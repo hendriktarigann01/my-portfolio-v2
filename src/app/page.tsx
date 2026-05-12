@@ -5,12 +5,11 @@ import { ProcessView } from "@/views/ProcessView";
 import { NowView } from "@/views/NowView";
 // import { ContactView } from "@/views/ContactView";
 import { CTAView } from "@/views/CTAView";
-import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <main className="md:px-24">
+      <main className="px-4 md:px-24">
         <HeroView />
         <WorkView />
         <ProcessView />

@@ -35,7 +35,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  cursor: none !important;
+}
+
+/* Custom cursor hanya di mouse/trackpad device */
+@media (pointer: fine) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
 }
 
 html {

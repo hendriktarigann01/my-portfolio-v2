@@ -1,9 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import worksData from "@/data/works.json";
+
+// MotionLink: gabungan framer-motion + Next.js client-side navigation
+const MotionLink = motion.create(Link);
 
 type WorkItem = {
   name: string;
@@ -35,9 +39,9 @@ function getFeatured() {
 
 function ProjectCard({ item, className = "" }: { item: WorkItem; className?: string }) {
   return (
-    <motion.a
-      href={`/work/${item.slug}`}
-      className={`group flex flex-col justify-between rounded-3xl p-8 h-full ${className}`}
+    <MotionLink
+      href={`/works/${item.slug}`}
+      className={`group flex flex-col justify-between rounded-3xl p-6 md:p-8 h-full ${className}`}
       style={{
         background: "rgba(239,209,195,0.03)",
         border: "1px solid rgba(239,209,195,0.08)",
@@ -127,7 +131,7 @@ function ProjectCard({ item, className = "" }: { item: WorkItem; className?: str
           {item.stack}
         </span>
       </div>
-    </motion.a>
+    </MotionLink>
   );
 }
 
@@ -135,24 +139,24 @@ function getBentoClass(index: number) {
   const remainder = index % 5;
   switch (remainder) {
     case 0:
-      return "col-span-1 md:col-span-2 min-h-[300px]";
+      return "col-span-1 md:col-span-2 min-h-[240px] md:min-h-[300px]";
     case 1:
-      return "col-span-1 md:col-span-1 min-h-[300px]";
+      return "col-span-1 md:col-span-1 min-h-[240px] md:min-h-[300px]";
     case 2:
-      return "col-span-1 md:col-span-1 min-h-[300px]";
+      return "col-span-1 md:col-span-1 min-h-[240px] md:min-h-[300px]";
     case 3:
-      return "col-span-1 md:col-span-2 min-h-[300px]";
+      return "col-span-1 md:col-span-2 min-h-[240px] md:min-h-[300px]";
     case 4:
-      return "col-span-1 md:col-span-3 min-h-[350px]";
+      return "col-span-1 md:col-span-3 min-h-[240px] md:min-h-[350px]";
     default:
-      return "col-span-1 md:col-span-1 min-h-[300px]";
+      return "col-span-1 md:col-span-1 min-h-[240px] md:min-h-[300px]";
   }
 }
 
 export function WorkView() {
   const items = getFeatured();
   return (
-    <section id="work" className="py-32">
+    <section id="work" className="py-12 md:py-24">
       <div className="container-main">
         <div style={{ marginBottom: "5rem" }}>
           <ScrollReveal>
@@ -184,7 +188,7 @@ export function WorkView() {
                 Work
               </h2>
             </div>
-            <motion.a
+            <MotionLink
               href="/works"
               style={{
                 fontFamily: "var(--font-body)",
@@ -196,7 +200,7 @@ export function WorkView() {
               className="hover-underline pb-0.5"
             >
               All projects →
-            </motion.a>
+            </MotionLink>
           </div>
         </ScrollReveal>
         </div>

@@ -1,6 +1,12 @@
+// Tujuan      : Interactive canvas arrow drawing effect mengarah ke button — desktop only
+// Caller      : src/views/HeroView.tsx
+// Dependensi  : React (useEffect, useRef, useCallback)
+// Main Exports: DirectAction
+// Side Effects: mousemove event listener, requestAnimationFrame loop (desktop only)
+
 "use client";
 
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 
 export const DirectAction = ({
   children,
@@ -27,6 +33,17 @@ export const DirectAction = ({
   });
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const animationFrameIdRef = useRef<number | null>(null);
+
+  // Deteksi touch device — disable canvas effect di mobile
+  const [isTouchDevice, setIsTouchDevice] = useState(true);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(pointer: coarse)");
+    setIsTouchDevice(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsTouchDevice(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   const drawArrow = useCallback(() => {
     if (!canvasRef.current || !targetRef.current || !ctxRef.current) return;
@@ -95,6 +112,9 @@ export const DirectAction = ({
   }, [color]);
 
   useEffect(() => {
+    // Jangan inisialisasi canvas & listener di touch device
+    if (isTouchDevice) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -116,7 +136,7 @@ export const DirectAction = ({
       const canvasEl = canvasRef.current;
       if (!canvasEl) return;
       const rect = canvasEl.getBoundingClientRect();
-      
+
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
@@ -149,7 +169,7 @@ export const DirectAction = ({
         cancelAnimationFrame(animationFrameIdRef.current);
       }
     };
-  }, [drawArrow]);
+  }, [drawArrow, isTouchDevice]);
 
   return (
     <div className={`relative ${containerClassName || ""}`}>
@@ -158,10 +178,13 @@ export const DirectAction = ({
           {children}
         </button>
       </div>
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 pointer-events-none z-[9999]"
-      />
+      {/* Canvas hanya dirender di non-touch device */}
+      {!isTouchDevice && (
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 pointer-events-none z-[9999]"
+        />
+      )}
     </div>
   );
 };

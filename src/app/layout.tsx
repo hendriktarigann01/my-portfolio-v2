@@ -1,3 +1,10 @@
+// Tujuan      : Root layout — wraps semua halaman dengan providers global
+// Caller      : Next.js App Router (otomatis)
+// Dependensi  : SmoothScrollProvider, CursorFollow, Preloader, GlobalIllustrations,
+//               ChatWidget, Navbar, Footer, AudioProvider
+// Main Exports: RootLayout (default)
+// Side Effects: Font load, audio init
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
@@ -7,6 +14,7 @@ import { GlobalIllustrations } from "@/components/GlobalIllustrations";
 import { ChatWidget } from "@/components/ChatWidget";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { AudioProvider } from "@/lib/audio-context";
 
 export const metadata: Metadata = {
   title: "Hendrik Tarigan",
@@ -33,15 +41,18 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <SmoothScrollProvider>
-          <Preloader />
-          <GlobalIllustrations />
-          <CursorFollow />
-          <Navbar />
-          {children}
-          <Footer />
-        </SmoothScrollProvider>
-        <ChatWidget />
+        {/* AudioProvider di luar SmoothScrollProvider agar persist saat navigasi */}
+        <AudioProvider>
+          <SmoothScrollProvider>
+            <Preloader />
+            <GlobalIllustrations />
+            <CursorFollow />
+            <Navbar />
+            {children}
+            <Footer />
+          </SmoothScrollProvider>
+          <ChatWidget />
+        </AudioProvider>
       </body>
     </html>
   );

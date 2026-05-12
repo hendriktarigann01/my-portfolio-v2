@@ -95,7 +95,7 @@ export default function WorkDetailPage({
   return (
     <main className="min-h-screen ">
       {/* ── Hero ── */}
-      <section className="relative py-32 px-6 overflow-hidden">
+      <section className="py-12 md:py-24 px-6 md:px-0">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -104,7 +104,7 @@ export default function WorkDetailPage({
           }}
         />
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative container-main mx-auto">
           {/* breadcrumb */}
           <motion.div
             className="flex items-center gap-2 mb-12"
@@ -308,13 +308,13 @@ export default function WorkDetailPage({
 
       {/* ── Divider ── */}
       <div
-        className="max-w-4xl mx-auto px-6"
+        className="container-main mx-auto px-6"
         style={{ height: "1px", background: "rgba(239,209,195,0.07)" }}
       />
 
       {/* ── Body ── */}
       <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto space-y-20">
+        <div className="container-main mx-auto space-y-20">
           {entry.description && (
             <ContentBlock label="Overview" delay={0}>
               <p
@@ -481,7 +481,7 @@ export default function WorkDetailPage({
 
       {/* ── Back nav ── */}
       <section className="pb-24 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="container-main mx-auto">
           <Link href="/works">
             <motion.div
               className="inline-flex items-center gap-3"

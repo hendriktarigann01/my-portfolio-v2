@@ -67,8 +67,8 @@ const item: Variants = {
 
 export default function WorksPage() {
   return (
-    <main className="min-h-screen  py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+     <section className="py-12 md:py-24 px-6 md:px-0">
+       <div className="container-main mx-auto">
         {/* Header */}
         <motion.div
           className="mb-24"
@@ -179,7 +179,7 @@ export default function WorksPage() {
           ))}
         </div>
       </div>
-    </main>
+    </section>
   );
 }
 

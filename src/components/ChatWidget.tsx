@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback, FormEvent } from "react";
-import { AnimatePresence, motion, type Variants } from "framer-motion";
-import { MessageSquare, Send, X, Loader2 } from "lucide-react";
 import Image from "next/image";
+import { useState, useRef, useEffect, useCallback, type FormEvent } from "react";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { X, Send, Loader2, MessageSquare, ChevronDown } from "lucide-react";
+import { globalLenis } from "@/components/SmoothScrollProvider";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -42,6 +43,28 @@ const dotTransition = (delay: number) => ({
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
+const MAX_QUESTIONS = 10;
+
+// Keywords yang relevan dengan portfolio Hendrik
+const TOPIC_KEYWORDS = [
+    // Tentang Hendrik
+    "hendrik", "tarigan", "you", "your", "he", "his", "profile", "about",
+    // Skills & Tech
+    "work", "project", "portfolio", "skill", "tech", "stack", "code", "build",
+    "develop", "design", "frontend", "backend", "fullstack", "next", "react",
+    "typescript", "javascript", "node", "supabase", "database", "api",
+    // Kolaborasi
+    "hire", "freelance", "collaborate", "available", "contact", "price",
+    "rate", "cost", "project", "client", "work together",
+    // Experience
+    "experience", "background", "education", "career", "job", "role",
+];
+
+function isOnTopic(text: string): boolean {
+    const lower = text.toLowerCase();
+    return TOPIC_KEYWORDS.some((kw) => lower.includes(kw));
+}
+
 const GREETING: Message = {
     id: "greeting",
     role: "model",
@@ -56,6 +79,33 @@ const QUICK_QUESTIONS = [
     "Is he available for freelance?",
 ];
 
+// ─── localStorage helpers ────────────────────────────────────────────────────
+
+const LS_KEY = "ht_chat_ql"; // Hendrik Tarigan chat question log
+
+function getTodayStr() {
+    return new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+}
+
+function loadCount(): number {
+    if (typeof window === "undefined") return 0;
+    try {
+        const raw = localStorage.getItem(LS_KEY);
+        if (!raw) return 0;
+        const { count, date } = JSON.parse(raw);
+        // Reset jika berbeda hari (daily limit)
+        return date === getTodayStr() ? (count ?? 0) : 0;
+    } catch {
+        return 0;
+    }
+}
+
+function saveCount(count: number) {
+    try {
+        localStorage.setItem(LS_KEY, JSON.stringify({ count, date: getTodayStr() }));
+    } catch { /* ignore */ }
+}
+
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export function ChatWidget() {
@@ -64,6 +114,14 @@ export function ChatWidget() {
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [hasInteracted, setHasInteracted] = useState(false);
+    // Init dari localStorage — persist antar refresh, reset setiap hari
+    const [questionCount, setQuestionCount] = useState<number>(0);
+    const isLimitReached = questionCount >= MAX_QUESTIONS;
+
+    // Baca localStorage setelah mount (client-only)
+    useEffect(() => {
+        setQuestionCount(loadCount());
+    }, []);
 
     const scrollRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
@@ -86,6 +144,11 @@ export function ChatWidget() {
         async (text: string) => {
             if (!text.trim() || isLoading) return;
 
+            // ── Middleware 1: Limit check ─────────────────────────────────────
+            if (questionCount >= MAX_QUESTIONS) {
+                return;
+            }
+
             setHasInteracted(true);
             const userMsg: Message = {
                 id: `user-${Date.now()}`,
@@ -93,13 +156,40 @@ export function ChatWidget() {
                 content: text.trim(),
                 timestamp: new Date(),
             };
-
             setMessages((prev) => [...prev, userMsg]);
             setInput("");
+
+            const nextCount = questionCount + 1;
+            setQuestionCount(nextCount);
+            saveCount(nextCount); // persist ke localStorage
+
+            // ── Middleware 2: Topic filter ────────────────────────────────────
+            if (!isOnTopic(text)) {
+                const refuseMsg: Message = {
+                    id: `refuse-${Date.now()}`,
+                    role: "model",
+                    content: "I can only answer questions about Hendrik — his work, skills, stack, or how to collaborate. Try asking something related! 😊",
+                    timestamp: new Date(),
+                };
+                setMessages((prev) => [...prev, refuseMsg]);
+
+                // Tambah pesan limit jika ini pertanyaan terakhir
+                if (nextCount >= MAX_QUESTIONS) {
+                    setTimeout(() => {
+                        setMessages((prev) => [...prev, {
+                            id: `limit-${Date.now()}`,
+                            role: "model",
+                            content: `We've reached the ${MAX_QUESTIONS}-question limit. Hope I was helpful! Reach out directly via the contact section. 🙌`,
+                            timestamp: new Date(),
+                        }]);
+                    }, 400);
+                }
+                return;
+            }
+
             setIsLoading(true);
 
             try {
-                // Build history excluding greeting
                 const history = [...messages.filter((m) => m.id !== "greeting"), userMsg].map(
                     (m) => ({ role: m.role, content: m.content })
                 );
@@ -111,7 +201,6 @@ export function ChatWidget() {
                 });
 
                 const data = await res.json();
-
                 if (!res.ok) throw new Error(data.error || "Request failed");
 
                 const aiMsg: Message = {
@@ -121,6 +210,18 @@ export function ChatWidget() {
                     timestamp: new Date(),
                 };
                 setMessages((prev) => [...prev, aiMsg]);
+
+                // Pesan limit setelah pertanyaan terakhir berhasil
+                if (nextCount >= MAX_QUESTIONS) {
+                    setTimeout(() => {
+                        setMessages((prev) => [...prev, {
+                            id: `limit-${Date.now()}`,
+                            role: "model",
+                            content: `We've reached the ${MAX_QUESTIONS}-question limit. Hope I was helpful! Reach out directly via the contact section. 🙌`,
+                            timestamp: new Date(),
+                        }]);
+                    }, 600);
+                }
             } catch {
                 const errMsg: Message = {
                     id: `err-${Date.now()}`,
@@ -133,7 +234,7 @@ export function ChatWidget() {
                 setIsLoading(false);
             }
         },
-        [messages, isLoading]
+        [messages, isLoading, questionCount]
     );
 
     const handleSubmit = (e: FormEvent) => {
@@ -141,7 +242,50 @@ export function ChatWidget() {
         sendMessage(input);
     };
 
+    // ── Scroll lock saat chat terbuka ───────────────────────────────────────
+    useEffect(() => {
+        if (isOpen) {
+            // Lock native scroll
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+            // Stop Lenis smooth scroll
+            globalLenis?.stop();
+        } else {
+            document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
+            // Resume Lenis smooth scroll
+            globalLenis?.start();
+        }
+        return () => {
+            document.body.style.overflow = "";
+            document.documentElement.style.overflow = "";
+            globalLenis?.start();
+        };
+    }, [isOpen]);
+
     return (
+        <>
+        {/* ─── Backdrop Overlay ───────────────────────────────────────────── */}
+        <AnimatePresence>
+            {isOpen && (
+                <motion.div
+                    key="chat-backdrop"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    onClick={() => setIsOpen(false)}
+                    style={{
+                        position: "fixed",
+                        inset: 0,
+                        zIndex: 9990,
+                        background: "rgba(1, 22, 23, 0.65)",
+                        backdropFilter: "blur(8px)",
+                        WebkitBackdropFilter: "blur(8px)",
+                    }}
+                />
+            )}
+        </AnimatePresence>
         <div
             style={{
                 position: "fixed",
@@ -245,6 +389,7 @@ export function ChatWidget() {
                         {/* Messages */}
                         <div
                             ref={scrollRef}
+                            data-lenis-prevent
                             style={{
                                 flex: 1,
                                 overflowY: "auto",
@@ -383,43 +528,59 @@ export function ChatWidget() {
                                 padding: "12px 16px",
                                 borderTop: "1px solid rgba(239, 209, 195, 0.08)",
                                 display: "flex",
-                                alignItems: "center",
-                                gap: 10,
+                                flexDirection: "column",
+                                gap: 8,
                                 background: "rgba(2, 66, 68, 0.6)",
                                 flexShrink: 0,
                             }}
                         >
+                            {/* Counter */}
+                            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                                <span style={{
+                                    fontFamily: "var(--font-body)",
+                                    fontSize: "0.65rem",
+                                    fontWeight: 600,
+                                    color: isLimitReached ? "rgba(239,100,100,0.6)" : "rgba(239,209,195,0.25)",
+                                    letterSpacing: "0.05em",
+                                }}>
+                                    {questionCount}/{MAX_QUESTIONS} questions
+                                </span>
+                            </div>
+                            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                             <input
                                 ref={inputRef}
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                placeholder="Ask about Hendrik..."
-                                disabled={isLoading}
+                                placeholder={isLimitReached ? "Question limit reached" : "Ask about Hendrik..."}
+                                disabled={isLoading || isLimitReached}
                                 style={{
                                     flex: 1,
                                     padding: "10px 16px",
                                     borderRadius: 14,
                                     border: "1px solid rgba(239, 209, 195, 0.1)",
-                                    background: "rgba(239, 209, 195, 0.04)",
-                                    color: "#efd1c3",
+                                    background: isLimitReached ? "rgba(239,209,195,0.02)" : "rgba(239, 209, 195, 0.04)",
+                                    color: isLimitReached ? "rgba(239,209,195,0.3)" : "#efd1c3",
                                     fontFamily: "var(--font-body)",
                                     fontSize: "0.82rem",
                                     outline: "none",
                                     transition: "border-color 0.2s, background 0.2s",
+                                    opacity: isLimitReached ? 0.5 : 1,
                                 }}
                                 onFocus={(e) => {
-                                    e.currentTarget.style.borderColor = "rgba(239,209,195,0.25)";
-                                    e.currentTarget.style.background = "rgba(239,209,195,0.06)";
+                                    if (!isLimitReached) {
+                                        e.currentTarget.style.borderColor = "rgba(239,209,195,0.25)";
+                                        e.currentTarget.style.background = "rgba(239,209,195,0.06)";
+                                    }
                                 }}
                                 onBlur={(e) => {
                                     e.currentTarget.style.borderColor = "rgba(239,209,195,0.1)";
-                                    e.currentTarget.style.background = "rgba(239,209,195,0.04)";
+                                    e.currentTarget.style.background = isLimitReached ? "rgba(239,209,195,0.02)" : "rgba(239,209,195,0.04)";
                                 }}
                             />
                             <motion.button
                                 type="submit"
-                                disabled={!input.trim() || isLoading}
+                                disabled={!input.trim() || isLoading || isLimitReached}
                                 whileHover={{ scale: 1.06 }}
                                 whileTap={{ scale: 0.94 }}
                                 style={{
@@ -428,17 +589,17 @@ export function ChatWidget() {
                                     borderRadius: "50%",
                                     border: "none",
                                     background:
-                                        input.trim() && !isLoading
+                                        input.trim() && !isLoading && !isLimitReached
                                             ? "#efd1c3"
                                             : "rgba(239,209,195,0.1)",
                                     color:
-                                        input.trim() && !isLoading
+                                        input.trim() && !isLoading && !isLimitReached
                                             ? "#024244"
                                             : "rgba(239,209,195,0.3)",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    cursor: input.trim() && !isLoading ? "pointer" : "default",
+                                    cursor: input.trim() && !isLoading && !isLimitReached ? "pointer" : "default",
                                     flexShrink: 0,
                                     transition: "all 0.2s ease",
                                 }}
@@ -449,6 +610,7 @@ export function ChatWidget() {
                                     <Send size={16} />
                                 )}
                             </motion.button>
+                            </div>
                         </form>
                     </motion.div>
                 )}
@@ -513,5 +675,6 @@ export function ChatWidget() {
                 </AnimatePresence>
             </motion.button>
         </div>
+        </>
     );
 }

@@ -38,24 +38,6 @@ function StepItem({ step, index, total }: { step: typeof steps[0]; index: number
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
     >
-      {/* Connector line left */}
-      {index > 0 && (
-        <motion.div
-          style={{
-            position: "absolute",
-            top: 28,
-            right: "50%",
-            width: "100%",
-            height: "1px",
-            background: "rgba(239,209,195,0.15)",
-            zIndex: 0,
-            transformOrigin: "left",
-          }}
-          initial={{ scaleX: 0 }}
-          animate={isInView ? { scaleX: 1 } : {}}
-          transition={{ duration: 0.6, delay: index * 0.15 - 0.05, ease: "easeOut" }}
-        />
-      )}
 
       {/* Circle */}
       <motion.div
@@ -145,7 +127,7 @@ export function ProcessView() {
   const lineInView = useInView(lineRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="process" style={{ padding: "8rem 0" }}>
+   <section id="process" className="py-12 md:py-24">
       <div className="container-main">
         <div style={{ marginBottom: "5rem" }}>
           <ScrollReveal>
@@ -175,8 +157,12 @@ export function ProcessView() {
 
         {/* Timeline */}
         <div style={{ position: "relative" }}>
-          {/* Horizontal line */}
-          <div ref={lineRef} style={{ position: "absolute", top: 28, left: "calc(12.5%)", right: "calc(12.5%)", height: "1px", background: "rgba(239,209,195,0.08)", zIndex: 0 }}>
+          {/* Horizontal line — desktop only */}
+          <div
+            ref={lineRef}
+            className="hidden md:block"
+            style={{ position: "absolute", top: 28, left: "calc(12.5%)", right: "calc(12.5%)", height: "1px", background: "rgba(239,209,195,0.08)", zIndex: 0 }}
+          >
             <motion.div
               style={{ height: "100%", background: "rgba(239,209,195,0.2)", transformOrigin: "left" }}
               initial={{ scaleX: 0 }}
@@ -185,8 +171,8 @@ export function ProcessView() {
             />
           </div>
 
-          {/* Steps */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1.5rem", position: "relative", zIndex: 1 }}>
+          {/* Steps — 1 col mobile, 2 col tablet, 4 col desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" style={{ position: "relative", zIndex: 1 }}>
             {steps.map((step, i) => (
               <StepItem key={step.index} step={step} index={i} total={steps.length} />
             ))}

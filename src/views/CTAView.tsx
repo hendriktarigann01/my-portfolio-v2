@@ -12,15 +12,12 @@ const LocationMap = dynamic(
 
 export function CTAView() {
   return (
-    <section style={{ padding: "6rem 0" }}>
+    <section className="py-12 md:py-24">
       <div className="container-main">
         <ScrollReveal>
           <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-12 items-center"
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "3rem",
-              alignItems: "center", 
               position: "relative",
               overflow: "hidden",
             }}

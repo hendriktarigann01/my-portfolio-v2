@@ -32,7 +32,7 @@ const nowItems = [
 
 export function NowView() {
   return (
-    <section id="now" className="relative w-full pb-32">
+   <section id="now" className="py-12 md:py-24">
       <div className="container-main flex flex-col md:flex-row justify-between relative">
         
         {/* Right side Text (Sticky) */}
@@ -84,7 +84,7 @@ export function NowView() {
           {nowItems.map((item, i) => (
             <figure key={i} className="md:sticky top-0 md:h-screen grid place-content-center py-6 md:py-0">
               <motion.article
-                className={`w-full max-w-md mx-auto rounded-3xl p-8 md:p-12 shadow-2xl ${item.rotation}`}
+                className={`w-full max-w-md mx-auto rounded-3xl p-8 md:p-12 shadow-xl ${item.rotation}`}
                 style={{
                   background: "rgba(2,66,68,0.9)", 
                   backdropFilter: "blur(20px)",

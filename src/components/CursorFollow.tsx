@@ -1,6 +1,12 @@
+// Tujuan      : Custom cursor — hanya aktif di non-touch device (disabled di mobile)
+// Caller      : src/app/layout.tsx
+// Dependensi  : framer-motion
+// Main Exports: CursorFollow
+// Side Effects: mousemove event listener (desktop only)
+
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export function CursorFollow() {
@@ -9,90 +15,65 @@ export function CursorFollow() {
   const dotX = useMotionValue(-100);
   const dotY = useMotionValue(-100);
 
-  const springConfig = { damping: 25, stiffness: 300, mass: 0.5 };
-  const trailConfig = { damping: 35, stiffness: 150, mass: 0.8 };
-
-  const springX = useSpring(cursorX, springConfig);
-  const springY = useSpring(cursorY, springConfig);
-  const trailX = useSpring(dotX, trailConfig);
-  const trailY = useSpring(dotY, trailConfig);
+  const springX = useSpring(cursorX, { damping: 25, stiffness: 300, mass: 0.5 });
+  const springY = useSpring(cursorY, { damping: 25, stiffness: 300, mass: 0.5 });
+  const trailX = useSpring(dotX, { damping: 35, stiffness: 150, mass: 0.8 });
+  const trailY = useSpring(dotY, { damping: 35, stiffness: 150, mass: 0.8 });
 
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(true);
 
   useEffect(() => {
+    const mq = window.matchMedia("(pointer: coarse)");
+    setIsTouchDevice(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsTouchDevice(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  useEffect(() => {
+    if (isTouchDevice) return;
     const move = (e: MouseEvent) => {
       cursorX.set(e.clientX - 10);
       cursorY.set(e.clientY - 10);
       dotX.set(e.clientX - 4);
       dotY.set(e.clientY - 4);
     };
-
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const isInteractive =
-        target.closest("a, button, [data-cursor-hover], input, textarea") !==
-        null;
-      setIsHovering(isInteractive);
+    const over = (e: MouseEvent) => {
+      setIsHovering(
+        (e.target as HTMLElement).closest("a, button, [data-cursor-hover], input, textarea") !== null
+      );
     };
-
-    const handleMouseDown = () => setIsClicking(true);
-    const handleMouseUp = () => setIsClicking(false);
-
+    const down = () => setIsClicking(true);
+    const up = () => setIsClicking(false);
     window.addEventListener("mousemove", move);
-    window.addEventListener("mouseover", handleMouseOver);
-    window.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("mouseup", handleMouseUp);
-
+    window.addEventListener("mouseover", over);
+    window.addEventListener("mousedown", down);
+    window.addEventListener("mouseup", up);
     return () => {
       window.removeEventListener("mousemove", move);
-      window.removeEventListener("mouseover", handleMouseOver);
-      window.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("mouseover", over);
+      window.removeEventListener("mousedown", down);
+      window.removeEventListener("mouseup", up);
     };
-  }, [cursorX, cursorY, dotX, dotY]);
+  }, [isTouchDevice, cursorX, cursorY, dotX, dotY]);
+
+  if (isTouchDevice) return null;
 
   return (
     <>
-      {/* Ring cursor */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[99999] rounded-full border mix-blend-exclusion"
-        style={{
-          x: springX,
-          y: springY,
-          width: 20,
-          height: 20,
-          borderColor: "#efd1c3",
-        }}
-        animate={{
-          scale: isHovering ? 2.5 : isClicking ? 0.8 : 1,
-          opacity: isHovering ? 0.6 : 0.8,
-          borderWidth: isHovering ? 1.5 : 1,
-        }}
-        transition={{
-          scale: { type: "spring", stiffness: 300, damping: 20 },
-          opacity: { duration: 0.2 },
-          borderWidth: { duration: 0.2 },
-        }}
+        style={{ x: springX, y: springY, width: 20, height: 20, borderColor: "#efd1c3" }}
+        animate={{ scale: isHovering ? 2.5 : isClicking ? 0.8 : 1, opacity: isHovering ? 0.6 : 0.8, borderWidth: isHovering ? 1.5 : 1 }}
+        transition={{ scale: { type: "spring", stiffness: 300, damping: 20 }, opacity: { duration: 0.2 }, borderWidth: { duration: 0.2 } }}
       />
-      {/* Dot cursor */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[99999] rounded-full"
-        style={{
-          x: trailX,
-          y: trailY,
-          width: 8,
-          height: 8,
-          backgroundColor: "#efd1c3",
-        }}
-        animate={{
-          scale: isClicking ? 0.5 : 1,
-          opacity: isHovering ? 0 : 1,
-        }}
-        transition={{
-          scale: { type: "spring", stiffness: 400, damping: 20 },
-          opacity: { duration: 0.15 },
-        }}
+        style={{ x: trailX, y: trailY, width: 8, height: 8, backgroundColor: "#efd1c3" }}
+        animate={{ scale: isClicking ? 0.5 : 1, opacity: isHovering ? 0 : 1 }}
+        transition={{ scale: { type: "spring", stiffness: 400, damping: 20 }, opacity: { duration: 0.15 } }}
       />
     </>
   );
