@@ -60,7 +60,56 @@
         "Railway",
         "Aiven"
       ],
-      "isFeatured": "true",
+      "images": [
+        {
+          "url": "/assets/systems/converra/1.png",
+          "title": "Converra - Screenshot 1"
+        },
+        {
+          "url": "/assets/systems/converra/2.png",
+          "title": "Converra - Screenshot 2"
+        },
+        {
+          "url": "/assets/systems/converra/3.png",
+          "title": "Converra - Screenshot 3"
+        },
+        {
+          "url": "/assets/systems/converra/4.png",
+          "title": "Converra - Screenshot 4"
+        },
+        {
+          "url": "/assets/systems/converra/5.png",
+          "title": "Converra - Screenshot 5"
+        },
+        {
+          "url": "/assets/systems/converra/6.png",
+          "title": "Converra 11 - Screenshot 6"
+        },
+        {
+          "url": "/assets/systems/converra/7.png",
+          "title": "Converra 12 - Screenshot 7"
+        },
+        {
+          "url": "/assets/systems/converra/8.png",
+          "title": "Converra - Screenshot 8"
+        },
+        {
+          "url": "/assets/systems/converra/9.png",
+          "title": "Converra - Screenshot 9"
+        },
+        {
+          "url": "/assets/systems/converra/10.png",
+          "title": "Converra - Screenshot 10"
+        },
+        {
+          "url": "/assets/systems/converra/11.png",
+          "title": "Converra - Screenshot 11"
+        },
+        {
+          "url": "/assets/systems/converra/12.png",
+          "title": "Converra - Screenshot 12"
+        }
+      ],
       "links": {
         "demo": "",
         "repo": ""
@@ -111,26 +160,102 @@
         "Tailwind CSS",
         "Vercel"
       ],
-      "isFeatured": "false",
+      "images": [
+        {
+          "url": "/assets/systems/mjs-registr/1.webp",
+          "title": "MJS Event Registration - Welcome Page"
+        },
+        {
+          "url": "/assets/systems/mjs-registr/2.webp",
+          "title": "MJS Event Registration - Form Input"
+        },
+        {
+          "url": "/assets/systems/mjs-registr/3.webp",
+          "title": "MJS Event Registration - Form Success & QR"
+        },
+        {
+          "url": "/assets/systems/mjs-registr/4.webp",
+          "title": "MJS Event Registration - Admin Dashboard Analytics"
+        },
+        {
+          "url": "/assets/systems/mjs-registr/5.webp",
+          "title": "MJS Event Registration - Attendee List Management"
+        },
+        {
+          "url": "/assets/systems/mjs-registr/6.webp",
+          "title": "MJS Event Registration - QR Check-in Page"
+        },
+        {
+          "url": "/assets/systems/mjs-registr/7.webp",
+          "title": "MJS Event Registration - Audit Logs View"
+        },
+        {
+          "url": "/assets/systems/mjs-registr/a.webp",
+          "title": "MJS Event Registration - Scan Handshake"
+        }
+      ],
       "links": {
         "demo": "https://mjs-registr.vercel.app/",
         "repo": ""
       }
     },
     {
-      "name": "smart-meeting",
+      "name": "Smart Meeting Room",
       "slug": "smart-meeting",
       "stack": "TypeScript",
       "category": "system",
-      "focus": "workflow, scheduling logic",
-      "summary": "",
-      "description": "",
-      "problem": "",
-      "solution": "",
-      "highlights": [],
-      "features": [],
-      "techStack": [],
-      "isFeatured": "false",
+      "focus": "meeting room scheduling, real-time tablet status",
+      "summary": "A corporate meeting room booking and management system featuring central scheduling, Outlook calendar integration, and interactive door display tablets to visualize room availability.",
+      "description": "Smart Meeting is an end-to-end office resource scheduling system. It consists of a Next.js admin dashboard for managing conference rooms, recurring booking calendars, and resource allocations (VC, projector), coupled with lightweight React client apps running on wall-mounted tablets outside each meeting room. The door displays connect via WebSockets to show instant room status (Green for Available, Red for Occupied), handle proximity detection, and allow users to book or extend meetings on the spot. The system integrates with Exchange/Outlook calendars via Microsoft Graph API for automated scheduling sync.",
+      "problem": "Uncoordinated room booking in corporate environments led to double bookings, meeting interruptions, and empty reserved rooms (ghost meetings) where attendees booked a room but failed to show up.",
+      "solution": "A centralized room scheduling system with dedicated tablet interfaces placed outside each meeting room. The tablets sync with the central database and company calendar, providing instant visual feedback on room availability. A quick check-in button releases rooms if the host does not arrive within 10 minutes, eliminating ghost meetings.",
+      "highlights": [
+        "Interactive door display tablet interface with instant check-in",
+        "Outlook / Microsoft Exchange calendar sync via Microsoft Graph API",
+        "Real-time room occupancy status visualization (Available/Occupied/Pending)",
+        "Instant booking and extension controls directly from the room tablet",
+        "Ghost meeting mitigation: auto-releases room after 10 minutes of inactivity",
+        "Centralized admin dashboard for room booking analytics and user permissions",
+        "Deployed as Next.js app with SQLite/PostgreSQL database"
+      ],
+      "features": [
+        "Room occupancy dashboard with live calendar scheduler",
+        "Tablet optimized view with high-contrast UI (green/red status states)",
+        "Instant booking interface for walk-up reservations",
+        "Meeting room check-in and check-out button flow",
+        "Interactive timeline display showing current and upcoming events",
+        "Resource manager (track VC devices, whiteboard, catering settings)",
+        "Outlook/Exchange bi-directional calendar integration",
+        "Detailed usage statistics (room utilization rates, peak hours)",
+        "Secure admin settings for holiday scheduling and user roles"
+      ],
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Microsoft Graph API",
+        "WebSocket",
+        "Vercel"
+      ],
+      "images": [
+        { "url": "/assets/systems/smart-meeting/1.webp", "title": "Smart Meeting - Screenshot 1" },
+        { "url": "/assets/systems/smart-meeting/2.webp", "title": "Smart Meeting - Screenshot 2" },
+        { "url": "/assets/systems/smart-meeting/3.webp", "title": "Smart Meeting - Screenshot 3" },
+        { "url": "/assets/systems/smart-meeting/4.webp", "title": "Smart Meeting - Screenshot 4" },
+        { "url": "/assets/systems/smart-meeting/5.webp", "title": "Smart Meeting - Screenshot 5" },
+        { "url": "/assets/systems/smart-meeting/6.webp", "title": "Smart Meeting - Screenshot 6" },
+        { "url": "/assets/systems/smart-meeting/7.webp", "title": "Smart Meeting - Screenshot 7" },
+        { "url": "/assets/systems/smart-meeting/8.webp", "title": "Smart Meeting - Screenshot 8" },
+        { "url": "/assets/systems/smart-meeting/9.webp", "title": "Smart Meeting - Screenshot 9" },
+        { "url": "/assets/systems/smart-meeting/10.webp", "title": "Smart Meeting - Screenshot 10" },
+        { "url": "/assets/systems/smart-meeting/11.webp", "title": "Smart Meeting - Screenshot 11" },
+        { "url": "/assets/systems/smart-meeting/12.webp", "title": "Smart Meeting - Screenshot 12" },
+        { "url": "/assets/systems/smart-meeting/13.webp", "title": "Smart Meeting - Screenshot 13" },
+        { "url": "/assets/systems/smart-meeting/14.webp", "title": "Smart Meeting - Screenshot 14" }
+      ],
       "links": {
         "demo": "",
         "repo": ""
@@ -175,26 +300,53 @@
         "HTML",
         "CSS"
       ],
-      "isFeatured": "true",
+      "images": [
+        { "url": "/assets/systems/mjs-led-configuration/1.png", "title": "LED Configurator - Wall Configuration Panel" },
+        { "url": "/assets/systems/mjs-led-configuration/2.png", "title": "LED Configurator - Technical Specs & Calculations" },
+        { "url": "/assets/systems/mjs-led-configuration/3.png", "title": "LED Configurator - Wall Simulation Preview" },
+        { "url": "/assets/systems/mjs-led-configuration/4.png", "title": "LED Configurator - Room Layout Calibration" },
+        { "url": "/assets/systems/mjs-led-configuration/5.png", "title": "LED Configurator - Processor Recommendation Sheet" },
+        { "url": "/assets/systems/mjs-led-configuration/6.png", "title": "LED Configurator - Power and Distance Specs" },
+        { "url": "/assets/systems/mjs-led-configuration/7.png", "title": "LED Configurator - Proposal Export Setup" }
+      ],
       "links": {
         "demo": "https://configurator.mjsolution.co.id/",
         "repo": ""
       }
     },
     {
-      "name": "motion-detector-human",
+      "name": "Motion Detector Human",
       "slug": "motion-detector-human",
       "stack": "Python",
       "category": "experiment",
-      "focus": "untuk booth di event, mendeteksi gerakan manusia untuk trigger animasi selamat datang",
-      "summary": "",
-      "description": "",
-      "problem": "",
-      "solution": "",
-      "highlights": [],
-      "features": [],
-      "techStack": [],
-      "isFeatured": "false",
+      "focus": "computer vision proximity trigger for event screens",
+      "summary": "A computer vision utility using Python, OpenCV, and a webcam to detect visitor presence at exhibition booths and trigger welcome animations via WebSockets.",
+      "description": "Motion Detector Human is an event automation experiment. It uses a Python script running OpenCV on a local machine (connected to a webcam) to track movements in front of a digital display. The script monitors entry/exit zones and estimates distance to identify when a visitor approaches the screen. Once a proximity threshold is crossed, it broadcasts a command over local WebSockets to the web display app, triggering active greeting animations and starting interactive video sequences automatically.",
+      "problem": "Exhibition screens showing static loops or standard videos fail to grab the attention of passersby, resulting in low booth engagement.",
+      "solution": "An intelligent camera-triggered display that remains in standby mode until a visitor approaches, instantly greeting them with dynamic, responsive visual changes that prompt interaction.",
+      "highlights": [
+        "Real-time human proximity detection using OpenCV and standard USB webcam",
+        "Local WebSocket communication to bridge Python computer vision and React frontend",
+        "Configurable active detection zones to filter out background aisle traffic",
+        "Adaptive background subtraction to run stably under changing event lighting",
+        "Standby vs welcome active loop trigger mechanism"
+      ],
+      "features": [
+        "Live camera feed view with bounding box overlays",
+        "Sensitivity, detection zone, and distance threshold configuration controls",
+        "Automatic background calibration baseline reset",
+        "Proximity status logging for analytics tracking",
+        "WebSocket client broadcast server"
+      ],
+      "techStack": [
+        "Python",
+        "OpenCV",
+        "WebSocket",
+        "Node.js"
+      ],
+      "images": [
+        { "url": "/assets/systems/motion-detector-human/1.webp", "title": "Motion Detector - Camera Tracking Feed" }
+      ],
       "links": {
         "demo": "",
         "repo": ""
@@ -248,7 +400,69 @@
         "shadcn/ui",
         "Aceternity UI"
       ],
-      "isFeatured": "false",
+      "images": [],
+      "imageGroups": [
+        {
+          "label": "Arch ID",
+          "images": [
+            { "url": "/assets/interactive/mjs-memory-card/archid/1.webp", "title": "Memory Card × Arch ID - 1" },
+            { "url": "/assets/interactive/mjs-memory-card/archid/2.webp", "title": "Memory Card × Arch ID - 2" },
+            { "url": "/assets/interactive/mjs-memory-card/archid/3.webp", "title": "Memory Card × Arch ID - 3" },
+            { "url": "/assets/interactive/mjs-memory-card/archid/4.webp", "title": "Memory Card × Arch ID - 4" },
+            { "url": "/assets/interactive/mjs-memory-card/archid/5.webp", "title": "Memory Card × Arch ID - 5" },
+            { "url": "/assets/interactive/mjs-memory-card/archid/6.webp", "title": "Memory Card × Arch ID - 6" },
+            { "url": "/assets/interactive/mjs-memory-card/archid/7.webp", "title": "Memory Card × Arch ID - 7" }
+          ]
+        },
+        {
+          "label": "Default",
+          "images": [
+            { "url": "/assets/interactive/mjs-memory-card/default/1.webp", "title": "Memory Card Default - 1" },
+            { "url": "/assets/interactive/mjs-memory-card/default/2.webp", "title": "Memory Card Default - 2" },
+            { "url": "/assets/interactive/mjs-memory-card/default/3.webp", "title": "Memory Card Default - 3" },
+            { "url": "/assets/interactive/mjs-memory-card/default/4.webp", "title": "Memory Card Default - 4" },
+            { "url": "/assets/interactive/mjs-memory-card/default/5.webp", "title": "Memory Card Default - 5" },
+            { "url": "/assets/interactive/mjs-memory-card/default/6.webp", "title": "Memory Card Default - 6" },
+            { "url": "/assets/interactive/mjs-memory-card/default/7.webp", "title": "Memory Card Default - 7" }
+          ]
+        },
+        {
+          "label": "Happify",
+          "images": [
+            { "url": "/assets/interactive/mjs-memory-card/happify/1.webp", "title": "Memory Card × Happify - 1" },
+            { "url": "/assets/interactive/mjs-memory-card/happify/2.webp", "title": "Memory Card × Happify - 2" },
+            { "url": "/assets/interactive/mjs-memory-card/happify/3.webp", "title": "Memory Card × Happify - 3" },
+            { "url": "/assets/interactive/mjs-memory-card/happify/4.webp", "title": "Memory Card × Happify - 4" },
+            { "url": "/assets/interactive/mjs-memory-card/happify/5.webp", "title": "Memory Card × Happify - 5" },
+            { "url": "/assets/interactive/mjs-memory-card/happify/6.webp", "title": "Memory Card × Happify - 6" },
+            { "url": "/assets/interactive/mjs-memory-card/happify/7.webp", "title": "Memory Card × Happify - 7" }
+          ]
+        },
+        {
+          "label": "VisionWork",
+          "images": [
+            { "url": "/assets/interactive/mjs-memory-card/visionwork/1.webp", "title": "Memory Card × VisionWork - 1" },
+            { "url": "/assets/interactive/mjs-memory-card/visionwork/2.webp", "title": "Memory Card × VisionWork - 2" },
+            { "url": "/assets/interactive/mjs-memory-card/visionwork/3.webp", "title": "Memory Card × VisionWork - 3" },
+            { "url": "/assets/interactive/mjs-memory-card/visionwork/4.webp", "title": "Memory Card × VisionWork - 4" },
+            { "url": "/assets/interactive/mjs-memory-card/visionwork/5.webp", "title": "Memory Card × VisionWork - 5" },
+            { "url": "/assets/interactive/mjs-memory-card/visionwork/6.webp", "title": "Memory Card × VisionWork - 6" },
+            { "url": "/assets/interactive/mjs-memory-card/visionwork/7.webp", "title": "Memory Card × VisionWork - 7" }
+          ]
+        },
+        {
+          "label": "In-Lite",
+          "images": [
+            { "url": "/assets/interactive/mjs-memory-card/in-lite/1.webp", "title": "Memory Card × In-Lite - 1" },
+            { "url": "/assets/interactive/mjs-memory-card/in-lite/2.webp", "title": "Memory Card × In-Lite - 2" },
+            { "url": "/assets/interactive/mjs-memory-card/in-lite/3.webp", "title": "Memory Card × In-Lite - 3" },
+            { "url": "/assets/interactive/mjs-memory-card/in-lite/4.webp", "title": "Memory Card × In-Lite - 4" },
+            { "url": "/assets/interactive/mjs-memory-card/in-lite/5.webp", "title": "Memory Card × In-Lite - 5" },
+            { "url": "/assets/interactive/mjs-memory-card/in-lite/6.webp", "title": "Memory Card × In-Lite - 6" },
+            { "url": "/assets/interactive/mjs-memory-card/in-lite/7.webp", "title": "Memory Card × In-Lite - 7" }
+          ]
+        }
+      ],
       "links": {
         "demo": "https://mjs-memory-card.vercel.app/",
         "repo": ""
@@ -300,26 +514,98 @@
         "Web Audio API",
         "Lucide React"
       ],
-      "isFeatured": "false",
+      "images": [],
+      "imageGroups": [
+        {
+          "label": "Happify",
+          "images": [
+            { "url": "/assets/interactive/mjs-scream-challenge/happify/1.webp", "title": "Scream Challenge × Happify - 1" },
+            { "url": "/assets/interactive/mjs-scream-challenge/happify/2.webp", "title": "Scream Challenge × Happify - 2" },
+            { "url": "/assets/interactive/mjs-scream-challenge/happify/3.webp", "title": "Scream Challenge × Happify - 3" },
+            { "url": "/assets/interactive/mjs-scream-challenge/happify/4.webp", "title": "Scream Challenge × Happify - 4" },
+            { "url": "/assets/interactive/mjs-scream-challenge/happify/5.webp", "title": "Scream Challenge × Happify - 5" }
+          ]
+        },
+        {
+          "label": "In-Lite",
+          "images": [
+            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/1.webp", "title": "Scream Challenge × In-Lite - 1" },
+            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/2.webp", "title": "Scream Challenge × In-Lite - 2" },
+            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/3.webp", "title": "Scream Challenge × In-Lite - 3" },
+            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/4.webp", "title": "Scream Challenge × In-Lite - 4" },
+            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/5.webp", "title": "Scream Challenge × In-Lite - 5" },
+            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/6.webp", "title": "Scream Challenge × In-Lite - 6" },
+            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/7.webp", "title": "Scream Challenge × In-Lite - 7" }
+          ]
+        },
+        {
+          "label": "VisionWork",
+          "images": [
+            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/1.webp", "title": "Scream Challenge × VisionWork - 1" },
+            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/2.webp", "title": "Scream Challenge × VisionWork - 2" },
+            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/3.webp", "title": "Scream Challenge × VisionWork - 3" },
+            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/4.webp", "title": "Scream Challenge × VisionWork - 4" },
+            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/5.webp", "title": "Scream Challenge × VisionWork - 5" },
+            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/6.webp", "title": "Scream Challenge × VisionWork - 6" }
+          ]
+        }
+      ],
       "links": {
         "demo": "https://mjs-scream-challenge.vercel.app/",
         "repo": ""
       }
     },
     {
-      "name": "mjs-spin-wheel",
+      "name": "MJS Spin the Wheel",
       "slug": "mjs-spin-wheel",
       "stack": "TypeScript",
-      "category": "interactive",
-      "focus": "animation, randomness logic",
-      "summary": "",
-      "description": "",
-      "problem": "",
-      "solution": "",
-      "highlights": [],
-      "features": [],
-      "techStack": [],
-      "isFeatured": "false",
+      "category": "game",
+      "focus": "canvas animation, probability logic, prize management",
+      "summary": "An interactive digital fortune wheel game for event giveaways — allowing users to spin for prizes with probability weights and real-time inventory tracking.",
+      "description": "MJS Spin the Wheel is a digital fortune wheel application developed for exhibition booth engagement. Visitors register with their name/email, then tap to spin the wheel for a chance to win various branded merchandise. The backend manages segment configurations, prize titles, custom slice colors, and precise winning probabilities. It also implements strict daily inventory caps to prevent high-value prizes from running out too early. Frequently integrated as the final reward stage of the Memory Card or Scream Challenge games.",
+      "problem": "Traditional paper ticket giveaways or offline raffle draws at events are boring, hard to coordinate, suffer from high admin overhead, and provide no real-time way to limit high-value prize distributions dynamically.",
+      "solution": "An interactive touch-screen spin wheel that features physical inertia deceleration and celebration sound effects. Admins set prize limits and probability weights via the dashboard, ensuring prizes are distributed evenly throughout the event duration while automatically logging winner contact info.",
+      "highlights": [
+        "Physics-based kinetic wheel spin and friction slowing animation",
+        "Configurable prize probabilities and stock limits to prevent over-giving",
+        "Unique coupon code generator for prize validation and checkout",
+        "Integrated sound effects for tick markers and winning fanfare (Howler.js)",
+        "Fully responsive design for portrait kiosk screens or mobile devices",
+        "Supabase logging for analytics and winner tracking"
+      ],
+      "features": [
+        "Welcome screen with quick user email/phone registration",
+        "Dynamic canvas-rendered wheel with custom slice colors and text sizing",
+        "Tap-to-spin gesture and physics-simulated rotation deceleration",
+        "Interactive winning confetti overlay on landing",
+        "Unique verification code display and QR code generator for claim desk",
+        "Admin control panel to manage prize inventory, labels, and odds",
+        "Offline synchronization buffer in case of event network dropouts"
+      ],
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Supabase",
+        "Howler.js"
+      ],
+      "images": [],
+      "imageGroups": [
+        {
+          "label": "In-Lite",
+          "images": [
+            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/1.webp", "title": "Spin the Wheel × In-Lite - Welcome Kiosk" },
+            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/2.webp", "title": "Spin the Wheel × In-Lite - Input Data Form" },
+            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/3.webp", "title": "Spin the Wheel × In-Lite - Ready to Spin" },
+            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/4.webp", "title": "Spin the Wheel × In-Lite - Deceleration Spin" },
+            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/5.webp", "title": "Spin the Wheel × In-Lite - Landing on Prize" },
+            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/6.webp", "title": "Spin the Wheel × In-Lite - Winner Confetti Dialog" },
+            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/7.webp", "title": "Spin the Wheel × In-Lite - Reward Claim QR Code" }
+          ]
+        }
+      ],
       "links": {
         "demo": "https://mjs-spin-wheel.vercel.app/",
         "repo": ""
@@ -369,7 +655,7 @@
         "html2canvas",
         "Tailwind CSS"
       ],
-      "isFeatured": "false",
+      "images": [],
       "links": {
         "demo": "https://mjs-photobooth-flax.vercel.app/",
         "repo": ""
@@ -433,7 +719,7 @@
         "react-qr-code",
         "Vercel"
       ],
-      "isFeatured": "false",
+      "images": [],
       "links": {
         "demo": "",
         "repo": ""
@@ -473,7 +759,7 @@
         "HTML",
         "CSS"
       ],
-      "isFeatured": "false",
+      "images": [],
       "links": {
         "demo": "https://product-showcase-mjs.vercel.app/",
         "repo": ""
@@ -526,7 +812,40 @@
         "Lenis Scroll",
         "next-intl"
       ],
-      "isFeatured": "true",
+      "images": [
+        {
+          "url": "/assets/landing-pages/vision-lab/1.png",
+          "title": "VisionLAB - Screenshot 1"
+        },
+        {
+          "url": "/assets/landing-pages/vision-lab/2.png",
+          "title": "VisionLAB - Screenshot 2"
+        },
+        {
+          "url": "/assets/landing-pages/vision-lab/3.png",
+          "title": "VisionLAB - Screenshot 3"
+        },
+        {
+          "url": "/assets/landing-pages/vision-lab/4.png",
+          "title": "VisionLAB - Screenshot 4"
+        },
+        {
+          "url": "/assets/landing-pages/vision-lab/5.png",
+          "title": "VisionLAB - Screenshot 5"
+        },
+        {
+          "url": "/assets/landing-pages/vision-lab/6.png",
+          "title": "VisionLAB - Screenshot 6"
+        },
+        {
+          "url": "/assets/landing-pages/vision-lab/7.png",
+          "title": "VisionLAB - Screenshot 7"
+        },
+        {
+          "url": "/assets/landing-pages/vision-lab/8.png",
+          "title": "VisionLAB - Screenshot 8"
+        }
+      ],
       "links": {
         "demo": "https://visionlab.co.id/",
         "repo": ""
@@ -572,7 +891,28 @@
         "Lenis Scroll",
         "next-intl"
       ],
-      "isFeatured": "false",
+      "images": [
+        {
+          "url": "/assets/landing-pages/envision/1.png",
+          "title": "Envision - Screenshot 1"
+        },
+        {
+          "url": "/assets/landing-pages/envision/2.png",
+          "title": "Envision - Screenshot 2"
+        },
+        {
+          "url": "/assets/landing-pages/envision/3.png",
+          "title": "Envision - Screenshot 3"
+        },
+        {
+          "url": "/assets/landing-pages/envision/4.png",
+          "title": "Envision - Screenshot 4"
+        },
+        {
+          "url": "/assets/landing-pages/envision/5.png",
+          "title": "Envision - Screenshot 5"
+        }
+      ],
       "links": {
         "demo": "https://envsn.asia/",
         "repo": ""
@@ -615,7 +955,24 @@
         "Lenis Scroll",
         "next-intl"
       ],
-      "isFeatured": "false",
+      "images": [
+        {
+          "url": "/assets/landing-pages/neo/1.png",
+          "title": "Neo - Screenshot 1"
+        },
+        {
+          "url": "/assets/landing-pages/neo/2.png",
+          "title": "Neo - Screenshot 2"
+        },
+        {
+          "url": "/assets/landing-pages/neo/3.png",
+          "title": "Neo - Screenshot 3"
+        },
+        {
+          "url": "/assets/landing-pages/neo/4.png",
+          "title": "Neo - Screenshot 4"
+        }
+      ],
       "links": {
         "demo": "https://neodisplay.id/",
         "repo": ""
@@ -658,7 +1015,24 @@
         "Lenis Scroll",
         "next-intl"
       ],
-      "isFeatured": "false",
+      "images": [
+        {
+          "url": "/assets/landing-pages/kmi/1.png",
+          "title": "KMI - Screenshot 1"
+        },
+        {
+          "url": "/assets/landing-pages/kmi/2.png",
+          "title": "KMI - Screenshot 2"
+        },
+        {
+          "url": "/assets/landing-pages/kmi/3.png",
+          "title": "KMI - Screenshot 3"
+        },
+        {
+          "url": "/assets/landing-pages/kmi/4.png",
+          "title": "KMI - Screenshot 4"
+        }
+      ],
       "links": {
         "demo": "https://kmi-official-site.vercel.app/",
         "repo": ""

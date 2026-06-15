@@ -1,12 +1,17 @@
+// Tujuan      : Menampilkan 3 daftar karya terpilih (1 dari masing-masing kategori) dalam bentuk grid 3 kolom simetris
+// Caller      : Halaman utama (src/app/page.tsx)
+// Dependensi  : react, next/link, framer-motion, lucide-react, ScrollReveal, worksData
+// Main Exports: WorkView
+// Side Effects: -
+
 "use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import worksData from "@/data/works.json";
 
-// MotionLink: gabungan framer-motion + Next.js client-side navigation
 const MotionLink = motion.create(Link);
 
 type WorkItem = {
@@ -14,9 +19,9 @@ type WorkItem = {
   slug: string;
   stack: string;
   category: string;
-  focus: string;
+  focus?: string;
   summary: string;
-  isFeatured: string;
+  isFeatured?: string;
   links: { demo: string; repo: string };
 };
 
@@ -27,14 +32,12 @@ const categoryLabel: Record<string, string> = {
   experiment: "Experiment"
 };
 
-function getFeatured() {
-  const all = [
-    ...worksData.systems,
-    ...worksData.interactive,
-    ...worksData.landing_pages,
+function getCuratedWorks() {
+  return [
+    worksData.systems[0],
+    worksData.interactive[0],
+    worksData.landing_pages[0],
   ] as WorkItem[];
-
-  return all.filter((p) => p.isFeatured === "true");
 }
 
 function ProjectCard({ item, className = "" }: { item: WorkItem; className?: string }) {
@@ -106,18 +109,20 @@ function ProjectCard({ item, className = "" }: { item: WorkItem; className?: str
         >
           {item.name}
         </h3>
-        <p
-          className="mb-6"
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "0.95rem",
-            color: "rgba(239,209,195,0.5)",
-            fontWeight: 300,
-            lineHeight: 1.6,
-          }}
-        >
-          {item.focus}
-        </p>
+        {item.focus && (
+          <p
+            className="mb-6"
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.95rem",
+              color: "rgba(239,209,195,0.5)",
+              fontWeight: 300,
+              lineHeight: 1.6,
+            }}
+          >
+            {item.focus}
+          </p>
+        )}
         <span
           className="inline-block px-3 py-1.5 rounded-lg text-xs"
           style={{
@@ -135,87 +140,87 @@ function ProjectCard({ item, className = "" }: { item: WorkItem; className?: str
   );
 }
 
-function getBentoClass(index: number) {
-  const remainder = index % 5;
-  switch (remainder) {
-    case 0:
-      return "col-span-1 md:col-span-2 min-h-[240px] md:min-h-[300px]";
-    case 1:
-      return "col-span-1 md:col-span-1 min-h-[240px] md:min-h-[300px]";
-    case 2:
-      return "col-span-1 md:col-span-1 min-h-[240px] md:min-h-[300px]";
-    case 3:
-      return "col-span-1 md:col-span-2 min-h-[240px] md:min-h-[300px]";
-    case 4:
-      return "col-span-1 md:col-span-3 min-h-[240px] md:min-h-[350px]";
-    default:
-      return "col-span-1 md:col-span-1 min-h-[240px] md:min-h-[300px]";
-  }
-}
-
 export function WorkView() {
-  const items = getFeatured();
+  const items = getCuratedWorks();
+
   return (
     <section id="work" className="py-12 md:py-24">
       <div className="container-main">
-        <div style={{ marginBottom: "5rem" }}>
+        {/* Section Header */}
+        <div style={{ marginBottom: "4rem" }}>
           <ScrollReveal>
-            <div className="flex items-end justify-between flex-wrap gap-6">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span
+            <div className="flex items-center justify-between flex-wrap gap-6">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span
+                    style={{
+                      fontSize: "0.7rem",
+                      fontFamily: "var(--font-body)",
+                      color: "rgba(239,209,195,0.4)",
+                      letterSpacing: "0.25em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Selected Work
+                  </span>
+                </div>
+                <h2
                   style={{
-                    fontSize: "0.7rem",
-                    fontFamily: "var(--font-body)",
-                    color: "rgba(239,209,195,0.4)",
-                    letterSpacing: "0.25em",
-                    textTransform: "uppercase",
+                    fontFamily: "var(--font-display)",
+                    fontWeight: 800,
+                    fontSize: "clamp(3rem, 7vw, 6rem)",
+                    color: "#efd1c3",
+                    letterSpacing: "-0.03em",
+                    lineHeight: 1,
                   }}
                 >
-                  Selected Work
-                </span>
+                  Work
+                </h2>
               </div>
-              <h2
+
+              {/* Premium Apple-style All Projects Button */}
+              <MotionLink
+                href="/works"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all z-10"
                 style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 800,
-                  fontSize: "clamp(3rem, 7vw, 6rem)",
-                  color: "#efd1c3",
-                  letterSpacing: "-0.03em",
-                  lineHeight: 1,
+                  background: "rgba(239,209,195,0.04)",
+                  border: "1px solid rgba(239,209,195,0.1)",
+                  color: "rgba(239,209,195,0.7)",
+                  fontFamily: "var(--font-body)",
                 }}
+                whileHover={{
+                  backgroundColor: "rgba(239,209,195,0.12)",
+                  borderColor: "rgba(239,209,195,0.22)",
+                  color: "#efd1c3",
+                  scale: 1.03,
+                }}
+                whileTap={{ scale: 0.97 }}
               >
-                Work
-              </h2>
+                <span>All projects</span>
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  style={{ fontSize: "0.9rem" }}
+                >
+                  →
+                </motion.span>
+              </MotionLink>
             </div>
-            <MotionLink
-              href="/works"
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.875rem",
-                color: "rgba(239,209,195,0.45)",
-                letterSpacing: "0.05em",
-              }}
-              whileHover={{ color: "#efd1c3", x: 4 }}
-              className="hover-underline pb-0.5"
-            >
-              All projects →
-            </MotionLink>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
         </div>
 
+        {/* Bento Grid (3 Curated Columns) */}
         <ScrollReveal>
-          <StaggerContainer
-            staggerDelay={0.07}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
-            {items.map((item, i) => (
-              <StaggerItem key={item.slug} className={getBentoClass(i)}>
-                <ProjectCard item={item} className="w-full" />
-              </StaggerItem>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {items.map((item) => (
+              <div
+                key={item.slug}
+                className="col-span-1 min-h-[260px] md:min-h-[320px]"
+              >
+                <ProjectCard item={item} className="w-full h-full" />
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </ScrollReveal>
       </div>
     </section>

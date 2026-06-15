@@ -2,14 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-
-interface ScrollRevealProps {
-  children: React.ReactNode;
-  delay?: number;
-  direction?: "up" | "left" | "right" | "none";
-  className?: string;
-  once?: boolean;
-}
+import type { ScrollRevealProps, StaggerContainerProps } from "./types";
 
 export function ScrollReveal({
   children,
@@ -47,12 +40,6 @@ export function ScrollReveal({
       {children}
     </motion.div>
   );
-}
-
-interface StaggerContainerProps {
-  children: React.ReactNode;
-  className?: string;
-  staggerDelay?: number;
 }
 
 export function StaggerContainer({ children, className, staggerDelay = 0.1 }: StaggerContainerProps) {

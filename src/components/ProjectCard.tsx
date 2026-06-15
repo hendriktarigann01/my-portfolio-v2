@@ -3,19 +3,8 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  year: string;
-  url?: string;
-  size?: "large" | "medium" | "small";
-  accent?: string;
-}
-
-const DEFAULT_ACCENT = "rgba(239,209,195,0.06)";
+import { DEFAULT_ACCENT } from "./constants";
+import type { Project } from "./types";
 
 export function ProjectCard({ project }: { project: Project }) {
   const cardRef = useRef<HTMLDivElement>(null);

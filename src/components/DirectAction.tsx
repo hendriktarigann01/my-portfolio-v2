@@ -1,12 +1,7 @@
-// Tujuan      : Interactive canvas arrow drawing effect mengarah ke button — desktop only
-// Caller      : src/views/HeroView.tsx
-// Dependensi  : React (useEffect, useRef, useCallback)
-// Main Exports: DirectAction
-// Side Effects: mousemove event listener, requestAnimationFrame loop (desktop only)
-
 "use client";
 
 import React, { useEffect, useRef, useCallback, useState } from "react";
+import type { DirectActionProps } from "./types";
 
 export const DirectAction = ({
   children,
@@ -16,15 +11,7 @@ export const DirectAction = ({
   color = { r: 239, g: 209, b: 195 },
   containerClassName,
   buttonWrapperClassName,
-}: {
-  children: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-  style?: React.CSSProperties;
-  color?: { r: number; g: number; b: number };
-  containerClassName?: string;
-  buttonWrapperClassName?: string;
-}) => {
+}: DirectActionProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const targetRef = useRef<HTMLButtonElement>(null);
   const mousePosRef = useRef<{ x: number | null; y: number | null }>({
@@ -34,7 +21,6 @@ export const DirectAction = ({
   const ctxRef = useRef<CanvasRenderingContext2D | null>(null);
   const animationFrameIdRef = useRef<number | null>(null);
 
-  // Deteksi touch device — disable canvas effect di mobile
   const [isTouchDevice, setIsTouchDevice] = useState(true);
 
   useEffect(() => {
@@ -61,7 +47,6 @@ export const DirectAction = ({
     const rect = targetEl.getBoundingClientRect();
     const canvasRect = canvasEl.getBoundingClientRect();
 
-    // Map to canvas coordinate space
     const cx = rect.left - canvasRect.left + rect.width / 2;
     const cy = rect.top - canvasRect.top + rect.height / 2;
 
@@ -85,7 +70,6 @@ export const DirectAction = ({
     ctx.strokeStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${opacity})`;
     ctx.lineWidth = 2;
 
-    // Draw curve
     ctx.save();
     ctx.beginPath();
     ctx.moveTo(x0, y0);
@@ -94,7 +78,6 @@ export const DirectAction = ({
     ctx.stroke();
     ctx.restore();
 
-    // Draw arrowhead
     const angle = Math.atan2(y1 - controlY, x1 - controlX);
     const headLength = 10 * (ctx.lineWidth / 1.5);
     ctx.beginPath();
@@ -112,7 +95,6 @@ export const DirectAction = ({
   }, [color]);
 
   useEffect(() => {
-    // Jangan inisialisasi canvas & listener di touch device
     if (isTouchDevice) return;
 
     const canvas = canvasRef.current;
@@ -140,7 +122,6 @@ export const DirectAction = ({
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      // If mouse is outside the canvas (e.g. outside the Hero section), reset the arrow
       if (x < 0 || x > rect.width || y < 0 || y > rect.height) {
         mousePosRef.current = { x: null, y: null };
       } else {
@@ -178,7 +159,6 @@ export const DirectAction = ({
           {children}
         </button>
       </div>
-      {/* Canvas hanya dirender di non-touch device */}
       {!isTouchDevice && (
         <canvas
           ref={canvasRef}

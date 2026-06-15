@@ -13,7 +13,6 @@ type WorkEntry = {
   category: string;
   focus?: string;
   summary: string;
-  isFeatured: string;
   links: { demo: string; repo: string };
 };
 
@@ -67,8 +66,8 @@ const item: Variants = {
 
 export default function WorksPage() {
   return (
-     <section className="py-12 md:py-24 px-6 md:px-0">
-       <div className="container-main mx-auto">
+    <section className="py-12 md:py-24 px-6 md:px-0">
+      <div className="container-main mx-auto">
         {/* Header */}
         <motion.div
           className="mb-24"
@@ -186,7 +185,6 @@ export default function WorksPage() {
 // ─── card ─────────────────────────────────────────────────────────────────────
 
 function WorkCard({ entry }: { entry: WorkEntry }) {
-  const isFeatured = entry.isFeatured === "true";
 
   return (
     <motion.div variants={item}>
@@ -194,12 +192,8 @@ function WorkCard({ entry }: { entry: WorkEntry }) {
         <motion.div
           className="relative rounded-2xl p-6 h-full min-h-[160px] flex flex-col justify-between overflow-hidden"
           style={{
-            background: isFeatured
-              ? "rgba(239,209,195,0.05)"
-              : "rgba(239,209,195,0.02)",
-            border: isFeatured
-              ? "1px solid rgba(239,209,195,0.12)"
-              : "1px solid rgba(239,209,195,0.06)",
+            background: "rgba(239,209,195,0.02)",
+            border: "1px solid rgba(239,209,195,0.06)",
           }}
           whileHover={{
             background: "rgba(239,209,195,0.07)",
@@ -208,26 +202,19 @@ function WorkCard({ entry }: { entry: WorkEntry }) {
           }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-          {/* Featured dot */}
-          {isFeatured && (
-            <span
-              className="absolute top-5 right-5 w-1.5 h-1.5 rounded-full z-10"
-              style={{ background: "#efd1c3" }}
-            />
-          )}
 
           {/* Image Slot */}
-          <div 
+          <div
             className="w-full h-40 md:h-48 mb-6 rounded-xl overflow-hidden shrink-0 relative"
-            style={{ 
-              background: "rgba(239,209,195,0.03)", 
-              border: "1px solid rgba(239,209,195,0.05)" 
+            style={{
+              background: "rgba(239,209,195,0.03)",
+              border: "1px solid rgba(239,209,195,0.05)"
             }}
           >
-             {/* Replace this with your actual image */}
-             <div className="absolute inset-0 flex items-center justify-center">
-               <span style={{ color: "rgba(239,209,195,0.2)", fontSize: "0.8rem", fontFamily: "var(--font-body)" }}>Project Image</span>
-             </div>
+            {/* Replace this with your actual image */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span style={{ color: "rgba(239,209,195,0.2)", fontSize: "0.8rem", fontFamily: "var(--font-body)" }}>Project Image</span>
+            </div>
           </div>
 
           {/* Top: title + focus */}
@@ -284,17 +271,6 @@ function WorkCard({ entry }: { entry: WorkEntry }) {
                 {entry.category}
               </span>
             </div>
-            <motion.span
-              className="text-xs shrink-0"
-              style={{
-                color: "rgba(239,209,195,0.25)",
-                fontFamily: "var(--font-body)",
-              }}
-              initial={{ x: 0 }}
-              whileHover={{ x: 3 }}
-            >
-              →
-            </motion.span>
           </div>
         </motion.div>
       </Link>

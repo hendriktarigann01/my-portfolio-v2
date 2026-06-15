@@ -8,47 +8,9 @@ import {
   useMemo,
   useState,
 } from "react"
-import {
-  AnimatePresence,
-  AnimatePresenceProps,
-  motion,
-  MotionProps,
-  Transition,
-} from "framer-motion"
-
-const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(" ");
-
-interface TextRotateProps {
-  texts: string[]
-  rotationInterval?: number
-  initial?: MotionProps["initial"]
-  animate?: MotionProps["animate"]
-  exit?: MotionProps["exit"]
-  animatePresenceMode?: AnimatePresenceProps["mode"]
-  animatePresenceInitial?: boolean
-  staggerDuration?: number
-  staggerFrom?: "first" | "last" | "center" | number | "random"
-  transition?: Transition
-  loop?: boolean // Whether to start from the first text when the last one is reached
-  auto?: boolean // Whether to start the animation automatically
-  splitBy?: "words" | "characters" | "lines" | string
-  onNext?: (index: number) => void
-  mainClassName?: string
-  splitLevelClassName?: string
-  elementLevelClassName?: string
-}
-
-export interface TextRotateRef {
-  next: () => void
-  previous: () => void
-  jumpTo: (index: number) => void
-  reset: () => void
-}
-
-interface WordObject {
-  characters: string[]
-  needsSpace: boolean
-}
+import { AnimatePresence, motion } from "framer-motion"
+import { cn } from "./helpers"
+import type { TextRotateProps, TextRotateRef, WordObject } from "./types"
 
 const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
   (

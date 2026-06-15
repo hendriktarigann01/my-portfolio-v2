@@ -32,9 +32,8 @@ const nowItems = [
 
 export function NowView() {
   return (
-   <section id="now" className="py-12 md:py-24">
+    <section id="now" className="py-12 md:py-24">
       <div className="container-main flex flex-col md:flex-row justify-between relative">
-        
         {/* Right side Text (Sticky) */}
         <div className="w-full md:w-1/2 md:sticky top-0 h-auto md:h-screen flex flex-col justify-center mb-12 md:mb-0 z-10 pointer-events-none pt-24 md:pt-0">
           <ScrollReveal>
@@ -59,7 +58,7 @@ export function NowView() {
                 color: "#efd1c3",
                 letterSpacing: "-0.03em",
                 lineHeight: 1,
-                marginBottom: "1.5rem"
+                marginBottom: "1.5rem",
               }}
             >
               What I&apos;m <br /> up to
@@ -82,14 +81,17 @@ export function NowView() {
         {/* Left side Cards (Scrolling/Sticky) */}
         <div className="w-full md:w-1/2 flex flex-col gap-4 relative z-20">
           {nowItems.map((item, i) => (
-            <figure key={i} className="md:sticky top-0 md:h-screen grid place-content-center py-6 md:py-0">
+            <figure
+              key={i}
+              className="md:sticky top-0 md:h-screen grid place-content-center py-6 md:py-0"
+            >
               <motion.article
-                className={`w-full max-w-md mx-auto rounded-3xl p-8 md:p-12 shadow-xl ${item.rotation}`}
+                className={`w-full max-w-md mx-auto rounded-3xl p-8 md:p-12 ${item.rotation}`}
                 style={{
-                  background: "rgba(2,66,68,0.9)", 
-                  backdropFilter: "blur(20px)",
+                  background: "rgba(2,66,68,0.9)",
+                  backdropFilter: "blur(10px)",
                   border: "1px solid rgba(239,209,195,0.15)",
-                  }}
+                }}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >

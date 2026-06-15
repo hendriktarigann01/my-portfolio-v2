@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { use } from "react";
+import { notFound } from "next/navigation";
 import worksData from "@/data/works.json";
+import Carousel, { type CarouselImage, GroupedCarousel, type ImageGroup } from "@/components/Carousel";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -20,9 +22,11 @@ type WorkEntry = {
   highlights: string[];
   features: string[];
   techStack: string[];
-  isFeatured: string;
+  isFeatured?: string;
   links: { demo: string; repo: string };
   status?: string;
+  images?: { url: string; title?: string }[];
+  imageGroups?: { label: string; images: { url: string; title?: string }[] }[];
 };
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
@@ -59,31 +63,7 @@ export default function WorkDetailPage({
   const entry = allEntries.find((e) => e.slug === slug);
 
   if (!entry) {
-    return (
-      <main className="min-h-screen ">
-        <div className="text-center">
-          <p
-            style={{
-              fontFamily: "var(--font-display)",
-              color: "rgba(239,209,195,0.3)",
-              fontSize: "1rem",
-            }}
-          >
-            Project not found.
-          </p>
-          <Link
-            href="/works"
-            className="mt-4 inline-block text-sm"
-            style={{
-              color: "rgba(239,209,195,0.4)",
-              fontFamily: "var(--font-body)",
-            }}
-          >
-            ← Back to all work
-          </Link>
-        </div>
-      </main>
-    );
+    notFound();
   }
 
   const title = formatTitle(entry.name);
@@ -228,21 +208,20 @@ export default function WorkDetailPage({
             {entry.summary || entry.focus}
           </motion.p>
 
-          {/* Image Slot */}
+          {/* Project Carousel */}
           <motion.div
-            className="w-full aspect-[16/9] mt-12 mb-10 rounded-2xl overflow-hidden relative"
-            style={{
-              background: "rgba(239,209,195,0.02)",
-              border: "1px solid rgba(239,209,195,0.08)"
-            }}
+            className="w-full mt-12 mb-10"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            {/* Replace this with your actual image */}
-            <div className="absolute inset-0 flex items-center justify-center">
-               <span style={{ color: "rgba(239,209,195,0.2)", fontSize: "1rem", fontFamily: "var(--font-body)" }}>Project Cover Image</span>
-            </div>
+            {entry.imageGroups && entry.imageGroups.length > 0 ? (
+              <GroupedCarousel
+                groups={entry.imageGroups as ImageGroup[]}
+              />
+            ) : (
+              <Carousel images={(entry.images as CarouselImage[]) || []} />
+            )}
           </motion.div>
 
           {/* CTA links */}
@@ -482,31 +461,24 @@ export default function WorkDetailPage({
       {/* ── Back nav ── */}
       <section className="pb-24 px-6">
         <div className="container-main mx-auto">
-          <Link href="/works">
+          <Link href="/works" className="inline-block">
             <motion.div
-              className="inline-flex items-center gap-3"
-              whileHover={{ x: -4 }}
-              transition={{ duration: 0.25 }}
+              className="inline-flex items-center gap-3.5 px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
+              style={{
+                background: "rgba(239,209,195,0.04)",
+                border: "1px solid rgba(239,209,195,0.1)",
+                color: "rgba(239,209,195,0.7)",
+                fontFamily: "var(--font-body)",
+              }}
+              whileHover={{
+                backgroundColor: "rgba(239,209,195,0.12)",
+                borderColor: "rgba(239,209,195,0.22)",
+                color: "#efd1c3",
+              }}
+              transition={{ duration: 0.3 }}
             >
-              <span
-                style={{
-                  color: "rgba(239,209,195,0.35)",
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.85rem",
-                }}
-              >
-                ←
-              </span>
-              <span
-                style={{
-                  color: "rgba(239,209,195,0.35)",
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.85rem",
-                  fontWeight: 300,
-                }}
-              >
-                All projects
-              </span>
+              <span style={{ fontSize: "1rem" }}>←</span>
+              <span>All projects</span>
             </motion.div>
           </Link>
         </div>

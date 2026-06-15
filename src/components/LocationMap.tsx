@@ -3,24 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-
-const HOME = {
-  lat: -6.2329298,
-  lng: 107.1418222,
-  city: "Cikarang",
-  country: "Indonesia"
-};
-
-function degToRad(deg: number) { return deg * (Math.PI / 180); }
-function getDistanceKm(lat1: number, lng1: number, lat2: number, lng2: number) {
-  const R = 6371;
-  const dLat = degToRad(lat2 - lat1);
-  const dLng = degToRad(lng2 - lng1);
-  const a = Math.sin(dLat / 2) ** 2 + Math.cos(degToRad(lat1)) * Math.cos(degToRad(lat2)) * Math.sin(dLng / 2) ** 2;
-  return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
-}
-
-type GeoData = { city: string; country_name: string; latitude: number; longitude: number; };
+import { HOME_LOCATION } from "./constants";
+import { getDistanceKm } from "./helpers";
+import type { GeoData } from "./types";
 
 export function LocationMap() {
   const mapContainer = useRef<HTMLDivElement>(null);
@@ -29,7 +14,6 @@ export function LocationMap() {
   const [distance, setDistance] = useState<number | null>(null);
   const [locationSource, setLocationSource] = useState<"gps" | "ip">("ip");
 
-  // 1. Fetch geo (GPS -> fallback IP)
   useEffect(() => {
     const fetchIP = () => {
       fetch("/api/geo")
@@ -37,7 +21,7 @@ export function LocationMap() {
         .then((data) => {
           if (data.latitude && !isNaN(data.latitude)) {
             setGeo(data);
-            setDistance(getDistanceKm(HOME.lat, HOME.lng, data.latitude, data.longitude));
+            setDistance(getDistanceKm(HOME_LOCATION.lat, HOME_LOCATION.lng, data.latitude, data.longitude));
             setLocationSource("ip");
           }
         })
@@ -54,7 +38,7 @@ export function LocationMap() {
             longitude: pos.coords.longitude,
           };
           setGeo(data);
-          setDistance(getDistanceKm(HOME.lat, HOME.lng, data.latitude, data.longitude));
+          setDistance(getDistanceKm(HOME_LOCATION.lat, HOME_LOCATION.lng, data.latitude, data.longitude));
           setLocationSource("gps");
         },
         fetchIP,
@@ -65,14 +49,13 @@ export function LocationMap() {
     }
   }, []);
 
-  // 2. Init map
   useEffect(() => {
     if (!mapContainer.current || map.current) return;
 
     map.current = new maplibregl.Map({
       container: mapContainer.current,
       style: "https://tiles.stadiamaps.com/styles/alidade_smooth_dark.json",
-      center: [HOME.lng, HOME.lat],
+      center: [HOME_LOCATION.lng, HOME_LOCATION.lat],
       zoom: 10,
       interactive: false,
       attributionControl: false,
@@ -81,14 +64,12 @@ export function LocationMap() {
     return () => { map.current?.remove(); map.current = null; };
   }, []);
 
-  // 3. Render markers + line + zoom out — jalan setelah geo ready
   useEffect(() => {
     if (!geo || isNaN(geo.latitude) || isNaN(geo.longitude)) return;
     if (!map.current) return;
     const m = map.current;
 
     const onLoad = () => {
-      // Home marker
       const homeEl = document.createElement("div");
       homeEl.style.cssText = `
         width: 48px; height: 48px;
@@ -96,10 +77,9 @@ export function LocationMap() {
         filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));
       `;
       new maplibregl.Marker({ element: homeEl, anchor: "bottom" })
-        .setLngLat([HOME.lng, HOME.lat])
+        .setLngLat([HOME_LOCATION.lng, HOME_LOCATION.lat])
         .addTo(m);
 
-      // User marker
       const userEl = document.createElement("div");
       userEl.style.cssText = `
         width: 14px; height: 14px; border-radius: 50%;
@@ -111,7 +91,6 @@ export function LocationMap() {
         .setLngLat([geo.longitude, geo.latitude])
         .addTo(m);
 
-      // Dashed line
       if (!m.getSource("line")) {
         m.addSource("line", {
           type: "geojson",
@@ -120,7 +99,7 @@ export function LocationMap() {
             properties: {},
             geometry: {
               type: "LineString",
-              coordinates: [[HOME.lng, HOME.lat], [geo.longitude, geo.latitude]],
+              coordinates: [[HOME_LOCATION.lng, HOME_LOCATION.lat], [geo.longitude, geo.latitude]],
             },
           },
         });
@@ -138,12 +117,11 @@ export function LocationMap() {
         });
       }
 
-      // Zoom out
       setTimeout(() => {
         m.fitBounds(
           [
-            [Math.min(HOME.lng, geo.longitude) - 5, Math.min(HOME.lat, geo.latitude) - 5],
-            [Math.max(HOME.lng, geo.longitude) + 5, Math.max(HOME.lat, geo.latitude) + 5],
+            [Math.min(HOME_LOCATION.lng, geo.longitude) - 5, Math.min(HOME_LOCATION.lat, geo.latitude) - 5],
+            [Math.max(HOME_LOCATION.lng, geo.longitude) + 5, Math.max(HOME_LOCATION.lat, geo.latitude) + 5],
           ],
           { duration: 2800, essential: true, padding: 80 }
         );
@@ -177,7 +155,7 @@ export function LocationMap() {
           <>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "rgba(239,209,195,0.6)", lineHeight: 1.7, fontWeight: 300 }}>
               I&apos;m based in{" "}
-              <span style={{ color: "#efd1c3", fontWeight: 500 }}>{HOME.city}, {HOME.country}</span>
+              <span style={{ color: "#efd1c3", fontWeight: 500 }}>{HOME_LOCATION.city}, {HOME_LOCATION.country}</span>
               {" "}— roughly{" "}
               <span style={{ color: "#efd1c3", fontWeight: 600, fontFamily: "var(--font-display)" }}>
                 {distance.toLocaleString()} km

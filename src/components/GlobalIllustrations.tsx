@@ -3,21 +3,7 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-const illustrations = [
-  { src: "/illustration/5.png",  top: 5,  left: "3%",   w: 80, rotate: -8  },
-  { src: "/illustration/6.png",  top: 15, left: "80%",  w: 80, rotate: 6   },
-  { src: "/illustration/1.png",  top: 35, left: "2%",   w: 80, rotate: -5  },
-  { src: "/illustration/9.png",  top: 45, left: "85%",  w: 80, rotate: 8   },
-  { src: "/illustration/2.png",  top: 60, left: "3%",   w: 80, rotate: 5   },
-  { src: "/illustration/7.png",  top: 75, left: "83%",  w: 80, rotate: -6  },
-  { src: "/illustration/3.png",  top: 85, left: "5%",   w: 80, rotate: 7   },
-  { src: "/illustration/4.png",  top: 95, left: "80%",  w: 80, rotate: -4  },
-  { src: "/illustration/8.png",  top: 25, left: "88%",  w: 80, rotate: -10 },
-  { src: "/illustration/10.png", top: 55, left: "78%",  w: 80, rotate: 9   },
-  { src: "/illustration/11.png", top: 70, left: "10%",  w: 80, rotate: -5  },
-  { src: "/illustration/12.png", top: 10, left: "15%",  w: 80, rotate: 4   },
-];
+import { ILLUSTRATIONS, ILLUSTRATION_SPREAD } from "./constants";
 
 function IllustrationFloat({
   src,
@@ -38,10 +24,8 @@ function IllustrationFloat({
   rotate: number;
   scrollY: any;
 }) {
-  // Translate Y directly based on scroll in pixels.
-  // speedMultiplier near 1 mimics normal page scroll.
   const y = useTransform(scrollY, (v: number) => -(v * speedMultiplier));
-  
+
   return (
     <motion.div
       className="absolute pointer-events-none select-none z-0"
@@ -88,16 +72,11 @@ export function GlobalIllustrations() {
 
   if (!mounted) return null;
 
-  // Sebar 12 ilustrasi sejauh 750vh (Multiplier 7.5) agar tidak ada yang terpotong di bawah footer
-  const spreadMultiplier = 7.5;
-  
-  const allIllustrations = illustrations.map((i) => {
-    return {
-      ...i,
-      topVh: i.top * spreadMultiplier,
-      speedMultiplier: 0.85, 
-    };
-  });
+  const allIllustrations = ILLUSTRATIONS.map((i) => ({
+    ...i,
+    topVh: i.top * ILLUSTRATION_SPREAD,
+    speedMultiplier: 0.85,
+  }));
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">

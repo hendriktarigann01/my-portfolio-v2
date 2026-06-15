@@ -1,23 +1,12 @@
-// Tujuan      : Navbar global — sidebar desktop + mobile fullscreen overlay menu
-// Caller      : src/app/layout.tsx
-// Dependensi  : framer-motion, lucide-react, useAudio (lib/audio-context)
-// Main Exports: Navbar
-// Side Effects: Audio toggle via AudioContext
-
 "use client";
+
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Volume2, VolumeX, Menu, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAudio } from "@/lib/audio-context";
-
-const navLinks = [
-  { label: "WORK", href: "#work" },
-  { label: "PROCESS", href: "#process" },
-  { label: "NOW", href: "#now" },
-  { label: "CONTACT", href: "#contact" },
-];
+import { NAV_LINKS } from "./constants";
 
 export function Navbar() {
   const { isPlaying, toggleSound } = useAudio();
@@ -45,10 +34,8 @@ export function Navbar() {
 
   return (
     <>
-      {/* --- LEFT SIDEBAR (desktop only) --- */}
+      {/* LEFT SIDEBAR (desktop) */}
       <div className="hidden md:block fixed left-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(239,209,195,0.05)" }}>
-
-        {/* Logo */}
         <motion.div
           className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-auto"
           initial={{ opacity: 0, y: -20 }}
@@ -67,7 +54,6 @@ export function Navbar() {
           </a>
         </motion.div>
 
-        {/* Middle Vertical Text */}
         <motion.div
           className="absolute top-1/2 left-1/2 pointer-events-auto"
           initial={{ opacity: 0 }}
@@ -92,7 +78,7 @@ export function Navbar() {
         </motion.div>
       </div>
 
-      {/* --- RIGHT SIDEBAR (desktop only) --- */}
+      {/* RIGHT SIDEBAR (desktop) */}
       <div className="hidden md:block fixed right-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(239,209,195,0.05)" }}>
         <motion.nav
           className="absolute top-1/2 right-1/2 pointer-events-auto flex items-center gap-12"
@@ -104,7 +90,7 @@ export function Navbar() {
             whiteSpace: "nowrap",
           }}
         >
-          {navLinks.slice().reverse().map((link) => (
+          {NAV_LINKS.slice().reverse().map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -128,9 +114,8 @@ export function Navbar() {
         </motion.nav>
       </div>
 
-      {/* --- MOBILE TOP BAR --- */}
+      {/* MOBILE TOP BAR */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between">
-        {/* Logo text */}
         <motion.a
           href="#"
           onClick={(e) => handleClick(e, "#")}
@@ -146,7 +131,6 @@ export function Navbar() {
           HT<span style={{ color: "rgba(239,209,195,0.35)" }}>.</span>
         </motion.a>
 
-        {/* Hamburger button */}
         <motion.button
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -177,7 +161,7 @@ export function Navbar() {
         </motion.button>
       </div>
 
-      {/* --- MOBILE FULLSCREEN MENU OVERLAY --- */}
+      {/* MOBILE FULLSCREEN MENU */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -188,7 +172,7 @@ export function Navbar() {
             className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden"
             style={{ background: "rgba(2,20,21,0.97)", backdropFilter: "blur(20px)" }}
           >
-            {navLinks.map((link, i) => (
+            {NAV_LINKS.map((link, i) => (
               <motion.a
                 key={link.href}
                 href={link.href}
@@ -212,7 +196,6 @@ export function Navbar() {
               </motion.a>
             ))}
 
-            {/* Divider */}
             <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
@@ -220,7 +203,6 @@ export function Navbar() {
               style={{ width: 48, height: 1, background: "rgba(239,209,195,0.15)" }}
             />
 
-            {/* Audio toggle */}
             <motion.button
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
@@ -249,7 +231,7 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Bottom Left Audio Control FAB (all screens) */}
+      {/* Audio FAB (desktop) */}
       <motion.button
         className="pointer-events-auto hidden md:flex"
         initial={{ opacity: 0, scale: 0 }}

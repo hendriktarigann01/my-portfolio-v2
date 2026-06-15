@@ -17,8 +17,28 @@ import { Footer } from "@/components/Footer";
 import { AudioProvider } from "@/lib/audio-context";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://htsolution.tech"),
   title: "Hendrik Tarigan",
-  description: "From whiteboard to working product. End to end, solo.",
+  description:
+    "Fullstack developer crafting high performance digital systems and turning complex workflows into elegant web and desktop applications.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Hendrik Tarigan",
+    description:
+      "Fullstack developer crafting high performance digital systems and turning complex workflows into elegant web and desktop applications.",
+    url: "https://htsolution.tech",
+    siteName: "Hendrik Tarigan Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hendrik Tarigan",
+    description:
+      "Fullstack developer crafting high performance digital systems and turning complex workflows into elegant web and desktop applications.",
+  },
 };
 
 export default function RootLayout({
@@ -41,7 +61,6 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {/* AudioProvider di luar SmoothScrollProvider agar persist saat navigasi */}
         <AudioProvider>
           <SmoothScrollProvider>
             <Preloader />

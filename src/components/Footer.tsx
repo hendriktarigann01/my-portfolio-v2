@@ -1,9 +1,20 @@
+"use client";
+
 import Link from "next/link";
 
 // SVG Social Icons
 function IconGithub({ size = 20 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"></path>
     </svg>
   );
@@ -11,7 +22,16 @@ function IconGithub({ size = 20 }: { size?: number }) {
 
 function IconLinkedin({ size = 20 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
       <rect x="2" y="9" width="4" height="12"></rect>
       <circle cx="4" cy="4" r="2"></circle>
@@ -21,7 +41,16 @@ function IconLinkedin({ size = 20 }: { size?: number }) {
 
 function IconTwitter({ size = 20 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
       <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
     </svg>
   );
@@ -66,11 +95,18 @@ export function Footer() {
           {tape}
         </div>
 
+        {/* Parent utama (bisa lepas class relative jika tidak dibutuhkan lagi) */}
         <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-10 flex-1 w-full">
-
           {/* Nav */}
           <div className="flex flex-col gap-3">
-            <h4 className="uppercase text-xs font-semibold" style={{ fontFamily: "var(--font-display)", color: "rgba(239,209,195,0.8)", letterSpacing: "0.1em" }}>
+            <h4
+              className="uppercase text-xs font-semibold"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "rgba(239,209,195,0.8)",
+                letterSpacing: "0.1em",
+              }}
+            >
               Navigation
             </h4>
             <div className="flex flex-col gap-2 text-sm">
@@ -79,9 +115,15 @@ export function Footer() {
                   key={href}
                   href={href}
                   className="transition-colors hover:text-[#efd1c3]"
-                  style={{ fontFamily: "var(--font-body)", color: "rgba(239,209,195,0.5)" }}
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    color: "rgba(239,209,195,0.5)",
+                  }}
                 >
-                  {href.replace("/#", "").toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}
+                  {href
+                    .replace("/#", "")
+                    .toLowerCase()
+                    .replace(/^\w/, (c) => c.toUpperCase())}
                 </Link>
               ))}
             </div>
@@ -89,13 +131,26 @@ export function Footer() {
 
           {/* Socials */}
           <div className="flex flex-col gap-3">
-            <h4 className="uppercase text-xs font-semibold" style={{ fontFamily: "var(--font-display)", color: "rgba(239,209,195,0.8)", letterSpacing: "0.1em" }}>
+            <h4
+              className="uppercase text-xs font-semibold"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "rgba(239,209,195,0.8)",
+                letterSpacing: "0.1em",
+              }}
+            >
               Socials
             </h4>
             <div className="flex flex-col gap-2 text-sm">
               {[
-                { label: "LinkedIn", href: "https://linkedin.com/in/hendriktarigan" },
-                { label: "Instagram", href: "https://instagram.com/hendriktarigan" },
+                {
+                  label: "LinkedIn",
+                  href: "https://linkedin.com/in/hendriktarigan",
+                },
+                {
+                  label: "Instagram",
+                  href: "https://instagram.com/hendriktarigan",
+                },
                 { label: "GitHub", href: "https://github.com/hendriktarigan" },
               ].map((s) => (
                 <a
@@ -104,7 +159,10 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   className="transition-colors hover:text-[#efd1c3]"
-                  style={{ fontFamily: "var(--font-body)", color: "rgba(239,209,195,0.5)" }}
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    color: "rgba(239,209,195,0.5)",
+                  }}
                 >
                   {s.label}
                 </a>
@@ -112,28 +170,90 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Status */}
-          <div className="flex flex-col gap-3">
-            <h4 className="uppercase text-xs font-semibold" style={{ fontFamily: "var(--font-display)", color: "rgba(239,209,195,0.8)", letterSpacing: "0.1em" }}>
+          {/* Status - Ditambahkan h-full / min-h agar tingginya fleksibel menampung v1 & v2 */}
+          <div className="flex flex-col gap-3 h-full min-h-[110px] md:min-h-[140px] relative">
+            <h4
+              className="uppercase text-xs font-semibold"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "rgba(239,209,195,0.8)",
+                letterSpacing: "0.1em",
+              }}
+            >
               Status
             </h4>
-            <div className="group relative text-sm cursor-default" style={{ height: "2.5rem", width: "16rem" }}>
+
+            <div
+              className="group relative text-sm cursor-default"
+              style={{ height: "2.5rem", width: "16rem" }}
+            >
               <span
                 className="absolute top-0 left-0 flex items-center gap-2 transition-opacity duration-300 group-hover:opacity-0"
-                style={{ fontFamily: "var(--font-body)", color: "rgba(239,209,195,0.5)" }}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: "rgba(239,209,195,0.5)",
+                }}
               >
                 Available for work
               </span>
               <span
                 className="absolute top-0 left-0 flex flex-col opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                style={{ fontFamily: "var(--font-body)", color: "rgba(239,209,195,0.6)", lineHeight: 1.5 }}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: "rgba(239,209,195,0.6)",
+                  lineHeight: 1.5,
+                }}
               >
-                <span>☹ It&apos;s a fake availability.</span>
-                <span style={{ fontSize: "0.75rem", color: "rgba(239,209,195,0.4)" }}>Contact me to check actual status.</span>
+                <span>Available for select freelance projects.</span>
+                <span style={{ color: "rgba(239,209,195,0.4)" }}>
+                  Let&apos;s discuss your roadmap.
+                </span>
+              </span>
+            </div>
+
+            {/* v1 & v2 dipindahkan ke sini, menggunakan mt-auto agar selalu terdorong ke ujung bawah kontainer Status */}
+            <div className="mt-auto flex items-end gap-1.5 pt-4">
+              <a
+                href="https://portfolio-hendrik.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "2.5rem",
+                  fontWeight: 900,
+                  color: "rgba(239,209,195,0.1)",
+                  letterSpacing: "-0.04em",
+                  lineHeight: 1,
+                  textDecoration: "none",
+                  fontStretch: "expanded",
+                  transition: "color 0.3s",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.color = "rgba(239,209,195,0.6)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.color = "rgba(239,209,195,0.1)")
+                }
+              >
+                v1
+              </a>
+              <span
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "2.5rem",
+                  fontWeight: 900,
+                  color: "rgba(239,209,195,0.45)",
+                  letterSpacing: "-0.04em",
+                  lineHeight: 1,
+                  fontStretch: "expanded",
+                  textDecoration: "line-through",
+                  textDecorationColor: "rgba(239,209,195,0.2)",
+                }}
+              >
+                v2
               </span>
             </div>
           </div>
-
         </div>
       </div>
     </footer>

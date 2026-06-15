@@ -1,16 +1,8 @@
-// Tujuan      : Smooth scroll provider menggunakan Lenis
-// Caller      : src/app/layout.tsx
-// Dependensi  : lenis
-// Main Exports: SmoothScrollProvider, lenisRef (module-level untuk external stop/start)
-// Side Effects: Lenis instance, requestAnimationFrame loop
-
 "use client";
 
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 
-// Module-level ref agar komponen lain (misal ChatWidget) bisa stop/start Lenis
-// tanpa perlu prop drilling atau context tambahan
 export let globalLenis: Lenis | null = null;
 
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {

@@ -1,9 +1,3 @@
-// Tujuan      : Custom cursor — hanya aktif di non-touch device (disabled di mobile)
-// Caller      : src/app/layout.tsx
-// Dependensi  : framer-motion
-// Main Exports: CursorFollow
-// Side Effects: mousemove event listener (desktop only)
-
 "use client";
 
 import { useEffect, useState } from "react";
