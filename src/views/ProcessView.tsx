@@ -3,30 +3,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { PROCESS_STEPS } from "@/constants";
+import type { ProcessStep } from "@/types";
 
-const steps = [
-  {
-    index: "01",
-    title: "Alignment Over Execution",
-    body: "I always make sure the context is fully understood with the stakeholders before touching the code. Once the requirements and limitations are clear, I start mapping out the database and API contracts while gradually working on the UI design."
-  },
-  {
-    index: "02",
-    title: "Seamless Integration",
-    body: "I usually handle the backend and frontend processes at the same time. While designing the API schema on the backend, I also work on slicing the UI right away so that the data structures are in sync and I don’t have to do the same work twice.",
-  },
-  {
-    index: "03",
-    title: "Background Processing",
-    body: "Complex architectural problems aren't always solved in front of a monitor. Stuck logic usually finds a way out while I'm commuting.Once I'm sitting in front of my laptop, all I have to do is execute the blueprint.",
-  },
-  {
-    index: "04",
-    title: "The Fullstack Advantage",
-    body: "I handle everything end-to-end, from the frontend to the database, so there's no risk of miscommunication during handoffs. Everything is managed under one roof, which makes the development cycle much faster and more consistent.",
-  },
-];
-function StepItem({ step, index, total }: { step: typeof steps[0]; index: number; total: number }) {
+function StepItem({ step, index, total }: { step: ProcessStep; index: number; total: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -41,13 +21,13 @@ function StepItem({ step, index, total }: { step: typeof steps[0]; index: number
 
       {/* Circle */}
       <motion.div
-        whileHover={{ scale: 1.1, boxShadow: "0 0 30px rgba(239,209,195,0.2)" }}
+        whileHover={{ scale: 1.1, boxShadow: "0 0 30px rgba(var(--accent-rgb),0.2)" }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         style={{
           width: 56,
           height: 56,
           borderRadius: "50%",
-          border: "1.5px solid rgba(239,209,195,0.3)",
+          border: "1.5px solid rgba(var(--accent-rgb),0.3)",
           background: "#024244",
           display: "flex",
           alignItems: "center",
@@ -62,7 +42,7 @@ function StepItem({ step, index, total }: { step: typeof steps[0]; index: number
           fontFamily: "var(--font-display)",
           fontWeight: 800,
           fontSize: "0.85rem",
-          color: "#efd1c3",
+          color: "var(--accent)",
           letterSpacing: "0.05em",
         }}>
           {step.index}
@@ -78,19 +58,19 @@ function StepItem({ step, index, total }: { step: typeof steps[0]; index: number
           height: 0,
           borderLeft: "8px solid transparent",
           borderRight: "8px solid transparent",
-          borderTop: "10px solid rgba(239,209,195,0.15)",
+          borderTop: "10px solid rgba(var(--accent-rgb),0.15)",
         }} />
       </motion.div>
 
       {/* Card */}
       <motion.div
-        whileHover={{ y: -4, borderColor: "rgba(239,209,195,0.2)", background: "rgba(239,209,195,0.07)" }}
+        whileHover={{ y: -4, borderColor: "rgba(var(--accent-rgb),0.2)", background: "rgba(var(--accent-rgb),0.07)" }}
         transition={{ duration: 0.25 }}
         style={{
           borderRadius: "1rem",
           padding: "1.5rem",
-          background: "rgba(239,209,195,0.03)",
-          border: "1px solid rgba(239,209,195,0.09)",
+          background: "rgba(var(--accent-rgb),0.03)",
+          border: "1px solid rgba(var(--accent-rgb),0.09)",
           width: "100%",
           height: "min(265px, 100%)",
           textAlign: "center",
@@ -101,7 +81,7 @@ function StepItem({ step, index, total }: { step: typeof steps[0]; index: number
           fontFamily: "var(--font-display)",
           fontWeight: 700,
           fontSize: "0.95rem",
-          color: "#efd1c3",
+          color: "var(--accent)",
           letterSpacing: "-0.01em",
           marginBottom: "0.625rem",
           lineHeight: 1.3,
@@ -111,7 +91,7 @@ function StepItem({ step, index, total }: { step: typeof steps[0]; index: number
         <p style={{
           fontFamily: "var(--font-body)",
           fontSize: "0.8rem",
-          color: "rgba(239,209,195,0.45)",
+          color: "rgba(var(--accent-rgb),0.45)",
           fontWeight: 300,
           lineHeight: 1.7,
         }}>
@@ -127,7 +107,7 @@ export function ProcessView() {
   const lineInView = useInView(lineRef, { once: true, margin: "-80px" });
 
   return (
-   <section id="process" className="py-12 md:py-24">
+   <section id="process" className="py-12 md:py-24 scroll-mt-20 md:scroll-mt-0">
       <div className="container-main">
         <div style={{ marginBottom: "5rem" }}>
           <ScrollReveal>
@@ -135,7 +115,7 @@ export function ProcessView() {
               <span style={{
                 fontSize: "0.7rem",
                 fontFamily: "var(--font-body)",
-                color: "rgba(239,209,195,0.4)",
+                color: "rgba(var(--accent-rgb),0.4)",
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
               }}>
@@ -146,7 +126,7 @@ export function ProcessView() {
               fontFamily: "var(--font-display)",
               fontWeight: 800,
               fontSize: "clamp(2.5rem, 6vw, 5rem)",
-              color: "#efd1c3",
+              color: "var(--accent)",
               letterSpacing: "-0.03em",
               lineHeight: 1,
             }}>
@@ -161,10 +141,10 @@ export function ProcessView() {
           <div
             ref={lineRef}
             className="hidden md:block"
-            style={{ position: "absolute", top: 28, left: "calc(12.5%)", right: "calc(12.5%)", height: "1px", background: "rgba(239,209,195,0.08)", zIndex: 0 }}
+            style={{ position: "absolute", top: 28, left: "calc(12.5%)", right: "calc(12.5%)", height: "1px", background: "rgba(var(--accent-rgb),0.08)", zIndex: 0 }}
           >
             <motion.div
-              style={{ height: "100%", background: "rgba(239,209,195,0.2)", transformOrigin: "left" }}
+              style={{ height: "100%", background: "rgba(var(--accent-rgb),0.2)", transformOrigin: "left" }}
               initial={{ scaleX: 0 }}
               animate={lineInView ? { scaleX: 1 } : {}}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -173,8 +153,8 @@ export function ProcessView() {
 
           {/* Steps — 1 col mobile, 2 col tablet, 4 col desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" style={{ position: "relative", zIndex: 1 }}>
-            {steps.map((step, i) => (
-              <StepItem key={step.index} step={step} index={i} total={steps.length} />
+            {PROCESS_STEPS.map((step, i) => (
+              <StepItem key={step.index} step={step} index={i} total={PROCESS_STEPS.length} />
             ))}
           </div>
         </div>

@@ -9,8 +9,8 @@ import {
   useState,
 } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { cn } from "./helpers"
-import type { TextRotateProps, TextRotateRef, WordObject } from "./types"
+import { cn } from "@/helpers"
+import type { TextRotateProps, TextRotateRef, WordObject } from "@/types"
 
 const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
   (

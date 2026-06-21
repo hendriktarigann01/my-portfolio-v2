@@ -6,6 +6,7 @@
 // Side Effects: Font load, audio init
 
 import type { Metadata } from "next";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { CursorFollow } from "@/components/CursorFollow";
@@ -15,6 +16,13 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AudioProvider } from "@/lib/audio-context";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["300", "400", "500"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://htsolution.tech"),
@@ -47,19 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={dmSans.variable}>
       <body>
         <AudioProvider>
           <SmoothScrollProvider>

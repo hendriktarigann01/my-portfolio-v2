@@ -16,7 +16,7 @@ export default function NotFoundPage() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 50% 40% at 50% 45%, rgba(239,209,195,0.05) 0%, transparent 70%)",
+            "radial-gradient(ellipse 50% 40% at 50% 45%, rgba(var(--accent-rgb), 0.05) 0%, transparent 70%)",
         }}
       />
 
@@ -24,9 +24,9 @@ export default function NotFoundPage() {
         <motion.span
           className="mb-8 px-4 py-1.5 rounded-full text-[11px] tracking-[0.25em] uppercase"
           style={{
-            background: "rgba(239,209,195,0.05)",
-            color: "rgba(239,209,195,0.35)",
-            border: "1px solid rgba(239,209,195,0.08)",
+            background: "rgba(var(--accent-rgb), 0.05)",
+            color: "rgba(var(--accent-rgb), 0.35)",
+            border: "1px solid rgba(var(--accent-rgb), 0.08)",
             fontFamily: "var(--font-body)",
           }}
           initial={{ opacity: 0, y: -10 }}
@@ -43,7 +43,7 @@ export default function NotFoundPage() {
             fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "clamp(7rem, 22vw, 14rem)",
-            color: "rgba(239,209,195,0.07)",
+            color: "rgba(var(--accent-rgb), 0.07)",
             letterSpacing: "-0.06em",
             lineHeight: 0.85,
             userSelect: "none",
@@ -65,7 +65,7 @@ export default function NotFoundPage() {
             fontFamily: "var(--font-display)",
             fontWeight: 800,
             fontSize: "clamp(1.4rem, 4vw, 2.2rem)",
-            color: "#efd1c3",
+            color: "var(--accent)",
             letterSpacing: "-0.03em",
           }}
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function NotFoundPage() {
           className="text-center"
           style={{
             fontFamily: "var(--font-body)",
-            color: "rgba(239,209,195,0.4)",
+            color: "rgba(var(--accent-rgb), 0.4)",
             fontSize: "0.95rem",
             fontWeight: 300,
             lineHeight: 1.7,

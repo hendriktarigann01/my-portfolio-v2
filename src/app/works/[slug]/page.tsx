@@ -5,7 +5,11 @@ import Link from "next/link";
 import { use } from "react";
 import { notFound } from "next/navigation";
 import worksData from "@/data/works.json";
-import Carousel, { type CarouselImage, GroupedCarousel, type ImageGroup } from "@/components/Carousel";
+import Carousel, {
+  type CarouselImage,
+  GroupedCarousel,
+} from "@/components/Carousel";
+import type { ImageGroup } from "@/types";
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -80,7 +84,7 @@ export default function WorkDetailPage({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 60% 50% at 50% -10%, rgba(239,209,195,0.07) 0%, transparent 70%)",
+              "radial-gradient(ellipse 60% 50% at 50% -10%, rgba(var(--accent-rgb),0.07) 0%, transparent 70%)",
           }}
         />
 
@@ -96,28 +100,28 @@ export default function WorkDetailPage({
               href="/"
               className="text-xs tracking-widest uppercase transition-opacity hover:opacity-70"
               style={{
-                color: "rgba(239,209,195,0.35)",
+                color: "rgba(var(--accent-rgb),0.35)",
                 fontFamily: "var(--font-body)",
               }}
             >
               Home
             </Link>
-            <span style={{ color: "rgba(239,209,195,0.2)" }}>/</span>
+            <span style={{ color: "rgba(var(--accent-rgb),0.2)" }}>/</span>
             <Link
               href="/works"
               className="text-xs tracking-widest uppercase transition-opacity hover:opacity-70"
               style={{
-                color: "rgba(239,209,195,0.35)",
+                color: "rgba(var(--accent-rgb),0.35)",
                 fontFamily: "var(--font-body)",
               }}
             >
-              Work
+              Projects
             </Link>
-            <span style={{ color: "rgba(239,209,195,0.2)" }}>/</span>
+            <span style={{ color: "rgba(var(--accent-rgb),0.2)" }}>/</span>
             <span
               className="text-xs tracking-widest uppercase"
               style={{
-                color: "rgba(239,209,195,0.6)",
+                color: "rgba(var(--accent-rgb),0.6)",
                 fontFamily: "var(--font-body)",
               }}
             >
@@ -135,9 +139,9 @@ export default function WorkDetailPage({
             <span
               className="px-3 py-1 rounded-full text-[11px] tracking-widest uppercase"
               style={{
-                background: "rgba(239,209,195,0.06)",
-                color: "rgba(239,209,195,0.5)",
-                border: "1px solid rgba(239,209,195,0.1)",
+                background: "rgba(var(--accent-rgb),0.06)",
+                color: "rgba(var(--accent-rgb),0.5)",
+                border: "1px solid rgba(var(--accent-rgb),0.1)",
                 fontFamily: "var(--font-body)",
               }}
             >
@@ -146,9 +150,9 @@ export default function WorkDetailPage({
             <span
               className="px-3 py-1 rounded-full text-[11px] tracking-widest uppercase"
               style={{
-                background: "rgba(239,209,195,0.06)",
-                color: "rgba(239,209,195,0.5)",
-                border: "1px solid rgba(239,209,195,0.1)",
+                background: "rgba(var(--accent-rgb),0.06)",
+                color: "rgba(var(--accent-rgb),0.5)",
+                border: "1px solid rgba(var(--accent-rgb),0.1)",
                 fontFamily: "var(--font-body)",
               }}
             >
@@ -158,9 +162,9 @@ export default function WorkDetailPage({
               <span
                 className="px-3 py-1 rounded-full text-[11px] tracking-widest uppercase flex items-center gap-1.5"
                 style={{
-                  background: "rgba(239,209,195,0.08)",
-                  color: "#efd1c3",
-                  border: "1px solid rgba(239,209,195,0.15)",
+                  background: "rgba(var(--accent-rgb),0.08)",
+                  color: "var(--accent)",
+                  border: "1px solid rgba(var(--accent-rgb),0.15)",
                   fontFamily: "var(--font-body)",
                 }}
               >
@@ -177,7 +181,7 @@ export default function WorkDetailPage({
               fontFamily: "var(--font-display)",
               fontWeight: 800,
               fontSize: "clamp(2.8rem, 7vw, 6rem)",
-              color: "#efd1c3",
+              color: "var(--accent)",
               letterSpacing: "-0.04em",
             }}
             initial={{ opacity: 0, y: 30 }}
@@ -195,7 +199,7 @@ export default function WorkDetailPage({
           <motion.p
             style={{
               fontFamily: "var(--font-body)",
-              color: "rgba(239,209,195,0.55)",
+              color: "rgba(var(--accent-rgb),0.55)",
               fontSize: "1.05rem",
               fontWeight: 300,
               lineHeight: 1.7,
@@ -216,9 +220,7 @@ export default function WorkDetailPage({
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             {entry.imageGroups && entry.imageGroups.length > 0 ? (
-              <GroupedCarousel
-                groups={entry.imageGroups as ImageGroup[]}
-              />
+              <GroupedCarousel groups={entry.imageGroups as ImageGroup[]} />
             ) : (
               <Carousel images={(entry.images as CarouselImage[]) || []} />
             )}
@@ -241,13 +243,13 @@ export default function WorkDetailPage({
                   <motion.span
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium cursor-pointer"
                     style={{
-                      background: "rgba(239,209,195,0.12)",
-                      color: "#efd1c3",
-                      border: "1px solid rgba(239,209,195,0.18)",
+                      background: "rgba(var(--accent-rgb),0.12)",
+                      color: "var(--accent)",
+                      border: "1px solid rgba(var(--accent-rgb),0.18)",
                       fontFamily: "var(--font-body)",
                     }}
                     whileHover={{
-                      background: "rgba(239,209,195,0.2)",
+                      background: "rgba(var(--accent-rgb),0.2)",
                       scale: 1.02,
                     }}
                     whileTap={{ scale: 0.97 }}
@@ -265,13 +267,13 @@ export default function WorkDetailPage({
                   <motion.span
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium cursor-pointer"
                     style={{
-                      background: "rgba(239,209,195,0.04)",
-                      color: "rgba(239,209,195,0.7)",
-                      border: "1px solid rgba(239,209,195,0.1)",
+                      background: "rgba(var(--accent-rgb),0.04)",
+                      color: "rgba(var(--accent-rgb),0.7)",
+                      border: "1px solid rgba(var(--accent-rgb),0.1)",
                       fontFamily: "var(--font-body)",
                     }}
                     whileHover={{
-                      background: "rgba(239,209,195,0.09)",
+                      background: "rgba(var(--accent-rgb),0.09)",
                       scale: 1.02,
                     }}
                     whileTap={{ scale: 0.97 }}
@@ -288,7 +290,7 @@ export default function WorkDetailPage({
       {/* ── Divider ── */}
       <div
         className="container-main mx-auto px-6"
-        style={{ height: "1px", background: "rgba(239,209,195,0.07)" }}
+        style={{ height: "1px", background: "rgba(var(--accent-rgb),0.07)" }}
       />
 
       {/* ── Body ── */}
@@ -299,7 +301,7 @@ export default function WorkDetailPage({
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  color: "rgba(239,209,195,0.6)",
+                  color: "rgba(var(--accent-rgb),0.6)",
                   fontSize: "1rem",
                   fontWeight: 300,
                   lineHeight: 1.8,
@@ -317,7 +319,7 @@ export default function WorkDetailPage({
                   <p
                     style={{
                       fontFamily: "var(--font-body)",
-                      color: "rgba(239,209,195,0.55)",
+                      color: "rgba(var(--accent-rgb),0.55)",
                       fontSize: "0.9rem",
                       fontWeight: 300,
                       lineHeight: 1.8,
@@ -332,7 +334,7 @@ export default function WorkDetailPage({
                   <p
                     style={{
                       fontFamily: "var(--font-body)",
-                      color: "rgba(239,209,195,0.55)",
+                      color: "rgba(var(--accent-rgb),0.55)",
                       fontSize: "0.9rem",
                       fontWeight: 300,
                       lineHeight: 1.8,
@@ -359,12 +361,12 @@ export default function WorkDetailPage({
                   >
                     <span
                       className="mt-2 w-1 h-1 rounded-full shrink-0"
-                      style={{ background: "#efd1c3" }}
+                      style={{ background: "var(--accent)" }}
                     />
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
-                        color: "rgba(239,209,195,0.6)",
+                        color: "rgba(var(--accent-rgb),0.6)",
                         fontSize: "0.9rem",
                         fontWeight: 300,
                         lineHeight: 1.7,
@@ -386,10 +388,10 @@ export default function WorkDetailPage({
                     key={i}
                     className="rounded-xl px-4 py-3"
                     style={{
-                      background: "rgba(239,209,195,0.03)",
-                      border: "1px solid rgba(239,209,195,0.07)",
+                      background: "rgba(var(--accent-rgb),0.03)",
+                      border: "1px solid rgba(var(--accent-rgb),0.07)",
                       fontFamily: "var(--font-body)",
-                      color: "rgba(239,209,195,0.55)",
+                      color: "rgba(var(--accent-rgb),0.55)",
                       fontSize: "0.85rem",
                       fontWeight: 300,
                     }}
@@ -413,9 +415,9 @@ export default function WorkDetailPage({
                     key={i}
                     className="px-3 py-1.5 rounded-full text-xs"
                     style={{
-                      background: "rgba(239,209,195,0.06)",
-                      color: "rgba(239,209,195,0.65)",
-                      border: "1px solid rgba(239,209,195,0.1)",
+                      background: "rgba(var(--accent-rgb),0.06)",
+                      color: "rgba(var(--accent-rgb),0.65)",
+                      border: "1px solid rgba(var(--accent-rgb),0.1)",
                       fontFamily: "var(--font-body)",
                     }}
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -439,14 +441,14 @@ export default function WorkDetailPage({
               <div
                 className="rounded-2xl p-12 text-center"
                 style={{
-                  background: "rgba(239,209,195,0.02)",
-                  border: "1px solid rgba(239,209,195,0.06)",
+                  background: "rgba(var(--accent-rgb),0.02)",
+                  border: "1px solid rgba(var(--accent-rgb),0.06)",
                 }}
               >
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    color: "rgba(239,209,195,0.2)",
+                    color: "rgba(var(--accent-rgb),0.2)",
                     fontSize: "0.9rem",
                     fontWeight: 300,
                   }}
@@ -465,15 +467,15 @@ export default function WorkDetailPage({
             <motion.div
               className="inline-flex items-center gap-3.5 px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
               style={{
-                background: "rgba(239,209,195,0.04)",
-                border: "1px solid rgba(239,209,195,0.1)",
-                color: "rgba(239,209,195,0.7)",
+                background: "rgba(var(--accent-rgb),0.04)",
+                border: "1px solid rgba(var(--accent-rgb),0.1)",
+                color: "rgba(var(--accent-rgb),0.7)",
                 fontFamily: "var(--font-body)",
               }}
               whileHover={{
-                backgroundColor: "rgba(239,209,195,0.12)",
-                borderColor: "rgba(239,209,195,0.22)",
-                color: "#efd1c3",
+                backgroundColor: "rgba(var(--tertiary-rgb),0.08)",
+                borderColor: "rgba(var(--tertiary-rgb),0.25)",
+                color: "var(--tertiary)",
               }}
               transition={{ duration: 0.3 }}
             >
@@ -509,7 +511,7 @@ function ContentBlock({
         <span
           className="text-xs font-medium tracking-[0.2em] uppercase"
           style={{
-            color: "rgba(239,209,195,0.3)",
+            color: "var(--tertiary)",
             fontFamily: "var(--font-body)",
           }}
         >
@@ -517,7 +519,7 @@ function ContentBlock({
         </span>
         <span
           className="h-px flex-1"
-          style={{ background: "rgba(239,209,195,0.07)" }}
+          style={{ background: "rgba(var(--tertiary-rgb),0.15)" }}
         />
       </div>
       {children}

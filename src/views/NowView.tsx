@@ -2,37 +2,11 @@
 
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
-
-const nowItems = [
-  {
-    label: "Building",
-    value: "This Portfolio",
-    note: "Next.js 16, Framer Motion, Lenis. Focusing on micro-interactions and smooth scrolling.",
-    rotation: "rotate-2",
-  },
-  {
-    label: "Exploring",
-    value: "Motion design on the web",
-    note: "Framer Motion, GSAP, advanced CSS @keyframes for better UX.",
-    rotation: "-rotate-2",
-  },
-  {
-    label: "Reading",
-    value: "Scalable frontend architecture",
-    note: "Monorepos, design systems, and component-driven development.",
-    rotation: "rotate-1",
-  },
-  {
-    label: "Thinking about",
-    value: "First public side project",
-    note: "Still in ideation phase, focusing on developer tooling.",
-    rotation: "-rotate-1",
-  },
-];
+import { NOW_ITEMS } from "@/constants";
 
 export function NowView() {
   return (
-    <section id="now" className="py-12 md:py-24">
+    <section id="now" className="py-12 md:pt-0 md:pb-24 scroll-mt-20 md:scroll-mt-0">
       <div className="container-main flex flex-col md:flex-row justify-between relative">
         {/* Right side Text (Sticky) */}
         <div className="w-full md:w-1/2 md:sticky top-0 h-auto md:h-screen flex flex-col justify-center mb-12 md:mb-0 z-10 pointer-events-none pt-24 md:pt-0">
@@ -42,7 +16,7 @@ export function NowView() {
                 style={{
                   fontSize: "0.7rem",
                   fontFamily: "var(--font-body)",
-                  color: "rgba(239,209,195,0.4)",
+                  color: "rgba(var(--accent-rgb),0.4)",
                   letterSpacing: "0.25em",
                   textTransform: "uppercase",
                 }}
@@ -55,7 +29,7 @@ export function NowView() {
                 fontFamily: "var(--font-display)",
                 fontWeight: 800,
                 fontSize: "clamp(3.5rem, 8vw, 6rem)",
-                color: "#efd1c3",
+                color: "var(--accent)",
                 letterSpacing: "-0.03em",
                 lineHeight: 1,
                 marginBottom: "1.5rem",
@@ -67,7 +41,7 @@ export function NowView() {
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "1rem",
-                color: "rgba(239,209,195,0.4)",
+                color: "rgba(var(--accent-rgb),0.4)",
                 fontWeight: 300,
                 maxWidth: "300px",
                 lineHeight: 1.6,
@@ -80,7 +54,7 @@ export function NowView() {
 
         {/* Left side Cards (Scrolling/Sticky) */}
         <div className="w-full md:w-1/2 flex flex-col gap-4 relative z-20">
-          {nowItems.map((item, i) => (
+          {NOW_ITEMS.map((item, i) => (
             <figure
               key={i}
               className="md:sticky top-0 md:h-screen grid place-content-center py-6 md:py-0"
@@ -90,7 +64,7 @@ export function NowView() {
                 style={{
                   background: "rgba(2,66,68,0.9)",
                   backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(239,209,195,0.15)",
+                  border: "1px solid rgba(var(--accent-rgb),0.15)",
                 }}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
@@ -102,7 +76,7 @@ export function NowView() {
                     fontSize: "0.75rem",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
-                    color: "rgba(239,209,195,0.4)",
+                    color: "rgba(var(--accent-rgb),0.4)",
                     marginBottom: "1rem",
                   }}
                 >
@@ -113,7 +87,7 @@ export function NowView() {
                     fontFamily: "var(--font-display)",
                     fontWeight: 700,
                     fontSize: "2rem",
-                    color: "#efd1c3",
+                    color: "var(--accent)",
                     letterSpacing: "-0.02em",
                     marginBottom: "1rem",
                     lineHeight: 1.1,
@@ -125,7 +99,7 @@ export function NowView() {
                   style={{
                     fontFamily: "var(--font-body)",
                     fontSize: "1rem",
-                    color: "rgba(239,209,195,0.5)",
+                    color: "rgba(var(--accent-rgb),0.5)",
                     fontWeight: 300,
                     lineHeight: 1.6,
                   }}

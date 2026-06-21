@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import type { ScrollRevealProps, StaggerContainerProps } from "./types";
+import type { ScrollRevealProps, StaggerContainerProps } from "@/types";
 
 export function ScrollReveal({
   children,

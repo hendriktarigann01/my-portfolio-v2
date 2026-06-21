@@ -1,22 +1,23 @@
 "use client";
-
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import { motion, useMotionValue, animate, AnimatePresence } from "framer-motion";
-import { ACCENT, THUMB_ACTIVE_W, THUMB_INACTIVE_W, THUMB_GAP, THUMB_MARGIN } from "./constants";
-import type { CarouselImage, CarouselProps } from "./types";
+import Image from "next/image";
+import { useEffect, useRef, useState, useCallback } from "react";
+import {
+  motion,
+  useMotionValue,
+  animate,
+  AnimatePresence,
+} from "framer-motion";
+import {
+  ACCENT,
+  THUMB_ACTIVE_W,
+  THUMB_INACTIVE_W,
+  THUMB_GAP,
+  THUMB_MARGIN,
+} from "@/constants";
+import type { CarouselImage, CarouselProps, ImageGroup, GroupedCarouselProps } from "@/types";
+import { useKeyboardNavigation } from "@/hooks";
 
 export type { CarouselImage };
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-export type ImageGroup = {
-  label: string;
-  images: CarouselImage[];
-};
-
-export type GroupedCarouselProps = {
-  groups: ImageGroup[];
-};
 
 // ─── Thumbnails ───────────────────────────────────────────────────────────────
 
@@ -79,9 +80,10 @@ function Thumbnails({
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="relative shrink-0 h-full overflow-hidden"
             style={{
-              border: i === index
-                ? `1.5px solid ${ACCENT}0.35)`
-                : `1px solid ${ACCENT}0.08)`,
+              border:
+                i === index
+                  ? `1.5px solid ${ACCENT}0.35)`
+                  : `1px solid ${ACCENT}0.08)`,
             }}
           >
             <img
@@ -160,7 +162,10 @@ function VariantTabs({
   if (groups.length <= 1) return null;
 
   return (
-    <div className="flex items-center gap-1.5 mb-4 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+    <div
+      className="flex items-center gap-1.5 mb-4 overflow-x-auto"
+      style={{ scrollbarWidth: "none" }}
+    >
       <span
         className="shrink-0 mr-2 text-[0.65rem] uppercase tracking-[0.15em]"
         style={{
@@ -177,12 +182,12 @@ function VariantTabs({
           className="relative shrink-0 px-3.5 py-1.5 rounded-full text-[0.7rem] tracking-wider uppercase"
           style={{
             fontFamily: "var(--font-body)",
-            color: i === active ? "#efd1c3" : `${ACCENT}0.4)`,
+            color: i === active ? "var(--accent)" : `${ACCENT}0.4)`,
             cursor: "pointer",
             border: "none",
             background: "transparent",
           }}
-          whileHover={{ color: "#efd1c3" }}
+          whileHover={{ color: "var(--accent)" }}
           transition={{ duration: 0.2 }}
         >
           {i === active && (
@@ -216,19 +221,11 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
     setIndex(0);
   }, [images]);
 
-  const handleKey = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") setIndex((i) => Math.max(0, i - 1));
-      if (e.key === "ArrowRight")
-        setIndex((i) => Math.min(images.length - 1, i + 1));
-    },
-    [images.length]
-  );
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [handleKey]);
+  useKeyboardNavigation({
+    onLeft: () => setIndex((i) => Math.max(0, i - 1)),
+    onRight: () => setIndex((i) => Math.min(images.length - 1, i + 1)),
+    enabled: images.length > 1,
+  });
 
   useEffect(() => {
     if (!isDragging && containerRef.current) {
@@ -258,8 +255,16 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
           border: `1px solid ${ACCENT}0.08)`,
         }}
       >
+        {/* Ambient light gradient background */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0 opacity-30"
+          style={{
+            background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.15) 0%, transparent 80%)",
+          }}
+        />
+
         <motion.div
-          className="flex"
+          className="flex relative z-10"
           drag="x"
           dragElastic={0.15}
           dragMomentum={false}
@@ -280,13 +285,18 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
           {images.map((img, i) => (
             <div
               key={`${img.url}-${i}`}
-              className="shrink-0 w-full aspect-[16/9] relative overflow-hidden"
+              className="shrink-0 w-full aspect-[16/9] relative overflow-hidden flex items-center justify-center"
             >
-              <img
+              {/* Main image rendered fully using object-contain */}
+              <Image
                 src={img.url}
                 alt={img.title || `Project screenshot ${i + 1}`}
-                className="w-full h-full object-cover select-none pointer-events-none"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1200px"
+                className="object-contain select-none pointer-events-none z-10 p-2 md:p-4"
                 draggable={false}
+                loading={i === index ? "eager" : "lazy"}
+                priority={i === index}
               />
             </div>
           ))}
@@ -319,6 +329,7 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
               border: `1px solid ${ACCENT}0.1)`,
               fontFamily: "var(--font-body)",
               letterSpacing: "0.06em",
+              zIndex: 20,
             }}
           >
             {index + 1} / {images.length}

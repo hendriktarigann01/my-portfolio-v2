@@ -2,13 +2,43 @@
 
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
-import { DEFAULT_ACCENT } from "./constants";
-import type { Project } from "./types";
+import { ArrowUpRight, Cpu, Gamepad2, Globe, FlaskConical, Database } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import type { WorkEntry } from "@/types";
 
-export function ProjectCard({ project }: { project: Project }) {
+const categoryLabel: Record<string, string> = {
+  system: "System",
+  interactive: "Interactive",
+  landing: "Landing Page",
+};
+
+const getProjectIcon = (category: string) => {
+  switch (category) {
+    case "system":
+      return <Cpu size={20} className="text-[var(--accent)]" />;
+    case "interactive":
+      return <Gamepad2 size={20} className="text-[var(--accent)]" />;
+    case "landing":
+    case "landing_pages":
+      return <Globe size={20} className="text-[var(--accent)]" />;
+    case "experiment":
+      return <FlaskConical size={20} className="text-[var(--accent)]" />;
+    default:
+      return <Database size={20} className="text-[var(--accent)]" />;
+  }
+};
+
+export function ProjectCard({
+  project,
+  className = "",
+}: {
+  project: WorkEntry;
+  className?: string;
+}) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -34,73 +64,86 @@ export function ProjectCard({ project }: { project: Project }) {
     setIsHovered(false);
   };
 
+  const handleCardClick = () => {
+    router.push(`/works/${project.slug}`);
+  };
+
+  const tags = project.stack
+    ? project.stack.split(",").map((s) => s.trim())
+    : [];
+  const demoUrl = project.links.demo || project.links.repo || "#";
+
   return (
-    <motion.div
+    <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
+      className={className}
       style={{
-        rotateX,
-        rotateY,
-        transformPerspective: 1200,
-        transformStyle: "preserve-3d",
+        perspective: "1200px",
       }}
-      whileHover={{ z: 20 }}
     >
       <motion.div
-        className="group relative h-full rounded-3xl p-8 overflow-hidden transition-all duration-500"
+        onClick={handleCardClick}
+        className="group relative block h-full rounded-3xl p-8 overflow-hidden transition-all duration-500 cursor-pointer"
         style={{
+          rotateX,
+          rotateY,
+          transformStyle: "preserve-3d",
           background: isHovered
-            ? "rgba(239,209,195,0.07)"
-            : "rgba(239,209,195,0.03)",
-          border: "1px solid rgba(239,209,195,0.09)",
-          boxShadow: isHovered
-            ? "0 30px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(239,209,195,0.1)"
-            : "0 4px 30px rgba(0,0,0,0.2)",
+            ? "rgba(var(--accent-rgb),0.07)"
+            : "rgba(var(--accent-rgb),0.03)",
+          border: "1px solid rgba(var(--accent-rgb),0.09)",
         }}
         transition={{ duration: 0.4 }}
+        whileHover={{ z: 20 }}
       >
         {/* Glow effect on hover */}
         <motion.div
           className="absolute inset-0 rounded-3xl pointer-events-none"
           animate={{
             background: isHovered
-              ? `radial-gradient(circle at ${mouseX.get() * 100 + 50}% ${mouseY.get() * 100 + 50}%, rgba(239,209,195,0.08) 0%, transparent 60%)`
+              ? `radial-gradient(circle at ${mouseX.get() * 100 + 50}% ${mouseY.get() * 100 + 50}%, rgba(var(--accent-rgb),0.08) 0%, transparent 60%)`
               : "none",
           }}
         />
 
         {/* Top row */}
         <div className="flex items-start justify-between mb-8 relative z-10">
-          <div
-            className="w-12 h-12 rounded-2xl flex items-center justify-center"
-            style={{ background: project.accent || DEFAULT_ACCENT }}
-          >
+          <div className="flex items-center gap-3">
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center"
+              style={{ background: "rgba(var(--accent-rgb),0.07)" }}
+            >
+              {getProjectIcon(project.category)}
+            </div>
             <span
+              className="px-3 py-1.5 rounded-lg text-[0.7rem] uppercase tracking-wider"
               style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 700,
-                fontSize: "1rem",
-                color: "#efd1c3",
+                background: "rgba(var(--accent-rgb),0.04)",
+                color: "rgba(var(--accent-rgb),0.4)",
+                border: "1px solid rgba(var(--accent-rgb),0.08)",
+                fontFamily: "var(--font-body)",
               }}
             >
-              {project.title.charAt(0)}
+              {categoryLabel[project.category] || project.category}
             </span>
           </div>
 
           <motion.a
-            href={project.url || "#"}
-            target={project.url ? "_blank" : undefined}
+            href={demoUrl}
+            target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
             className="flex items-center justify-center w-10 h-10 rounded-xl transition-all"
             style={{
-              background: "rgba(239,209,195,0.08)",
-              color: "#efd1c3",
+              background: "rgba(var(--accent-rgb),0.08)",
+              color: "var(--accent)",
               opacity: isHovered ? 1 : 0.4,
             }}
             whileHover={{
-              background: "rgba(239,209,195,0.18)",
+              background: "rgba(var(--accent-rgb),0.18)",
               scale: 1.1,
             }}
             whileTap={{ scale: 0.9 }}
@@ -118,22 +161,30 @@ export function ProjectCard({ project }: { project: Project }) {
                 fontFamily: "var(--font-display)",
                 fontWeight: 700,
                 fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
-                color: "#efd1c3",
+                color: "var(--accent)",
                 letterSpacing: "-0.02em",
               }}
             >
-              {project.title}
+              <Link
+                href={`/works/${project.slug}`}
+                onClick={(e) => e.stopPropagation()}
+                className="hover:underline"
+              >
+                {project.name}
+              </Link>
             </h3>
-            <span
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.7rem",
-                color: "rgba(239,209,195,0.35)",
-                letterSpacing: "0.1em",
-              }}
-            >
-              {project.year}
-            </span>
+            {project.year && (
+              <span
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.7rem",
+                  color: "var(--tertiary)",
+                  letterSpacing: "0.1em",
+                }}
+              >
+                {project.year}
+              </span>
+            )}
           </div>
 
           <p
@@ -141,23 +192,23 @@ export function ProjectCard({ project }: { project: Project }) {
             style={{
               fontFamily: "var(--font-body)",
               fontSize: "0.875rem",
-              color: "rgba(239,209,195,0.6)",
+              color: "rgba(var(--accent-rgb),0.6)",
               fontWeight: 300,
             }}
           >
-            {project.description}
+            {project.focus || project.summary}
           </p>
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
+            {tags.map((tag) => (
               <span
                 key={tag}
                 className="px-3 py-1 rounded-full text-xs"
                 style={{
-                  background: "rgba(239,209,195,0.07)",
-                  color: "rgba(239,209,195,0.7)",
-                  border: "1px solid rgba(239,209,195,0.1)",
+                  background: "rgba(var(--tertiary-rgb),0.06)",
+                  color: "var(--tertiary)",
+                  border: "1px solid rgba(var(--tertiary-rgb),0.12)",
                   fontFamily: "var(--font-body)",
                   letterSpacing: "0.04em",
                   fontWeight: 400,
@@ -178,6 +229,6 @@ export function ProjectCard({ project }: { project: Project }) {
           }}
         />
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

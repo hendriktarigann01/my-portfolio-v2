@@ -14,7 +14,8 @@ const config: Config = {
       },
       colors: {
         bg: "#024244",
-        accent: "#efd1c3",
+        accent: "var(--accent)",
+        tertiary: "var(--tertiary)",
       },
     },
   },

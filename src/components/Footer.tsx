@@ -85,7 +85,7 @@ export function Footer() {
         style={{
           background: "rgba(2, 66, 68, 0.4)",
           backdropFilter: "blur(20px)",
-          border: "1px solid rgba(239, 209, 195, 0.15)",
+          border: "1px solid rgba(var(--accent-rgb), 0.15)",
         }}
       >
         <div className="hidden md:block absolute -top-4 -left-8 w-[80px] h-[36px] scale-75">
@@ -103,21 +103,21 @@ export function Footer() {
               className="uppercase text-xs font-semibold"
               style={{
                 fontFamily: "var(--font-display)",
-                color: "rgba(239,209,195,0.8)",
+                color: "rgba(var(--accent-rgb),0.8)",
                 letterSpacing: "0.1em",
               }}
             >
               Navigation
             </h4>
             <div className="flex flex-col gap-2 text-sm">
-              {["/#work", "/#process", "/#now", "/#contact"].map((href) => (
+              {["/#projects", "/#process", "/#now", "/#contact"].map((href) => (
                 <Link
                   key={href}
                   href={href}
-                  className="transition-colors hover:text-[#efd1c3]"
+                  className="transition-colors hover:text-[var(--accent)]"
                   style={{
                     fontFamily: "var(--font-body)",
-                    color: "rgba(239,209,195,0.5)",
+                    color: "rgba(var(--accent-rgb),0.5)",
                   }}
                 >
                   {href
@@ -135,7 +135,7 @@ export function Footer() {
               className="uppercase text-xs font-semibold"
               style={{
                 fontFamily: "var(--font-display)",
-                color: "rgba(239,209,195,0.8)",
+                color: "rgba(var(--accent-rgb),0.8)",
                 letterSpacing: "0.1em",
               }}
             >
@@ -158,10 +158,10 @@ export function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="transition-colors hover:text-[#efd1c3]"
+                  className="transition-colors hover:text-[var(--accent)]"
                   style={{
                     fontFamily: "var(--font-body)",
-                    color: "rgba(239,209,195,0.5)",
+                    color: "rgba(var(--accent-rgb),0.5)",
                   }}
                 >
                   {s.label}
@@ -176,7 +176,7 @@ export function Footer() {
               className="uppercase text-xs font-semibold"
               style={{
                 fontFamily: "var(--font-display)",
-                color: "rgba(239,209,195,0.8)",
+                color: "rgba(var(--accent-rgb),0.8)",
                 letterSpacing: "0.1em",
               }}
             >
@@ -191,21 +191,21 @@ export function Footer() {
                 className="absolute top-0 left-0 flex items-center gap-2 transition-opacity duration-300 group-hover:opacity-0"
                 style={{
                   fontFamily: "var(--font-body)",
-                  color: "rgba(239,209,195,0.5)",
+                  color: "rgba(var(--accent-rgb),0.5)",
                 }}
               >
-                Available for work
+                Available for projects
               </span>
               <span
                 className="absolute top-0 left-0 flex flex-col opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 style={{
                   fontFamily: "var(--font-body)",
-                  color: "rgba(239,209,195,0.6)",
+                  color: "rgba(var(--accent-rgb),0.6)",
                   lineHeight: 1.5,
                 }}
               >
                 <span>Available for select freelance projects.</span>
-                <span style={{ color: "rgba(239,209,195,0.4)" }}>
+                <span style={{ color: "rgba(var(--accent-rgb),0.4)" }}>
                   Let&apos;s discuss your roadmap.
                 </span>
               </span>
@@ -221,7 +221,7 @@ export function Footer() {
                   fontFamily: "var(--font-display)",
                   fontSize: "2.5rem",
                   fontWeight: 900,
-                  color: "rgba(239,209,195,0.1)",
+                  color: "rgba(var(--accent-rgb),0.1)",
                   letterSpacing: "-0.04em",
                   lineHeight: 1,
                   textDecoration: "none",
@@ -229,10 +229,10 @@ export function Footer() {
                   transition: "color 0.3s",
                 }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = "rgba(239,209,195,0.6)")
+                  (e.currentTarget.style.color = "rgba(var(--accent-rgb),0.6)")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.color = "rgba(239,209,195,0.1)")
+                  (e.currentTarget.style.color = "rgba(var(--accent-rgb),0.1)")
                 }
               >
                 v1
@@ -242,12 +242,12 @@ export function Footer() {
                   fontFamily: "var(--font-display)",
                   fontSize: "2.5rem",
                   fontWeight: 900,
-                  color: "rgba(239,209,195,0.45)",
+                  color: "rgba(var(--accent-rgb),0.45)",
                   letterSpacing: "-0.04em",
                   lineHeight: 1,
                   fontStretch: "expanded",
                   textDecoration: "line-through",
-                  textDecorationColor: "rgba(239,209,195,0.2)",
+                  textDecorationColor: "rgba(var(--accent-rgb),0.2)",
                 }}
               >
                 v2

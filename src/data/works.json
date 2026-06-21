@@ -6,13 +6,13 @@
       "stack": "TypeScript",
       "category": "system",
       "focus": "content management, structured data",
-      "summary": "Converra is a full-stack digital signage CMS consisting of a Next.js web dashboard, an Express REST API backend, and an Electron desktop player app — enabling centralized content scheduling, playlist management, and real-time multi-screen remote control.",
-      "description": "Converra is the most complex system built at MJ Solution Indonesia — a production-grade digital signage platform with three distinct layers. The Next.js frontend serves both as an admin dashboard and a browser-based player interface, with screen connection flow and auth pages. The Express backend handles REST API operations, JWT authentication, file uploads up to 100MB, and dual real-time strategies — native WebSocket in development and Pusher Channels in production. The Electron desktop player (mjs-cms-desktop) runs on physical display devices, authenticates via token, receives remote commands in real time, supports idle video and content playback, and ships with an auto-update mechanism across 4 published releases. Storage is handled by local filesystem in development and Cloudinary CDN in production. The entire system is deployed across Vercel (frontend), Railway (backend), and Aiven PostgreSQL (database).",
-      "problem": "Managing content across multiple digital display locations required manually updating each player device on-site — a slow, error-prone workflow that became impossible to scale as the number of screens and clients grew. There was no way to monitor screen health, schedule content in advance, or push updates remotely without physical access to each device.",
-      "solution": "A three-part centralized platform where operators manage all content, playlists, and screens from a single web dashboard. The Electron player app runs silently on display hardware, authenticates with a token, and receives real-time commands via Pusher or WebSocket — enabling full remote control of every registered screen without any physical intervention.",
+      "summary": "Converra is a full-stack digital signage CMS consisting of a Next.js web dashboard, an Express REST API backend, and an Electron desktop player app  -  enabling centralized content scheduling, playlist management, and real-time multi-screen remote control.",
+      "description": "Converra is the most complex system built at MJ Solution Indonesia  -  a production-grade digital signage platform with three distinct layers. The Next.js frontend serves both as an admin dashboard and a browser-based player interface, with screen connection flow and auth pages. The Express backend handles REST API operations, JWT authentication, file uploads up to 100MB, and dual real-time strategies  -  native WebSocket in development and Pusher Channels in production. The Electron desktop player (mjs-cms-desktop) runs on physical display devices, authenticates via token, receives remote commands in real time, supports idle video and content playback, and ships with an auto-update mechanism across 4 published releases. Storage is handled by local filesystem in development and Cloudinary CDN in production. The entire system is deployed across Vercel (frontend), Railway (backend), and Aiven PostgreSQL (database).",
+      "problem": "Managing content across multiple digital display locations required manually updating each player device on-site  -  a slow, error-prone workflow that became impossible to scale as the number of screens and clients grew. There was no way to monitor screen health, schedule content in advance, or push updates remotely without physical access to each device.",
+      "solution": "A three-part centralized platform where operators manage all content, playlists, and screens from a single web dashboard. The Electron player app runs silently on display hardware, authenticates with a token, and receives real-time commands via Pusher or WebSocket  -  enabling full remote control of every registered screen without any physical intervention.",
       "highlights": [
         "Three-part architecture: Next.js web dashboard, Express backend, and Electron desktop player",
-        "Electron player app with 4 published releases (latest v1.1.1 — March 2026)",
+        "Electron player app with 4 published releases (latest v1.1.1  -  March 2026)",
         "Dual real-time strategy: native WebSocket (development) and Pusher Channels (production)",
         "Dual storage strategy: local filesystem (development) and Cloudinary CDN (production)",
         "Token-based screen authentication for secure player registration",
@@ -121,10 +121,10 @@
       "stack": "TypeScript",
       "category": "system",
       "focus": "form handling, data flow",
-      "summary": "A system event registration and check-in management system with real-time QR code verification, admin dashboard, and audit logging — built with Next.js and PostgreSQL.",
-      "description": "MJS Event Registration is a system for managing event attendee registration and on-site check-in. Attendees register via a public form, receive a unique QR code upon successful submission, and are verified at the venue through a QR scanner page. Admins access a protected dashboard with registration management, analytics charts, and full audit logs. The system uses Supabase PostgreSQL via Prisma ORM, Upstash Redis for rate limiting, and NextAuth for session-based authentication — suitable for internal company events as well as client-facing event management needs.",
-      "problem": "Manual event registration and check-in processes are slow, error-prone, and difficult to audit — especially for mid-to-large scale corporate events where real-time attendee verification and data accuracy are critical.",
-      "solution": "A web-based registration system where attendees self-register and instantly receive a QR code. On event day, staff use the built-in QR scanner to verify attendance in real time. Admins monitor registrations, view analytics, and access audit logs from a protected dashboard — replacing spreadsheets and manual processes entirely.",
+      "summary": "A system event registration and check-in management system with real-time QR code verification, admin dashboard, and audit logging  -  built with Next.js and PostgreSQL.",
+      "description": "MJS Event Registration is a system for managing event attendee registration and on-site check-in. Attendees register via a public form, receive a unique QR code upon successful submission, and are verified at the venue through a QR scanner page. Admins access a protected dashboard with registration management, analytics charts, and full audit logs. The system uses Supabase PostgreSQL via Prisma ORM, Upstash Redis for rate limiting, and NextAuth for session-based authentication  -  suitable for internal company events as well as client-facing event management needs.",
+      "problem": "Manual event registration and check-in processes are slow, error-prone, and difficult to audit  -  especially for mid-to-large scale corporate events where real-time attendee verification and data accuracy are critical.",
+      "solution": "A web-based registration system where attendees self-register and instantly receive a QR code. On event day, staff use the built-in QR scanner to verify attendance in real time. Admins monitor registrations, view analytics, and access audit logs from a protected dashboard  -  replacing spreadsheets and manual processes entirely.",
       "highlights": [
         "Real-time QR code generation per registrant on successful submission",
         "Built-in QR scanner page for on-site check-in verification",
@@ -241,20 +241,62 @@
         "Vercel"
       ],
       "images": [
-        { "url": "/assets/systems/smart-meeting/1.webp", "title": "Smart Meeting - Screenshot 1" },
-        { "url": "/assets/systems/smart-meeting/2.webp", "title": "Smart Meeting - Screenshot 2" },
-        { "url": "/assets/systems/smart-meeting/3.webp", "title": "Smart Meeting - Screenshot 3" },
-        { "url": "/assets/systems/smart-meeting/4.webp", "title": "Smart Meeting - Screenshot 4" },
-        { "url": "/assets/systems/smart-meeting/5.webp", "title": "Smart Meeting - Screenshot 5" },
-        { "url": "/assets/systems/smart-meeting/6.webp", "title": "Smart Meeting - Screenshot 6" },
-        { "url": "/assets/systems/smart-meeting/7.webp", "title": "Smart Meeting - Screenshot 7" },
-        { "url": "/assets/systems/smart-meeting/8.webp", "title": "Smart Meeting - Screenshot 8" },
-        { "url": "/assets/systems/smart-meeting/9.webp", "title": "Smart Meeting - Screenshot 9" },
-        { "url": "/assets/systems/smart-meeting/10.webp", "title": "Smart Meeting - Screenshot 10" },
-        { "url": "/assets/systems/smart-meeting/11.webp", "title": "Smart Meeting - Screenshot 11" },
-        { "url": "/assets/systems/smart-meeting/12.webp", "title": "Smart Meeting - Screenshot 12" },
-        { "url": "/assets/systems/smart-meeting/13.webp", "title": "Smart Meeting - Screenshot 13" },
-        { "url": "/assets/systems/smart-meeting/14.webp", "title": "Smart Meeting - Screenshot 14" }
+        {
+          "url": "/assets/systems/smart-meeting/1.webp",
+          "title": "Smart Meeting - Screenshot 1"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/2.webp",
+          "title": "Smart Meeting - Screenshot 2"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/3.webp",
+          "title": "Smart Meeting - Screenshot 3"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/4.webp",
+          "title": "Smart Meeting - Screenshot 4"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/5.webp",
+          "title": "Smart Meeting - Screenshot 5"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/6.webp",
+          "title": "Smart Meeting - Screenshot 6"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/7.webp",
+          "title": "Smart Meeting - Screenshot 7"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/8.webp",
+          "title": "Smart Meeting - Screenshot 8"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/9.webp",
+          "title": "Smart Meeting - Screenshot 9"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/10.webp",
+          "title": "Smart Meeting - Screenshot 10"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/11.webp",
+          "title": "Smart Meeting - Screenshot 11"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/12.webp",
+          "title": "Smart Meeting - Screenshot 12"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/13.webp",
+          "title": "Smart Meeting - Screenshot 13"
+        },
+        {
+          "url": "/assets/systems/smart-meeting/14.webp",
+          "title": "Smart Meeting - Screenshot 14"
+        }
       ],
       "links": {
         "demo": "",
@@ -267,10 +309,10 @@
       "stack": "JavaScript",
       "category": "system",
       "focus": "configuration led to help sales team",
-      "summary": "A web-based LED & LCD display configurator built for MJ Solution's sales team and clients — enabling real-time technical calculations, room placement simulation, processor recommendations, and PDF proposal export.",
-      "description": "MJS LED Configurator is an internal web tool developed to streamline the LED & LCD display quotation process at MJ Solution Indonesia. Users input basic parameters such as room dimensions, desired screen size, pixel pitch, and installation type (indoor/outdoor). The system automatically calculates screen resolution, module count, real physical dimensions, remaining wall space, viewing distance, power consumption, and recommends compatible LED processors — all following industry-standard formulas. Clients can also upload a photo of their actual location to preview how the LED screen would look in their space, and export the full technical result as a professional PDF proposal.",
-      "problem": "The LED display quotation process at MJ Solution was slow and manual — sales had to gather extensive technical data before pricing, clients had no visual reference of the final result, and on-site surveys were required just to measure room dimensions before any calculation could begin in Excel.",
-      "solution": "A browser-based configurator that lets sales staff and clients independently configure LED displays by entering room and screen parameters. The system handles all technical calculations automatically, simulates screen placement in the client's uploaded room photo, recommends compatible processors, and generates a ready-to-send PDF proposal — eliminating manual Excel work and reducing the need for on-site surveys.",
+      "summary": "A web-based LED & LCD display configurator built for MJ Solution's sales team and clients  -  enabling real-time technical calculations, room placement simulation, processor recommendations, and PDF proposal export.",
+      "description": "MJS LED Configurator is an internal web tool developed to streamline the LED & LCD display quotation process at MJ Solution Indonesia. Users input basic parameters such as room dimensions, desired screen size, pixel pitch, and installation type (indoor/outdoor). The system automatically calculates screen resolution, module count, real physical dimensions, remaining wall space, viewing distance, power consumption, and recommends compatible LED processors  -  all following industry-standard formulas. Clients can also upload a photo of their actual location to preview how the LED screen would look in their space, and export the full technical result as a professional PDF proposal.",
+      "problem": "The LED display quotation process at MJ Solution was slow and manual  -  sales had to gather extensive technical data before pricing, clients had no visual reference of the final result, and on-site surveys were required just to measure room dimensions before any calculation could begin in Excel.",
+      "solution": "A browser-based configurator that lets sales staff and clients independently configure LED displays by entering room and screen parameters. The system handles all technical calculations automatically, simulates screen placement in the client's uploaded room photo, recommends compatible processors, and generates a ready-to-send PDF proposal  -  eliminating manual Excel work and reducing the need for on-site surveys.",
       "highlights": [
         "Eliminates manual Excel-based LED calculations",
         "Clients can self-configure LED displays without technical background",
@@ -278,7 +320,7 @@
         "Room photo upload with LED screen overlay for realistic preview",
         "Automatic processor (sending box/controller) recommendation based on final resolution",
         "PDF export with technical specs, simulation image, and device recommendations",
-        "Industry-standard formulas: resolution = module size ÷ pixel pitch, real size = resolution × total modules",
+        "Industry-standard formulas: resolution = module size / pixel pitch, real size = resolution * total modules",
         "Supports indoor and outdoor installation types",
         "Responsive design: works on laptop, tablet, and smartphone"
       ],
@@ -301,13 +343,34 @@
         "CSS"
       ],
       "images": [
-        { "url": "/assets/systems/mjs-led-configuration/1.png", "title": "LED Configurator - Wall Configuration Panel" },
-        { "url": "/assets/systems/mjs-led-configuration/2.png", "title": "LED Configurator - Technical Specs & Calculations" },
-        { "url": "/assets/systems/mjs-led-configuration/3.png", "title": "LED Configurator - Wall Simulation Preview" },
-        { "url": "/assets/systems/mjs-led-configuration/4.png", "title": "LED Configurator - Room Layout Calibration" },
-        { "url": "/assets/systems/mjs-led-configuration/5.png", "title": "LED Configurator - Processor Recommendation Sheet" },
-        { "url": "/assets/systems/mjs-led-configuration/6.png", "title": "LED Configurator - Power and Distance Specs" },
-        { "url": "/assets/systems/mjs-led-configuration/7.png", "title": "LED Configurator - Proposal Export Setup" }
+        {
+          "url": "/assets/systems/mjs-led-configuration/1.png",
+          "title": "LED Configurator - Wall Configuration Panel"
+        },
+        {
+          "url": "/assets/systems/mjs-led-configuration/2.png",
+          "title": "LED Configurator - Technical Specs & Calculations"
+        },
+        {
+          "url": "/assets/systems/mjs-led-configuration/3.png",
+          "title": "LED Configurator - Wall Simulation Preview"
+        },
+        {
+          "url": "/assets/systems/mjs-led-configuration/4.png",
+          "title": "LED Configurator - Room Layout Calibration"
+        },
+        {
+          "url": "/assets/systems/mjs-led-configuration/5.png",
+          "title": "LED Configurator - Processor Recommendation Sheet"
+        },
+        {
+          "url": "/assets/systems/mjs-led-configuration/6.png",
+          "title": "LED Configurator - Power and Distance Specs"
+        },
+        {
+          "url": "/assets/systems/mjs-led-configuration/7.png",
+          "title": "LED Configurator - Proposal Export Setup"
+        }
       ],
       "links": {
         "demo": "https://configurator.mjsolution.co.id/",
@@ -318,7 +381,7 @@
       "name": "Motion Detector Human",
       "slug": "motion-detector-human",
       "stack": "Python",
-      "category": "experiment",
+      "category": "system",
       "focus": "computer vision proximity trigger for event screens",
       "summary": "A computer vision utility using Python, OpenCV, and a webcam to detect visitor presence at exhibition booths and trigger welcome animations via WebSockets.",
       "description": "Motion Detector Human is an event automation experiment. It uses a Python script running OpenCV on a local machine (connected to a webcam) to track movements in front of a digital display. The script monitors entry/exit zones and estimates distance to identify when a visitor approaches the screen. Once a proximity threshold is crossed, it broadcasts a command over local WebSockets to the web display app, triggering active greeting animations and starting interactive video sequences automatically.",
@@ -345,7 +408,10 @@
         "Node.js"
       ],
       "images": [
-        { "url": "/assets/systems/motion-detector-human/1.webp", "title": "Motion Detector - Camera Tracking Feed" }
+        {
+          "url": "/assets/systems/motion-detector-human/1.webp",
+          "title": "Motion Detector - Camera Tracking Feed"
+        }
       ],
       "links": {
         "demo": "",
@@ -358,19 +424,19 @@
       "name": "MJS Memory Card",
       "slug": "mjs-memory-card",
       "stack": "TypeScript",
-      "category": "game",
+      "category": "interactive",
       "focus": "game logic, event booth experience",
-      "summary": "A two-stage memory card matching game built for MJ Solution event booths — featuring avatar selection, timed stages, sound effects, and a real-time Supabase leaderboard.",
-      "description": "MJS Memory Card is a browser-based memory card game designed for event booths and exhibitions. Players enter their name, pick an avatar, then race through two timed stages matching product image pairs. Stage 1 runs for 60 seconds and Stage 2 for 45 seconds — with a 5-second countdown overlay between stages. Scores are ranked by total completion time and saved to a Supabase leaderboard. The UI supports two layout modes: desktop landscape and portrait signage display, making it ready for both kiosk and standard screens.",
+      "summary": "A two-stage memory card matching game built for MJ Solution event booths  -  featuring avatar selection, timed stages, sound effects, and a real-time Supabase leaderboard.",
+      "description": "MJS Memory Card is a browser-based memory card game designed for event booths and exhibitions. Players enter their name, pick an avatar, then race through two timed stages matching product image pairs. Stage 1 runs for 60 seconds and Stage 2 for 45 seconds  -  with a 5-second countdown overlay between stages. Scores are ranked by total completion time and saved to a Supabase leaderboard. The UI supports two layout modes: desktop landscape and portrait signage display, making it ready for both kiosk and standard screens.",
       "problem": "Event booths often rely on passive displays or printed materials that fail to engage visitors. There was no interactive experience that could draw crowds, encourage participation, and organically introduce MJ Solution's products.",
-      "solution": "An interactive game that disguises product exposure as entertainment — card images are MJ Solution products, and the competitive leaderboard drives repeat plays. The dual layout mode means the same app runs on both standard laptops and portrait digital signage screens at the booth.",
+      "solution": "An interactive game that disguises product exposure as entertainment  -  card images are MJ Solution products, and the competitive leaderboard drives repeat plays. The dual layout mode means the same app runs on both standard laptops and portrait digital signage screens at the booth.",
       "highlights": [
         "Two-stage timed gameplay (60s + 45s) with 5-second countdown overlay between stages",
         "6 randomized product image cards per stage for replayability",
         "Real-time leaderboard ranked by fastest total completion time (Supabase PostgreSQL)",
         "Podium display for top 3 with avatar, name, and time",
         "Sound effects for flip, match, wrong, and win via Howler.js AudioManager singleton",
-        "Dual layout mode: desktop (landscape 4×3 grid) and signage (portrait 3×4 grid)",
+        "Dual layout mode: desktop (landscape 4x3 grid) and signage (portrait 3x4 grid)",
         "Zustand global state management for player, stage, and settings",
         "3D flip card animation via Framer Motion",
         "Avatar selection with 6 options on registration screen"
@@ -386,7 +452,7 @@
         "Leaderboard page with podium (rank 1-3) and rank list (rank 4-10)",
         "Sound toggle (on/off) from game header",
         "Portrait/landscape layout auto-detection via useLayoutVariant hook",
-        "Client-side only — no SSR, all DB access via Supabase JS SDK"
+        "Client-side only  -  no SSR, all DB access via Supabase JS SDK"
       ],
       "techStack": [
         "Next.js 16",
@@ -405,61 +471,166 @@
         {
           "label": "Arch ID",
           "images": [
-            { "url": "/assets/interactive/mjs-memory-card/archid/1.webp", "title": "Memory Card × Arch ID - 1" },
-            { "url": "/assets/interactive/mjs-memory-card/archid/2.webp", "title": "Memory Card × Arch ID - 2" },
-            { "url": "/assets/interactive/mjs-memory-card/archid/3.webp", "title": "Memory Card × Arch ID - 3" },
-            { "url": "/assets/interactive/mjs-memory-card/archid/4.webp", "title": "Memory Card × Arch ID - 4" },
-            { "url": "/assets/interactive/mjs-memory-card/archid/5.webp", "title": "Memory Card × Arch ID - 5" },
-            { "url": "/assets/interactive/mjs-memory-card/archid/6.webp", "title": "Memory Card × Arch ID - 6" },
-            { "url": "/assets/interactive/mjs-memory-card/archid/7.webp", "title": "Memory Card × Arch ID - 7" }
+            {
+              "url": "/assets/interactive/mjs-memory-card/archid/1.webp",
+              "title": "Memory Card x Arch ID - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/archid/2.webp",
+              "title": "Memory Card x Arch ID - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/archid/3.webp",
+              "title": "Memory Card x Arch ID - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/archid/4.webp",
+              "title": "Memory Card x Arch ID - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/archid/5.webp",
+              "title": "Memory Card x Arch ID - 5"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/archid/6.webp",
+              "title": "Memory Card x Arch ID - 6"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/archid/7.webp",
+              "title": "Memory Card x Arch ID - 7"
+            }
           ]
         },
         {
           "label": "Default",
           "images": [
-            { "url": "/assets/interactive/mjs-memory-card/default/1.webp", "title": "Memory Card Default - 1" },
-            { "url": "/assets/interactive/mjs-memory-card/default/2.webp", "title": "Memory Card Default - 2" },
-            { "url": "/assets/interactive/mjs-memory-card/default/3.webp", "title": "Memory Card Default - 3" },
-            { "url": "/assets/interactive/mjs-memory-card/default/4.webp", "title": "Memory Card Default - 4" },
-            { "url": "/assets/interactive/mjs-memory-card/default/5.webp", "title": "Memory Card Default - 5" },
-            { "url": "/assets/interactive/mjs-memory-card/default/6.webp", "title": "Memory Card Default - 6" },
-            { "url": "/assets/interactive/mjs-memory-card/default/7.webp", "title": "Memory Card Default - 7" }
+            {
+              "url": "/assets/interactive/mjs-memory-card/default/1.webp",
+              "title": "Memory Card Default - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/default/2.webp",
+              "title": "Memory Card Default - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/default/3.webp",
+              "title": "Memory Card Default - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/default/4.webp",
+              "title": "Memory Card Default - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/default/5.webp",
+              "title": "Memory Card Default - 5"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/default/6.webp",
+              "title": "Memory Card Default - 6"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/default/7.webp",
+              "title": "Memory Card Default - 7"
+            }
           ]
         },
         {
           "label": "Happify",
           "images": [
-            { "url": "/assets/interactive/mjs-memory-card/happify/1.webp", "title": "Memory Card × Happify - 1" },
-            { "url": "/assets/interactive/mjs-memory-card/happify/2.webp", "title": "Memory Card × Happify - 2" },
-            { "url": "/assets/interactive/mjs-memory-card/happify/3.webp", "title": "Memory Card × Happify - 3" },
-            { "url": "/assets/interactive/mjs-memory-card/happify/4.webp", "title": "Memory Card × Happify - 4" },
-            { "url": "/assets/interactive/mjs-memory-card/happify/5.webp", "title": "Memory Card × Happify - 5" },
-            { "url": "/assets/interactive/mjs-memory-card/happify/6.webp", "title": "Memory Card × Happify - 6" },
-            { "url": "/assets/interactive/mjs-memory-card/happify/7.webp", "title": "Memory Card × Happify - 7" }
+            {
+              "url": "/assets/interactive/mjs-memory-card/happify/1.webp",
+              "title": "Memory Card x Happify - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/happify/2.webp",
+              "title": "Memory Card x Happify - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/happify/3.webp",
+              "title": "Memory Card x Happify - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/happify/4.webp",
+              "title": "Memory Card x Happify - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/happify/5.webp",
+              "title": "Memory Card x Happify - 5"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/happify/6.webp",
+              "title": "Memory Card x Happify - 6"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/happify/7.webp",
+              "title": "Memory Card x Happify - 7"
+            }
           ]
         },
         {
           "label": "VisionWork",
           "images": [
-            { "url": "/assets/interactive/mjs-memory-card/visionwork/1.webp", "title": "Memory Card × VisionWork - 1" },
-            { "url": "/assets/interactive/mjs-memory-card/visionwork/2.webp", "title": "Memory Card × VisionWork - 2" },
-            { "url": "/assets/interactive/mjs-memory-card/visionwork/3.webp", "title": "Memory Card × VisionWork - 3" },
-            { "url": "/assets/interactive/mjs-memory-card/visionwork/4.webp", "title": "Memory Card × VisionWork - 4" },
-            { "url": "/assets/interactive/mjs-memory-card/visionwork/5.webp", "title": "Memory Card × VisionWork - 5" },
-            { "url": "/assets/interactive/mjs-memory-card/visionwork/6.webp", "title": "Memory Card × VisionWork - 6" },
-            { "url": "/assets/interactive/mjs-memory-card/visionwork/7.webp", "title": "Memory Card × VisionWork - 7" }
+            {
+              "url": "/assets/interactive/mjs-memory-card/visionwork/1.webp",
+              "title": "Memory Card x VisionWork - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/visionwork/2.webp",
+              "title": "Memory Card x VisionWork - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/visionwork/3.webp",
+              "title": "Memory Card x VisionWork - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/visionwork/4.webp",
+              "title": "Memory Card x VisionWork - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/visionwork/5.webp",
+              "title": "Memory Card x VisionWork - 5"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/visionwork/6.webp",
+              "title": "Memory Card x VisionWork - 6"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/visionwork/7.webp",
+              "title": "Memory Card x VisionWork - 7"
+            }
           ]
         },
         {
           "label": "In-Lite",
           "images": [
-            { "url": "/assets/interactive/mjs-memory-card/in-lite/1.webp", "title": "Memory Card × In-Lite - 1" },
-            { "url": "/assets/interactive/mjs-memory-card/in-lite/2.webp", "title": "Memory Card × In-Lite - 2" },
-            { "url": "/assets/interactive/mjs-memory-card/in-lite/3.webp", "title": "Memory Card × In-Lite - 3" },
-            { "url": "/assets/interactive/mjs-memory-card/in-lite/4.webp", "title": "Memory Card × In-Lite - 4" },
-            { "url": "/assets/interactive/mjs-memory-card/in-lite/5.webp", "title": "Memory Card × In-Lite - 5" },
-            { "url": "/assets/interactive/mjs-memory-card/in-lite/6.webp", "title": "Memory Card × In-Lite - 6" },
-            { "url": "/assets/interactive/mjs-memory-card/in-lite/7.webp", "title": "Memory Card × In-Lite - 7" }
+            {
+              "url": "/assets/interactive/mjs-memory-card/in-lite/1.webp",
+              "title": "Memory Card x In-Lite - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/in-lite/2.webp",
+              "title": "Memory Card x In-Lite - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/in-lite/3.webp",
+              "title": "Memory Card x In-Lite - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/in-lite/4.webp",
+              "title": "Memory Card x In-Lite - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/in-lite/5.webp",
+              "title": "Memory Card x In-Lite - 5"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/in-lite/6.webp",
+              "title": "Memory Card x In-Lite - 6"
+            },
+            {
+              "url": "/assets/interactive/mjs-memory-card/in-lite/7.webp",
+              "title": "Memory Card x In-Lite - 7"
+            }
           ]
         }
       ],
@@ -472,21 +643,21 @@
       "name": "MJS Scream Challenge",
       "slug": "mjs-scream-challenge",
       "stack": "TypeScript",
-      "category": "game",
+      "category": "interactive",
       "focus": "real-time audio input, event booth experience",
-      "summary": "A microphone-based scream challenge game for MJ Solution × Arch ID event booths — players scream into the mic for 60 seconds, accumulate score via dB intensity and combo multiplier, and winners unlock a Spin the Wheel prize.",
-      "description": "MJS Scream Challenge is an interactive event booth game where players scream or blow into their device microphone for 60 seconds. Sound intensity is captured in real time via the Web Audio API and converted to a score using dB thresholds, rate multipliers, and a live combo system. Two difficulty levels are available: Normal and Hard, each with different dB thresholds and scoring rates. Players who reach a score of 300+ are classified as winners and receive a link to the Spin the Wheel prize page. All scores are saved to a Supabase leaderboard with podium and rank display. Built for the MJ Solution Indonesia × Arch ID brand event.",
+      "summary": "A microphone-based scream challenge game for MJ Solution x Arch ID event booths  -  players scream into the mic for 60 seconds, accumulate score via dB intensity and combo multiplier, and winners unlock a Spin the Wheel prize.",
+      "description": "MJS Scream Challenge is an interactive event booth game where players scream or blow into their device microphone for 60 seconds. Sound intensity is captured in real time via the Web Audio API and converted to a score using dB thresholds, rate multipliers, and a live combo system. Two difficulty levels are available: Normal and Hard, each with different dB thresholds and scoring rates. Players who reach a score of 300+ are classified as winners and receive a link to the Spin the Wheel prize page. All scores are saved to a Supabase leaderboard with podium and rank display. Built for the MJ Solution Indonesia x Arch ID brand event.",
       "problem": "Standard event booth activities are often passive and forgettable. There was a need for a high-energy, instantly understandable interactive experience that could draw a crowd, create shareable moments, and integrate with an existing prize mechanic.",
       "solution": "A mic-based game with a clear win condition, live visual feedback via a power meter, and a combo multiplier that rewards sustained effort. The 60-second format is short enough for quick turnover at the booth while the leaderboard and Spin the Wheel integration create incentive for competitive replay.",
       "highlights": [
         "Real-time microphone dB tracking via Web Audio API and requestAnimationFrame",
         "Combo multiplier system that scales with accumulated score (x1 to x5)",
         "Two difficulty levels: Normal (dB threshold -70 to -30 dBFS) and Hard (-60 to -10 dBFS)",
-        "Win condition: score ≥ 300 unlocks Spin the Wheel prize link",
+        "Win condition: score >= 300 unlocks Spin the Wheel prize link",
         "60-second game timer with live score accumulation display",
-        "Power meter visualization with 4 tiers (Weak → Max) using balloon animation",
+        "Power meter visualization with 4 tiers (Weak -> Max) using balloon animation",
         "Supabase leaderboard with top-10 ranking by score",
-        "Phase-based state machine: register → instruction → countdown → playing → result",
+        "Phase-based state machine: register -> instruction -> countdown -> playing -> result",
         "3-2-1-SCREAM countdown animation before game starts",
         "Dual layout support: mobile default and desktop/signage via useLayoutVariant",
         "Background video on game screen"
@@ -502,7 +673,7 @@
         "Auto-reset to registration on loss",
         "Leaderboard page with podium (rank 1-3) and rank rows (rank 4-10)",
         "Avatar selection with 6 options",
-        "Client-side only — no SSR, direct Supabase access via anon key"
+        "Client-side only  -  no SSR, direct Supabase access via anon key"
       ],
       "techStack": [
         "Next.js 16",
@@ -519,34 +690,88 @@
         {
           "label": "Happify",
           "images": [
-            { "url": "/assets/interactive/mjs-scream-challenge/happify/1.webp", "title": "Scream Challenge × Happify - 1" },
-            { "url": "/assets/interactive/mjs-scream-challenge/happify/2.webp", "title": "Scream Challenge × Happify - 2" },
-            { "url": "/assets/interactive/mjs-scream-challenge/happify/3.webp", "title": "Scream Challenge × Happify - 3" },
-            { "url": "/assets/interactive/mjs-scream-challenge/happify/4.webp", "title": "Scream Challenge × Happify - 4" },
-            { "url": "/assets/interactive/mjs-scream-challenge/happify/5.webp", "title": "Scream Challenge × Happify - 5" }
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/happify/1.webp",
+              "title": "Scream Challenge x Happify - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/happify/2.webp",
+              "title": "Scream Challenge x Happify - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/happify/3.webp",
+              "title": "Scream Challenge x Happify - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/happify/4.webp",
+              "title": "Scream Challenge x Happify - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/happify/5.webp",
+              "title": "Scream Challenge x Happify - 5"
+            }
           ]
         },
         {
           "label": "In-Lite",
           "images": [
-            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/1.webp", "title": "Scream Challenge × In-Lite - 1" },
-            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/2.webp", "title": "Scream Challenge × In-Lite - 2" },
-            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/3.webp", "title": "Scream Challenge × In-Lite - 3" },
-            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/4.webp", "title": "Scream Challenge × In-Lite - 4" },
-            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/5.webp", "title": "Scream Challenge × In-Lite - 5" },
-            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/6.webp", "title": "Scream Challenge × In-Lite - 6" },
-            { "url": "/assets/interactive/mjs-scream-challenge/in-lite/7.webp", "title": "Scream Challenge × In-Lite - 7" }
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/in-lite/1.webp",
+              "title": "Scream Challenge x In-Lite - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/in-lite/2.webp",
+              "title": "Scream Challenge x In-Lite - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/in-lite/3.webp",
+              "title": "Scream Challenge x In-Lite - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/in-lite/4.webp",
+              "title": "Scream Challenge x In-Lite - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/in-lite/5.webp",
+              "title": "Scream Challenge x In-Lite - 5"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/in-lite/6.webp",
+              "title": "Scream Challenge x In-Lite - 6"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/in-lite/7.webp",
+              "title": "Scream Challenge x In-Lite - 7"
+            }
           ]
         },
         {
           "label": "VisionWork",
           "images": [
-            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/1.webp", "title": "Scream Challenge × VisionWork - 1" },
-            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/2.webp", "title": "Scream Challenge × VisionWork - 2" },
-            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/3.webp", "title": "Scream Challenge × VisionWork - 3" },
-            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/4.webp", "title": "Scream Challenge × VisionWork - 4" },
-            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/5.webp", "title": "Scream Challenge × VisionWork - 5" },
-            { "url": "/assets/interactive/mjs-scream-challenge/visionwork/6.webp", "title": "Scream Challenge × VisionWork - 6" }
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/visionwork/1.webp",
+              "title": "Scream Challenge x VisionWork - 1"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/visionwork/2.webp",
+              "title": "Scream Challenge x VisionWork - 2"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/visionwork/3.webp",
+              "title": "Scream Challenge x VisionWork - 3"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/visionwork/4.webp",
+              "title": "Scream Challenge x VisionWork - 4"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/visionwork/5.webp",
+              "title": "Scream Challenge x VisionWork - 5"
+            },
+            {
+              "url": "/assets/interactive/mjs-scream-challenge/visionwork/6.webp",
+              "title": "Scream Challenge x VisionWork - 6"
+            }
           ]
         }
       ],
@@ -559,9 +784,9 @@
       "name": "MJS Spin the Wheel",
       "slug": "mjs-spin-wheel",
       "stack": "TypeScript",
-      "category": "game",
+      "category": "interactive",
       "focus": "canvas animation, probability logic, prize management",
-      "summary": "An interactive digital fortune wheel game for event giveaways — allowing users to spin for prizes with probability weights and real-time inventory tracking.",
+      "summary": "An interactive digital fortune wheel game for event giveaways  -  allowing users to spin for prizes with probability weights and real-time inventory tracking.",
       "description": "MJS Spin the Wheel is a digital fortune wheel application developed for exhibition booth engagement. Visitors register with their name/email, then tap to spin the wheel for a chance to win various branded merchandise. The backend manages segment configurations, prize titles, custom slice colors, and precise winning probabilities. It also implements strict daily inventory caps to prevent high-value prizes from running out too early. Frequently integrated as the final reward stage of the Memory Card or Scream Challenge games.",
       "problem": "Traditional paper ticket giveaways or offline raffle draws at events are boring, hard to coordinate, suffer from high admin overhead, and provide no real-time way to limit high-value prize distributions dynamically.",
       "solution": "An interactive touch-screen spin wheel that features physical inertia deceleration and celebration sound effects. Admins set prize limits and probability weights via the dashboard, ensuring prizes are distributed evenly throughout the event duration while automatically logging winner contact info.",
@@ -596,13 +821,34 @@
         {
           "label": "In-Lite",
           "images": [
-            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/1.webp", "title": "Spin the Wheel × In-Lite - Welcome Kiosk" },
-            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/2.webp", "title": "Spin the Wheel × In-Lite - Input Data Form" },
-            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/3.webp", "title": "Spin the Wheel × In-Lite - Ready to Spin" },
-            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/4.webp", "title": "Spin the Wheel × In-Lite - Deceleration Spin" },
-            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/5.webp", "title": "Spin the Wheel × In-Lite - Landing on Prize" },
-            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/6.webp", "title": "Spin the Wheel × In-Lite - Winner Confetti Dialog" },
-            { "url": "/assets/interactive/mjs-spin-wheel/in-lite/7.webp", "title": "Spin the Wheel × In-Lite - Reward Claim QR Code" }
+            {
+              "url": "/assets/interactive/mjs-spin-wheel/in-lite/1.webp",
+              "title": "Spin the Wheel x In-Lite - Welcome Kiosk"
+            },
+            {
+              "url": "/assets/interactive/mjs-spin-wheel/in-lite/2.webp",
+              "title": "Spin the Wheel x In-Lite - Input Data Form"
+            },
+            {
+              "url": "/assets/interactive/mjs-spin-wheel/in-lite/3.webp",
+              "title": "Spin the Wheel x In-Lite - Ready to Spin"
+            },
+            {
+              "url": "/assets/interactive/mjs-spin-wheel/in-lite/4.webp",
+              "title": "Spin the Wheel x In-Lite - Deceleration Spin"
+            },
+            {
+              "url": "/assets/interactive/mjs-spin-wheel/in-lite/5.webp",
+              "title": "Spin the Wheel x In-Lite - Landing on Prize"
+            },
+            {
+              "url": "/assets/interactive/mjs-spin-wheel/in-lite/6.webp",
+              "title": "Spin the Wheel x In-Lite - Winner Confetti Dialog"
+            },
+            {
+              "url": "/assets/interactive/mjs-spin-wheel/in-lite/7.webp",
+              "title": "Spin the Wheel x In-Lite - Reward Claim QR Code"
+            }
           ]
         }
       ],
@@ -615,14 +861,14 @@
       "name": "MJS Photobooth",
       "slug": "mjs-photobooth",
       "stack": "TypeScript",
-      "category": "system",
+      "category": "interactive",
       "focus": "media capture, cloud storage, event booth experience",
-      "summary": "An interactive photobooth web app for events — featuring webcam capture, layout and frame customization, photo filters, and result delivery via email, WhatsApp request, or QR code download.",
+      "summary": "An interactive photobooth web app for events  -  featuring webcam capture, layout and frame customization, photo filters, and result delivery via email, WhatsApp request, or QR code download.",
       "description": "MJS Photobooth is a browser-based photobooth application designed for MJ Solution event installations. Users go through a guided flow: welcome screen, layout selection, photo capture via webcam, preview with frame overlay composited using html2canvas, and final delivery via QR code, email, or WhatsApp request. The composited photo is uploaded to a Supabase Storage bucket named after the event, and a QR code is generated from the public URL for instant download. Email delivery uses Nodemailer via a Next.js API route. WhatsApp requests are logged to a Supabase database table and managed through a separate admin dashboard page.",
       "problem": "Physical photo prints at events require expensive hardware and on-site operators. There was no digital alternative that could deliver a polished, branded photo experience and get results directly into visitors' hands without manual intervention.",
-      "solution": "A fully browser-based photobooth with a guided multi-screen flow that captures, composites, and delivers branded photos digitally — via QR code scan, email, or WhatsApp — with zero need for physical printing hardware. An admin dashboard lets the team manage and track WhatsApp delivery requests.",
+      "solution": "A fully browser-based photobooth with a guided multi-screen flow that captures, composites, and delivers branded photos digitally  -  via QR code scan, email, or WhatsApp  -  with zero need for physical printing hardware. An admin dashboard lets the team manage and track WhatsApp delivery requests.",
       "highlights": [
-        "Multi-screen guided flow: Welcome → Layout → Photo Capture → Preview → QR Delivery",
+        "Multi-screen guided flow: Welcome -> Layout -> Photo Capture -> Preview -> QR Delivery",
         "Webcam photo capture with layout and frame selection",
         "Final image compositing with frame overlay using html2canvas",
         "QR code generation from Supabase Storage public URL for instant download",
@@ -665,17 +911,17 @@
       "name": "Happify",
       "slug": "happify-product-mockup",
       "stack": "TypeScript",
-      "category": "system",
+      "category": "interactive",
       "focus": "e-commerce, product customization, payment integration",
-      "summary": "Happify is a full-stack custom merchandise e-commerce platform — featuring an interactive canvas-based product designer, AI background removal, cross-device QR checkout, Midtrans QRIS payment, and automated email and WhatsApp order notifications.",
-      "description": "Happify is a custom merchandise platform built by MJ Solution Indonesia, allowing customers to personalize products — T-shirts, socks, tote bags, and gift cards — through an interactive canvas designer. Users can upload photos with client-side AI background removal, browse Pixabay stock designs, and edit gift cards. Cart state persists in localStorage, with a cross-device QR checkout flow that lets kiosk users transfer their cart to a mobile device via Supabase-backed checkout sessions. Payment is handled via Midtrans Snap (QRIS only). Post-payment, a webhook triggers automated order confirmation emails via Resend (to customer and production team) and WhatsApp resi notifications via Fonnte. An admin dashboard handles order and shipping management.",
+      "summary": "Happify is a full-stack custom merchandise e-commerce platform  -  featuring an interactive canvas-based product designer, AI background removal, cross-device QR checkout, Midtrans QRIS payment, and automated email and WhatsApp order notifications.",
+      "description": "Happify is a custom merchandise platform built by MJ Solution Indonesia, allowing customers to personalize products  -  T-shirts, socks, tote bags, and gift cards  -  through an interactive canvas designer. Users can upload photos with client-side AI background removal, browse Pixabay stock designs, and edit gift cards. Cart state persists in localStorage, with a cross-device QR checkout flow that lets kiosk users transfer their cart to a mobile device via Supabase-backed checkout sessions. Payment is handled via Midtrans Snap (QRIS only). Post-payment, a webhook triggers automated order confirmation emails via Resend (to customer and production team) and WhatsApp resi notifications via Fonnte. An admin dashboard handles order and shipping management.",
       "problem": "Ordering custom merchandise typically requires back-and-forth communication with a designer, manual calculations for shipping, and no real-time visibility into order status. For event or kiosk contexts, completing a purchase on a small screen or shared device adds further friction.",
-      "solution": "A self-service customization platform where customers design their own products, calculate shipping in real time via Binderbyte API, and pay via QRIS — all in one flow. The cross-device QR checkout solves the kiosk-to-mobile handoff problem, while the Express backend and Midtrans webhook automate all post-payment notifications and order logging without manual intervention.",
+      "solution": "A self-service customization platform where customers design their own products, calculate shipping in real time via Binderbyte API, and pay via QRIS  -  all in one flow. The cross-device QR checkout solves the kiosk-to-mobile handoff problem, while the Express backend and Midtrans webhook automate all post-payment notifications and order logging without manual intervention.",
       "highlights": [
         "Interactive canvas-based product customizer (T-shirt, socks, tote bag, gift card)",
         "Client-side AI background removal via @imgly/background-removal and MediaPipe",
         "Pixabay stock design search with proxy API route",
-        "Cross-device QR checkout: kiosk → Supabase checkout_sessions → mobile prefill",
+        "Cross-device QR checkout: kiosk -> Supabase checkout_sessions -> mobile prefill",
         "Midtrans Snap integration (QRIS only, sandbox)",
         "Automated post-payment email to customer and production team via Resend",
         "WhatsApp resi notification via Fonnte API",
@@ -691,8 +937,8 @@
         "Gift card editor with canvas",
         "Add to cart with localStorage persistence",
         "Cart page with item management and order summary",
-        "QR checkout modal for cross-device handoff (kiosk → mobile)",
-        "Checkout form with region selector (province → city → district)",
+        "QR checkout modal for cross-device handoff (kiosk -> mobile)",
+        "Checkout form with region selector (province -> city -> district)",
         "Real-time shipping cost calculation (Binderbyte API)",
         "Midtrans Snap QRIS payment popup",
         "Order success, pending, and error pages",
@@ -729,12 +975,12 @@
       "name": "MJS Product Showcase",
       "slug": "mjs-product-showcase",
       "stack": "JavaScript",
-      "category": "system",
+      "category": "interactive",
       "focus": "interactive product presentation for sales and marketing",
       "summary": "An interactive product showcase web app for MJ Solution Indonesia, built to replace static presentations with a dynamic, navigable product exploration experience for sales events and client meetings.",
-      "description": "MJS Product Showcase is an interactive web-based presentation tool designed for MJ Solution's sales and marketing team. It serves as a digital catalog covering two main product categories — LED Display and LCD Display — featuring clean layouts, micro-interaction animations, and slide-in product detail sections. The project originated from a stakeholder meeting where static PowerPoint presentations were deemed insufficient for engaging product walkthroughs. Custom isometric illustrations were created in Adobe Illustrator to visually communicate product use-cases without heavy text, and the final product has been actively used in exhibitions, trade shows, and client meetings.",
-      "problem": "Static PowerPoint presentations were inefficient for product demonstrations at events and client meetings — they lacked interactivity, required too much verbal explanation, and failed to give audiences a clear spatial understanding of how digital display products fit real environments.",
-      "solution": "A web-based interactive prototype that lets sales and marketing teams navigate between product categories with smooth transitions and micro-interactions. Custom isometric illustrations visualize real-world use cases, while an intuitive user flow allows audiences to explore products independently — making presentations faster, more engaging, and more professional.",
+      "description": "MJS Product Showcase is an interactive web-based presentation tool designed for MJ Solution's sales and marketing team. It serves as a digital catalog covering two main product categories  -  LED Display and LCD Display  -  featuring clean layouts, micro-interaction animations, and slide-in product detail sections. The project originated from a stakeholder meeting where static PowerPoint presentations were deemed insufficient for engaging product walkthroughs. Custom isometric illustrations were created in Adobe Illustrator to visually communicate product use-cases without heavy text, and the final product has been actively used in exhibitions, trade shows, and client meetings.",
+      "problem": "Static PowerPoint presentations were inefficient for product demonstrations at events and client meetings  -  they lacked interactivity, required too much verbal explanation, and failed to give audiences a clear spatial understanding of how digital display products fit real environments.",
+      "solution": "A web-based interactive prototype that lets sales and marketing teams navigate between product categories with smooth transitions and micro-interactions. Custom isometric illustrations visualize real-world use cases, while an intuitive user flow allows audiences to explore products independently  -  making presentations faster, more engaging, and more professional.",
       "highlights": [
         "Initiated from a stakeholder meeting as a replacement for static PowerPoint decks",
         "Covers two product categories: LED Display and LCD Display",
@@ -743,7 +989,7 @@
         "Actively used in trade events, exhibitions, and client meetings",
         "Received positive feedback from stakeholders and visitors",
         "Reduced presentation time while increasing perceived brand professionalism",
-        "No technical background required to navigate — designed for any audience"
+        "No technical background required to navigate  -  designed for any audience"
       ],
       "features": [
         "Multi-page structure: Home, LED Display, LCD Display",
@@ -773,10 +1019,10 @@
       "stack": "TypeScript",
       "category": "landing",
       "status": "active",
-      "summary": "Multi-page landing site for VisionLAB by MJ Solution Indonesia — a professional multimedia service center specializing in LED & LCD screen repair, maintenance, and on-site training.",
-      "description": "VisionLAB is a multimedia service center under MJ Solution Indonesia, focused on repair, maintenance, and servicing of LED & LCD screens. The website serves as a full-featured service landing page with dedicated pages for each service, a partner brand showcase, maintenance process breakdown, tiered service packages, and an FAQ section — all driving visitors to WhatsApp-based consultation.",
+      "summary": "Multi-page landing site for VisionLAB by MJ Solution Indonesia  -  a professional multimedia service center specializing in LED & LCD screen repair, maintenance, and on-site training.",
+      "description": "VisionLAB is a multimedia service center under MJ Solution Indonesia, focused on repair, maintenance, and servicing of LED & LCD screens. The website serves as a full-featured service landing page with dedicated pages for each service, a partner brand showcase, maintenance process breakdown, tiered service packages, and an FAQ section  -  all driving visitors to WhatsApp-based consultation.",
       "problem": "As demand for digital displays rises, many LED and LCD screens degrade from poor or irregular maintenance, leaving businesses with underperforming or broken displays and no reliable professional service partner to restore them.",
-      "solution": "VisionLAB provides end-to-end LED & LCD screen care — from complete hardware repair and calibration to scheduled maintenance contracts and on-site technician training — handled by certified technicians with experience across major international display brands.",
+      "solution": "VisionLAB provides end-to-end LED & LCD screen care  -  from complete hardware repair and calibration to scheduled maintenance contracts and on-site technician training  -  handled by certified technicians with experience across major international display brands.",
       "highlights": [
         "1,200+ LED & LCD screens repaired",
         "95% customer satisfaction rate",
@@ -786,7 +1032,7 @@
         "Flexible maintenance plans: one-time, monthly, quarterly, and annual",
         "6-step systematic maintenance process",
         "WhatsApp-based booking for fast consultation",
-        "Based in Kemayoran, Jakarta Utara — serving Indonesia"
+        "Based in Kemayoran, Jakarta Utara  -  serving Indonesia"
       ],
       "features": [
         "Hero section with dual CTA (Book a Service & Explore Services)",
@@ -857,17 +1103,17 @@
       "stack": "TypeScript",
       "category": "landing",
       "status": "active",
-      "summary": "Landing page for Envision, a premium immersive experience company offering the 'Multiverse Engine' — a sensory platform combining micro-LED visuals, kinesthetic interaction, atmospheric audio, and spatial design.",
+      "summary": "Landing page for Envision, a premium immersive experience company offering the 'Multiverse Engine'  -  a sensory platform combining micro-LED visuals, kinesthetic interaction, atmospheric audio, and spatial design.",
       "description": "Envision is a high-end immersive experience platform that goes beyond traditional display solutions. Their flagship product, the Multiverse Engine, blends micro-LED seamless displays, real-time 8K/16K rendering, motion, atmospheric-synthesizer audio, and sensory elements into a fully bespoke experience. The landing page positions Envision as an end-to-end partner for venues, corporations, and institutions looking to transform spaces into unforgettable visual destinations.",
       "problem": "In an era where audiences expect more than passive viewing, conventional display solutions fail to deliver truly immersive, emotionally engaging environments. Spaces lack the integration of visuals, motion, sound, and sensory elements needed to create lasting experiences.",
-      "solution": "Envision's Multiverse Engine delivers a fully custom-built sensory platform — combining micro-LED displays, high-performance media servers, kinesthetic interaction, and atmospheric design — all engineered and installed end-to-end, from discovery and UX design to deployment and long-term support.",
+      "solution": "Envision's Multiverse Engine delivers a fully custom-built sensory platform  -  combining micro-LED displays, high-performance media servers, kinesthetic interaction, and atmospheric design  -  all engineered and installed end-to-end, from discovery and UX design to deployment and long-term support.",
       "highlights": [
-        "Flagship 'Multiverse Engine' — a multi-sensory immersive platform",
+        "Flagship 'Multiverse Engine'  -  a multi-sensory immersive platform",
         "Micro-LED modular cabinets with fine pitch and absolute black contrast",
         "Real-time 8K/16K rendering via high-end media server",
-        "Kinesthetic interaction — audience controls the digital environment with body movements",
+        "Kinesthetic interaction  -  audience controls the digital environment with body movements",
         "Atmospheric-synthesizer audio and sensory elements (scent, temperature, air pressure)",
-        "Fully bespoke — custom-designed per space, identity, and story",
+        "Fully bespoke  -  custom-designed per space, identity, and story",
         "End-to-end partner: concept, design, build, installation, and ongoing support",
         "Industrial-grade hardware built for 24/7 operation"
       ],
@@ -925,9 +1171,9 @@
       "category": "landing",
       "status": "active",
       "summary": "Landing page for NEO Display, a brand offering integrated LED & LCD visual solutions tailored for retail, SMEs, corporate, education, and public spaces.",
-      "description": "NEO Display is a visual solutions brand delivering complete LED and LCD display ecosystems designed for specific environments. The landing page showcases curated solution bundles across multiple verticals — from corporate boardrooms to commercial and public spaces — with a structured 5-step approach from discovery to optimization.",
+      "description": "NEO Display is a visual solutions brand delivering complete LED and LCD display ecosystems designed for specific environments. The landing page showcases curated solution bundles across multiple verticals  -  from corporate boardrooms to commercial and public spaces  -  with a structured 5-step approach from discovery to optimization.",
       "problem": "Businesses and institutions often struggle to find display solutions that are truly tailored to their space, scalable for future growth, and integrated end-to-end rather than being a patchwork of disconnected hardware and content systems.",
-      "solution": "NEO Display offers fully integrated visual ecosystems that combine LED, LCD, spatial design, and content strategy into a single cohesive solution — backed by a structured process from initial discovery through professional installation and ongoing optimization.",
+      "solution": "NEO Display offers fully integrated visual ecosystems that combine LED, LCD, spatial design, and content strategy into a single cohesive solution  -  backed by a structured process from initial discovery through professional installation and ongoing optimization.",
       "highlights": [
         "Fully integrated visual ecosystem (LED + LCD + supporting systems)",
         "Solutions tailored to specific environments and use cases",
@@ -984,10 +1230,10 @@
       "stack": "TypeScript",
       "category": "landing",
       "status": "active",
-      "summary": "B2B landing page for KMI, a company specializing in digital display solutions — covering products, services, key advantages, and a consultation CTA.",
+      "summary": "B2B landing page for KMI, a company specializing in digital display solutions  -  covering products, services, key advantages, and a consultation CTA.",
       "description": "KMI is a company specializing in high-performance digital display procurement at competitive prices. This B2B landing page showcases their product lineup (Interactive Whiteboard, LED Indoor, Standfloor), service highlights, and drives visitors toward direct consultation via email.",
       "problem": "Businesses and government institutions seeking quality display solutions often struggle to find vendors that balance high performance with budget constraints, while maintaining a transparent and reliable process from start to finish.",
-      "solution": "KMI serves as an end-to-end display procurement partner — handling everything from site survey and proposal to installation and final handover — backed by verified products and a team experienced in government and corporate projects.",
+      "solution": "KMI serves as an end-to-end display procurement partner  -  handling everything from site survey and proposal to installation and final handover  -  backed by verified products and a team experienced in government and corporate projects.",
       "highlights": [
         "Display products verified against strict quality standards",
         "End-to-end service: survey, installation, and handover",

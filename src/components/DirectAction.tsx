@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useCallback, useState } from "react";
-import type { DirectActionProps } from "./types";
+import type { DirectActionProps } from "@/types";
 
 export const DirectAction = ({
   children,

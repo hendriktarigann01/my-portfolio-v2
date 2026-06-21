@@ -59,13 +59,13 @@ export function CursorFollow() {
     <>
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[99999] rounded-full border mix-blend-exclusion"
-        style={{ x: springX, y: springY, width: 20, height: 20, borderColor: "#efd1c3" }}
+        style={{ x: springX, y: springY, width: 20, height: 20, borderColor: "var(--accent)" }}
         animate={{ scale: isHovering ? 2.5 : isClicking ? 0.8 : 1, opacity: isHovering ? 0.6 : 0.8, borderWidth: isHovering ? 1.5 : 1 }}
         transition={{ scale: { type: "spring", stiffness: 300, damping: 20 }, opacity: { duration: 0.2 }, borderWidth: { duration: 0.2 } }}
       />
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[99999] rounded-full"
-        style={{ x: trailX, y: trailY, width: 8, height: 8, backgroundColor: "#efd1c3" }}
+        style={{ x: trailX, y: trailY, width: 8, height: 8, backgroundColor: "var(--accent)" }}
         animate={{ scale: isClicking ? 0.5 : 1, opacity: isHovering ? 0 : 1 }}
         transition={{ scale: { type: "spring", stiffness: 400, damping: 20 }, opacity: { duration: 0.15 } }}
       />

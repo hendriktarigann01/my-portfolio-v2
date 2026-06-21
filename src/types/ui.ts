@@ -1,28 +1,5 @@
 import type { MotionProps, Transition, AnimatePresenceProps } from "framer-motion";
 
-export type CarouselImage = {
-  url: string;
-  title?: string;
-};
-
-export type CarouselProps = {
-  images: CarouselImage[];
-};
-
-export interface Message {
-  id: string;
-  role: "user" | "model";
-  content: string;
-  timestamp: Date;
-}
-
-export type GeoData = {
-  city: string;
-  country_name: string;
-  latitude: number;
-  longitude: number;
-};
-
 export interface ScrollRevealProps {
   children: React.ReactNode;
   delay?: number;
@@ -36,11 +13,6 @@ export interface StaggerContainerProps {
   className?: string;
   staggerDelay?: number;
 }
-
-export type NavLink = {
-  label: string;
-  href: string;
-};
 
 export type IllustrationData = {
   src: string;
@@ -101,4 +73,17 @@ export interface TextRotateProps {
   mainClassName?: string;
   splitLevelClassName?: string;
   elementLevelClassName?: string;
+}
+
+export interface NowItem {
+  label: string;
+  value: string;
+  note: string;
+  rotation: string;
+}
+
+export interface ProcessStep {
+  index: string;
+  title: string;
+  body: string;
 }

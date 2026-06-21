@@ -6,7 +6,8 @@ import { useState } from "react";
 import { Volume2, VolumeX, Menu, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAudio } from "@/lib/audio-context";
-import { NAV_LINKS } from "./constants";
+import { NAV_LINKS } from "@/constants";
+import { globalLenis } from "@/components/SmoothScrollProvider";
 
 export function Navbar() {
   const { isPlaying, toggleSound } = useAudio();
@@ -26,16 +27,24 @@ export function Navbar() {
       return;
     }
     if (href === "#") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (globalLenis) {
+        globalLenis.scrollTo(0);
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
       return;
     }
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    if (globalLenis) {
+      globalLenis.scrollTo(href);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <>
       {/* LEFT SIDEBAR (desktop) */}
-      <div className="hidden md:block fixed left-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(239,209,195,0.05)" }}>
+      <div className="hidden md:block fixed left-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}>
         <motion.div
           className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-auto"
           initial={{ opacity: 0, y: -20 }}
@@ -68,7 +77,7 @@ export function Navbar() {
             style={{
               fontFamily: "var(--font-body)",
               fontSize: "0.75rem",
-              color: "rgba(239,209,195,0.4)",
+              color: "rgba(var(--accent-rgb),0.4)",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
             }}
@@ -79,7 +88,7 @@ export function Navbar() {
       </div>
 
       {/* RIGHT SIDEBAR (desktop) */}
-      <div className="hidden md:block fixed right-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(239,209,195,0.05)" }}>
+      <div className="hidden md:block fixed right-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}>
         <motion.nav
           className="absolute top-1/2 right-1/2 pointer-events-auto flex items-center gap-12"
           initial={{ opacity: 0 }}
@@ -99,14 +108,14 @@ export function Navbar() {
               style={{
                 fontFamily: "var(--font-body)",
                 fontSize: "0.75rem",
-                color: "rgba(239,209,195,0.65)",
+                color: "rgba(var(--accent-rgb),0.65)",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
                 fontWeight: 500,
                 transition: "color 0.3s ease",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#efd1c3")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(239,209,195,0.65)")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(var(--accent-rgb),0.65)")}
             >
               {link.label}
             </a>
@@ -123,12 +132,12 @@ export function Navbar() {
             fontFamily: "var(--font-display)",
             fontWeight: 700,
             fontSize: "1.25rem",
-            color: "#efd1c3",
+            color: "var(--accent)",
           }}
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
         >
-          HT<span style={{ color: "rgba(239,209,195,0.35)" }}>.</span>
+          HT<span style={{ color: "rgba(var(--accent-rgb),0.35)" }}>.</span>
         </motion.a>
 
         <motion.button
@@ -139,7 +148,7 @@ export function Navbar() {
           style={{
             background: "transparent",
             border: "none",
-            color: "#efd1c3",
+            color: "var(--accent)",
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
@@ -184,13 +193,13 @@ export function Navbar() {
                   fontFamily: "var(--font-display)",
                   fontSize: "1.75rem",
                   fontWeight: 700,
-                  color: "#efd1c3",
+                  color: "var(--accent)",
                   letterSpacing: "0.05em",
                   textDecoration: "none",
                   transition: "color 0.2s",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(239,209,195,0.5)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#efd1c3")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(var(--accent-rgb),0.5)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--accent)")}
               >
                 {link.label}
               </motion.a>
@@ -200,7 +209,7 @@ export function Navbar() {
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              style={{ width: 48, height: 1, background: "rgba(239,209,195,0.15)" }}
+              style={{ width: 48, height: 1, background: "rgba(var(--accent-rgb),0.15)" }}
             />
 
             <motion.button
@@ -213,10 +222,10 @@ export function Navbar() {
                 alignItems: "center",
                 gap: 8,
                 background: "transparent",
-                border: "1px solid rgba(239,209,195,0.2)",
+                border: "1px solid rgba(var(--accent-rgb),0.2)",
                 borderRadius: "9999px",
                 padding: "10px 20px",
-                color: "rgba(239,209,195,0.7)",
+                color: "rgba(var(--accent-rgb),0.7)",
                 fontFamily: "var(--font-body)",
                 fontSize: "0.8rem",
                 letterSpacing: "0.15em",
@@ -248,8 +257,8 @@ export function Navbar() {
           height: 56,
           borderRadius: "50%",
           border: "none",
-          background: isPlaying ? "rgba(239,209,195,0.15)" : "#efd1c3",
-          color: isPlaying ? "#efd1c3" : "#024244",
+          background: isPlaying ? "rgba(var(--accent-rgb),0.15)" : "var(--accent)",
+          color: isPlaying ? "var(--accent)" : "#024244",
           alignItems: "center",
           justifyContent: "center",
           cursor: "pointer",

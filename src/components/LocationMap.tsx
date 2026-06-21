@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { HOME_LOCATION } from "./constants";
-import { getDistanceKm } from "./helpers";
-import type { GeoData } from "./types";
+import { HOME_LOCATION } from "@/constants";
+import { getDistanceKm } from "@/helpers";
+import type { GeoData } from "@/types";
 
 export function LocationMap() {
   const mapContainer = useRef<HTMLDivElement>(null);
@@ -83,9 +83,9 @@ export function LocationMap() {
       const userEl = document.createElement("div");
       userEl.style.cssText = `
         width: 14px; height: 14px; border-radius: 50%;
-        background: rgba(239,209,195,0.6);
-        border: 2px solid #efd1c3;
-        box-shadow: 0 0 0 4px rgba(239,209,195,0.15);
+        background: rgba(var(--accent-rgb),0.6);
+        border: 2px solid var(--accent);
+        box-shadow: 0 0 0 4px rgba(var(--accent-rgb),0.15);
       `;
       new maplibregl.Marker({ element: userEl })
         .setLngLat([geo.longitude, geo.latitude])
@@ -134,7 +134,7 @@ export function LocationMap() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      <div style={{ borderRadius: "1.25rem", overflow: "hidden", border: "1px solid rgba(239,209,195,0.1)", aspectRatio: "16/9", position: "relative" }}>
+      <div style={{ borderRadius: "1.25rem", overflow: "hidden", border: "1px solid rgba(var(--accent-rgb),0.1)", aspectRatio: "16/9", position: "relative" }}>
         <style>{`
           .maplibregl-canvas { border-radius: 1.25rem; }
           .maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right { display: none !important; }
@@ -143,29 +143,29 @@ export function LocationMap() {
         {!geo && (
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(1,48,50,0.6)", backdropFilter: "blur(4px)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#efd1c3", animation: "pulse 1.2s infinite" }} />
-              <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(239,209,195,0.5)" }}>Detecting location...</span>
+              <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--accent)", animation: "pulse 1.2s infinite" }} />
+              <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(var(--accent-rgb),0.5)" }}>Detecting location...</span>
             </div>
           </div>
         )}
       </div>
 
-      <div style={{ padding: "1.125rem 1.375rem", borderRadius: "1rem", background: "rgba(239,209,195,0.04)", border: "1px solid rgba(239,209,195,0.08)" }}>
+      <div style={{ padding: "1.125rem 1.375rem", borderRadius: "1rem", background: "rgba(var(--accent-rgb),0.04)", border: "1px solid rgba(var(--accent-rgb),0.08)" }}>
         {distance !== null && geo ? (
           <>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "rgba(239,209,195,0.6)", lineHeight: 1.7, fontWeight: 300 }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "rgba(var(--accent-rgb),0.6)", lineHeight: 1.7, fontWeight: 300 }}>
               I&apos;m based in{" "}
-              <span style={{ color: "#efd1c3", fontWeight: 500 }}>{HOME_LOCATION.city}, {HOME_LOCATION.country}</span>
-              {" "}— roughly{" "}
-              <span style={{ color: "#efd1c3", fontWeight: 600, fontFamily: "var(--font-display)" }}>
+              <span style={{ color: "var(--accent)", fontWeight: 500 }}>{HOME_LOCATION.city}, {HOME_LOCATION.country}</span>
+              {" "}, roughly{" "}
+              <span style={{ color: "var(--accent)", fontWeight: 600, fontFamily: "var(--font-display)" }}>
                 {distance.toLocaleString()} km
               </span>
               {" "}away from{" "}
-              <span style={{ color: "#efd1c3", fontWeight: 500 }}>
+              <span style={{ color: "var(--accent)", fontWeight: 500 }}>
                 {locationSource === "gps" ? "your location" : `${geo.city}, ${geo.country_name}`}
               </span>.
             </p>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.72rem", color: "rgba(239,209,195,0.25)", marginTop: "0.375rem", fontWeight: 300 }}>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.72rem", color: "rgba(var(--accent-rgb),0.25)", marginTop: "0.375rem", fontWeight: 300 }}>
               {locationSource === "gps"
                 ? "Based on your device GPS. Accurate to your exact location."
                 : "Based on your IP address. Your actual location may differ."}
@@ -173,8 +173,8 @@ export function LocationMap() {
           </>
         ) : (
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-            <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "rgba(239,209,195,0.3)" }} />
-            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(239,209,195,0.3)", fontWeight: 300 }}>
+            <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "rgba(var(--accent-rgb),0.3)" }} />
+            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(var(--accent-rgb),0.3)", fontWeight: 300 }}>
               Detecting your location...
             </span>
           </div>

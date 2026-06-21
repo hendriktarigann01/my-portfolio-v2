@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/Button";
+import { globalLenis } from "@/components/SmoothScrollProvider";
 
 interface WordsPullUpProps {
   text: string;
@@ -49,8 +50,13 @@ export const WordsPullUp = ({
 };
 
 export function HeroView() {
-  const handleExplore = () =>
-    document.querySelector("#work")?.scrollIntoView({ behavior: "smooth" });
+  const handleExplore = () => {
+    if (globalLenis) {
+      globalLenis.scrollTo("#projects");
+    } else {
+      document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section
@@ -84,7 +90,7 @@ export function HeroView() {
           {/* 1. Title */}
           <h1
             className="font-medium leading-[0.85] tracking-[-0.08em] text-[14vw] md:text-[22vw] text-center pointer-events-auto"
-            style={{ color: "#efd1c3", fontFamily: "var(--font-display)" }}
+            style={{ color: "var(--accent)", fontFamily: "var(--font-display)" }}
           >
             <WordsPullUp text="Hendrik" />
           </h1>
@@ -96,7 +102,7 @@ export function HeroView() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="text-sm font-light text-center max-w-[320px] pointer-events-auto"
             style={{
-              color: "rgba(239,209,195,0.7)",
+              color: "rgba(var(--accent-rgb),0.7)",
               lineHeight: 1.5,
               fontFamily: "var(--font-body)",
             }}
@@ -123,7 +129,7 @@ export function HeroView() {
             <div className="col-span-8 z-10 pointer-events-auto">
               <h1
                 className="font-medium leading-[0.85] tracking-[-0.1em] text-[13vw] lg:text-[11vw] xl:text-[9vw]"
-                style={{ color: "#efd1c3", fontFamily: "var(--font-display)" }}
+                style={{ color: "var(--accent)", fontFamily: "var(--font-display)" }}
               >
                 <WordsPullUp text="Hendrik" />
               </h1>
@@ -139,7 +145,7 @@ export function HeroView() {
                 }}
                 className="text-base font-light"
                 style={{
-                  color: "rgba(239,209,195,0.7)",
+                  color: "rgba(var(--accent-rgb),0.7)",
                   lineHeight: 1.4,
                   fontFamily: "var(--font-body)",
                 }}

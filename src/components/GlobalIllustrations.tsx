@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ILLUSTRATIONS, ILLUSTRATION_SPREAD } from "./constants";
+import { ILLUSTRATIONS, ILLUSTRATION_SPREAD } from "@/constants";
 
 function IllustrationFloat({
   src,

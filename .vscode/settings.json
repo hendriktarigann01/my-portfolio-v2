@@ -1,9 +1,0 @@
-{
-  "python-envs.pythonProjects": [
-    {
-      "path": "public/assets/systems/smart-meeting",
-      "envManager": "ms-python.python:venv",
-      "packageManager": "ms-python.python:pip"
-    }
-  ]
-}

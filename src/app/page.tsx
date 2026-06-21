@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { HeroView } from "@/views/HeroView";
 import { WorkView } from "@/views/WorkView";
 import { LogoMarquee } from "@/components/Marquee";

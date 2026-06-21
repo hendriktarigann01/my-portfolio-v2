@@ -5,7 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { TextRotate } from "@/components/CTAExample";
-import { MessageSquare, PhoneCall } from "lucide-react";
+import { MessageSquare } from "lucide-react";
+import { CONTACT_INFO } from "@/constants";
 
 const LocationMap = dynamic(
   () => import("@/components/LocationMap").then((m) => m.LocationMap),
@@ -14,14 +15,12 @@ const LocationMap = dynamic(
 
 export function CTAView() {
   const handleWAConnect = () => {
-    const waText =
-      "Hello Hendrik, I'm interested in discussing a project and learning how you can help achieve our business goals.";
-    const waUrl = `https://api.whatsapp.com/send?phone=6289637719519&text=${encodeURIComponent(waText)}`;
+    const waUrl = `https://api.whatsapp.com/send?phone=${CONTACT_INFO.phone}&text=${encodeURIComponent(CONTACT_INFO.whatsappText)}`;
     window.open(waUrl, "_blank");
   };
 
   return (
-    <section id="contact" className="py-12 md:py-24">
+    <section id="contact" className="py-12 md:py-24 scroll-mt-20 md:scroll-mt-0">
       <div className="container-main">
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -37,7 +36,10 @@ export function CTAView() {
             >
               {/* Headline */}
               <div>
-                <span className="text-[11px] tracking-[0.25em] text-[#efd1c3]/40 uppercase font-semibold block mb-3">
+                <span
+                  className="text-[11px] tracking-[0.25em] uppercase font-semibold block mb-3"
+                  style={{ color: "var(--tertiary)" }}
+                >
                   Ready to Grow?
                 </span>
                 <h2
@@ -46,7 +48,7 @@ export function CTAView() {
                     fontFamily: "var(--font-display)",
                     fontWeight: 800,
                     fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)",
-                    color: "#efd1c3",
+                    color: "var(--accent)",
                     letterSpacing: "-0.03em",
                     lineHeight: 1.05,
                   }}
@@ -55,7 +57,7 @@ export function CTAView() {
                   <span
                     style={{
                       color: "transparent",
-                      WebkitTextStroke: "1.5px rgba(239,209,195,0.45)",
+                      WebkitTextStroke: "1.5px rgba(var(--accent-rgb), 0.45)",
                     }}
                   >
                     <TextRotate
@@ -81,7 +83,7 @@ export function CTAView() {
                 style={{
                   background: "rgba(2, 66, 68, 0.45)",
                   backdropFilter: "blur(24px)",
-                  border: "1px solid rgba(239, 209, 195, 0.12)",
+                  border: "1px solid rgba(var(--accent-rgb), 0.12)",
                 }}
               >
                 <div className="flex flex-col items-start z-10 flex-1">
@@ -90,7 +92,7 @@ export function CTAView() {
                       fontFamily: "var(--font-display)",
                       fontWeight: 800,
                       fontSize: "1.8rem",
-                      color: "#efd1c3",
+                      color: "var(--accent)",
                       letterSpacing: "-0.02em",
                       lineHeight: 1.1,
                     }}
@@ -98,7 +100,14 @@ export function CTAView() {
                   >
                     WhatsApp
                   </h3>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#efd1c3]/8 text-[#efd1c3] text-[11px] font-medium tracking-wide uppercase transition-colors hover:bg-[#efd1c3]/15">
+                  <div
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-medium tracking-wide uppercase transition-all hover:opacity-85"
+                    style={{
+                      backgroundColor: "rgba(var(--accent-rgb), 0.08)",
+                      color: "var(--accent)",
+                      border: "1px solid rgba(var(--accent-rgb), 0.15)",
+                    }}
+                  >
                     <MessageSquare size={13} />
                     <span>Talk To Me</span>
                   </div>
@@ -113,7 +122,7 @@ export function CTAView() {
                       width={120}
                       height={120}
                       className="object-contain"
-                      priority
+                      loading="lazy"
                     />
                   </motion.div>
                 </div>

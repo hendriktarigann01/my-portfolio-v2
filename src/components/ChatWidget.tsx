@@ -12,9 +12,9 @@ import {
   panelVariants,
   msgVariants,
   dotTransition,
-} from "./constants";
-import { isOnTopic, loadCount, saveCount } from "./helpers";
-import type { Message } from "./types";
+} from "@/constants";
+import { isOnTopic, loadCount, saveCount } from "@/helpers";
+import type { Message } from "@/types";
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +68,7 @@ export function ChatWidget() {
         const refuseMsg: Message = {
           id: `refuse-${Date.now()}`,
           role: "model",
-          content: "I can only answer questions about Hendrik — his work, skills, stack, or how to collaborate. Try asking something related! 😊",
+          content: "I can only answer questions about Hendrik: his projects, skills, stack, or how to collaborate. Try asking something related! 😊",
           timestamp: new Date(),
         };
         setMessages((prev) => [...prev, refuseMsg]);
@@ -206,7 +206,7 @@ export function ChatWidget() {
                 overflow: "hidden",
                 background: "rgba(2, 66, 68, 0.92)",
                 backdropFilter: "blur(24px)",
-                border: "1px solid rgba(239, 209, 195, 0.12)",
+                border: "1px solid rgba(var(--accent-rgb), 0.12)",
                 display: "flex",
                 flexDirection: "column",
                 maxHeight: "min(520px, calc(100vh - 120px))",
@@ -289,7 +289,7 @@ export function ChatWidget() {
                   flexDirection: "column",
                   gap: 12,
                   scrollbarWidth: "thin",
-                  scrollbarColor: "rgba(239,209,195,0.15) transparent",
+                  scrollbarColor: "rgba(var(--accent-rgb),0.15) transparent",
                 }}
               >
                 {messages.map((msg) => (
@@ -314,16 +314,16 @@ export function ChatWidget() {
                             : "16px 16px 16px 4px",
                         background:
                           msg.role === "user"
-                            ? "#efd1c3"
-                            : "rgba(239, 209, 195, 0.07)",
-                        color: msg.role === "user" ? "#024244" : "#efd1c3",
+                            ? "var(--accent)"
+                            : "rgba(var(--accent-rgb), 0.07)",
+                        color: msg.role === "user" ? "#024244" : "var(--accent)",
                         fontFamily: "var(--font-body)",
                         fontSize: "0.82rem",
                         lineHeight: 1.6,
                         fontWeight: msg.role === "user" ? 500 : 300,
                         border:
                           msg.role === "model"
-                            ? "1px solid rgba(239,209,195,0.08)"
+                            ? "1px solid rgba(var(--accent-rgb),0.08)"
                             : "none",
                         wordBreak: "break-word",
                         whiteSpace: "pre-wrap",
@@ -344,8 +344,8 @@ export function ChatWidget() {
                       style={{
                         padding: "12px 18px",
                         borderRadius: "16px 16px 16px 4px",
-                        background: "rgba(239, 209, 195, 0.07)",
-                        border: "1px solid rgba(239,209,195,0.08)",
+                        background: "rgba(var(--accent-rgb), 0.07)",
+                        border: "1px solid rgba(var(--accent-rgb),0.08)",
                         display: "flex",
                         gap: 5,
                         alignItems: "center",
@@ -360,7 +360,7 @@ export function ChatWidget() {
                             width: 6,
                             height: 6,
                             borderRadius: "50%",
-                            background: "rgba(239,209,195,0.4)",
+                            background: "rgba(var(--accent-rgb),0.4)",
                           }}
                         />
                       ))}
@@ -385,17 +385,17 @@ export function ChatWidget() {
                         key={q}
                         whileHover={{
                           scale: 1.03,
-                          background: "rgba(239,209,195,0.12)",
-                          borderColor: "rgba(239,209,195,0.25)",
+                          background: "rgba(var(--accent-rgb),0.12)",
+                          borderColor: "rgba(var(--accent-rgb),0.25)",
                         }}
                         whileTap={{ scale: 0.97 }}
                         onClick={() => sendMessage(q)}
                         style={{
                           padding: "8px 14px",
                           borderRadius: 12,
-                          border: "1px solid rgba(239,209,195,0.12)",
-                          background: "rgba(239,209,195,0.05)",
-                          color: "rgba(239,209,195,0.7)",
+                          border: "1px solid rgba(var(--accent-rgb),0.12)",
+                          background: "rgba(var(--accent-rgb),0.05)",
+                          color: "rgba(var(--accent-rgb),0.7)",
                           fontFamily: "var(--font-body)",
                           fontSize: "0.75rem",
                           fontWeight: 400,
@@ -415,7 +415,7 @@ export function ChatWidget() {
                 onSubmit={handleSubmit}
                 style={{
                   padding: "12px 16px",
-                  borderTop: "1px solid rgba(239, 209, 195, 0.08)",
+                  borderTop: "1px solid rgba(var(--accent-rgb), 0.08)",
                   display: "flex",
                   flexDirection: "column",
                   gap: 8,
@@ -428,7 +428,7 @@ export function ChatWidget() {
                     fontFamily: "var(--font-body)",
                     fontSize: "0.65rem",
                     fontWeight: 600,
-                    color: isLimitReached ? "rgba(239,100,100,0.6)" : "rgba(239,209,195,0.25)",
+                    color: isLimitReached ? "rgba(239,100,100,0.6)" : "rgba(var(--accent-rgb),0.25)",
                     letterSpacing: "0.05em",
                   }}>
                     {questionCount}/{MAX_QUESTIONS} questions
@@ -446,9 +446,9 @@ export function ChatWidget() {
                       flex: 1,
                       padding: "10px 16px",
                       borderRadius: 14,
-                      border: "1px solid rgba(239, 209, 195, 0.1)",
-                      background: isLimitReached ? "rgba(239,209,195,0.02)" : "rgba(239, 209, 195, 0.04)",
-                      color: isLimitReached ? "rgba(239,209,195,0.3)" : "#efd1c3",
+                      border: "1px solid rgba(var(--accent-rgb), 0.1)",
+                      background: isLimitReached ? "rgba(var(--accent-rgb),0.02)" : "rgba(var(--accent-rgb), 0.04)",
+                      color: isLimitReached ? "rgba(var(--accent-rgb),0.3)" : "var(--accent)",
                       fontFamily: "var(--font-body)",
                       fontSize: "0.82rem",
                       outline: "none",
@@ -457,13 +457,13 @@ export function ChatWidget() {
                     }}
                     onFocus={(e) => {
                       if (!isLimitReached) {
-                        e.currentTarget.style.borderColor = "rgba(239,209,195,0.25)";
-                        e.currentTarget.style.background = "rgba(239,209,195,0.06)";
+                        e.currentTarget.style.borderColor = "rgba(var(--accent-rgb),0.25)";
+                        e.currentTarget.style.background = "rgba(var(--accent-rgb),0.06)";
                       }
                     }}
                     onBlur={(e) => {
-                      e.currentTarget.style.borderColor = "rgba(239,209,195,0.1)";
-                      e.currentTarget.style.background = isLimitReached ? "rgba(239,209,195,0.02)" : "rgba(239,209,195,0.04)";
+                      e.currentTarget.style.borderColor = "rgba(var(--accent-rgb),0.1)";
+                      e.currentTarget.style.background = isLimitReached ? "rgba(var(--accent-rgb),0.02)" : "rgba(var(--accent-rgb),0.04)";
                     }}
                   />
                   <motion.button
@@ -478,12 +478,12 @@ export function ChatWidget() {
                       border: "none",
                       background:
                         input.trim() && !isLoading && !isLimitReached
-                          ? "#efd1c3"
-                          : "rgba(239,209,195,0.1)",
+                          ? "var(--accent)"
+                          : "rgba(var(--accent-rgb),0.1)",
                       color:
                         input.trim() && !isLoading && !isLimitReached
                           ? "#024244"
-                          : "rgba(239,209,195,0.3)",
+                          : "rgba(var(--accent-rgb),0.3)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -514,8 +514,8 @@ export function ChatWidget() {
             height: 56,
             borderRadius: "50%",
             border: "none",
-            background: isOpen ? "rgba(239,209,195,0.15)" : "#efd1c3",
-            color: isOpen ? "#efd1c3" : "#024244",
+            background: isOpen ? "rgba(var(--accent-rgb),0.15)" : "var(--accent)",
+            color: isOpen ? "var(--accent)" : "#024244",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
