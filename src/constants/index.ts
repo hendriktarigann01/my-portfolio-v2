@@ -9,3 +9,7 @@ export * from "./works";
 export * from "./now";
 export * from "./process";
 export * from "./contact";
+export * from "./pricing";
+
+
+

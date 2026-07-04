@@ -204,41 +204,28 @@
       "slug": "smart-meeting",
       "stack": "TypeScript",
       "category": "system",
-      "focus": "meeting room scheduling, real-time tablet status",
-      "summary": "A corporate meeting room booking and management system featuring central scheduling, Outlook calendar integration, and interactive door display tablets to visualize room availability.",
-      "description": "Smart Meeting is an end-to-end office resource scheduling system. It consists of a Next.js admin dashboard for managing conference rooms, recurring booking calendars, and resource allocations (VC, projector), coupled with lightweight React client apps running on wall-mounted tablets outside each meeting room. The door displays connect via WebSockets to show instant room status (Green for Available, Red for Occupied), handle proximity detection, and allow users to book or extend meetings on the spot. The system integrates with Exchange/Outlook calendars via Microsoft Graph API for automated scheduling sync.",
-      "problem": "Uncoordinated room booking in corporate environments led to double bookings, meeting interruptions, and empty reserved rooms (ghost meetings) where attendees booked a room but failed to show up.",
-      "solution": "A centralized room scheduling system with dedicated tablet interfaces placed outside each meeting room. The tablets sync with the central database and company calendar, providing instant visual feedback on room availability. A quick check-in button releases rooms if the host does not arrive within 10 minutes, eliminating ghost meetings.",
+      "focus": "product configuration, meeting room package builder",
+      "summary": "A meeting room product configurator for MJ Solution's sales process — clients select between Essential and Enterprise packages, pick their preferred LCD/LED display products, and see the full setup rendered live on a canvas preview with pricing.",
+      "description": "Smart Meeting Room is a web-based product configurator that helps clients and sales staff build a complete meeting room display setup. Users choose between two package tiers — Essential and Enterprise — then select the LCD or LED products they want. As selections are made, the canvas preview updates in real time to reflect the chosen configuration. The tool is designed to shorten the sales consultation cycle by letting clients self-explore options and visualize their meeting room before committing.",
+      "problem": "Clients had difficulty visualizing how different display products would look in their meeting room, and sales needed a faster way to walk clients through package options without manual back-and-forth.",
+      "solution": "A self-serve configurator where clients pick their package tier and product selections, with a live canvas that updates to show exactly what the room will look like — reducing ambiguity and speeding up the decision process.",
       "highlights": [
-        "Interactive door display tablet interface with instant check-in",
-        "Outlook / Microsoft Exchange calendar sync via Microsoft Graph API",
-        "Real-time room occupancy status visualization (Available/Occupied/Pending)",
-        "Instant booking and extension controls directly from the room tablet",
-        "Ghost meeting mitigation: auto-releases room after 10 minutes of inactivity",
-        "Centralized admin dashboard for room booking analytics and user permissions",
-        "Deployed as Next.js app with SQLite/PostgreSQL database"
+        "Two package tiers: Essential and Enterprise",
+        "Live canvas preview that updates as products are selected",
+        "Product picker for LCD/LED display options",
+        "Designed to shorten the sales consultation cycle"
       ],
       "features": [
-        "Room occupancy dashboard with live calendar scheduler",
-        "Tablet optimized view with high-contrast UI (green/red status states)",
-        "Instant booking interface for walk-up reservations",
-        "Meeting room check-in and check-out button flow",
-        "Interactive timeline display showing current and upcoming events",
-        "Resource manager (track VC devices, whiteboard, catering settings)",
-        "Outlook/Exchange bi-directional calendar integration",
-        "Detailed usage statistics (room utilization rates, peak hours)",
-        "Secure admin settings for holiday scheduling and user roles"
+        "Package tier selection: Essential and Enterprise",
+        "Product selection per room component",
+        "Real-time canvas preview reflecting current selections",
+        "Pricing display per configuration"
       ],
       "techStack": [
         "Next.js",
         "React",
         "TypeScript",
-        "Tailwind CSS",
-        "Prisma ORM",
-        "PostgreSQL",
-        "Microsoft Graph API",
-        "WebSocket",
-        "Vercel"
+        "Tailwind CSS"
       ],
       "images": [
         {
@@ -1281,6 +1268,248 @@
       ],
       "links": {
         "demo": "https://kmi-official-site.vercel.app/",
+        "repo": ""
+      }
+    },
+    {
+      "name": "CreativeLAB",
+      "slug": "creativelab",
+      "stack": "TypeScript",
+      "category": "landing",
+      "status": "active",
+      "summary": "A premium, highly interactive Next.js showcase web application built for Creative Lab  -  featuring parallax scroll, non-linear timeline warping, and gesture-based scroll snapping.",
+      "description": "CreativeLAB is a high-fidelity interactive showcase landing page. It showcases high-fidelity software engineering and physical interactive installations with smooth scroll mechanics, immersive animations, and dynamic localization. Key features include Parallax Scroll & Timeline Warping (synchronized WebM video scrubbing with text fading mapped to a non-linear timeline), Gesture-Based Scroll Snapping using a custom ease-out curve, and full i18n support.",
+      "problem": "Traditional landing pages feel static and fail to demonstrate high-fidelity interactions or physical installation experiences in a way that feels premium and engaging.",
+      "solution": "An immersive scroll-based experience that leverages WebM video scrubbing, smooth scroll warping, and snappy transitions to showcase creative installations in an interactive showcase.",
+      "highlights": [
+        "Timeline Warping (getWarpedProgress) to map linear scroll input to non-linear active/transition phases",
+        "Gesture-based Scroll Snapping (useLenis state-machine listener) for smooth transition slides",
+        "Synchronized WebM video scrubbing matched with text sequence overlays",
+        "Internationalization (i18n) via next-intl supporting localized sub-routing (en/id)",
+        "Smooth scroll orchestration using Lenis scroll engine",
+        "Glow ambient backdrop components and reusable PageHero for subpage layouts"
+      ],
+      "features": [
+        "Localized subpage routing for home, services, and portfolio",
+        "Lenis scroll snapping with custom easing curves",
+        "Timeline warping for active scroll state persistence",
+        "SEO optimized JSON-LD schema generators"
+      ],
+      "techStack": [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Lenis",
+        "Motion",
+        "GSAP",
+        "Three.js",
+        "D3.js",
+        "next-intl"
+      ],
+      "images": [],
+      "links": {
+        "demo": "https://creativelab.mjsolution.co.id/",
+        "repo": ""
+      }
+    },
+    {
+      "name": "Tanta Resto & Lounge",
+      "slug": "tanta-resto-lounge",
+      "stack": "TypeScript",
+      "category": "landing",
+      "status": "active",
+      "summary": "A premium, elegant landing page for Tanta Resto & Lounge at SOGO Plaza Senayan, Jakarta  -  featuring an Indonesian-Western fusion digital menu and private room reservation channels.",
+      "description": "Tanta is an upscale restaurant landing page developed for Tanta Resto & Lounge located at Plaza Senayan, Jakarta. It showcases their signature Indonesian-Western fusion cuisine, premium coffee partnering with Strada Coffee, and luxury tea blends from Harney & Sons. It provides access to their complete digital menu (Salad, Soup, Claypot, Steaks, Indonesian signature dishes), highlights their private VIP rooms with fountain views, and directs guests to a smooth WhatsApp table reservation system.",
+      "problem": "Fine dining customers expect a premium online presence where they can instantly view high-fidelity menu item descriptions and book tables without using clunky reservation forms.",
+      "solution": "A sophisticated, high-contrast single-page web app presenting food items in clean grid menus, complete with ingredients list, pricing, private room amenities, and direct pre-filled WhatsApp booking links.",
+      "highlights": [
+        "Upscale, high-contrast typography and layout matching Plaza Senayan dining vibes",
+        "Complete categorized digital menu panel with detailed descriptions and pricing",
+        "Strada Coffee and Harney & Sons partner branding showcase",
+        "Private VIP Room (10-20 guests) availability and fountain view highlight",
+        "Pre-filled WhatsApp reservation system handler"
+      ],
+      "features": [
+        "Interactive categorized food & drink digital menu board",
+        "VIP gathering facilities gallery",
+        "Direct WhatsApp booking link integration"
+      ],
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "images": [
+        {
+          "url": "/assets/landing-pages/tanta/1.webp",
+          "title": "Tanta Resto & Lounge - Landing Page"
+        }
+      ],
+      "links": {
+        "demo": "https://tanta.vercel.app/",
+        "repo": ""
+      }
+    },
+    {
+      "name": "in-Lite Indonesia",
+      "slug": "in-lite-indonesia",
+      "stack": "TypeScript",
+      "category": "landing",
+      "status": "active",
+      "summary": "A premium landing page for in-Lite LED Indonesia  -  showcasing their diverse lighting solutions and the new Alura & Linea switch and socket series with a modern, high-contrast aesthetic.",
+      "description": "in-Lite Indonesia is a clean, modern landing page designed to show PT Suryamas Lumisindo Dwidaya's extensive catalog of 2000+ LED lighting products and their newly launched switch & socket series (Alura and Linea). It features structured categories (Core, Value, Advance, Automotive, Outdoor), highlight specs (baby skin coating, soft clicking, 850°C fire retardancy), and clean redirection to Mitra10, Depo Bangunan, and official marketplace stores.",
+      "problem": "Traditional product sheets or marketplace listings fail to represent the complete ecosystem of in-Lite's new and legacy offerings, especially in showcasing the premium feel and aesthetic of switch/socket design series.",
+      "solution": "A fast-loading, visually engaging landing page that integrates full product specifications, highlight features of the new switch/socket collections, and direct CTA buttons to e-commerce, presenting in-Lite as a unified one-stop electrical solution.",
+      "highlights": [
+        "High-contrast, modern UI showcasing both Lighting and Switch/Socket lineups",
+        "Interactive specifications list for Alura & Linea premium switch series",
+        "Clear visualization of core, value, advance, and outdoor lighting categories",
+        "Integrated distribution channel listing (modern trade, marketplace links)",
+        "Optimized mobile layout for paid traffic acquisition and social media ads"
+      ],
+      "features": [
+        "Product catalog breakdown (Lighting vs Switch & Socket)",
+        "Visual feature highlights (baby skin coating, soft clicking, fire retardant specs)",
+        "Interactive redirection map for distributor locations"
+      ],
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "images": [
+        {
+          "url": "/assets/landing-pages/in-lite/1.webp",
+          "title": "in-Lite Indonesia - Landing Page"
+        }
+      ],
+      "links": {
+        "demo": "https://in-lite-indonesia.vercel.app/",
+        "repo": ""
+      }
+    },
+    {
+      "name": "Bali Surfers Perfume",
+      "slug": "balisurfersperfume",
+      "stack": "TypeScript",
+      "category": "landing",
+      "status": "active",
+      "summary": "A premium landing page for Bali Surfer's Perfume  -  showcasing tropical beachfront vibes, product variant catalogs, and brand storytelling with smooth scroll animations.",
+      "description": "Bali Surfer's Perfume is a high-performance single-page visual showcase landing page developed to capture the tropical lifestyle essence of the brand. It features a responsive layout highlighting their signature fresh aquatic product lineup (Blue Point, Kuta 7AM, etc.), olfactory notes descriptions, BPOM certification badges, and calls-to-action driving sales to their official e-commerce channels.",
+      "problem": "The brand needed a high-fidelity visual identity hub that showcases their beach-inspired perfume lineup and tells their story without the overhead of a full e-commerce engine.",
+      "solution": "A fast-loading, highly-responsive landing page utilizing Framer Motion for elegant fade-in transitions and visual layouts that match their tropical beachfront aesthetic, directly funneling users to checkout marketplaces.",
+      "highlights": [
+        "Smooth scroll transitions and elegant fade-in animations via Framer Motion",
+        "Detailed interactive visual catalog of signature perfume variants",
+        "BPOM certification and quality assurance badges to build trust",
+        "Direct redirection funnels to official e-commerce stores (Tokopedia, Shopee)",
+        "Fully responsive mobile-first visual layout suited for social media ad traffic"
+      ],
+      "features": [
+        "E-commerce checkout funnel redirection",
+        "Perfume notes profile breakdown interface",
+        "High-contrast layout optimized for advertising CTR"
+      ],
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "images": [
+        {
+          "url": "/assets/landing-pages/bsp/1.webp",
+          "title": "Bali Surfers Perfume - Landing Page"
+        }
+      ],
+      "links": {
+        "demo": "https://balisurfersperfume.vercel.app/",
+        "repo": ""
+      }
+    },
+    {
+      "name": "Warung Leko Grand Wisata",
+      "slug": "leko-grand-wisata",
+      "stack": "TypeScript",
+      "category": "landing",
+      "status": "active",
+      "summary": "A premium landing page for Warung Leko Grand Wisata  -  Bekasi, showcasing their famous Iga Penyet and premium Indonesian cuisine with smooth parallax scroll animations.",
+      "description": "Leko is a modern restaurant landing page developed for Warung Leko Grand Wisata in Tambun Selatan, Bekasi. It features their menu catalog (Sop Iga, Iga Penyet, Gurame Sambal Bawang Merah, etc.), custom location mapping, WhatsApp reservation integration, and a highly responsive design optimized for local search engines.",
+      "problem": "Restaurant visitors frequently struggle to access up-to-date menus, private room details, and location maps on a single fast-loading platform, leading to lost reservations.",
+      "solution": "A fast-loading, single-page website that organizes the menu by categories (Iga, Seafood, Poultry, Drinks), highlights the private gathering facilities, and provides a direct, pre-filled WhatsApp reservation button, boosting conversion rates.",
+      "highlights": [
+        "Structured restaurant menu sections with pricing and detailed descriptions",
+        "Embedded Google Maps and localized Tambun Selatan Bekasi SEO schema",
+        "Pre-filled WhatsApp reservation integration for table booking",
+        "Fluid scrolling and fade-in animations using Framer Motion",
+        "High-contrast theme designed to highlight culinary photography"
+      ],
+      "features": [
+        "Categorized food & beverage digital menu",
+        "Facilities showcase (private dining, gathering space)",
+        "One-click WhatsApp booking handler"
+      ],
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "images": [
+        {
+          "url": "/assets/landing-pages/leko/1.webp",
+          "title": "Warung Leko Grand Wisata - Landing Page"
+        }
+      ],
+      "links": {
+        "demo": "https://leko-grandwisata.vercel.app/",
+        "repo": ""
+      }
+    },
+    {
+      "name": "Metland Cikarang",
+      "slug": "metland-cikarang",
+      "stack": "TypeScript",
+      "category": "landing",
+      "status": "active",
+      "summary": "A premium real-estate landing page for Metland Cikarang by PT Metropolitan Land Tbk  -  showcasing green eco-living residences in Cibitung, Bekasi.",
+      "description": "Metland Cikarang is a conversion-focused landing page built for PT Metropolitan Land Tbk's eco-living residential project in Cibitung, Bekasi. It showcases modern biophilic homes with high ceiling architecture starting from Rp 635 Million. The site features interactive housing cluster specifications, unit layouts, video walkthroughs, and a direct CTA funnel to WhatsApp to connect with the developer's marketing gallery.",
+      "problem": "Potential homebuyers often bounce due to slow loading times, cluttered layouts, and friction in contacting sales agents when browsing housing options online.",
+      "solution": "A blazing-fast, mobile-friendly landing page presenting biophilic home models, unit plans, and eco-green facilities with pre-formatted WhatsApp contact links, maximizing sales lead generation.",
+      "highlights": [
+        "Eco-living and biophilic design residency branding showcase",
+        "Detailed interactive cluster unit specifications and floor plans",
+        "Smooth scroll layout matching modern real estate aesthetics",
+        "Direct lead generation funnel linked to Sales Marketing Gallery WhatsApp",
+        "Optimized local SEO tags for Cibitung, Bekasi real estate queries"
+      ],
+      "features": [
+        "Cluster unit gallery showcasing biophilic layouts",
+        "Interactive amenities map and developer details",
+        "One-tap sales representative WhatsApp dialer"
+      ],
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "images": [
+        {
+          "url": "/assets/landing-pages/metland-cikarang/1.webp",
+          "title": "Metland Cikarang - Landing Page"
+        }
+      ],
+      "links": {
+        "demo": "http://metland-cikarang.vercel.app/",
         "repo": ""
       }
     }

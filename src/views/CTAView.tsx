@@ -20,7 +20,10 @@ export function CTAView() {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-24 scroll-mt-20 md:scroll-mt-0">
+    <section
+      id="contact"
+      className="py-12 md:py-24 scroll-mt-20 md:scroll-mt-0"
+    >
       <div className="container-main">
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -86,7 +89,7 @@ export function CTAView() {
                   border: "1px solid rgba(var(--accent-rgb), 0.12)",
                 }}
               >
-                <div className="flex flex-col items-start z-10 flex-1">
+                <div className="flex flex-col items-start z-10 flex-1 gap-10">
                   <h3
                     style={{
                       fontFamily: "var(--font-display)",
@@ -98,7 +101,7 @@ export function CTAView() {
                     }}
                     className="mb-2"
                   >
-                    WhatsApp
+                    Have a Project?
                   </h3>
                   <div
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-medium tracking-wide uppercase transition-all hover:opacity-85"
