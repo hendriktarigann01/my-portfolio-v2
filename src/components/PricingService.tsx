@@ -1,9 +1,20 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/helpers/cn";
 import { CONTACT_INFO } from "@/constants";
-import { Check, ArrowRight } from "lucide-react";
+import {
+  Check,
+  ArrowRight,
+  SquarePlay,
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  Maximize2,
+  X,
+} from "lucide-react";
+import { globalLenis } from "@/components/SmoothScrollProvider";
 import type { PricingPlan } from "@/types";
 
 // Presentational Header Component
@@ -93,6 +104,140 @@ export const BackgroundEffects = () => {
   );
 };
 
+// Premium Video Modal Component
+interface VideoModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  videoSrc: string;
+  title: string;
+}
+
+export const VideoModal = ({
+  isOpen,
+  onClose,
+  videoSrc,
+  title,
+}: VideoModalProps) => {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current.play().then(() => {
+        setIsPlaying(true);
+      });
+    }
+  };
+
+  const toggleMute = () => {
+    if (!videoRef.current) return;
+    videoRef.current.muted = !videoRef.current.muted;
+    setIsMuted(videoRef.current.muted);
+  };
+
+  const handleFullscreen = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.requestFullscreen) {
+      videoRef.current.requestFullscreen();
+    }
+  };
+
+  // Close modal on escape key and control scroll
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "hidden"; // Disable scroll when modal is open
+      globalLenis?.stop();
+    }
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "unset";
+      globalLenis?.start();
+    };
+  }, [isOpen, onClose]);
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={onClose}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#011415]/90 backdrop-blur-md cursor-pointer"
+        >
+          <motion.div
+            initial={{ scale: 0.95, y: 20 }}
+            animate={{ scale: 1, y: 0 }}
+            exit={{ scale: 0.95, y: 20 }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden border border-[rgba(var(--accent-rgb),0.25)] bg-[#011d1e] cursor-default"
+          >
+            {/* Modal Header */}
+            <div className="absolute top-0 inset-x-0 h-14 flex items-center justify-between px-6 z-20 pointer-events-none">
+              <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] font-body">
+                {title} - Live Preview
+              </span>
+              <button
+                onClick={onClose}
+                className="p-1.5 rounded-full bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-all pointer-events-auto hover:scale-105"
+              >
+                <X size={14} />
+              </button>
+            </div>
+
+            {/* Video Player */}
+            <video
+              ref={videoRef}
+              src={videoSrc}
+              autoPlay
+              loop
+              playsInline
+              muted={isMuted}
+              className="w-full h-full object-contain"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+            />
+
+            {/* Controls Overlay */}
+            <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4 z-10">
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={togglePlay}
+                  className="p-2 rounded bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
+                >
+                  {isPlaying ? <Pause size={14} /> : <Play size={14} />}
+                </button>
+                <button
+                  onClick={toggleMute}
+                  className="p-2 rounded bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
+                >
+                  {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
+                </button>
+              </div>
+
+              <button
+                onClick={handleFullscreen}
+                className="p-2 rounded bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
+              >
+                <Maximize2 size={14} />
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 // Presentational Pricing Card Component
 export const PricingCard = ({
   plan,
@@ -101,6 +246,8 @@ export const PricingCard = ({
   plan: PricingPlan;
   index: number;
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleContact = () => {
     const waUrl = `https://api.whatsapp.com/send?phone=${CONTACT_INFO.phone}&text=${encodeURIComponent(plan.waText)}`;
     window.open(waUrl, "_blank");
@@ -113,112 +260,136 @@ export const PricingCard = ({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -10, borderColor: "rgba(var(--accent-rgb), 0.25)" }}
-      className={cn(
-        "relative flex flex-col justify-between h-full rounded-[2rem] p-6 lg:p-5 xl:p-8 border transition-all duration-300 overflow-hidden",
-      )}
-      style={{
-        backdropFilter: "blur(24px)",
-      }}
-    >
-      <div className="flex flex-1 flex-col space-y-3">
-        {/* Title */}
-        <h3
-          style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 700,
-            fontSize: "1rem",
-            color: "var(--accent)",
-            letterSpacing: "-0.01em",
-          }}
-        >
-          {plan.name}
-        </h3>
-
-        {/* Price */}
-        <div className="flex items-baseline gap-1 select-none">
-          <span
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 700,
-              fontSize: "1.8rem",
-              color: "var(--accent)",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            {plan.price}
-          </span>
-          {plan.priceSub && (
-            <span
-              className="text-xs lowercase opacity-50"
-              style={{ color: "var(--accent)" }}
-            >
-              / {plan.priceSub}
-            </span>
-          )}
-        </div>
-
-        {/* Description */}
-        <p
-          className="text-xs"
-          style={{
-            fontFamily: "var(--font-body)",
-            color: "rgba(var(--accent-rgb), 0.5)",
-            lineHeight: 1.6,
-          }}
-        >
-          {plan.description}
-        </p>
-
-        {/* Features List */}
-        <ul className="flex flex-1 flex-col gap-4 mb-3">
-          {plan.features.map((feature, fIdx) => (
-            <li key={fIdx} className="flex items-start gap-3">
-              <div
-                className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full"
-                style={{
-                  backgroundColor: "rgba(var(--accent-rgb), 0.08)",
-                  border: "1px solid rgba(var(--accent-rgb), 0.12)",
-                }}
-              >
-                <Check size={11} className="text-[var(--accent)]" />
-              </div>
-              <span
-                className="text-xs"
-                style={{
-                  fontFamily: "var(--font-body)",
-                  color: "rgba(var(--accent-rgb), 0.65)",
-                  lineHeight: 1.4,
-                }}
-              >
-                {feature}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* CTA Button - always at bottom */}
-      <button
-        onClick={handleContact}
-        className="w-full flex items-center justify-center gap-2 py-4 rounded-2xl text-xs font-semibold tracking-wide uppercase transition-all duration-300 cursor-pointer"
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        whileHover={{ y: -10, borderColor: "rgba(var(--accent-rgb))" }}
+        className={cn(
+          "relative flex flex-col justify-between h-full rounded-[2rem] p-6 lg:p-5 xl:p-8 border transition-all duration-300 overflow-hidden",
+        )}
         style={{
-          backgroundColor: plan.isPopular
-            ? "var(--accent)"
-            : "rgba(var(--accent-rgb), 0.06)",
-          color: plan.isPopular ? "#012a2c" : "var(--accent)",
-          border: plan.isPopular
-            ? "none"
-            : "1px solid rgba(var(--accent-rgb), 0.15)",
+          backdropFilter: "blur(24px)",
+          borderColor: "rgba(var(--accent-rgb), 0.25)",
         }}
       >
-        <span>{getButtonLabel(plan.id)}</span>
-        <ArrowRight size={14} />
-      </button>
-    </motion.div>
+        <div className="flex flex-1 flex-col space-y-3">
+          {/* Title Row */}
+          <div className={cn("flex items-center justify-between gap-3")}>
+            <h3
+              style={{
+                fontFamily: "var(--font-display)",
+                fontWeight: 700,
+                fontSize: "1rem",
+                color: "var(--accent)",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              {plan.name}
+            </h3>
+
+            {plan.videoSrc && (
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-[rgba(var(--accent-rgb),0.06)] hover:bg-[rgba(var(--accent-rgb),0.15)] border border-[rgba(var(--accent-rgb),0.15)] hover:border-[rgba(var(--accent-rgb),0.35)] text-[9px] font-bold tracking-wider text-[var(--accent)] transition-all duration-300 cursor-pointer select-none"
+              >
+                <SquarePlay
+                  size={10}
+                  className="animate-pulse text-[var(--accent)]"
+                />
+                <span>DEMO</span>
+              </button>
+            )}
+          </div>
+
+          <div className="flex items-baseline gap-1 select-none">
+            <span
+              style={{
+                fontFamily: "var(--font-display)",
+                fontWeight: 700,
+                fontSize: "1.8rem",
+                color: "var(--accent)",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              {plan.price}
+            </span>
+            {plan.priceSub && (
+              <span
+                className="text-xs lowercase opacity-50"
+                style={{ color: "var(--accent)" }}
+              >
+                / {plan.priceSub}
+              </span>
+            )}
+          </div>
+
+          <p
+            className="text-xs"
+            style={{
+              fontFamily: "var(--font-body)",
+              color: "rgba(var(--accent-rgb), 0.5)",
+              lineHeight: 1.6,
+            }}
+          >
+            {plan.description}
+          </p>
+
+          <ul className="flex flex-1 flex-col gap-4 mb-3">
+            {plan.features.map((feature, fIdx) => (
+              <li key={fIdx} className="flex items-start gap-3">
+                <div
+                  className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full"
+                  style={{
+                    backgroundColor: "rgba(var(--accent-rgb), 0.08)",
+                    border: "1px solid rgba(var(--accent-rgb), 0.12)",
+                  }}
+                >
+                  <Check size={11} className="text-[var(--accent)]" />
+                </div>
+                <span
+                  className="text-xs"
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    color: "rgba(var(--accent-rgb), 0.65)",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {feature}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <button
+          onClick={handleContact}
+          className="w-full flex items-center justify-center gap-2 py-4 rounded-2xl text-xs font-semibold tracking-wide uppercase transition-all duration-300 cursor-pointer"
+          style={{
+            backgroundColor: plan.isPopular
+              ? "var(--accent)"
+              : "rgba(var(--accent-rgb), 0.06)",
+            color: plan.isPopular ? "#012a2c" : "var(--accent)",
+            border: plan.isPopular
+              ? "none"
+              : "1px solid rgba(var(--accent-rgb), 0.15)",
+          }}
+        >
+          <span>{getButtonLabel(plan.id)}</span>
+          <ArrowRight size={14} />
+        </button>
+      </motion.div>
+
+      {/* Render Modal */}
+      {plan.videoSrc && (
+        <VideoModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          videoSrc={plan.videoSrc}
+          title={plan.name}
+        />
+      )}
+    </>
   );
 };

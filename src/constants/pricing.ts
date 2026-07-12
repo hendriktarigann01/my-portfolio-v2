@@ -17,6 +17,7 @@ export const SERVICE_PLANS: PricingPlan[] = [
     ],
     waText:
       "Hi Hendrik, I am interested in the *Express Template (Rp499k)* package. I would like to consult about the best template option for my business.",
+    videoSrc: "/assets/landing-pages/in-lite/example.webm",
   },
   {
     id: "custom-page",

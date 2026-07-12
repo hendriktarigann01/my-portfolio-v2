@@ -7,4 +7,6 @@ export interface PricingPlan {
   features: string[];
   isPopular?: boolean;
   waText: string;
+  videoSrc?: string;
 }
+
