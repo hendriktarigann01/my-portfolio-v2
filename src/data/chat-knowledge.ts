@@ -1,15 +1,5 @@
-// Tujuan      : Knowledge base & system prompt untuk AI chatbot portfolio
-// Caller      : src/app/api/chat/route.ts
-// Dependensi  : -
-// Main Exports: SYSTEM_PROMPT
-// Side Effects: -
-
 import worksData from "./works.json";
 
-/**
- * Dynamically builds the project knowledge section from works.json
- * so the chatbot stays in sync when the data file is updated.
- */
 function buildProjectKnowledge(): string {
   const sections: string[] = [];
 
@@ -20,7 +10,9 @@ function buildProjectKnowledge(): string {
   };
 
   for (const [key, label] of Object.entries(categories)) {
-    const items = (worksData as Record<string, Array<Record<string, unknown>>>)[key];
+    const items = (worksData as Record<string, Array<Record<string, unknown>>>)[
+      key
+    ];
     if (!items || items.length === 0) continue;
 
     const list = items

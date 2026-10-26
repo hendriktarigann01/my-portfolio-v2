@@ -1,62 +1,67 @@
-import { ReactNode } from "react";
+import { type ReactNode, type CSSProperties } from "react";
+
+export type BadgeVariant =
+  | "subtle"
+  | "active"
+  | "filled"
+  | "solid-accent"
+  | "tertiary"
+  | "tertiary-filled";
 
 interface BadgeProps {
   children: ReactNode;
-  variant?: "subtle" | "active" | "filled" | "solid-accent" | "tertiary" | "tertiary-filled";
+  variant?: BadgeVariant;
   className?: string;
 }
 
-export function Badge({ children, variant = "subtle", className = "" }: BadgeProps) {
-  let style: React.CSSProperties = {};
-  
-  if (variant === "subtle") {
-    style = {
-      background: "rgba(var(--accent-rgb), 0.06)",
-      color: "rgba(var(--accent-rgb), 0.5)",
-      border: "1px solid rgba(var(--accent-rgb), 0.1)",
-      fontFamily: "var(--font-body)",
-    };
-  } else if (variant === "active") {
-    style = {
-      background: "rgba(var(--accent-rgb), 0.08)",
-      color: "var(--accent)",
-      border: "1px solid rgba(var(--accent-rgb), 0.15)",
-      fontFamily: "var(--font-body)",
-    };
-  } else if (variant === "filled") {
-    style = {
-      background: "rgba(var(--accent-rgb), 0.06)",
-      color: "rgba(var(--accent-rgb), 0.55)",
-      border: "1px solid rgba(var(--accent-rgb), 0.08)",
-      fontFamily: "var(--font-body)",
-    };
-  } else if (variant === "solid-accent") {
-    style = {
-      background: "var(--accent)",
-      color: "#000000",
-      border: "1px solid var(--accent)",
-      fontFamily: "var(--font-body)",
-    };
-  } else if (variant === "tertiary") {
-    style = {
-      background: "rgba(var(--tertiary-rgb), 0.06)",
-      color: "var(--tertiary)",
-      border: "1px solid rgba(var(--tertiary-rgb), 0.12)",
-      fontFamily: "var(--font-body)",
-    };
-  } else if (variant === "tertiary-filled") {
-    style = {
-      background: "rgba(var(--tertiary-rgb), 0.08)",
-      color: "var(--tertiary)",
-      border: "1px solid rgba(var(--tertiary-rgb), 0.15)",
-      fontFamily: "var(--font-body)",
-    };
-  }
+const BADGE_STYLES: Record<BadgeVariant, CSSProperties> = {
+  subtle: {
+    background: "rgba(var(--accent-rgb), 0.06)",
+    color: "rgba(var(--accent-rgb), 0.5)",
+    border: "1px solid rgba(var(--accent-rgb), 0.1)",
+    fontFamily: "var(--font-body)",
+  },
+  active: {
+    background: "rgba(var(--accent-rgb), 0.08)",
+    color: "var(--accent)",
+    border: "1px solid rgba(var(--accent-rgb), 0.15)",
+    fontFamily: "var(--font-body)",
+  },
+  filled: {
+    background: "rgba(var(--accent-rgb), 0.06)",
+    color: "rgba(var(--accent-rgb), 0.55)",
+    border: "1px solid rgba(var(--accent-rgb), 0.08)",
+    fontFamily: "var(--font-body)",
+  },
+  "solid-accent": {
+    background: "var(--accent)",
+    color: "#000000",
+    border: "1px solid var(--accent)",
+    fontFamily: "var(--font-body)",
+  },
+  tertiary: {
+    background: "rgba(var(--tertiary-rgb), 0.06)",
+    color: "var(--tertiary)",
+    border: "1px solid rgba(var(--tertiary-rgb), 0.12)",
+    fontFamily: "var(--font-body)",
+  },
+  "tertiary-filled": {
+    background: "rgba(var(--tertiary-rgb), 0.08)",
+    color: "var(--tertiary)",
+    border: "1px solid rgba(var(--tertiary-rgb), 0.15)",
+    fontFamily: "var(--font-body)",
+  },
+};
 
+export function Badge({
+  children,
+  variant = "subtle",
+  className = "",
+}: BadgeProps) {
   return (
     <span
       className={`px-3 py-1 rounded-full text-[11px] tracking-widest uppercase inline-flex items-center gap-1.5 ${className}`}
-      style={style}
+      style={BADGE_STYLES[variant]}
     >
       {children}
     </span>

@@ -1,6 +1,7 @@
 "use client";
+
 import Image from "next/image";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useMotionValue,
@@ -8,18 +9,20 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import {
-  ACCENT,
   THUMB_ACTIVE_W,
   THUMB_INACTIVE_W,
   THUMB_GAP,
   THUMB_MARGIN,
 } from "@/constants";
-import type { CarouselImage, CarouselProps, ImageGroup, GroupedCarouselProps } from "@/types";
+import type {
+  CarouselImage,
+  CarouselProps,
+  ImageGroup,
+  GroupedCarouselProps,
+} from "@/types";
 import { useKeyboardNavigation } from "@/hooks";
 
 export type { CarouselImage };
-
-// ─── Thumbnails ───────────────────────────────────────────────────────────────
 
 function Thumbnails({
   images,
@@ -49,11 +52,8 @@ function Thumbnails({
       className="overflow-x-auto"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
-      <style>{`
-        .carousel-thumbs::-webkit-scrollbar { display: none; }
-      `}</style>
       <div
-        className="carousel-thumbs flex h-16 pb-1"
+        className="flex h-16 pb-1"
         style={{ width: "fit-content", gap: `${THUMB_GAP}px` }}
       >
         {images.map((img, i) => (
@@ -82,15 +82,18 @@ function Thumbnails({
             style={{
               border:
                 i === index
-                  ? `1.5px solid ${ACCENT}0.35)`
-                  : `1px solid ${ACCENT}0.08)`,
+                  ? "1.5px solid rgba(var(--accent-rgb), 0.35)"
+                  : "1px solid rgba(var(--accent-rgb), 0.08)",
             }}
           >
-            <img
+            <Image
               src={img.url}
               alt={img.title || `Thumbnail ${i + 1}`}
+              fill
+              sizes={`${THUMB_ACTIVE_W}px`}
               className="w-full h-full object-cover pointer-events-none select-none"
               draggable={false}
+              loading="lazy"
             />
           </motion.button>
         ))}
@@ -98,8 +101,6 @@ function Thumbnails({
     </div>
   );
 }
-
-// ─── Nav Button ───────────────────────────────────────────────────────────────
 
 function NavButton({
   direction,
@@ -119,14 +120,20 @@ function NavButton({
         [direction === "prev" ? "left" : "right"]: "14px",
         width: 40,
         height: 40,
-        background: disabled ? `${ACCENT}0.04)` : `${ACCENT}0.1)`,
-        border: `1px solid ${ACCENT}${disabled ? "0.06" : "0.18"})`,
+        background: disabled
+          ? "rgba(var(--accent-rgb), 0.04)"
+          : "rgba(var(--accent-rgb), 0.1)",
+        border: `1px solid rgba(var(--accent-rgb), ${disabled ? "0.06" : "0.18"})`,
         borderRadius: "50%",
-        color: disabled ? `${ACCENT}0.15)` : `${ACCENT}0.7)`,
+        color: disabled
+          ? "rgba(var(--accent-rgb), 0.15)"
+          : "rgba(var(--accent-rgb), 0.7)",
         cursor: disabled ? "not-allowed" : "pointer",
         backdropFilter: "blur(8px)",
       }}
-      whileHover={disabled ? {} : { scale: 1.1, background: `${ACCENT}0.18)` }}
+      whileHover={
+        disabled ? {} : { scale: 1.1, background: "rgba(var(--accent-rgb), 0.18)" }
+      }
       whileTap={disabled ? {} : { scale: 0.93 }}
       transition={{ duration: 0.2 }}
     >
@@ -148,8 +155,6 @@ function NavButton({
   );
 }
 
-// ─── Variant Tabs ─────────────────────────────────────────────────────────────
-
 function VariantTabs({
   groups,
   active,
@@ -169,7 +174,7 @@ function VariantTabs({
       <span
         className="shrink-0 mr-2 text-[0.65rem] uppercase tracking-[0.15em]"
         style={{
-          color: `${ACCENT}0.3)`,
+          color: "rgba(var(--accent-rgb), 0.3)",
           fontFamily: "var(--font-body)",
         }}
       >
@@ -182,7 +187,7 @@ function VariantTabs({
           className="relative shrink-0 px-3.5 py-1.5 rounded-full text-[0.7rem] tracking-wider uppercase"
           style={{
             fontFamily: "var(--font-body)",
-            color: i === active ? "var(--accent)" : `${ACCENT}0.4)`,
+            color: i === active ? "var(--accent)" : "rgba(var(--accent-rgb), 0.4)",
             cursor: "pointer",
             border: "none",
             background: "transparent",
@@ -195,8 +200,8 @@ function VariantTabs({
               layoutId="variant-pill"
               className="absolute inset-0 rounded-full"
               style={{
-                background: `${ACCENT}0.1)`,
-                border: `1px solid ${ACCENT}0.2)`,
+                background: "rgba(var(--accent-rgb), 0.1)",
+                border: "1px solid rgba(var(--accent-rgb), 0.2)",
               }}
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
             />
@@ -208,18 +213,11 @@ function VariantTabs({
   );
 }
 
-// ─── Inner Carousel (core slider) ─────────────────────────────────────────────
-
 function InnerCarousel({ images }: { images: CarouselImage[] }) {
   const [index, setIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
-
-  // Reset index when images change
-  useEffect(() => {
-    setIndex(0);
-  }, [images]);
 
   useKeyboardNavigation({
     onLeft: () => setIndex((i) => Math.max(0, i - 1)),
@@ -238,11 +236,6 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
     }
   }, [index, x, isDragging]);
 
-  // Snap x to 0 when images change
-  useEffect(() => {
-    x.set(0);
-  }, [images, x]);
-
   if (!images || images.length === 0) return null;
 
   return (
@@ -251,15 +244,15 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
         ref={containerRef}
         className="relative overflow-hidden"
         style={{
-          background: `${ACCENT}0.02)`,
-          border: `1px solid ${ACCENT}0.08)`,
+          background: "rgba(var(--accent-rgb), 0.02)",
+          border: "1px solid rgba(var(--accent-rgb), 0.08)",
         }}
       >
-        {/* Ambient light gradient background */}
         <div
           className="absolute inset-0 pointer-events-none z-0 opacity-30"
           style={{
-            background: "radial-gradient(circle, rgba(var(--accent-rgb), 0.15) 0%, transparent 80%)",
+            background:
+              "radial-gradient(circle, rgba(var(--accent-rgb), 0.15) 0%, transparent 80%)",
           }}
         />
 
@@ -287,7 +280,6 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
               key={`${img.url}-${i}`}
               className="shrink-0 w-full aspect-[16/9] relative overflow-hidden flex items-center justify-center"
             >
-              {/* Main image rendered fully using object-contain */}
               <Image
                 src={img.url}
                 alt={img.title || `Project screenshot ${i + 1}`}
@@ -325,8 +317,8 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
             style={{
               background: "rgba(2,66,68,0.6)",
               backdropFilter: "blur(8px)",
-              color: `${ACCENT}0.6)`,
-              border: `1px solid ${ACCENT}0.1)`,
+              color: "rgba(var(--accent-rgb), 0.6)",
+              border: "1px solid rgba(var(--accent-rgb), 0.1)",
               fontFamily: "var(--font-body)",
               letterSpacing: "0.06em",
               zIndex: 20,
@@ -342,23 +334,19 @@ function InnerCarousel({ images }: { images: CarouselImage[] }) {
   );
 }
 
-// ─── Default Carousel (flat images) ───────────────────────────────────────────
-
 export default function Carousel({ images }: CarouselProps) {
   if (!images || images.length === 0) return null;
   return <InnerCarousel images={images} />;
 }
 
-// ─── Grouped Carousel (variant tabs + carousel) ──────────────────────────────
-
 export function GroupedCarousel({ groups }: GroupedCarouselProps) {
   const [activeGroup, setActiveGroup] = useState(0);
 
-  // Filter out empty groups
   const validGroups = groups.filter((g) => g.images.length > 0);
   if (validGroups.length === 0) return null;
 
-  const currentImages = validGroups[activeGroup]?.images || [];
+  const currentGroup = validGroups[activeGroup];
+  const currentImages = currentGroup?.images || [];
 
   return (
     <div className="w-full">
@@ -369,13 +357,13 @@ export function GroupedCarousel({ groups }: GroupedCarouselProps) {
       />
       <AnimatePresence mode="wait">
         <motion.div
-          key={validGroups[activeGroup]?.label}
+          key={currentGroup?.label}
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.25 }}
         >
-          <InnerCarousel images={currentImages} />
+          <InnerCarousel key={currentGroup?.label} images={currentImages} />
         </motion.div>
       </AnimatePresence>
     </div>

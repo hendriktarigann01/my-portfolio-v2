@@ -1,2 +1,5 @@
-export const ACCENT = "rgba(var(--accent-rgb),";
-export const DEFAULT_ACCENT = "rgba(var(--accent-rgb),0.06)";
+export const ACCENT_COLOR = "var(--accent)";
+export const ACCENT_RGB = "239, 209, 195";
+
+export const rgbaAccent = (opacity: number): string =>
+  `rgba(var(--accent-rgb), ${opacity})`;

@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import type { ScrollRevealProps, StaggerContainerProps } from "@/types";
+import type { ScrollRevealProps } from "@/types";
 
 export function ScrollReveal({
   children,
@@ -16,9 +16,8 @@ export function ScrollReveal({
 
   const initial = {
     opacity: 0,
-    y: direction === "up" ? 40 : 0,
-    x: direction === "left" ? -40 : direction === "right" ? 40 : 0,
-    filter: "blur(8px)",
+    y: direction === "up" ? 32 : 0,
+    x: direction === "left" ? -32 : direction === "right" ? 32 : 0,
   };
 
   return (
@@ -27,53 +26,12 @@ export function ScrollReveal({
       className={className}
       initial={initial}
       animate={
-        isInView
-          ? { opacity: 1, y: 0, x: 0, filter: "blur(0px)" }
-          : initial
+        isInView ? { opacity: 1, y: 0, x: 0 } : initial
       }
       transition={{
         duration: 0.8,
         delay,
         ease: [0.16, 1, 0.3, 1],
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-export function StaggerContainer({ children, className, staggerDelay = 0.1 }: StaggerContainerProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={{
-        hidden: {},
-        visible: { transition: { staggerChildren: staggerDelay } },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-export function StaggerItem({ children, className }: { children: React.ReactNode; className?: string }) {
-  return (
-    <motion.div
-      className={className}
-      variants={{
-        hidden: { opacity: 0, y: 30, filter: "blur(6px)" },
-        visible: {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
-        },
       }}
     >
       {children}

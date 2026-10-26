@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { TextRotate } from "@/components/CTAExample";
 import { MessageSquare } from "lucide-react";
-import { CONTACT_INFO } from "@/constants";
+import { getWhatsAppUrl } from "@/helpers";
 
 const LocationMap = dynamic(
   () => import("@/components/LocationMap").then((m) => m.LocationMap),
@@ -15,8 +15,7 @@ const LocationMap = dynamic(
 
 export function CTAView() {
   const handleWAConnect = () => {
-    const waUrl = `https://api.whatsapp.com/send?phone=${CONTACT_INFO.phone}&text=${encodeURIComponent(CONTACT_INFO.whatsappText)}`;
-    window.open(waUrl, "_blank");
+    window.open(getWhatsAppUrl(), "_blank");
   };
 
   return (
@@ -27,17 +26,14 @@ export function CTAView() {
       <div className="container-main">
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* LEFT — Map */}
             <div style={{ position: "relative", zIndex: 1 }}>
               <LocationMap />
             </div>
 
-            {/* RIGHT — Apple-style Contact Callout */}
             <div
               style={{ position: "relative", zIndex: 1 }}
               className="flex flex-col gap-6"
             >
-              {/* Headline */}
               <div>
                 <span
                   className="text-[11px] tracking-[0.25em] uppercase font-semibold block mb-3"
@@ -79,15 +75,9 @@ export function CTAView() {
                 </h2>
               </div>
 
-              {/* Right */}
               <motion.div
                 onClick={handleWAConnect}
-                className="relative overflow-hidden rounded-[2rem] p-8 md:p-10 cursor-pointer flex flex-row items-center justify-between gap-6"
-                style={{
-                  background: "rgba(2, 66, 68, 0.45)",
-                  backdropFilter: "blur(24px)",
-                  border: "1px solid rgba(var(--accent-rgb), 0.12)",
-                }}
+                className="glass relative overflow-hidden rounded-[2rem] p-8 md:p-10 cursor-pointer flex flex-row items-center justify-between gap-6"
               >
                 <div className="flex flex-col items-start z-10 flex-1 gap-10">
                   <h3
@@ -116,7 +106,6 @@ export function CTAView() {
                   </div>
                 </div>
 
-                {/* Right contents - Floating Phone Illustration */}
                 <div className="flex flex-col items-center justify-center relative w-32 h-32 md:w-36 md:h-36 flex-shrink-0 z-10">
                   <motion.div className="w-24 h-24 md:w-28 md:h-28 relative flex items-center justify-center">
                     <Image

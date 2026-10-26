@@ -1,39 +1,54 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const emptySubscribe = () => () => {};
+
 export function Preloader() {
-  const [loading, setLoading] = useState(true);
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+
+  const [loading, setLoading] = useState(() => {
+    if (typeof window === "undefined") return true;
+    try {
+      return !sessionStorage.getItem("preloader_shown");
+    } catch {
+      return true;
+    }
+  });
 
   useEffect(() => {
-    setMounted(true);
-    // Check if we already loaded in this session
-    if (sessionStorage.getItem("preloader_shown")) {
-      setLoading(false);
-      return;
-    }
+    let delayTimer: ReturnType<typeof setTimeout> | undefined;
+    let fallbackTimer: ReturnType<typeof setTimeout> | undefined;
 
-    // Wait for document load or simply a timeout
     const handleLoad = () => {
-      // Add a slight delay for better UX if it loads too fast
-      setTimeout(() => {
+      delayTimer = setTimeout(() => {
         setLoading(false);
-        sessionStorage.setItem("preloader_shown", "true");
+        try {
+          sessionStorage.setItem("preloader_shown", "true");
+        } catch {
+          /* ignore */
+        }
       }, 800);
     };
 
     if (document.readyState === "complete") {
       handleLoad();
     } else {
-      window.addEventListener("load", handleLoad);
-      // Fallback timeout in case 'load' never fires correctly
-      setTimeout(handleLoad, 3000);
+      window.addEventListener("load", handleLoad, { once: true });
+      fallbackTimer = setTimeout(handleLoad, 3000);
     }
 
-    return () => window.removeEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+      if (delayTimer) clearTimeout(delayTimer);
+      if (fallbackTimer) clearTimeout(fallbackTimer);
+    };
   }, []);
 
   if (!mounted) return null;

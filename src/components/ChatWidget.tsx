@@ -25,12 +25,23 @@ export function ChatWidget() {
   const [questionCount, setQuestionCount] = useState<number>(0);
   const isLimitReached = questionCount >= MAX_QUESTIONS;
 
-  useEffect(() => {
-    setQuestionCount(loadCount());
-  }, []);
-
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const timeoutIdsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  const registerTimeout = useCallback((fn: () => void, delayMs: number) => {
+    const id = setTimeout(fn, delayMs);
+    timeoutIdsRef.current.push(id);
+    return id;
+  }, []);
+
+  useEffect(() => {
+    setQuestionCount(loadCount());
+    const currentTimers = timeoutIdsRef.current;
+    return () => {
+      currentTimers.forEach(clearTimeout);
+    };
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -40,21 +51,34 @@ export function ChatWidget() {
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
-      setTimeout(() => inputRef.current?.focus(), 300);
+      registerTimeout(() => inputRef.current?.focus(), 300);
     }
-  }, [isOpen]);
+  }, [isOpen, registerTimeout]);
+
+  const appendLimitNotice = useCallback(() => {
+    registerTimeout(() => {
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `limit-${Date.now()}`,
+          role: "model",
+          content: `We've reached the ${MAX_QUESTIONS}-question limit. Hope I was helpful! Reach out directly via the contact section. 🙌`,
+          timestamp: new Date(),
+        },
+      ]);
+    }, 500);
+  }, [registerTimeout]);
 
   const sendMessage = useCallback(
     async (text: string) => {
-      if (!text.trim() || isLoading) return;
-
-      if (questionCount >= MAX_QUESTIONS) return;
+      const trimmed = text.trim();
+      if (!trimmed || isLoading || questionCount >= MAX_QUESTIONS) return;
 
       setHasInteracted(true);
       const userMsg: Message = {
         id: `user-${Date.now()}`,
         role: "user",
-        content: text.trim(),
+        content: trimmed,
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, userMsg]);
@@ -64,24 +88,18 @@ export function ChatWidget() {
       setQuestionCount(nextCount);
       saveCount(nextCount);
 
-      if (!isOnTopic(text)) {
+      if (!isOnTopic(trimmed)) {
         const refuseMsg: Message = {
           id: `refuse-${Date.now()}`,
           role: "model",
-          content: "I can only answer questions about Hendrik: his projects, skills, stack, or how to collaborate. Try asking something related! 😊",
+          content:
+            "I can only answer questions about Hendrik: his projects, skills, stack, or how to collaborate. Try asking something related! 😊",
           timestamp: new Date(),
         };
         setMessages((prev) => [...prev, refuseMsg]);
 
         if (nextCount >= MAX_QUESTIONS) {
-          setTimeout(() => {
-            setMessages((prev) => [...prev, {
-              id: `limit-${Date.now()}`,
-              role: "model",
-              content: `We've reached the ${MAX_QUESTIONS}-question limit. Hope I was helpful! Reach out directly via the contact section. 🙌`,
-              timestamp: new Date(),
-            }]);
-          }, 400);
+          appendLimitNotice();
         }
         return;
       }
@@ -89,9 +107,10 @@ export function ChatWidget() {
       setIsLoading(true);
 
       try {
-        const history = [...messages.filter((m) => m.id !== "greeting"), userMsg].map(
-          (m) => ({ role: m.role, content: m.content })
-        );
+        const history = [
+          ...messages.filter((m) => m.id !== "greeting"),
+          userMsg,
+        ].map((m) => ({ role: m.role, content: m.content }));
 
         const res = await fetch("/api/chat", {
           method: "POST",
@@ -111,14 +130,7 @@ export function ChatWidget() {
         setMessages((prev) => [...prev, aiMsg]);
 
         if (nextCount >= MAX_QUESTIONS) {
-          setTimeout(() => {
-            setMessages((prev) => [...prev, {
-              id: `limit-${Date.now()}`,
-              role: "model",
-              content: `We've reached the ${MAX_QUESTIONS}-question limit. Hope I was helpful! Reach out directly via the contact section. 🙌`,
-              timestamp: new Date(),
-            }]);
-          }, 600);
+          appendLimitNotice();
         }
       } catch {
         const errMsg: Message = {
@@ -132,7 +144,7 @@ export function ChatWidget() {
         setIsLoading(false);
       }
     },
-    [messages, isLoading, questionCount]
+    [messages, isLoading, questionCount, appendLimitNotice],
   );
 
   const handleSubmit = (e: FormEvent) => {
@@ -212,7 +224,6 @@ export function ChatWidget() {
                 maxHeight: "min(520px, calc(100vh - 120px))",
               }}
             >
-              {/* Header */}
               <div
                 style={{
                   padding: "16px 20px",
@@ -277,7 +288,6 @@ export function ChatWidget() {
                 </motion.button>
               </div>
 
-              {/* Messages */}
               <div
                 ref={scrollRef}
                 data-lenis-prevent
@@ -410,7 +420,6 @@ export function ChatWidget() {
                 )}
               </div>
 
-              {/* Input */}
               <form
                 onSubmit={handleSubmit}
                 style={{
@@ -424,13 +433,17 @@ export function ChatWidget() {
                 }}
               >
                 <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                  <span style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.65rem",
-                    fontWeight: 600,
-                    color: isLimitReached ? "rgba(239,100,100,0.6)" : "rgba(var(--accent-rgb),0.25)",
-                    letterSpacing: "0.05em",
-                  }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: "0.65rem",
+                      fontWeight: 600,
+                      color: isLimitReached
+                        ? "rgba(239,100,100,0.6)"
+                        : "rgba(var(--accent-rgb),0.25)",
+                      letterSpacing: "0.05em",
+                    }}
+                  >
                     {questionCount}/{MAX_QUESTIONS} questions
                   </span>
                 </div>
@@ -440,15 +453,23 @@ export function ChatWidget() {
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder={isLimitReached ? "Question limit reached" : "Ask about Hendrik..."}
+                    placeholder={
+                      isLimitReached
+                        ? "Question limit reached"
+                        : "Ask about Hendrik..."
+                    }
                     disabled={isLoading || isLimitReached}
                     style={{
                       flex: 1,
                       padding: "10px 16px",
                       borderRadius: 14,
                       border: "1px solid rgba(var(--accent-rgb), 0.1)",
-                      background: isLimitReached ? "rgba(var(--accent-rgb),0.02)" : "rgba(var(--accent-rgb), 0.04)",
-                      color: isLimitReached ? "rgba(var(--accent-rgb),0.3)" : "var(--accent)",
+                      background: isLimitReached
+                        ? "rgba(var(--accent-rgb),0.02)"
+                        : "rgba(var(--accent-rgb), 0.04)",
+                      color: isLimitReached
+                        ? "rgba(var(--accent-rgb),0.3)"
+                        : "var(--accent)",
                       fontFamily: "var(--font-body)",
                       fontSize: "0.82rem",
                       outline: "none",
@@ -457,13 +478,18 @@ export function ChatWidget() {
                     }}
                     onFocus={(e) => {
                       if (!isLimitReached) {
-                        e.currentTarget.style.borderColor = "rgba(var(--accent-rgb),0.25)";
-                        e.currentTarget.style.background = "rgba(var(--accent-rgb),0.06)";
+                        e.currentTarget.style.borderColor =
+                          "rgba(var(--accent-rgb),0.25)";
+                        e.currentTarget.style.background =
+                          "rgba(var(--accent-rgb),0.06)";
                       }
                     }}
                     onBlur={(e) => {
-                      e.currentTarget.style.borderColor = "rgba(var(--accent-rgb),0.1)";
-                      e.currentTarget.style.background = isLimitReached ? "rgba(var(--accent-rgb),0.02)" : "rgba(var(--accent-rgb),0.04)";
+                      e.currentTarget.style.borderColor =
+                        "rgba(var(--accent-rgb),0.1)";
+                      e.currentTarget.style.background = isLimitReached
+                        ? "rgba(var(--accent-rgb),0.02)"
+                        : "rgba(var(--accent-rgb),0.04)";
                     }}
                   />
                   <motion.button
@@ -487,7 +513,10 @@ export function ChatWidget() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      cursor: input.trim() && !isLoading && !isLimitReached ? "pointer" : "default",
+                      cursor:
+                        input.trim() && !isLoading && !isLimitReached
+                          ? "pointer"
+                          : "default",
                       flexShrink: 0,
                       transition: "all 0.2s ease",
                     }}
@@ -504,7 +533,6 @@ export function ChatWidget() {
           )}
         </AnimatePresence>
 
-        {/* FAB */}
         <motion.button
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.92 }}

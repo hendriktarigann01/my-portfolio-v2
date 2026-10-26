@@ -15,22 +15,32 @@ export function LocationMap() {
   const [locationSource, setLocationSource] = useState<"gps" | "ip">("ip");
 
   useEffect(() => {
+    let isCancelled = false;
+
     const fetchIP = () => {
       fetch("/api/geo")
         .then((r) => r.json())
         .then((data) => {
-          if (data.latitude && !isNaN(data.latitude)) {
+          if (!isCancelled && data.latitude && !isNaN(data.latitude)) {
             setGeo(data);
-            setDistance(getDistanceKm(HOME_LOCATION.lat, HOME_LOCATION.lng, data.latitude, data.longitude));
+            setDistance(
+              getDistanceKm(
+                HOME_LOCATION.lat,
+                HOME_LOCATION.lng,
+                data.latitude,
+                data.longitude,
+              ),
+            );
             setLocationSource("ip");
           }
         })
         .catch(() => null);
     };
 
-    if (navigator.geolocation) {
+    if (typeof navigator !== "undefined" && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
+          if (isCancelled) return;
           const data = {
             city: "Your location",
             country_name: "",
@@ -38,15 +48,26 @@ export function LocationMap() {
             longitude: pos.coords.longitude,
           };
           setGeo(data);
-          setDistance(getDistanceKm(HOME_LOCATION.lat, HOME_LOCATION.lng, data.latitude, data.longitude));
+          setDistance(
+            getDistanceKm(
+              HOME_LOCATION.lat,
+              HOME_LOCATION.lng,
+              data.latitude,
+              data.longitude,
+            ),
+          );
           setLocationSource("gps");
         },
         fetchIP,
-        { timeout: 5000 }
+        { timeout: 5000 },
       );
     } else {
       fetchIP();
     }
+
+    return () => {
+      isCancelled = true;
+    };
   }, []);
 
   useEffect(() => {
@@ -61,15 +82,21 @@ export function LocationMap() {
       attributionControl: false,
     });
 
-    return () => { map.current?.remove(); map.current = null; };
+    return () => {
+      map.current?.remove();
+      map.current = null;
+    };
   }, []);
 
   useEffect(() => {
     if (!geo || isNaN(geo.latitude) || isNaN(geo.longitude)) return;
     if (!map.current) return;
     const m = map.current;
+    let fitTimer: ReturnType<typeof setTimeout> | undefined;
 
     const onLoad = () => {
+      if (!map.current) return;
+
       const homeEl = document.createElement("div");
       homeEl.style.cssText = `
         width: 48px; height: 48px;
@@ -99,7 +126,10 @@ export function LocationMap() {
             properties: {},
             geometry: {
               type: "LineString",
-              coordinates: [[HOME_LOCATION.lng, HOME_LOCATION.lat], [geo.longitude, geo.latitude]],
+              coordinates: [
+                [HOME_LOCATION.lng, HOME_LOCATION.lat],
+                [geo.longitude, geo.latitude],
+              ],
             },
           },
         });
@@ -117,64 +147,163 @@ export function LocationMap() {
         });
       }
 
-      setTimeout(() => {
+      fitTimer = setTimeout(() => {
+        if (!map.current) return;
         m.fitBounds(
           [
-            [Math.min(HOME_LOCATION.lng, geo.longitude) - 5, Math.min(HOME_LOCATION.lat, geo.latitude) - 5],
-            [Math.max(HOME_LOCATION.lng, geo.longitude) + 5, Math.max(HOME_LOCATION.lat, geo.latitude) + 5],
+            [
+              Math.min(HOME_LOCATION.lng, geo.longitude) - 5,
+              Math.min(HOME_LOCATION.lat, geo.latitude) - 5,
+            ],
+            [
+              Math.max(HOME_LOCATION.lng, geo.longitude) + 5,
+              Math.max(HOME_LOCATION.lat, geo.latitude) + 5,
+            ],
           ],
-          { duration: 2800, essential: true, padding: 80 }
+          { duration: 2800, essential: true, padding: 80 },
         );
       }, 800);
     };
 
-    if (m.isStyleLoaded()) onLoad();
-    else m.on("load", onLoad);
+    if (m.isStyleLoaded()) {
+      onLoad();
+    } else {
+      m.on("load", onLoad);
+    }
+
+    return () => {
+      if (fitTimer) clearTimeout(fitTimer);
+    };
   }, [geo]);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-      <div style={{ borderRadius: "1.25rem", overflow: "hidden", border: "1px solid rgba(var(--accent-rgb),0.1)", aspectRatio: "16/9", position: "relative" }}>
-        <style>{`
-          .maplibregl-canvas { border-radius: 1.25rem; }
-          .maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right { display: none !important; }
-        `}</style>
-        <div ref={mapContainer} style={{ width: "100%", height: "100%", minHeight: "220px" }} />
+      <div
+        style={{
+          borderRadius: "1.25rem",
+          overflow: "hidden",
+          border: "1px solid rgba(var(--accent-rgb),0.1)",
+          aspectRatio: "16/9",
+          position: "relative",
+        }}
+      >
+        <div
+          ref={mapContainer}
+          style={{ width: "100%", height: "100%", minHeight: "220px" }}
+        />
         {!geo && (
-          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(1,48,50,0.6)", backdropFilter: "blur(4px)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <div style={{ width: "8px", height: "8px", borderRadius: "50%", background: "var(--accent)", animation: "pulse 1.2s infinite" }} />
-              <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(var(--accent-rgb),0.5)" }}>Detecting location...</span>
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "rgba(1,48,50,0.6)",
+              backdropFilter: "blur(4px)",
+            }}
+          >
+            <div
+              style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}
+            >
+              <div
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  borderRadius: "50%",
+                  background: "var(--accent)",
+                  animation: "pulse 1.2s infinite",
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.8rem",
+                  color: "rgba(var(--accent-rgb),0.5)",
+                }}
+              >
+                Detecting location...
+              </span>
             </div>
           </div>
         )}
       </div>
 
-      <div style={{ padding: "1.125rem 1.375rem", borderRadius: "1rem", background: "rgba(var(--accent-rgb),0.04)", border: "1px solid rgba(var(--accent-rgb),0.08)" }}>
+      <div
+        style={{
+          padding: "1.125rem 1.375rem",
+          borderRadius: "1rem",
+          background: "rgba(var(--accent-rgb),0.04)",
+          border: "1px solid rgba(var(--accent-rgb),0.08)",
+        }}
+      >
         {distance !== null && geo ? (
           <>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "rgba(var(--accent-rgb),0.6)", lineHeight: 1.7, fontWeight: 300 }}>
+            <p
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.875rem",
+                color: "rgba(var(--accent-rgb),0.6)",
+                lineHeight: 1.7,
+                fontWeight: 300,
+              }}
+            >
               I&apos;m based in{" "}
-              <span style={{ color: "var(--accent)", fontWeight: 500 }}>{HOME_LOCATION.city}, {HOME_LOCATION.country}</span>
-              {" "}, roughly{" "}
-              <span style={{ color: "var(--accent)", fontWeight: 600, fontFamily: "var(--font-display)" }}>
-                {distance.toLocaleString()} km
-              </span>
-              {" "}away from{" "}
               <span style={{ color: "var(--accent)", fontWeight: 500 }}>
-                {locationSource === "gps" ? "your location" : `${geo.city}, ${geo.country_name}`}
-              </span>.
+                {HOME_LOCATION.city}, {HOME_LOCATION.country}
+              </span>
+              , roughly{" "}
+              <span
+                style={{
+                  color: "var(--accent)",
+                  fontWeight: 600,
+                  fontFamily: "var(--font-display)",
+                }}
+              >
+                {distance.toLocaleString()} km
+              </span>{" "}
+              away from{" "}
+              <span style={{ color: "var(--accent)", fontWeight: 500 }}>
+                {locationSource === "gps"
+                  ? "your location"
+                  : `${geo.city}, ${geo.country_name}`}
+              </span>
+              .
             </p>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.72rem", color: "rgba(var(--accent-rgb),0.25)", marginTop: "0.375rem", fontWeight: 300 }}>
+            <p
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.72rem",
+                color: "rgba(var(--accent-rgb),0.25)",
+                marginTop: "0.375rem",
+                fontWeight: 300,
+              }}
+            >
               {locationSource === "gps"
                 ? "Based on your device GPS. Accurate to your exact location."
                 : "Based on your IP address. Your actual location may differ."}
             </p>
           </>
         ) : (
-          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-            <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "rgba(var(--accent-rgb),0.3)" }} />
-            <span style={{ fontFamily: "var(--font-body)", fontSize: "0.8rem", color: "rgba(var(--accent-rgb),0.3)", fontWeight: 300 }}>
+          <div
+            style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}
+          >
+            <div
+              style={{
+                width: "6px",
+                height: "6px",
+                borderRadius: "50%",
+                background: "rgba(var(--accent-rgb),0.3)",
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.8rem",
+                color: "rgba(var(--accent-rgb),0.3)",
+                fontWeight: 300,
+              }}
+            >
               Detecting your location...
             </span>
           </div>

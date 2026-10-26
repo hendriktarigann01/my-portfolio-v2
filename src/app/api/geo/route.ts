@@ -1,6 +1,5 @@
 export async function GET(request: Request) {
   try {
-    // Ambil IP dari header
     const forwarded = request.headers.get("x-forwarded-for");
     const ip = forwarded?.split(",")[0]?.trim() || "";
 
@@ -9,9 +8,9 @@ export async function GET(request: Request) {
     const res = await fetch(url, {
       headers: {
         "User-Agent": "Mozilla/5.0 (compatible; portfolio/1.0)",
-        "Accept": "application/json",
+        Accept: "application/json",
       },
-      next: { revalidate: 3600 }, // cache 1 jam
+      next: { revalidate: 3600 },
     });
 
     if (!res.ok) throw new Error(`ipapi error: ${res.status}`);
@@ -28,7 +27,6 @@ export async function GET(request: Request) {
     });
   } catch (e) {
     console.error("Geo error:", e);
-    // Fallback: Singapore (dekat Indonesia)
     return Response.json({
       city: "Singapore",
       country_name: "Singapore",

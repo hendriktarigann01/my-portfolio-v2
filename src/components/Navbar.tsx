@@ -9,6 +9,8 @@ import { useAudio } from "@/lib/audio-context";
 import { NAV_LINKS } from "@/constants";
 import { globalLenis } from "@/components/SmoothScrollProvider";
 
+const REVERSED_NAV_LINKS = [...NAV_LINKS].reverse();
+
 export function Navbar() {
   const { isPlaying, toggleSound } = useAudio();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -43,8 +45,10 @@ export function Navbar() {
 
   return (
     <>
-      {/* LEFT SIDEBAR (desktop) */}
-      <div className="hidden md:block fixed left-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}>
+      <div
+        className="hidden md:block fixed left-0 top-0 bottom-0 w-24 z-50 pointer-events-none"
+        style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}
+      >
         <motion.div
           className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-auto"
           initial={{ opacity: 0, y: -20 }}
@@ -87,8 +91,10 @@ export function Navbar() {
         </motion.div>
       </div>
 
-      {/* RIGHT SIDEBAR (desktop) */}
-      <div className="hidden md:block fixed right-0 top-0 bottom-0 w-24 z-50 pointer-events-none" style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}>
+      <div
+        className="hidden md:block fixed right-0 top-0 bottom-0 w-24 z-50 pointer-events-none"
+        style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}
+      >
         <motion.nav
           className="absolute top-1/2 right-1/2 pointer-events-auto flex items-center gap-12"
           initial={{ opacity: 0 }}
@@ -99,23 +105,15 @@ export function Navbar() {
             whiteSpace: "nowrap",
           }}
         >
-          {NAV_LINKS.slice().reverse().map((link) => (
+          {REVERSED_NAV_LINKS.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleClick(e, link.href)}
-              className="hover-underline"
+              className="hover-underline text-[rgba(var(--accent-rgb),0.65)] hover:text-[var(--accent)] transition-colors duration-300 uppercase font-medium tracking-[0.2em] text-[0.75rem]"
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "0.75rem",
-                color: "rgba(var(--accent-rgb),0.65)",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                fontWeight: 500,
-                transition: "color 0.3s ease",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(var(--accent-rgb),0.65)")}
             >
               {link.label}
             </a>
@@ -123,7 +121,6 @@ export function Navbar() {
         </motion.nav>
       </div>
 
-      {/* MOBILE TOP BAR */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between">
         <motion.a
           href="#"
@@ -158,11 +155,23 @@ export function Navbar() {
         >
           <AnimatePresence mode="wait">
             {menuOpen ? (
-              <motion.span key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.15 }}>
+              <motion.span
+                key="close"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.15 }}
+              >
                 <X size={24} />
               </motion.span>
             ) : (
-              <motion.span key="open" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.15 }}>
+              <motion.span
+                key="open"
+                initial={{ rotate: 90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: -90, opacity: 0 }}
+                transition={{ duration: 0.15 }}
+              >
                 <Menu size={24} />
               </motion.span>
             )}
@@ -170,7 +179,6 @@ export function Navbar() {
         </motion.button>
       </div>
 
-      {/* MOBILE FULLSCREEN MENU */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -179,7 +187,10 @@ export function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden"
-            style={{ background: "rgba(2,20,21,0.97)", backdropFilter: "blur(20px)" }}
+            style={{
+              background: "rgba(2,20,21,0.97)",
+              backdropFilter: "blur(20px)",
+            }}
           >
             {NAV_LINKS.map((link, i) => (
               <motion.a
@@ -189,17 +200,14 @@ export function Navbar() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 + i * 0.06, duration: 0.4 }}
+                className="text-[var(--accent)] hover:text-[rgba(var(--accent-rgb),0.5)] transition-colors duration-200"
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: "1.75rem",
                   fontWeight: 700,
-                  color: "var(--accent)",
                   letterSpacing: "0.05em",
                   textDecoration: "none",
-                  transition: "color 0.2s",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(var(--accent-rgb),0.5)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--accent)")}
               >
                 {link.label}
               </motion.a>
@@ -209,7 +217,11 @@ export function Navbar() {
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
               transition={{ delay: 0.3, duration: 0.4 }}
-              style={{ width: 48, height: 1, background: "rgba(var(--accent-rgb),0.15)" }}
+              style={{
+                width: 48,
+                height: 1,
+                background: "rgba(var(--accent-rgb),0.15)",
+              }}
             />
 
             <motion.button
@@ -240,7 +252,6 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Audio FAB (desktop) */}
       <motion.button
         className="pointer-events-auto hidden md:flex"
         initial={{ opacity: 0, scale: 0 }}

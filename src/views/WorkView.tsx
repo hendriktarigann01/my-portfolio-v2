@@ -9,21 +9,16 @@ import type { WorkEntry } from "@/types";
 
 const MotionLink = motion.create(Link);
 
-function getCuratedWorks(): WorkEntry[] {
-  return [
-    worksData.systems[0],
-    worksData.interactive[0],
-    worksData.landing_pages[0],
-  ] as WorkEntry[];
-}
+const CURATED_WORKS: WorkEntry[] = [
+  worksData.systems[0],
+  worksData.interactive[0],
+  worksData.landing_pages[0],
+] as WorkEntry[];
 
 export function WorkView() {
-  const items = getCuratedWorks();
-
   return (
     <section id="projects" className="py-12 md:py-24 scroll-mt-20 md:scroll-mt-0">
       <div className="container-main">
-        {/* Section Header */}
         <div style={{ marginBottom: "4rem" }}>
           <ScrollReveal>
             <div className="flex items-center justify-between flex-wrap gap-6">
@@ -55,7 +50,6 @@ export function WorkView() {
                 </h2>
               </div>
 
-              {/* Premium Apple-style All Projects Button */}
               <MotionLink
                 href="/works"
                 className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all z-10"
@@ -86,10 +80,9 @@ export function WorkView() {
           </ScrollReveal>
         </div>
 
-        {/* Bento Grid (3 Curated Columns) */}
         <ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {items.map((item) => (
+            {CURATED_WORKS.map((item) => (
               <div
                 key={item.slug}
                 className="col-span-1 min-h-[260px] md:min-h-[320px]"

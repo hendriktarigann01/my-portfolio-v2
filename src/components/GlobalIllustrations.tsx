@@ -1,9 +1,16 @@
 "use client";
 
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { ILLUSTRATIONS, ILLUSTRATION_SPREAD } from "@/constants";
+
+const ALL_ILLUSTRATIONS = ILLUSTRATIONS.map((item, index) => ({
+  ...item,
+  topVh: item.top * ILLUSTRATION_SPREAD,
+  speedMultiplier: 0.85,
+  delay: 0.4 + (index % 5) * 0.12,
+}));
 
 function IllustrationFloat({
   src,
@@ -13,6 +20,7 @@ function IllustrationFloat({
   w,
   speedMultiplier,
   rotate,
+  delay,
   scrollY,
 }: {
   src: string;
@@ -22,7 +30,8 @@ function IllustrationFloat({
   w: number;
   speedMultiplier: number;
   rotate: number;
-  scrollY: any;
+  delay: number;
+  scrollY: MotionValue<number>;
 }) {
   const y = useTransform(scrollY, (v: number) => -(v * speedMultiplier));
 
@@ -44,7 +53,7 @@ function IllustrationFloat({
       transition={{
         duration: 1.2,
         ease: [0.16, 1, 0.3, 1],
-        delay: Math.random() * 0.6 + 0.4,
+        delay,
       }}
     >
       <Image
@@ -58,30 +67,22 @@ function IllustrationFloat({
   );
 }
 
-export function GlobalIllustrations() {
-  const [mounted, setMounted] = useState(false);
-  const { scrollY } = useScroll();
-  const smoothScrollY = useSpring(scrollY, {
-    damping: 30,
-    stiffness: 100,
-  });
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export function GlobalIllustrations() {
+  const mounted = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false,
+  );
+  const { scrollY } = useScroll();
 
   if (!mounted) return null;
 
-  const allIllustrations = ILLUSTRATIONS.map((i) => ({
-    ...i,
-    topVh: i.top * ILLUSTRATION_SPREAD,
-    speedMultiplier: 0.85,
-  }));
-
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {allIllustrations.map((il, i) => (
-        <IllustrationFloat key={i} {...il} scrollY={smoothScrollY} />
+      {ALL_ILLUSTRATIONS.map((il, i) => (
+        <IllustrationFloat key={i} {...il} scrollY={scrollY} />
       ))}
     </div>
   );

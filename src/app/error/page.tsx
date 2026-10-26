@@ -5,13 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export default function NotFoundPage() {
-  const handleBack = () => {
-    console.log("Navigating back to home...");
-  };
-
   return (
     <main className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-      {/* radial ambient glow */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -36,7 +31,6 @@ export default function NotFoundPage() {
           Page not found
         </motion.span>
 
-        {/* 404 */}
         <motion.h1
           className="text-center leading-none"
           style={{
@@ -58,7 +52,6 @@ export default function NotFoundPage() {
           404
         </motion.h1>
 
-        {/* message */}
         <motion.p
           className="text-center -mt-4 mb-2"
           style={{
@@ -93,7 +86,6 @@ export default function NotFoundPage() {
           somewhere else.
         </motion.p>
 
-        {/* CTA buttons */}
         <motion.div
           className="flex items-center justify-center gap-3"
           initial={{ opacity: 0, y: 10 }}
@@ -101,7 +93,7 @@ export default function NotFoundPage() {
           transition={{ delay: 0.6, duration: 0.5 }}
         >
           <Link href="/">
-            <Button label="Back to Home" onClick={handleBack} />
+            <Button label="Back to Home" />
           </Link>
         </motion.div>
       </div>

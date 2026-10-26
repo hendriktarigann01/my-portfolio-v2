@@ -2,16 +2,19 @@
 
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, Cpu, Gamepad2, Globe, FlaskConical, Database } from "lucide-react";
+import {
+  ArrowUpRight,
+  Cpu,
+  Gamepad2,
+  Globe,
+  FlaskConical,
+  Database,
+} from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { WorkEntry } from "@/types";
-
-const categoryLabel: Record<string, string> = {
-  system: "System",
-  interactive: "Interactive",
-  landing: "Landing Page",
-};
+import { getCategoryLabel } from "@/helpers";
+import { Badge } from "@/components/ui/Badge";
 
 const getProjectIcon = (category: string) => {
   switch (category) {
@@ -80,9 +83,7 @@ export function ProjectCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
       className={className}
-      style={{
-        perspective: "1200px",
-      }}
+      style={{ perspective: "1200px" }}
     >
       <motion.div
         onClick={handleCardClick}
@@ -99,7 +100,6 @@ export function ProjectCard({
         transition={{ duration: 0.4 }}
         whileHover={{ z: 20 }}
       >
-        {/* Glow effect on hover */}
         <motion.div
           className="absolute inset-0 rounded-3xl pointer-events-none"
           animate={{
@@ -109,7 +109,6 @@ export function ProjectCard({
           }}
         />
 
-        {/* Top row */}
         <div className="flex items-start justify-between mb-8 relative z-10">
           <div className="flex items-center gap-3">
             <div
@@ -127,7 +126,7 @@ export function ProjectCard({
                 fontFamily: "var(--font-body)",
               }}
             >
-              {categoryLabel[project.category] || project.category}
+              {getCategoryLabel(project.category)}
             </span>
           </div>
 
@@ -152,7 +151,6 @@ export function ProjectCard({
           </motion.a>
         </div>
 
-        {/* Content */}
         <div className="relative z-10">
           <div className="flex items-baseline gap-3 mb-3">
             <h3
@@ -199,28 +197,15 @@ export function ProjectCard({
             {project.focus || project.summary}
           </p>
 
-          {/* Tags */}
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 rounded-full text-xs"
-                style={{
-                  background: "rgba(var(--tertiary-rgb),0.06)",
-                  color: "var(--tertiary)",
-                  border: "1px solid rgba(var(--tertiary-rgb),0.12)",
-                  fontFamily: "var(--font-body)",
-                  letterSpacing: "0.04em",
-                  fontWeight: 400,
-                }}
-              >
+              <Badge key={tag} variant="tertiary" className="text-xs normal-case tracking-normal">
                 {tag}
-              </span>
+              </Badge>
             ))}
           </div>
         </div>
 
-        {/* Bottom gradient */}
         <div
           className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none rounded-b-3xl"
           style={{

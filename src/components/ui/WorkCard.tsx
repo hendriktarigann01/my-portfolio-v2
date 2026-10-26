@@ -12,16 +12,15 @@ interface WorkCardProps {
   entry: WorkEntry;
 }
 
-export function WorkCard({ entry }: WorkCardProps) {
-  let thumbnailUrl = "";
+function getThumbnailUrl(entry: WorkEntry): string {
   if (entry.images && entry.images.length > 0) {
-    thumbnailUrl = entry.images[0].url;
-  } else if (entry.imageGroups && entry.imageGroups.length > 0) {
-    const firstGroup = entry.imageGroups.find((g) => g.images.length > 0);
-    if (firstGroup) {
-      thumbnailUrl = firstGroup.images[0].url;
-    }
+    return entry.images[0].url;
   }
+  return entry.imageGroups?.[0]?.images?.[0]?.url || "";
+}
+
+export function WorkCard({ entry }: WorkCardProps) {
+  const thumbnailUrl = getThumbnailUrl(entry);
 
   return (
     <motion.div variants={WORK_GRID_ITEM_VARIANTS}>
@@ -39,7 +38,6 @@ export function WorkCard({ entry }: WorkCardProps) {
           }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-          {/* Image Slot */}
           <div
             className="w-full h-40 md:h-48 mb-6 rounded-xl overflow-hidden shrink-0 relative"
             style={{
@@ -72,7 +70,6 @@ export function WorkCard({ entry }: WorkCardProps) {
             )}
           </div>
 
-          {/* Top: title + focus */}
           <div>
             <h3
               className="mb-2 leading-tight"
@@ -100,7 +97,6 @@ export function WorkCard({ entry }: WorkCardProps) {
             </p>
           </div>
 
-          {/* Bottom: tags */}
           <div className="flex items-center justify-between mt-6 gap-3">
             <div className="flex gap-2 flex-wrap">
               <Badge variant="solid-accent" className="px-2.5 py-0.5 text-[10px]">

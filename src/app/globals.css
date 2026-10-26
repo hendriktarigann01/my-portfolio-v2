@@ -46,7 +46,6 @@
   box-sizing: border-box;
 }
 
-/* Custom cursor hanya di mouse/trackpad device */
 @media (pointer: fine) {
   *,
   *::before,
@@ -101,6 +100,7 @@ body::before {
   opacity: 0.025;
   pointer-events: none;
   z-index: 9999;
+  transform: translateZ(0);
 }
 
 .glass {
@@ -134,4 +134,28 @@ html.lenis {
 }
 .lenis.lenis-stopped {
   overflow: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.maplibregl-canvas {
+  border-radius: 1.25rem;
+}
+.maplibregl-ctrl-bottom-left,
+.maplibregl-ctrl-bottom-right {
+  display: none !important;
 }

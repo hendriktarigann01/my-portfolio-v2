@@ -1,8 +1,9 @@
 "use client";
+
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/helpers/cn";
-import { CONTACT_INFO } from "@/constants";
+import { getWhatsAppUrl } from "@/helpers/text";
 import {
   Check,
   ArrowRight,
@@ -17,7 +18,6 @@ import {
 import { globalLenis } from "@/components/SmoothScrollProvider";
 import type { PricingPlan } from "@/types";
 
-// Presentational Header Component
 export const PricingHeader = () => (
   <div className="text-center mb-5 relative z-10 px-4">
     <h2
@@ -47,64 +47,17 @@ export const PricingHeader = () => (
   </div>
 );
 
-// Presentational Background Effects Component with hydration fix
-export const BackgroundEffects = () => {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export const BackgroundEffects = () => (
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      backgroundImage:
+        "linear-gradient(rgba(239, 209, 195, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 209, 195, 0.015) 1px, transparent 1px)",
+      backgroundSize: "24px 24px",
+    }}
+  />
+);
 
-  if (!mounted) {
-    return (
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(239, 209, 195, 0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 209, 195, 0.01) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-        }}
-      />
-    );
-  }
-
-  return (
-    <>
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1.5 h-1.5 bg-[var(--accent)]/10 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              x: [0, Math.random() * 20 - 10, 0],
-              scale: [1, 1.5, 1],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(239, 209, 195, 0.01) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 209, 195, 0.01) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-        }}
-      />
-    </>
-  );
-};
-
-// Premium Video Modal Component
 interface VideoModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -147,14 +100,13 @@ export const VideoModal = ({
     }
   };
 
-  // Close modal on escape key and control scroll
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     if (isOpen) {
       window.addEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "hidden"; // Disable scroll when modal is open
+      document.body.style.overflow = "hidden";
       globalLenis?.stop();
     }
     return () => {
@@ -181,7 +133,6 @@ export const VideoModal = ({
             onClick={(e) => e.stopPropagation()}
             className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden border border-[rgba(var(--accent-rgb),0.25)] bg-[#011d1e] cursor-default"
           >
-            {/* Modal Header */}
             <div className="absolute top-0 inset-x-0 h-14 flex items-center justify-between px-6 z-20 pointer-events-none">
               <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] font-body">
                 {title} - Live Preview
@@ -194,7 +145,6 @@ export const VideoModal = ({
               </button>
             </div>
 
-            {/* Video Player */}
             <video
               ref={videoRef}
               src={videoSrc}
@@ -207,7 +157,6 @@ export const VideoModal = ({
               onPause={() => setIsPlaying(false)}
             />
 
-            {/* Controls Overlay */}
             <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4 z-10">
               <div className="flex items-center gap-3">
                 <button
@@ -238,19 +187,11 @@ export const VideoModal = ({
   );
 };
 
-// Presentational Pricing Card Component
-export const PricingCard = ({
-  plan,
-  index,
-}: {
-  plan: PricingPlan;
-  index: number;
-}) => {
+export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleContact = () => {
-    const waUrl = `https://api.whatsapp.com/send?phone=${CONTACT_INFO.phone}&text=${encodeURIComponent(plan.waText)}`;
-    window.open(waUrl, "_blank");
+    window.open(getWhatsAppUrl(plan.waText), "_blank");
   };
 
   const getButtonLabel = (id: string) => {
@@ -275,8 +216,7 @@ export const PricingCard = ({
         }}
       >
         <div className="flex flex-1 flex-col space-y-3">
-          {/* Title Row */}
-          <div className={cn("flex items-center justify-between gap-3")}>
+          <div className="flex items-center justify-between gap-3">
             <h3
               style={{
                 fontFamily: "var(--font-display)",
@@ -381,7 +321,6 @@ export const PricingCard = ({
         </button>
       </motion.div>
 
-      {/* Render Modal */}
       {plan.videoSrc && (
         <VideoModal
           isOpen={isModalOpen}

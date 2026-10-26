@@ -1,10 +1,3 @@
-// Tujuan      : Root layout — wraps semua halaman dengan providers global
-// Caller      : Next.js App Router (otomatis)
-// Dependensi  : SmoothScrollProvider, CursorFollow, Preloader, GlobalIllustrations,
-//               ChatWidget, Navbar, Footer, AudioProvider
-// Main Exports: RootLayout (default)
-// Side Effects: Font load, audio init
-
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";

@@ -8,7 +8,6 @@ export function NowView() {
   return (
     <section id="now" className="py-12 md:pt-0 md:pb-24 scroll-mt-20 md:scroll-mt-0">
       <div className="container-main flex flex-col md:flex-row justify-between relative">
-        {/* Right side Text (Sticky) */}
         <div className="w-full md:w-1/2 md:sticky top-0 h-auto md:h-screen flex flex-col justify-center mb-12 md:mb-0 z-10 pointer-events-none pt-24 md:pt-0">
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-4">
@@ -52,7 +51,6 @@ export function NowView() {
           </ScrollReveal>
         </div>
 
-        {/* Left side Cards (Scrolling/Sticky) */}
         <div className="w-full md:w-1/2 flex flex-col gap-4 relative z-20">
           {NOW_ITEMS.map((item, i) => (
             <figure
@@ -62,8 +60,7 @@ export function NowView() {
               <motion.article
                 className={`w-full max-w-md mx-auto rounded-3xl p-8 md:p-12 ${item.rotation}`}
                 style={{
-                  background: "rgba(2,66,68,0.9)",
-                  backdropFilter: "blur(10px)",
+                  background: "rgba(2,66,68,0.95)",
                   border: "1px solid rgba(var(--accent-rgb),0.15)",
                 }}
                 whileHover={{ scale: 1.02 }}

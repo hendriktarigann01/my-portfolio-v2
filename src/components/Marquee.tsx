@@ -3,12 +3,11 @@
 import Image from "next/image";
 import { LOGOS } from "@/constants";
 
-export function LogoMarquee() {
-  const doubleLogos = [...LOGOS, ...LOGOS, ...LOGOS];
+const MARQUEE_LOGOS = [...LOGOS, ...LOGOS, ...LOGOS];
 
+export function LogoMarquee() {
   return (
     <div className="w-full py-16 md:py-24 relative overflow-hidden">
-      {/* Title */}
       <div className="container-main mb-12 text-center md:text-left">
         <span
           className="text-[10px] tracking-[0.25em] uppercase font-bold block mb-2"
@@ -32,14 +31,12 @@ export function LogoMarquee() {
         </h2>
       </div>
 
-      {/* Marquee Wrapper - Terkunci di dalam container-main agar lebarnya sama dengan judul */}
       <div className="container-main relative w-full overflow-hidden py-6">
         <div className="w-full overflow-hidden flex items-center justify-start">
-         
           <div className="marquee-track flex gap-16 md:gap-24 items-center">
-            {doubleLogos.map((logo, idx) => (
+            {MARQUEE_LOGOS.map((logo, idx) => (
               <div
-                key={idx}
+                key={`${logo.name}-${idx}`}
                 className="flex-shrink-0 flex items-center justify-center w-28 md:w-36 h-12 relative"
               >
                 <Image
@@ -54,27 +51,6 @@ export function LogoMarquee() {
           </div>
         </div>
       </div>
-
-      {/* Native keyframe styles for infinite marquee scroll */}
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.3333%);
-          }
-        }
-        .marquee-track {
-          display: flex;
-          width: max-content;
-          animation: marquee 35s linear infinite;
-        }
-      `,
-        }}
-      />
     </div>
   );
 }

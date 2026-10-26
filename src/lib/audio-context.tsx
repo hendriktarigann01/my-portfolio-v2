@@ -1,12 +1,11 @@
-// Tujuan      : Global audio context — singleton persist antar navigasi dan re-render
-// Caller      : src/app/layout.tsx (AudioProvider wrapper), src/components/Navbar.tsx
-// Dependensi  : React context
-// Main Exports: AudioProvider, useAudio
-// Side Effects: Audio playback (browser)
-
 "use client";
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useSyncExternalStore,
+  ReactNode,
+} from "react";
 
 interface AudioContextValue {
   isPlaying: boolean;
@@ -18,67 +17,61 @@ const AudioCtx = createContext<AudioContextValue>({
   toggleSound: () => {},
 });
 
-// ─── Module-level singleton ─────────────────────────────────────────────────
-// Disimpan di luar React agar TIDAK terikat ke lifecycle component.
-// Ini persist selama tab terbuka — tidak terpengaruh oleh mount/unmount/StrictMode.
-let _audio: HTMLAudioElement | null = null;
-let _isPlaying = false;
-const _listeners = new Set<(playing: boolean) => void>();
+let audioInstance: HTMLAudioElement | null = null;
+let isAudioPlaying = false;
+const listeners = new Set<() => void>();
 
-function getAudio(): HTMLAudioElement {
-  if (!_audio) {
-    _audio = new Audio("/sounds/backsound.mp3");
-    _audio.loop = true;
+function getAudioInstance(): HTMLAudioElement {
+  if (!audioInstance) {
+    audioInstance = new Audio("/sounds/backsound.mp3");
+    audioInstance.loop = true;
   }
-  return _audio;
+  return audioInstance;
 }
 
 function notifyListeners() {
-  _listeners.forEach((fn) => fn(_isPlaying));
+  listeners.forEach((listener) => listener());
 }
 
 function playAudio() {
-  const audio = getAudio();
-  audio.play().then(() => {
-    _isPlaying = true;
-    notifyListeners();
-  }).catch(() => {});
+  const audio = getAudioInstance();
+  audio
+    .play()
+    .then(() => {
+      isAudioPlaying = true;
+      notifyListeners();
+    })
+    .catch(() => {});
 }
 
 function pauseAudio() {
-  if (_audio) {
-    _audio.pause();
-    _isPlaying = false;
+  if (audioInstance) {
+    audioInstance.pause();
+    isAudioPlaying = false;
     notifyListeners();
   }
 }
 
-// ─── Provider ────────────────────────────────────────────────────────────────
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+  };
+}
+
+function getSnapshot() {
+  return isAudioPlaying;
+}
+
+function getServerSnapshot() {
+  return false;
+}
 
 export function AudioProvider({ children }: { children: ReactNode }) {
-  const [isPlaying, setIsPlaying] = useState(_isPlaying);
-
-  useEffect(() => {
-    // Sync initial state dari singleton
-    setIsPlaying(_isPlaying);
-
-    // Subscribe ke perubahan state audio
-    const listener = (playing: boolean) => setIsPlaying(playing);
-    _listeners.add(listener);
-
-    // Auto-play pertama kali jika belum pernah
-    if (!_audio) {
-      playAudio();
-    }
-
-    return () => {
-      _listeners.delete(listener);
-      // TIDAK pause audio saat unmount — ini yang bikin persist
-    };
-  }, []);
+  const isPlaying = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const toggleSound = () => {
-    if (_isPlaying) {
+    if (isAudioPlaying) {
       pauseAudio();
     } else {
       playAudio();
