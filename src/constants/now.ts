@@ -1,28 +1,58 @@
 import type { NowItem } from "@/types";
 
-export const NOW_ITEMS: NowItem[] = [
-  {
-    label: "Building",
-    value: "This Portfolio",
-    note: "Next.js 16, Framer Motion, Lenis. Focusing on micro-interactions and smooth scrolling.",
-    rotation: "rotate-2",
-  },
-  {
-    label: "Exploring",
-    value: "Motion design on the web",
-    note: "Framer Motion, Advanced CSS @keyframes for better UX.",
-    rotation: "-rotate-2",
-  },
-  {
-    label: "Reading",
-    value: "Scalable frontend architecture",
-    note: "Monorepos, design systems, and component-driven development.",
-    rotation: "rotate-1",
-  },
-  {
-    label: "Thinking about",
-    value: "First public side project",
-    note: "Still in ideation phase, focusing on developer tooling.",
-    rotation: "-rotate-1",
-  },
-];
+export const NOW_ITEMS_BY_LANG: Record<"id" | "en", NowItem[]> = {
+  id: [
+    {
+      label: "Status Layanan",
+      value: "Menerima Proyek Baru",
+      note: "Kapasitas tersedia untuk pembuatan website usaha, otomasi spreadsheet, sistem kasir, dan bimbingan IT.",
+      rotation: "rotate-2",
+    },
+    {
+      label: "Fokus Solusi",
+      value: "Sistem & Otomasi Bisnis",
+      note: "Membantu UMKM, toko, dan kantor merapikan pembukuan, mempercepat rekap data, dan punya web siap jualan.",
+      rotation: "-rotate-2",
+    },
+    {
+      label: "Basis & Jangkauan",
+      value: "Cikarang & Seluruh Indonesia",
+      note: "Berbasis di Cikarang (Jababeka, Lippo, MM2100). Komunikasi lancar via WhatsApp & Google Meet dari mana saja.",
+      rotation: "rotate-1",
+    },
+    {
+      label: "Komitmen Jam Kerja",
+      value: "Malam & Akhir Pekan",
+      note: "Senin–Jumat 18.00–21.00 WIB, Sabtu–Minggu 08.00–21.00 WIB. Pengerjaan fokus, transparan, dan bergaransi.",
+      rotation: "-rotate-1",
+    },
+  ],
+  en: [
+    {
+      label: "Availability",
+      value: "Open for New Projects",
+      note: "Ready to take on new business websites, spreadsheet automations, custom dashboards, and software consulting.",
+      rotation: "rotate-2",
+    },
+    {
+      label: "Core Focus",
+      value: "Systems & Data Automation",
+      note: "Modernizing operational workflows, automating spreadsheets, and crafting reliable web-based applications.",
+      rotation: "-rotate-2",
+    },
+    {
+      label: "Location & Coverage",
+      value: "Cikarang & Remote Worldwide",
+      note: "Based in Cikarang industrial hub, Indonesia. Delivering software solutions seamlessly via WhatsApp & Meet.",
+      rotation: "rotate-1",
+    },
+    {
+      label: "Active Schedule",
+      value: "Evenings & Weekends",
+      note: "Mon–Fri 18:00–21:00 WIB, Sat–Sun 08:00–21:00 WIB. Dedicated deep work with transparent milestone updates.",
+      rotation: "-rotate-1",
+    },
+  ],
+};
+
+export const NOW_ITEMS: NowItem[] = NOW_ITEMS_BY_LANG.id;

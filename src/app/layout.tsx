@@ -9,6 +9,7 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AudioProvider } from "@/lib/audio-context";
+import { LanguageProvider } from "@/lib/language-context";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -48,19 +49,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={dmSans.variable}>
+    <html lang="id" className={dmSans.variable}>
       <body>
-        <AudioProvider>
-          <SmoothScrollProvider>
-            <Preloader />
-            <GlobalIllustrations />
-            <CursorFollow />
-            <Navbar />
-            {children}
-            <Footer />
-          </SmoothScrollProvider>
-          <ChatWidget />
-        </AudioProvider>
+        <LanguageProvider>
+          <AudioProvider>
+            <SmoothScrollProvider>
+              <Preloader />
+              <GlobalIllustrations />
+              <CursorFollow />
+              <Navbar />
+              {children}
+              <Footer />
+            </SmoothScrollProvider>
+            <ChatWidget />
+          </AudioProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

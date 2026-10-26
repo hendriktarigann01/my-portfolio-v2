@@ -176,7 +176,7 @@ export function ProjectCard({
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.7rem",
-                  color: "var(--tertiary)",
+                  color: "rgba(var(--accent-rgb), 0.6)",
                   letterSpacing: "0.1em",
                 }}
               >
@@ -199,7 +199,7 @@ export function ProjectCard({
 
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <Badge key={tag} variant="tertiary" className="text-xs normal-case tracking-normal">
+              <Badge key={tag} variant="subtle" className="text-xs normal-case tracking-normal">
                 {tag}
               </Badge>
             ))}

@@ -5,9 +5,13 @@ import {
   BackgroundEffects,
   PricingCard,
 } from "@/components/PricingService";
-import { SERVICE_PLANS } from "@/constants";
+import { SERVICE_PLANS_BY_LANG } from "@/constants/pricing";
+import { useLanguage } from "@/lib/language-context";
 
 export function PricingView() {
+  const { lang } = useLanguage();
+  const plans = SERVICE_PLANS_BY_LANG[lang] || SERVICE_PLANS_BY_LANG.id;
+
   return (
     <section
       id="services"
@@ -16,9 +20,9 @@ export function PricingView() {
       <PricingHeader />
       <BackgroundEffects />
 
-      <div className="w-[100%] max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 px-4">
-        {SERVICE_PLANS.map((plan) => (
-          <div key={plan.name}>
+      <div className="w-[100%] max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10 px-4">
+        {plans.map((plan) => (
+          <div key={plan.id} className="h-full">
             <PricingCard plan={plan} />
           </div>
         ))}

@@ -7,6 +7,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { TextRotate } from "@/components/CTAExample";
 import { MessageSquare } from "lucide-react";
 import { getWhatsAppUrl } from "@/helpers";
+import { useLanguage } from "@/lib/language-context";
 
 const LocationMap = dynamic(
   () => import("@/components/LocationMap").then((m) => m.LocationMap),
@@ -14,9 +15,30 @@ const LocationMap = dynamic(
 );
 
 export function CTAView() {
+  const { lang } = useLanguage();
+
   const handleWAConnect = () => {
-    window.open(getWhatsAppUrl(), "_blank");
+    const text =
+      lang === "id"
+        ? "Halo Mas Hendrik, saya tertarik konsultasi kebutuhan website / sistem digital untuk usaha saya."
+        : "Hi Hendrik, I'm interested in discussing a project and learning how you can help achieve our business goals.";
+    window.open(getWhatsAppUrl(text), "_blank");
   };
+
+  const rotatingTexts =
+    lang === "id"
+      ? [
+          "website usaha.",
+          "sistem kasir.",
+          "otomasi data.",
+          "solusi digital.",
+        ]
+      : [
+          "web systems.",
+          "business tools.",
+          "data workflows.",
+          "digital solutions.",
+        ];
 
   return (
     <section
@@ -37,9 +59,9 @@ export function CTAView() {
               <div>
                 <span
                   className="text-[11px] tracking-[0.25em] uppercase font-semibold block mb-3"
-                  style={{ color: "var(--tertiary)" }}
+                  style={{ color: "rgba(var(--accent-rgb), 0.6)" }}
                 >
-                  Ready to Grow?
+                  {lang === "id" ? "Siap Melangkah?" : "Ready to Grow?"}
                 </span>
                 <h2
                   className="flex flex-col min-h-[100px] md:min-h-[140px]"
@@ -52,7 +74,7 @@ export function CTAView() {
                     lineHeight: 1.05,
                   }}
                 >
-                  <span>Let&apos;s build</span>
+                  <span>{lang === "id" ? "Waktunya bangun" : "Let's build"}</span>
                   <span
                     style={{
                       color: "transparent",
@@ -60,12 +82,7 @@ export function CTAView() {
                     }}
                   >
                     <TextRotate
-                      texts={[
-                        "systems.",
-                        "experiences.",
-                        "products.",
-                        "the future.",
-                      ]}
+                      texts={rotatingTexts}
                       mainClassName="justify-start"
                       staggerDuration={0.03}
                       staggerFrom="last"
@@ -77,7 +94,7 @@ export function CTAView() {
 
               <motion.div
                 onClick={handleWAConnect}
-                className="glass relative overflow-hidden rounded-[2rem] p-8 md:p-10 cursor-pointer flex flex-row items-center justify-between gap-6"
+                className="glass relative overflow-hidden rounded-[2rem] p-8 md:p-10 cursor-pointer flex flex-row items-center justify-between gap-6 hover:border-[rgba(var(--accent-rgb),0.35)] transition-all"
               >
                 <div className="flex flex-col items-start z-10 flex-1 gap-10">
                   <h3
@@ -91,7 +108,7 @@ export function CTAView() {
                     }}
                     className="mb-2"
                   >
-                    Have a Project?
+                    {lang === "id" ? "Punya Kebutuhan IT?" : "Have a Project?"}
                   </h3>
                   <div
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-medium tracking-wide uppercase transition-all hover:opacity-85"
@@ -102,7 +119,7 @@ export function CTAView() {
                     }}
                   >
                     <MessageSquare size={13} />
-                    <span>Talk To Me</span>
+                    <span>{lang === "id" ? "Konsultasi via WhatsApp" : "Talk To Me"}</span>
                   </div>
                 </div>
 
@@ -126,3 +143,5 @@ export function CTAView() {
     </section>
   );
 }
+
+export default CTAView;

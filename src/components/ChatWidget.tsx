@@ -8,21 +8,34 @@ import { globalLenis } from "@/components/SmoothScrollProvider";
 import {
   MAX_QUESTIONS,
   GREETING,
+  GREETING_BY_LANG,
   QUICK_QUESTIONS,
+  QUICK_QUESTIONS_BY_LANG,
   panelVariants,
   msgVariants,
   dotTransition,
 } from "@/constants";
 import { isOnTopic, loadCount, saveCount } from "@/helpers";
+import { useLanguage } from "@/lib/language-context";
 import type { Message } from "@/types";
 
 export function ChatWidget() {
+  const { lang } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([GREETING]);
+  const [messages, setMessages] = useState<Message[]>([GREETING_BY_LANG.id || GREETING]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
   const [questionCount, setQuestionCount] = useState<number>(0);
+
+  const currentGreeting = GREETING_BY_LANG[lang] || GREETING;
+  const currentQuickQuestions = QUICK_QUESTIONS_BY_LANG[lang] || QUICK_QUESTIONS;
+
+  useEffect(() => {
+    if (!hasInteracted) {
+      setMessages([currentGreeting]);
+    }
+  }, [lang, currentGreeting, hasInteracted]);
   const isLimitReached = questionCount >= MAX_QUESTIONS;
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -254,7 +267,7 @@ export function ChatWidget() {
                         lineHeight: 1.3,
                       }}
                     >
-                      Hendrik&apos;s AI
+                      {lang === "id" ? "Asisten AI Hendrik" : "Hendrik's AI"}
                     </h3>
                     <span
                       style={{
@@ -263,7 +276,7 @@ export function ChatWidget() {
                         color: "rgba(2,66,68,0.6)",
                       }}
                     >
-                      Ask me anything
+                      {lang === "id" ? "Konsultasi Layanan & Solusi" : "Ask me anything"}
                     </span>
                   </div>
                 </div>
@@ -390,7 +403,7 @@ export function ChatWidget() {
                       marginTop: 4,
                     }}
                   >
-                    {QUICK_QUESTIONS.map((q) => (
+                    {currentQuickQuestions.map((q) => (
                       <motion.button
                         key={q}
                         whileHover={{
@@ -444,7 +457,7 @@ export function ChatWidget() {
                       letterSpacing: "0.05em",
                     }}
                   >
-                    {questionCount}/{MAX_QUESTIONS} questions
+                    {questionCount}/{MAX_QUESTIONS} {lang === "id" ? "pertanyaan" : "questions"}
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -455,8 +468,8 @@ export function ChatWidget() {
                     onChange={(e) => setInput(e.target.value)}
                     placeholder={
                       isLimitReached
-                        ? "Question limit reached"
-                        : "Ask about Hendrik..."
+                        ? (lang === "id" ? "Batas pertanyaan tercapai" : "Question limit reached")
+                        : (lang === "id" ? "Tanyakan layanan, paket, atau harga..." : "Ask about services or pricing...")
                     }
                     disabled={isLoading || isLimitReached}
                     style={{

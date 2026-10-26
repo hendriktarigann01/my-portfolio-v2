@@ -6,17 +6,57 @@ import { useState } from "react";
 import { Volume2, VolumeX, Menu, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { useAudio } from "@/lib/audio-context";
+import { useLanguage } from "@/lib/language-context";
 import { NAV_LINKS } from "@/constants";
+import { NAV_LINKS_BY_LANG } from "@/constants/navigation";
 import { globalLenis } from "@/components/SmoothScrollProvider";
 
-const REVERSED_NAV_LINKS = [...NAV_LINKS].reverse();
+export function LanguageToggle({ className = "" }: { className?: string }) {
+  const { lang, setLang } = useLanguage();
+
+  return (
+    <div
+      className={`inline-flex items-center p-0.5 rounded-full border border-[rgba(var(--accent-rgb),0.25)] bg-[rgba(2,20,21,0.7)] backdrop-blur-md text-[0.7rem] font-medium tracking-wider select-none ${className}`}
+      style={{ fontFamily: "var(--font-body)" }}
+    >
+      <button
+        type="button"
+        onClick={() => setLang("id")}
+        className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
+          lang === "id"
+            ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
+            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+        }`}
+        aria-label="Bahasa Indonesia"
+      >
+        ID
+      </button>
+      <button
+        type="button"
+        onClick={() => setLang("en")}
+        className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
+          lang === "en"
+            ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
+            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+        }`}
+        aria-label="English"
+      >
+        EN
+      </button>
+    </div>
+  );
+}
 
 export function Navbar() {
   const { isPlaying, toggleSound } = useAudio();
+  const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pathname = usePathname();
   const router = useRouter();
+
+  const currentNavLinks = NAV_LINKS_BY_LANG[lang] || NAV_LINKS;
+  const reversedNavLinks = [...currentNavLinks].reverse();
 
   const handleClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -105,7 +145,7 @@ export function Navbar() {
             whiteSpace: "nowrap",
           }}
         >
-          {REVERSED_NAV_LINKS.map((link) => (
+          {reversedNavLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -121,10 +161,22 @@ export function Navbar() {
         </motion.nav>
       </div>
 
-      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between">
+      {/* Desktop Language Switcher */}
+      <motion.div
+        className="hidden md:block fixed top-7 right-8 z-50 pointer-events-auto"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <LanguageToggle />
+      </motion.div>
+
+      {/* Mobile Header Bar */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between pointer-events-none">
         <motion.a
           href="#"
           onClick={(e) => handleClick(e, "#")}
+          className="pointer-events-auto"
           style={{
             fontFamily: "var(--font-display)",
             fontWeight: 700,
@@ -137,46 +189,49 @@ export function Navbar() {
           HT<span style={{ color: "rgba(var(--accent-rgb),0.35)" }}>.</span>
         </motion.a>
 
-        <motion.button
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Toggle menu"
-          style={{
-            background: "transparent",
-            border: "none",
-            color: "var(--accent)",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "4px",
-          }}
-        >
-          <AnimatePresence mode="wait">
-            {menuOpen ? (
-              <motion.span
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.15 }}
-              >
-                <X size={24} />
-              </motion.span>
-            ) : (
-              <motion.span
-                key="open"
-                initial={{ rotate: 90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: -90, opacity: 0 }}
-                transition={{ duration: 0.15 }}
-              >
-                <Menu size={24} />
-              </motion.span>
-            )}
-          </AnimatePresence>
-        </motion.button>
+        <div className="flex items-center gap-3 pointer-events-auto">
+          <LanguageToggle />
+          <motion.button
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+            style={{
+              background: "transparent",
+              border: "none",
+              color: "var(--accent)",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "4px",
+            }}
+          >
+            <AnimatePresence mode="wait">
+              {menuOpen ? (
+                <motion.span
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  <X size={24} />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="open"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  <Menu size={24} />
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </motion.button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -192,7 +247,7 @@ export function Navbar() {
               backdropFilter: "blur(20px)",
             }}
           >
-            {NAV_LINKS.map((link, i) => (
+            {currentNavLinks.map((link, i) => (
               <motion.a
                 key={link.href}
                 href={link.href}

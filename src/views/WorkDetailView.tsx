@@ -31,7 +31,7 @@ function ContentBlock({
         <span
           className="text-xs font-medium tracking-[0.2em] uppercase"
           style={{
-            color: "var(--tertiary)",
+            color: "rgba(var(--accent-rgb), 0.65)",
             fontFamily: "var(--font-body)",
           }}
         >
@@ -39,7 +39,7 @@ function ContentBlock({
         </span>
         <span
           className="h-px flex-1"
-          style={{ background: "rgba(var(--tertiary-rgb),0.15)" }}
+          style={{ background: "rgba(var(--accent-rgb),0.15)" }}
         />
       </div>
       {children}
@@ -386,9 +386,9 @@ export function WorkDetailView({ entry }: { entry: WorkEntry }) {
                 fontFamily: "var(--font-body)",
               }}
               whileHover={{
-                backgroundColor: "rgba(var(--tertiary-rgb),0.08)",
-                borderColor: "rgba(var(--tertiary-rgb),0.25)",
-                color: "var(--tertiary)",
+                backgroundColor: "rgba(var(--accent-rgb),0.12)",
+                borderColor: "rgba(var(--accent-rgb),0.22)",
+                color: "var(--accent)",
               }}
               transition={{ duration: 0.3 }}
             >

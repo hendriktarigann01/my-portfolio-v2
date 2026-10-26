@@ -1,24 +1,65 @@
 import type { ProcessStep } from "@/types";
 
-export const PROCESS_STEPS: ProcessStep[] = [
-  {
-    index: "01",
-    title: "Alignment Over Execution",
-    body: "I always make sure the context is fully understood with the stakeholders before touching the code. Once the requirements and limitations are clear, I start mapping out the database and API contracts while gradually working on the UI design.",
+export const PROCESS_STEPS_BY_LANG: Record<"id" | "en", ProcessStep[]> = {
+  id: [
+    {
+      index: "01",
+      title: "Konsultasi & Pemetaan Kebutuhan (Gratis)",
+      body: "Ceritakan masalah Anda via WhatsApp atau Google Meet. Saya berikan saran solusi paling efisien dan estimasi biaya. Tahap ini 100% gratis tanpa komitmen apa pun.",
+    },
+    {
+      index: "02",
+      title: "Penawaran Tertulis & Kunci Lingkup Kerja",
+      body: "Ruang lingkup fitur, harga jasa, dan jadwal pengerjaan disepakati di awal secara tertulis. Tidak ada biaya siluman di tengah jalan. DP 50% mengunci jadwal mulai pengerjaan.",
+    },
+    {
+      index: "03",
+      title: "Pengerjaan Transparan & Kabar Berkala",
+      body: "Dikerjakan di jam kerja aktif (Senin–Jumat 18–21 WIB, Sabtu–Minggu 08–21 WIB). Anda mendapat kabar progres berkala secara teratur, bukan menghilang lalu tiba-tiba muncul di akhir.",
+    },
+    {
+      index: "04",
+      title: "Uji Bersama, Pelunasan & Garansi 30 Hari",
+      body: "Kita uji fungsi bersama sampai Anda yakin berjalan lancar. Setelah pelunasan 50%, seluruh akses (source code, hosting, akun) diserahkan penuh. Didukung garansi bugfix gratis 14–30 hari.",
+    },
+  ],
+  en: [
+    {
+      index: "01",
+      title: "Alignment & Requirement Discovery",
+      body: "We start by mapping the problem and business goals before touching any code. Free consultation via WhatsApp or Google Meet to agree on the best technical path.",
+    },
+    {
+      index: "02",
+      title: "Clear Scope & Fixed Pricing",
+      body: "Deliverables, timeline, and exact pricing are locked upfront in writing. No hidden surprises. A 50% down payment confirms your milestone and kicks off development.",
+    },
+    {
+      index: "03",
+      title: "Transparent Execution & Progress Updates",
+      body: "Active working hours (Mon–Fri 18–21 WIB, Sat–Sun 08–21 WIB). Development proceeds with regular milestone demos so you always know where things stand.",
+    },
+    {
+      index: "04",
+      title: "Joint Testing, Handover & 30-Day Warranty",
+      body: "We test the system together until verified. Once finalized, 100% of credentials, source code, and assets are handed over to you, backed by a 30-day bugfix warranty.",
+    },
+  ],
+};
+
+export const OPERATIONAL_HOURS = {
+  id: {
+    title: "Jam Kerja & Komitmen Respon",
+    weekdays: "Senin – Jumat: 18.00 – 21.00 WIB",
+    weekends: "Sabtu – Minggu: 08.00 – 21.00 WIB",
+    note: "Pesan di luar jam kerja tetap diterima dan dibalas di kesempatan pertama. Gangguan darurat pada pekerjaan yang masih bergaransi direspon secepatnya.",
   },
-  {
-    index: "02",
-    title: "Seamless Integration",
-    body: "I usually handle the backend and frontend processes at the same time. While designing the API schema on the backend, I also work on slicing the UI right away so that the data structures are in sync and I don’t have to do the same work twice.",
+  en: {
+    title: "Working Hours & Response Policy",
+    weekdays: "Monday – Friday: 18:00 – 21:00 WIB",
+    weekends: "Saturday – Sunday: 08:00 – 21:00 WIB",
+    note: "Messages outside active hours are answered at the earliest opportunity. Critical bug alerts during warranty periods are handled promptly.",
   },
-  {
-    index: "03",
-    title: "Background Processing",
-    body: "Complex architectural problems aren't always solved in front of a monitor. Stuck logic usually finds a way out while I'm commuting. Once I'm sitting in front of my laptop, all I have to do is execute the blueprint.",
-  },
-  {
-    index: "04",
-    title: "The Fullstack Advantage",
-    body: "I handle everything end-to-end, from the frontend to the database, so there's no risk of miscommunication during handoffs. Everything is managed under one roof, which makes the development cycle much faster and more consistent.",
-  },
-];
+};
+
+export const PROCESS_STEPS: ProcessStep[] = PROCESS_STEPS_BY_LANG.id;

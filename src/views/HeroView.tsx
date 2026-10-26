@@ -3,15 +3,26 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { globalLenis } from "@/components/SmoothScrollProvider";
+import { useLanguage } from "@/lib/language-context";
 
 export function HeroView() {
+  const { lang } = useLanguage();
+
   const handleExplore = () => {
+    const target = lang === "id" ? "#services" : "#projects";
     if (globalLenis) {
-      globalLenis.scrollTo("#projects");
+      globalLenis.scrollTo(target);
     } else {
-      document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+      document.querySelector(target)?.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const bio =
+    lang === "id"
+      ? "Software Engineer & Solusi Digital Bisnis di Cikarang. Bikin website usaha, otomasi data spreadsheet, dan sistem kasir handal — cepat, transparan, bergaransi."
+      : "Fullstack developer crafting high performance digital systems and turning complex workflows into elegant web and business applications.";
+
+  const btnLabel = lang === "id" ? "Lihat Layanan" : "Explore";
 
   return (
     <section
@@ -55,8 +66,7 @@ export function HeroView() {
               fontFamily: "var(--font-body)",
             }}
           >
-            Fullstack developer crafting high performance digital systems and
-            turning complex workflows into elegant web and desktop applications.
+            {bio}
           </motion.p>
 
           <motion.div
@@ -65,7 +75,7 @@ export function HeroView() {
             transition={{ duration: 0.8, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
             className="pointer-events-auto"
           >
-            <Button label="Explore" onClick={handleExplore} />
+            <Button label={btnLabel} onClick={handleExplore} />
           </motion.div>
         </div>
 
@@ -103,9 +113,7 @@ export function HeroView() {
                   fontFamily: "var(--font-body)",
                 }}
               >
-                Fullstack developer crafting high performance digital systems
-                and turning complex workflows into elegant web and desktop
-                applications.
+                {bio}
               </motion.p>
             </div>
           </div>
@@ -119,7 +127,7 @@ export function HeroView() {
         >
           <div className="w-full h-full flex items-center justify-center overflow-hidden pointer-events-none">
             <div className="pointer-events-auto">
-              <Button label="Explore" onClick={handleExplore} />
+              <Button label={btnLabel} onClick={handleExplore} />
             </div>
           </div>
         </motion.div>

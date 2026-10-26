@@ -10,6 +10,4 @@ export * from "./now";
 export * from "./process";
 export * from "./contact";
 export * from "./pricing";
-
-
-
+export * from "./faq";

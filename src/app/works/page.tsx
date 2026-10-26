@@ -70,7 +70,7 @@ export default function WorksPage() {
                 <span
                   className="text-xs font-medium tracking-[0.25em] uppercase"
                   style={{
-                    color: "var(--tertiary)",
+                    color: "rgba(var(--accent-rgb), 0.7)",
                     fontFamily: "var(--font-body)",
                   }}
                 >
@@ -80,7 +80,7 @@ export default function WorksPage() {
                 <span
                   className="text-xs"
                   style={{
-                    color: "rgba(var(--tertiary-rgb), 0.7)",
+                    color: "rgba(var(--accent-rgb), 0.45)",
                     fontFamily: "var(--font-body)",
                   }}
                 >

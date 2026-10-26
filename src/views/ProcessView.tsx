@@ -3,7 +3,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { PROCESS_STEPS } from "@/constants";
+import { PROCESS_STEPS_BY_LANG, OPERATIONAL_HOURS } from "@/constants/process";
+import { useLanguage } from "@/lib/language-context";
 import type { ProcessStep } from "@/types";
 
 function StepItem({ step, index }: { step: ProcessStep; index: number }) {
@@ -89,7 +90,7 @@ function StepItem({ step, index }: { step: ProcessStep; index: number }) {
           background: "rgba(var(--accent-rgb),0.03)",
           border: "1px solid rgba(var(--accent-rgb),0.09)",
           width: "100%",
-          height: "min(265px, 100%)",
+          minHeight: "220px",
           textAlign: "center",
           backdropFilter: "blur(10px)",
         }}
@@ -111,9 +112,9 @@ function StepItem({ step, index }: { step: ProcessStep; index: number }) {
           style={{
             fontFamily: "var(--font-body)",
             fontSize: "0.8rem",
-            color: "rgba(var(--accent-rgb),0.45)",
+            color: "rgba(var(--accent-rgb),0.6)",
             fontWeight: 300,
-            lineHeight: 1.7,
+            lineHeight: 1.6,
           }}
         >
           {step.body}
@@ -126,6 +127,10 @@ function StepItem({ step, index }: { step: ProcessStep; index: number }) {
 export function ProcessView() {
   const lineRef = useRef<HTMLDivElement>(null);
   const lineInView = useInView(lineRef, { once: true, margin: "-80px" });
+  const { lang } = useLanguage();
+
+  const steps = PROCESS_STEPS_BY_LANG[lang] || PROCESS_STEPS_BY_LANG.id;
+  const hours = OPERATIONAL_HOURS[lang] || OPERATIONAL_HOURS.id;
 
   return (
     <section
@@ -147,12 +152,12 @@ export function ProcessView() {
                 style={{
                   fontSize: "0.7rem",
                   fontFamily: "var(--font-body)",
-                  color: "rgba(var(--accent-rgb),0.4)",
+                  color: "rgba(var(--accent-rgb),0.5)",
                   letterSpacing: "0.25em",
                   textTransform: "uppercase",
                 }}
               >
-                How I Work
+                {lang === "id" ? "Alur Transparan" : "How I Work"}
               </span>
             </div>
             <h2
@@ -165,7 +170,7 @@ export function ProcessView() {
                 lineHeight: 1,
               }}
             >
-              Process
+              {lang === "id" ? "Cara Kerja" : "Process"}
             </h2>
           </ScrollReveal>
         </div>
@@ -200,10 +205,29 @@ export function ProcessView() {
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"
             style={{ position: "relative", zIndex: 1 }}
           >
-            {PROCESS_STEPS.map((step, i) => (
+            {steps.map((step, i) => (
               <StepItem key={step.index} step={step} index={i} />
             ))}
           </div>
+
+          {/* Operational hours callout */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-12 text-center max-w-xl mx-auto p-5 rounded-2xl border border-[rgba(var(--accent-rgb),0.18)] bg-[rgba(var(--accent-rgb),0.03)] backdrop-blur-sm"
+          >
+            <p className="text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-1.5">
+              {hours.title}
+            </p>
+            <p className="text-xs text-[rgba(var(--accent-rgb),0.8)] font-medium">
+              {hours.weekdays} • {hours.weekends}
+            </p>
+            <p className="text-[11px] text-[rgba(var(--accent-rgb),0.5)] mt-1.5 leading-relaxed">
+              {hours.note}
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>

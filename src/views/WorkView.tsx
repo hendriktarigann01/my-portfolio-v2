@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import worksData from "@/data/works.json";
 import { ProjectCard } from "@/components/ProjectCard";
+import { useLanguage } from "@/lib/language-context";
 import type { WorkEntry } from "@/types";
 
 const MotionLink = motion.create(Link);
@@ -16,6 +17,8 @@ const CURATED_WORKS: WorkEntry[] = [
 ] as WorkEntry[];
 
 export function WorkView() {
+  const { lang } = useLanguage();
+
   return (
     <section id="projects" className="py-12 md:py-24 scroll-mt-20 md:scroll-mt-0">
       <div className="container-main">
@@ -28,12 +31,12 @@ export function WorkView() {
                     style={{
                       fontSize: "0.7rem",
                       fontFamily: "var(--font-body)",
-                      color: "rgba(var(--accent-rgb),0.4)",
+                      color: "rgba(var(--accent-rgb),0.5)",
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
                     }}
                   >
-                    Selected Projects
+                    {lang === "id" ? "Portofolio Hasil Kerja" : "Selected Projects"}
                   </span>
                 </div>
                 <h2
@@ -46,7 +49,7 @@ export function WorkView() {
                     lineHeight: 1,
                   }}
                 >
-                  Projects
+                  {lang === "id" ? "Proyek Terpilih" : "Projects"}
                 </h2>
               </div>
 
@@ -67,7 +70,7 @@ export function WorkView() {
                 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <span>All projects</span>
+                <span>{lang === "id" ? "Semua Proyek" : "All projects"}</span>
                 <motion.span
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
@@ -96,3 +99,5 @@ export function WorkView() {
     </section>
   );
 }
+
+export default WorkView;

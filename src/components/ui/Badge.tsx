@@ -4,9 +4,7 @@ export type BadgeVariant =
   | "subtle"
   | "active"
   | "filled"
-  | "solid-accent"
-  | "tertiary"
-  | "tertiary-filled";
+  | "solid-accent";
 
 interface BadgeProps {
   children: ReactNode;
@@ -37,18 +35,6 @@ const BADGE_STYLES: Record<BadgeVariant, CSSProperties> = {
     background: "var(--accent)",
     color: "#000000",
     border: "1px solid var(--accent)",
-    fontFamily: "var(--font-body)",
-  },
-  tertiary: {
-    background: "rgba(var(--tertiary-rgb), 0.06)",
-    color: "var(--tertiary)",
-    border: "1px solid rgba(var(--tertiary-rgb), 0.12)",
-    fontFamily: "var(--font-body)",
-  },
-  "tertiary-filled": {
-    background: "rgba(var(--tertiary-rgb), 0.08)",
-    color: "var(--tertiary)",
-    border: "1px solid rgba(var(--tertiary-rgb), 0.15)",
     fontFamily: "var(--font-body)",
   },
 };

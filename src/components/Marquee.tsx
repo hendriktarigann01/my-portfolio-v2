@@ -2,21 +2,24 @@
 
 import Image from "next/image";
 import { LOGOS } from "@/constants";
+import { useLanguage } from "@/lib/language-context";
 
 const MARQUEE_LOGOS = [...LOGOS, ...LOGOS, ...LOGOS];
 
 export function LogoMarquee() {
+  const { lang } = useLanguage();
+
   return (
     <div className="w-full py-16 md:py-24 relative overflow-hidden">
       <div className="container-main mb-12 text-center md:text-left">
         <span
           className="text-[10px] tracking-[0.25em] uppercase font-bold block mb-2"
           style={{
-            color: "rgba(var(--accent-rgb), 0.35)",
+            color: "rgba(var(--accent-rgb), 0.5)",
             fontFamily: "var(--font-body)",
           }}
         >
-          Selected Collaborations
+          {lang === "id" ? "Klien & Kolaborasi" : "Selected Collaborations"}
         </span>
         <h2
           style={{
@@ -27,7 +30,7 @@ export function LogoMarquee() {
             letterSpacing: "-0.02em",
           }}
         >
-          Trusted by Client Teams
+          {lang === "id" ? "Telah Dipercaya Berbagai Tim & Brand" : "Trusted by Client Teams"}
         </h2>
       </div>
 
@@ -54,3 +57,5 @@ export function LogoMarquee() {
     </div>
   );
 }
+
+export default LogoMarquee;

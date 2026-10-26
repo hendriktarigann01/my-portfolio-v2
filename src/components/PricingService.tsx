@@ -16,36 +16,42 @@ import {
   X,
 } from "lucide-react";
 import { globalLenis } from "@/components/SmoothScrollProvider";
+import { useLanguage } from "@/lib/language-context";
 import type { PricingPlan } from "@/types";
 
-export const PricingHeader = () => (
-  <div className="text-center mb-5 relative z-10 px-4">
-    <h2
-      className="mb-4"
-      style={{
-        fontFamily: "var(--font-display)",
-        fontWeight: 800,
-        fontSize: "clamp(2rem, 4vw, 3rem)",
-        color: "var(--accent)",
-        letterSpacing: "-0.03em",
-        lineHeight: 1.1,
-      }}
-    >
-      Services Packages
-    </h2>
-    <p
-      className="text-sm max-w-xl mx-auto mt-4"
-      style={{
-        fontFamily: "var(--font-body)",
-        color: "rgba(var(--accent-rgb), 0.55)",
-        lineHeight: 1.6,
-      }}
-    >
-      From a fast landing page to a fully custom system or desktop app, pick the
-      package that fits, or reach out to discuss what you need.
-    </p>
-  </div>
-);
+export const PricingHeader = () => {
+  const { lang } = useLanguage();
+
+  return (
+    <div className="text-center mb-8 relative z-10 px-4">
+      <h2
+        className="mb-4"
+        style={{
+          fontFamily: "var(--font-display)",
+          fontWeight: 800,
+          fontSize: "clamp(2rem, 4vw, 3rem)",
+          color: "var(--accent)",
+          letterSpacing: "-0.03em",
+          lineHeight: 1.1,
+        }}
+      >
+        {lang === "id" ? "Paket Layanan & Harga" : "Services & Pricing"}
+      </h2>
+      <p
+        className="text-sm max-w-2xl mx-auto mt-4"
+        style={{
+          fontFamily: "var(--font-body)",
+          color: "rgba(var(--accent-rgb), 0.65)",
+          lineHeight: 1.6,
+        }}
+      >
+        {lang === "id"
+          ? "Harga jelas dan terjangkau untuk kebutuhan usaha di Cikarang dan sekitarnya. Tanpa biaya siluman, garansi bug 30 hari, dan konsultasi gratis via WhatsApp."
+          : "Clear and accessible solutions tailored for your business. Zero hidden fees, a 30-day bugfix warranty, and free WhatsApp consultation."}
+      </p>
+    </div>
+  );
+};
 
 export const BackgroundEffects = () => (
   <div
@@ -189,15 +195,23 @@ export const VideoModal = ({
 
 export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { lang } = useLanguage();
 
   const handleContact = () => {
     window.open(getWhatsAppUrl(plan.waText), "_blank");
   };
 
   const getButtonLabel = (id: string) => {
-    if (id === "template") return "Order Now";
-    if (id === "custom-page") return "Inquire Now";
-    return "Discuss Project";
+    if (lang === "id") {
+      if (id === "web-kilat") return "Pesan Sekarang";
+      if (id === "otomasi-data") return "Konsultasi Otomasi";
+      if (id === "sistem-kasir") return "Diskusi Sistem";
+      return "Tanya via WhatsApp";
+    }
+    if (id === "web-kilat") return "Order Now";
+    if (id === "otomasi-data") return "Automate Now";
+    if (id === "sistem-kasir") return "Discuss System";
+    return "Inquire via WhatsApp";
   };
 
   return (
@@ -212,22 +226,31 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
         )}
         style={{
           backdropFilter: "blur(24px)",
-          borderColor: "rgba(var(--accent-rgb), 0.25)",
+          borderColor: plan.isPopular
+            ? "rgba(var(--accent-rgb), 0.6)"
+            : "rgba(var(--accent-rgb), 0.25)",
         }}
       >
         <div className="flex flex-1 flex-col space-y-3">
           <div className="flex items-center justify-between gap-3">
-            <h3
-              style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 700,
-                fontSize: "1rem",
-                color: "var(--accent)",
-                letterSpacing: "-0.01em",
-              }}
-            >
-              {plan.name}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 700,
+                  fontSize: "1rem",
+                  color: "var(--accent)",
+                  letterSpacing: "-0.01em",
+                }}
+              >
+                {plan.name}
+              </h3>
+              {plan.isPopular && (
+                <span className="px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider bg-[var(--accent)] text-[#012a2c] uppercase select-none">
+                  {lang === "id" ? "Terpopuler" : "Popular"}
+                </span>
+              )}
+            </div>
 
             {plan.videoSrc && (
               <button

@@ -3,6 +3,7 @@ import { WorkView } from "@/views/WorkView";
 import { LogoMarquee } from "@/components/Marquee";
 import { ProcessView } from "@/views/ProcessView";
 import { PricingView } from "@/views/PricingView";
+import { FAQView } from "@/views/FAQView";
 import { NowView } from "@/views/NowView";
 import { CTAView } from "@/views/CTAView";
 
@@ -15,11 +16,10 @@ export default function Home() {
         <LogoMarquee />
         <ProcessView />
         <PricingView />
+        <FAQView />
         <NowView />
         <CTAView />
       </main>
     </>
   );
 }
-
-

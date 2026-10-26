@@ -33,9 +33,7 @@
   --font-body: "DM Sans", system-ui, sans-serif;
   --bg: #024244;
   --accent: #efd1c3;
-  --tertiary: #b58372;
   --accent-rgb: 239, 209, 195;
-  --tertiary-rgb: 181, 131, 114;
   --container-max: 1280px;
   --container-pad: clamp(1.5rem, 5vw, 5rem);
 }

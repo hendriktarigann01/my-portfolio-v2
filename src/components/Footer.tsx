@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { NAV_LINKS, SOCIAL_LINKS } from "@/constants";
+import { NAV_LINKS_BY_LANG } from "@/constants/navigation";
+import { useLanguage } from "@/lib/language-context";
 
 const tape = (
   <svg
@@ -23,6 +25,9 @@ const tape = (
 );
 
 export function Footer() {
+  const { lang } = useLanguage();
+  const currentNavLinks = NAV_LINKS_BY_LANG[lang] || NAV_LINKS;
+
   return (
     <footer className="my-16 max-w-7xl container-main mx-auto md:px-24">
       <div className="glass relative rounded-[2.5rem] px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -43,10 +48,10 @@ export function Footer() {
                 letterSpacing: "0.1em",
               }}
             >
-              Navigation
+              {lang === "id" ? "Navigasi" : "Navigation"}
             </h4>
             <div className="flex flex-col gap-2 text-sm">
-              {NAV_LINKS.map((link) => (
+              {currentNavLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={`/${link.href}`}
