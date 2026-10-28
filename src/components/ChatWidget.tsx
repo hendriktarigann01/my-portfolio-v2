@@ -250,7 +250,7 @@ export function ChatWidget() {
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <Image
-                    src="/logo-dark-green.png"
+                    src="/logo-dark-green.webp"
                     alt="Logo"
                     width={40}
                     height={40}

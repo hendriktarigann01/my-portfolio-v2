@@ -69,51 +69,53 @@ export function NowView() {
           {items.map((item, i) => (
             <figure
               key={i}
-              className="md:sticky top-0 md:h-screen grid place-content-center py-6 md:py-0"
+              className="md:sticky top-0 md:h-screen grid place-content-center py-4 md:py-0"
             >
               <motion.article
-                className={`w-full max-w-md mx-auto rounded-3xl p-8 md:p-12 ${item.rotation}`}
+                className={`w-full max-w-[380px] sm:max-w-[420px] h-[240px] md:h-[260px] mx-auto rounded-3xl p-6 md:p-8 flex flex-col justify-between ${item.rotation}`}
                 style={{
-                  background: "rgba(2,66,68,0.95)",
-                  border: "1px solid rgba(var(--accent-rgb),0.18)",
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.25)",
+                  background: "rgba(2, 66, 68, 0.96)",
+                  border: "1px solid rgba(var(--accent-rgb), 0.2)",
+                  backdropFilter: "blur(16px)",
                 }}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <span
-                  style={{
-                    display: "block",
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.75rem",
-                    letterSpacing: "0.2em",
-                    textTransform: "uppercase",
-                    color: "rgba(var(--accent-rgb),0.55)",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  {item.label}
-                </span>
+                <div>
+                  <span
+                    style={{
+                      display: "block",
+                      fontFamily: "var(--font-body)",
+                      fontSize: "0.7rem",
+                      letterSpacing: "0.2em",
+                      textTransform: "uppercase",
+                      color: "rgba(var(--accent-rgb), 0.55)",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontWeight: 700,
+                      fontSize: "clamp(1.35rem, 2.5vw, 1.75rem)",
+                      color: "var(--accent)",
+                      letterSpacing: "-0.02em",
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {item.value}
+                  </h3>
+                </div>
+
                 <p
                   style={{
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 700,
-                    fontSize: "1.85rem",
-                    color: "var(--accent)",
-                    letterSpacing: "-0.02em",
-                    marginBottom: "1rem",
-                    lineHeight: 1.15,
-                  }}
-                >
-                  {item.value}
-                </p>
-                <p
-                  style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.95rem",
-                    color: "rgba(var(--accent-rgb),0.7)",
+                    fontSize: "0.85rem",
+                    color: "rgba(var(--accent-rgb), 0.72)",
                     fontWeight: 300,
-                    lineHeight: 1.6,
+                    lineHeight: 1.55,
                   }}
                 >
                   {item.note}

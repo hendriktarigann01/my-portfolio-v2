@@ -8,7 +8,7 @@ export const LOGOS = [
   { name: "Arch-ID", src: "/assets/logo/arch-id.webp" },
   { name: "Envision", src: "/assets/logo/envision.webp" },
   { name: "Happify", src: "/assets/logo/happify.webp" },
-  { name: "Creative Lab", src: "/assets/logo/creative-lab.png" },
+  { name: "Creative Lab", src: "/assets/logo/creative-lab.webp" },
   { name: "Vision Lab", src: "/assets/logo/vision-lab.webp" },
   { name: "Vision Works", src: "/assets/logo/vision-works.webp" },
 ];

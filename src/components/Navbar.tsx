@@ -3,9 +3,8 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Volume2, VolumeX, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
-import { useAudio } from "@/lib/audio-context";
 import { useLanguage } from "@/lib/language-context";
 import { NAV_LINKS } from "@/constants";
 import { NAV_LINKS_BY_LANG } from "@/constants/navigation";
@@ -18,37 +17,108 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
     <div
       className={`inline-flex items-center p-0.5 rounded-full border border-[rgba(var(--accent-rgb),0.25)] bg-[rgba(2,20,21,0.7)] backdrop-blur-md text-[0.7rem] font-medium tracking-wider select-none ${className}`}
       style={{ fontFamily: "var(--font-body)" }}
+      role="group"
+      aria-label="Pilih Bahasa"
     >
-      <button
-        type="button"
+      <div
+        role="button"
+        tabIndex={0}
         onClick={() => setLang("id")}
-        className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setLang("id");
+          }
+        }}
+        className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer select-none ${
           lang === "id"
             ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
             : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
         }`}
         aria-label="Bahasa Indonesia"
+        aria-pressed={lang === "id"}
       >
         ID
-      </button>
-      <button
-        type="button"
+      </div>
+      <div
+        role="button"
+        tabIndex={0}
         onClick={() => setLang("en")}
-        className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setLang("en");
+          }
+        }}
+        className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer select-none ${
           lang === "en"
             ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
             : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
         }`}
         aria-label="English"
+        aria-pressed={lang === "en"}
       >
         EN
-      </button>
+      </div>
+    </div>
+  );
+}
+
+export function VerticalLanguageToggle({ className = "" }: { className?: string }) {
+  const { lang, setLang } = useLanguage();
+
+  return (
+    <div
+      className={`flex flex-col items-center p-1 rounded-full border border-[rgba(var(--accent-rgb),0.25)] bg-[rgba(2,20,21,0.8)] backdrop-blur-md text-[0.7rem] font-bold tracking-wider select-none shadow-lg gap-1 ${className}`}
+      style={{ fontFamily: "var(--font-body)" }}
+      role="group"
+      aria-label="Pilih Bahasa"
+    >
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={() => setLang("id")}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setLang("id");
+          }
+        }}
+        className={`w-9 h-9 rounded-full transition-all duration-200 cursor-pointer flex items-center justify-center select-none ${
+          lang === "id"
+            ? "bg-[var(--accent)] text-[#024244] shadow-sm font-bold"
+            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+        }`}
+        aria-label="Bahasa Indonesia"
+        aria-pressed={lang === "id"}
+      >
+        ID
+      </div>
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={() => setLang("en")}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setLang("en");
+          }
+        }}
+        className={`w-9 h-9 rounded-full transition-all duration-200 cursor-pointer flex items-center justify-center select-none ${
+          lang === "en"
+            ? "bg-[var(--accent)] text-[#024244] shadow-sm font-bold"
+            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+        }`}
+        aria-label="English"
+        aria-pressed={lang === "en"}
+      >
+        EN
+      </div>
     </div>
   );
 }
 
 export function Navbar() {
-  const { isPlaying, toggleSound } = useAudio();
   const { lang } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -64,6 +134,13 @@ export function Navbar() {
   ) => {
     e.preventDefault();
     setMenuOpen(false);
+
+    // Navigasi ke halaman Git Trends
+    if (href === "git-trends" || href === "/git-trends") {
+      router.push("/git-trends");
+      return;
+    }
+
     if (pathname !== "/") {
       router.push(`/${href}`);
       return;
@@ -85,6 +162,7 @@ export function Navbar() {
 
   return (
     <>
+      {/* Desktop Left Sidebar: Logo & Copyright */}
       <div
         className="hidden md:block fixed left-0 top-0 bottom-0 w-24 z-50 pointer-events-none"
         style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}
@@ -97,7 +175,7 @@ export function Navbar() {
         >
           <a href="#" onClick={(e) => handleClick(e, "#")}>
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Logo"
               width={100}
               height={100}
@@ -126,17 +204,18 @@ export function Navbar() {
               textTransform: "uppercase",
             }}
           >
-            © {new Date().getFullYear()} Hendrik Tarigan
+            © 2026 Hendrik Tarigan
           </span>
         </motion.div>
       </div>
 
+      {/* Desktop Right Sidebar: Navigation Links */}
       <div
         className="hidden md:block fixed right-0 top-0 bottom-0 w-24 z-50 pointer-events-none"
         style={{ borderColor: "rgba(var(--accent-rgb),0.05)" }}
       >
         <motion.nav
-          className="absolute top-1/2 right-1/2 pointer-events-auto flex items-center gap-12"
+          className="absolute top-1/2 right-1/2 pointer-events-auto flex items-center gap-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -161,16 +240,6 @@ export function Navbar() {
         </motion.nav>
       </div>
 
-      {/* Desktop Language Switcher */}
-      <motion.div
-        className="hidden md:block fixed top-7 right-8 z-50 pointer-events-auto"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <LanguageToggle />
-      </motion.div>
-
       {/* Mobile Header Bar */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 px-6 py-5 flex items-center justify-between pointer-events-none">
         <motion.a
@@ -192,6 +261,7 @@ export function Navbar() {
         <div className="flex items-center gap-3 pointer-events-auto">
           <LanguageToggle />
           <motion.button
+            type="button"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             onClick={() => setMenuOpen((v) => !v)}
@@ -220,7 +290,7 @@ export function Navbar() {
                 </motion.span>
               ) : (
                 <motion.span
-                  key="open"
+                  key="menu"
                   initial={{ rotate: 90, opacity: 0 }}
                   animate={{ rotate: 0, opacity: 1 }}
                   exit={{ rotate: -90, opacity: 0 }}
@@ -234,16 +304,17 @@ export function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Fullscreen Drawer */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden"
+            initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+            animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
+            exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
+            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden fixed inset-0 z-40 flex flex-col justify-center items-center gap-8"
             style={{
-              background: "rgba(2,20,21,0.97)",
+              background: "rgba(2, 66, 68, 0.98)",
               backdropFilter: "blur(20px)",
             }}
           >
@@ -267,97 +338,25 @@ export function Navbar() {
                 {link.label}
               </motion.a>
             ))}
-
-            <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              style={{
-                width: 48,
-                height: 1,
-                background: "rgba(var(--accent-rgb),0.15)",
-              }}
-            />
-
-            <motion.button
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.4 }}
-              onClick={toggleSound}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                background: "transparent",
-                border: "1px solid rgba(var(--accent-rgb),0.2)",
-                borderRadius: "9999px",
-                padding: "10px 20px",
-                color: "rgba(var(--accent-rgb),0.7)",
-                fontFamily: "var(--font-body)",
-                fontSize: "0.8rem",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                cursor: "pointer",
-              }}
-            >
-              {isPlaying ? <Volume2 size={16} /> : <VolumeX size={16} />}
-              {isPlaying ? "Sound On" : "Sound Off"}
-            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <motion.button
-        className="pointer-events-auto hidden md:flex"
-        initial={{ opacity: 0, scale: 0 }}
+      {/* Desktop Vertical Language Toggle di Kiri Bawah (Layout Bekas Fitur Sound) */}
+      <motion.div
+        className="pointer-events-auto hidden md:block"
+        initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.92 }}
-        onClick={toggleSound}
         style={{
           position: "fixed",
           bottom: 24,
           left: 24,
-          width: 56,
-          height: 56,
-          borderRadius: "50%",
-          border: "none",
-          background: isPlaying ? "rgba(var(--accent-rgb),0.15)" : "var(--accent)",
-          color: isPlaying ? "var(--accent)" : "#024244",
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "pointer",
           zIndex: 9999,
-          transition: "background 0.3s, color 0.3s",
         }}
       >
-        <AnimatePresence mode="wait">
-          {isPlaying ? (
-            <motion.span
-              key="playing"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.15 }}
-              className="flex items-center justify-center"
-            >
-              <Volume2 size={22} />
-            </motion.span>
-          ) : (
-            <motion.span
-              key="muted"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.15 }}
-              className="flex items-center justify-center"
-            >
-              <VolumeX size={22} />
-            </motion.span>
-          )}
-        </AnimatePresence>
-      </motion.button>
+        <VerticalLanguageToggle />
+      </motion.div>
     </>
   );
 }

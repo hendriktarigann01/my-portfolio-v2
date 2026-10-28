@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useTouchDevice } from "@/hooks";
 
 export function CursorFollow() {
+  const [mounted, setMounted] = useState(false);
   const isTouchDevice = useTouchDevice();
 
   const cursorX = useMotionValue(-100);
@@ -21,7 +22,11 @@ export function CursorFollow() {
   const [isClicking, setIsClicking] = useState(false);
 
   useEffect(() => {
-    if (isTouchDevice) return;
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || isTouchDevice) return;
 
     const move = (e: MouseEvent) => {
       cursorX.set(e.clientX - 10);
@@ -52,9 +57,9 @@ export function CursorFollow() {
       window.removeEventListener("mousedown", down);
       window.removeEventListener("mouseup", up);
     };
-  }, [isTouchDevice, cursorX, cursorY, dotX, dotY]);
+  }, [mounted, isTouchDevice, cursorX, cursorY, dotX, dotY]);
 
-  if (isTouchDevice) return null;
+  if (!mounted || isTouchDevice) return null;
 
   return (
     <>

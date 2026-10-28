@@ -1,28 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const emptySubscribe = () => () => {};
-
 export function Preloader() {
-  const mounted = useSyncExternalStore(
-    emptySubscribe,
-    () => true,
-    () => false,
-  );
-
-  const [loading, setLoading] = useState(() => {
-    if (typeof window === "undefined") return true;
-    try {
-      return !sessionStorage.getItem("preloader_shown");
-    } catch {
-      return true;
-    }
-  });
+  const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setMounted(true);
+
+    try {
+      if (sessionStorage.getItem("preloader_shown")) {
+        setLoading(false);
+        return;
+      }
+    } catch {
+      // ignore storage error
+    }
+
     let delayTimer: ReturnType<typeof setTimeout> | undefined;
     let fallbackTimer: ReturnType<typeof setTimeout> | undefined;
 
@@ -70,7 +67,7 @@ export function Preloader() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="HT Logo"
                 width={140}
                 height={140}

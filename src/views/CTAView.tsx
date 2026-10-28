@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { TextRotate } from "@/components/CTAExample";
 import { MessageSquare } from "lucide-react";
 import { getWhatsAppUrl } from "@/helpers";
 import { useLanguage } from "@/lib/language-context";
@@ -25,21 +24,6 @@ export function CTAView() {
     window.open(getWhatsAppUrl(text), "_blank");
   };
 
-  const rotatingTexts =
-    lang === "id"
-      ? [
-          "website usaha.",
-          "sistem kasir.",
-          "otomasi data.",
-          "solusi digital.",
-        ]
-      : [
-          "web systems.",
-          "business tools.",
-          "data workflows.",
-          "digital solutions.",
-        ];
-
   return (
     <section
       id="contact"
@@ -47,93 +31,78 @@ export function CTAView() {
     >
       <div className="container-main">
         <ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div style={{ position: "relative", zIndex: 1 }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+            <div style={{ position: "relative", zIndex: 1 }} className="h-full">
               <LocationMap />
             </div>
 
             <div
               style={{ position: "relative", zIndex: 1 }}
-              className="flex flex-col gap-6"
+              className="flex flex-col justify-center h-full"
             >
-              <div>
-                <span
-                  className="text-[11px] tracking-[0.25em] uppercase font-semibold block mb-3"
-                  style={{ color: "rgba(var(--accent-rgb), 0.6)" }}
-                >
-                  {lang === "id" ? "Siap Melangkah?" : "Ready to Grow?"}
-                </span>
-                <h2
-                  className="flex flex-col min-h-[100px] md:min-h-[140px]"
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 800,
-                    fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)",
-                    color: "var(--accent)",
-                    letterSpacing: "-0.03em",
-                    lineHeight: 1.05,
-                  }}
-                >
-                  <span>{lang === "id" ? "Waktunya bangun" : "Let's build"}</span>
-                  <span
-                    style={{
-                      color: "transparent",
-                      WebkitTextStroke: "1.5px rgba(var(--accent-rgb), 0.45)",
-                    }}
-                  >
-                    <TextRotate
-                      texts={rotatingTexts}
-                      mainClassName="justify-start"
-                      staggerDuration={0.03}
-                      staggerFrom="last"
-                      rotationInterval={3000}
-                    />
-                  </span>
-                </h2>
-              </div>
-
               <motion.div
                 onClick={handleWAConnect}
-                className="glass relative overflow-hidden rounded-[2rem] p-8 md:p-10 cursor-pointer flex flex-row items-center justify-between gap-6 hover:border-[rgba(var(--accent-rgb),0.35)] transition-all"
+                whileHover={{ scale: 1.01, borderColor: "rgba(var(--accent-rgb), 0.4)" }}
+                whileTap={{ scale: 0.99 }}
+                className="glass relative overflow-hidden rounded-[2.5rem] p-8 md:p-12 cursor-pointer flex flex-col justify-between gap-8 border border-[rgba(var(--accent-rgb),0.2)] transition-all duration-300 h-full"
+                style={{
+                  background: "rgba(2, 66, 68, 0.55)",
+                  backdropFilter: "blur(20px)",
+                }}
               >
-                <div className="flex flex-col items-start z-10 flex-1 gap-10">
+                <div className="flex flex-col gap-3 z-10">
+                  <span
+                    className="text-[11px] tracking-[0.25em] uppercase font-semibold block"
+                    style={{ color: "var(--tertiary)", fontFamily: "var(--font-body)" }}
+                  >
+                    {lang === "id" ? "Hubungi Saya Langsung" : "Direct Contact"}
+                  </span>
                   <h3
                     style={{
                       fontFamily: "var(--font-display)",
                       fontWeight: 800,
-                      fontSize: "1.8rem",
+                      fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
                       color: "var(--accent)",
                       letterSpacing: "-0.02em",
-                      lineHeight: 1.1,
+                      lineHeight: 1.15,
                     }}
-                    className="mb-2"
                   >
-                    {lang === "id" ? "Punya Kebutuhan IT?" : "Have a Project?"}
+                    {lang === "id"
+                      ? "Punya Kebutuhan IT atau Proyek Usaha?"
+                      : "Have a Project in Mind?"}
                   </h3>
-                  <div
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-medium tracking-wide uppercase transition-all hover:opacity-85"
-                    style={{
-                      backgroundColor: "rgba(var(--accent-rgb), 0.08)",
-                      color: "var(--accent)",
-                      border: "1px solid rgba(var(--accent-rgb), 0.15)",
-                    }}
+                  <p
+                    className="text-xs md:text-sm text-[rgba(var(--accent-rgb),0.7)] font-light leading-relaxed max-w-md mt-1"
+                    style={{ fontFamily: "var(--font-body)" }}
                   >
-                    <MessageSquare size={13} />
-                    <span>{lang === "id" ? "Konsultasi via WhatsApp" : "Talk To Me"}</span>
-                  </div>
+                    {lang === "id"
+                      ? "Konsultasikan langsung dengan Hendrik. Diskusi awal 100% gratis, santai, dan tanpa komitmen apa pun."
+                      : "Discuss directly with Hendrik. The initial consultation is 100% free, relaxed, and with zero obligation."}
+                  </p>
                 </div>
 
-                <div className="flex flex-col items-center justify-center relative w-32 h-32 md:w-36 md:h-36 flex-shrink-0 z-10">
-                  <motion.div className="w-24 h-24 md:w-28 md:h-28 relative flex items-center justify-center">
+                <div className="flex items-center justify-between gap-4 pt-4 border-t border-[rgba(var(--accent-rgb),0.1)] z-10">
+                  <div
+                    className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-md"
+                    style={{
+                      backgroundColor: "var(--accent)",
+                      color: "#012a2c",
+                    }}
+                  >
+                    <MessageSquare size={15} />
+                    <span>{lang === "id" ? "Chat via WhatsApp" : "Chat on WhatsApp"}</span>
+                  </div>
+
+                  <div className="w-16 h-16 md:w-20 md:h-20 relative flex items-center justify-center flex-shrink-0">
                     <Image
                       src="/illustration/ht-illustration-telp.webp"
                       alt="WhatsApp Contact Illustration"
-                      width={120}
-                      height={120}
+                      width={80}
+                      height={80}
                       className="object-contain"
                       loading="lazy"
                     />
-                  </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </div>

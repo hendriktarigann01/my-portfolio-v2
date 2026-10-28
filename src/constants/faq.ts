@@ -21,11 +21,12 @@ export const FAQ_DATA_BY_LANG: Record<"id" | "en", FAQItem[]> = {
     {
       question: "Bagaimana jika ada error atau kendala setelah sistem selesai?",
       answer:
-        "Semua pekerjaan dilengkapi garansi perbaikan bug gratis selama 14–30 hari setelah serah terima untuk fungsi dalam ruang lingkup awal. Anda tidak ditinggal lepas tangan setelah pembayaran.",
+        "Semua pekerjaan dilengkapi garansi perbaikan bug gratis selama 14-30 hari setelah serah terima untuk fungsi dalam ruang lingkup awal. Anda tidak ditinggal lepas tangan setelah pembayaran.",
       category: "Garansi",
     },
     {
-      question: "Apakah ada biaya langganan bulanan yang harus dibayar ke Mas Hendrik?",
+      question:
+        "Apakah ada biaya langganan bulanan yang harus dibayar ke Mas Hendrik?",
       answer:
         "Tidak ada biaya sewa siluman. Sistem atau website yang dibuat bersifat beli putus (milik Anda). Untuk biaya pihak ketiga (seperti perpanjangan domain & hosting tahunan), Anda bayar langsung ke penyedia resminya atas nama Anda sendiri.",
       category: "Biaya",
@@ -45,7 +46,7 @@ export const FAQ_DATA_BY_LANG: Record<"id" | "en", FAQItem[]> = {
     {
       question: "Kapan jam kerja dan respon pesan Mas Hendrik?",
       answer:
-        "Jam kerja aktif: Senin–Jumat 18.00–21.00 WIB dan Sabtu–Minggu 08.00–21.00 WIB. Di luar jam kerja pesan tetap masuk dan akan dibalas di kesempatan pertama. Gangguan darurat pada proyek bergaransi direspon secepatnya.",
+        "Jam kerja aktif: Senin-Jumat 18.00-21.00 WIB dan Sabtu-Minggu 08.00-21.00 WIB. Di luar jam kerja pesan tetap masuk dan akan dibalas di kesempatan pertama. Gangguan darurat pada proyek bergaransi direspon secepatnya.",
       category: "Operasional",
     },
   ],
@@ -65,7 +66,7 @@ export const FAQ_DATA_BY_LANG: Record<"id" | "en", FAQItem[]> = {
     {
       question: "What happens if a bug or issue appears after delivery?",
       answer:
-        "All projects include a 14–30 day complimentary bugfix warranty covering any issues within the agreed scope. You will never be left unsupported post-launch.",
+        "All projects include a 14-30 day complimentary bugfix warranty covering any issues within the agreed scope. You will never be left unsupported post-launch.",
       category: "Warranty",
     },
     {
@@ -89,7 +90,7 @@ export const FAQ_DATA_BY_LANG: Record<"id" | "en", FAQItem[]> = {
     {
       question: "What are your active working and response hours?",
       answer:
-        "Active hours: Monday–Friday 18:00–21:00 WIB and Saturday–Sunday 08:00–21:00 WIB. Messages sent outside these hours are answered at the earliest opportunity, with emergency warranty bugs handled promptly.",
+        "Active hours: Monday-Friday 18:00-21:00 WIB and Saturday-Sunday 08:00-21:00 WIB. Messages sent outside these hours are answered at the earliest opportunity, with emergency warranty bugs handled promptly.",
       category: "Operations",
     },
   ],

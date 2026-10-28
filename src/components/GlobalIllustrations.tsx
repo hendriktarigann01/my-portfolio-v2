@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import Image from "next/image";
-import { useSyncExternalStore } from "react";
+import { useState, useEffect } from "react";
 import { ILLUSTRATIONS, ILLUSTRATION_SPREAD } from "@/constants";
 
 const ALL_ILLUSTRATIONS = ILLUSTRATIONS.map((item, index) => ({
@@ -67,15 +67,13 @@ function IllustrationFloat({
   );
 }
 
-const emptySubscribe = () => () => {};
-
 export function GlobalIllustrations() {
-  const mounted = useSyncExternalStore(
-    emptySubscribe,
-    () => true,
-    () => false,
-  );
+  const [mounted, setMounted] = useState(false);
   const { scrollY } = useScroll();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   if (!mounted) return null;
 

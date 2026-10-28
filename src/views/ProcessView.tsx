@@ -90,7 +90,7 @@ function StepItem({ step, index }: { step: ProcessStep; index: number }) {
           background: "rgba(var(--accent-rgb),0.03)",
           border: "1px solid rgba(var(--accent-rgb),0.09)",
           width: "100%",
-          minHeight: "220px",
+          minHeight: "240px",
           textAlign: "center",
           backdropFilter: "blur(10px)",
         }}

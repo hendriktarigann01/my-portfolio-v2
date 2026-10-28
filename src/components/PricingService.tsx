@@ -237,7 +237,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
               <h3
                 style={{
                   fontFamily: "var(--font-display)",
-                  fontWeight: 700,
+                  fontWeight: 500,
                   fontSize: "1rem",
                   color: "var(--accent)",
                   letterSpacing: "-0.01em",
@@ -271,7 +271,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
               style={{
                 fontFamily: "var(--font-display)",
                 fontWeight: 700,
-                fontSize: "1.8rem",
+                fontSize: "1.5rem",
                 color: "var(--accent)",
                 letterSpacing: "-0.02em",
               }}

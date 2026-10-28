@@ -1,8 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { SYSTEM_PROMPT } from "@/data/chat-knowledge";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
-
 interface ChatMessage {
   role: "user" | "model";
   content: string;
@@ -16,16 +14,15 @@ export async function POST(request: Request) {
       return Response.json({ error: "Messages are required" }, { status: 400 });
     }
 
-    if (
-      !process.env.GEMINI_API_KEY ||
-      process.env.GEMINI_API_KEY === "your_gemini_api_key_here"
-    ) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey || apiKey === "your_gemini_api_key_here") {
       return Response.json(
         { error: "API key not configured" },
         { status: 500 },
       );
     }
 
+    const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
       model: "gemini-flash-latest",
       systemInstruction: SYSTEM_PROMPT,
@@ -37,25 +34,29 @@ export async function POST(request: Request) {
     }));
 
     const chat = model.startChat({ history });
-
     const lastMessage = messages[messages.length - 1];
-    const result = await chat.sendMessage(lastMessage.content);
-    const responseText = result.response.text();
 
-    return Response.json({ message: responseText });
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("TIMEOUT")), 10000),
+    );
+
+    const result = await Promise.race([
+      chat.sendMessage(lastMessage.content),
+      timeoutPromise,
+    ]);
+
+    return Response.json({ message: result.response.text() });
   } catch (error) {
-    console.error("Chat API error:", error);
+    let errorMsg = "Maaf, terjadi kendala teknis. Silakan coba sesaat lagi.";
 
-    let errorMsg = "Failed to generate response. Please try again.";
     if (error instanceof Error) {
-      if (error.message.includes("429")) {
-        errorMsg =
-          "Wah, AI-nya lagi kepenuhan request dari Google (Rate Limit 429). Coba tunggu 1 menit lagi ya!";
-      } else {
-        errorMsg = `API Error: ${error.message}`;
+      if (error.message.includes("503") || error.message === "TIMEOUT") {
+        errorMsg = "Layanan Google AI saat ini sedang mengalami lonjakan antrean. Mohon tunggu sejenak dan coba lagi.";
+      } else if (error.message.includes("429")) {
+        errorMsg = "Batas permintaan tercapai (Rate Limit). Coba kembali dalam 1 menit.";
       }
     }
 
-    return Response.json({ error: errorMsg }, { status: 500 });
+    return Response.json({ error: errorMsg }, { status: 503 });
   }
 }

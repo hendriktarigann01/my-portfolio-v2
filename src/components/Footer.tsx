@@ -54,14 +54,16 @@ export function Footer() {
               {currentNavLinks.map((link) => (
                 <Link
                   key={link.href}
-                  href={`/${link.href}`}
+                  href={link.href.startsWith("#") ? `/${link.href}` : `/${link.href.replace(/^\//, "")}`}
                   className="transition-colors hover:text-[var(--accent)]"
                   style={{
                     fontFamily: "var(--font-body)",
                     color: "rgba(var(--accent-rgb),0.5)",
                   }}
                 >
-                  {link.label.toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}
+                  {link.label === "GIT TRENDS"
+                    ? "Git Trends"
+                    : link.label.toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}
                 </Link>
               ))}
             </div>

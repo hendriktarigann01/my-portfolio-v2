@@ -5,8 +5,8 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
     {
       id: "web-kilat",
       name: "Website Kilat Usaha",
-      price: "399k–499k",
-      priceSub: "1–3 hari kerja",
+      price: "399k-499k",
+      priceSub: "1-3 hari kerja",
       description:
         "Landing page profil usaha siap jualan. Langsung tayang di Google dengan tombol order WhatsApp & integrasi Google Maps.",
       isPopular: true,
@@ -16,7 +16,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Integrasi lokasi Google Maps & jam buka",
         "Gratis perapihan logo & banner promosi (Canva)",
         "Sudah termasuk hosting & domain (.my.id / .web.id)",
-        "Siap pakai dalam 1–3 hari kerja",
+        "Siap pakai dalam 1-3 hari kerja",
       ],
       waText:
         "Halo Mas Hendrik, saya tertarik dengan paket *Website Kilat Usaha (Rp399k-499k)*. Mau konsultasi kebutuhan website untuk usaha saya.",
@@ -25,8 +25,8 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
     {
       id: "otomasi-data",
       name: "Otomasi Excel & Spreadsheet",
-      price: "250k–600k",
-      priceSub: "1–2 hari kerja",
+      price: "250k-600k",
+      priceSub: "1-2 hari kerja",
       description:
         "Otomasi pencatatan data dan rekap omset otomatis tanpa salin manual tiap hari. Hemat waktu kerja berjam-jam.",
       features: [
@@ -43,8 +43,8 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
     {
       id: "web-custom",
       name: "Website Custom & Branding",
-      price: "850k–1.200k",
-      priceSub: "4–7 hari kerja",
+      price: "850k-1.200k",
+      priceSub: "4-7 hari kerja",
       description:
         "Desain eksklusif dibangun sesuai karakter brand Anda. Tampilan kredibel, animasi halus, dan optimasi SEO Google.",
       features: [
@@ -62,7 +62,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
       id: "sistem-kasir",
       name: "Sistem Kasir & Dashboard (PWA)",
       price: "Mulai 1.500k",
-      priceSub: "1–2 minggu",
+      priceSub: "1-2 minggu",
       description:
         "Sistem kasir (POS), stok barang, dan dashboard omset. Bisa dibuka di HP tanpa biaya langganan bulanan.",
       features: [
@@ -99,8 +99,8 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
     {
       id: "web-kilat",
       name: "Launch (Quick Website)",
-      price: "399k–499k",
-      priceSub: "1–3 business days",
+      price: "399k-499k",
+      priceSub: "1-3 business days",
       description:
         "Ready-to-sell business landing page. Fast turnaround with direct WhatsApp order & QRIS integration.",
       isPopular: true,
@@ -110,7 +110,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Google Maps & business profile integration",
         "Free logo & banner touch-up included (Canva)",
         "Includes hosting & domain (.my.id / .web.id)",
-        "Ready in 1–3 business days",
+        "Ready in 1-3 business days",
       ],
       waText:
         "Hi Hendrik, I am interested in the *Quick Business Website (Rp399k-499k)* package. I would like to consult about website options for my business.",
@@ -119,8 +119,8 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
     {
       id: "otomasi-data",
       name: "Spreadsheet & Data Automation",
-      price: "250k–600k",
-      priceSub: "1–2 business days",
+      price: "250k-600k",
+      priceSub: "1-2 business days",
       description:
         "Automate spreadsheet entries, daily revenue reports, and invoices. Eliminate hours of tedious manual data entry.",
       features: [
@@ -137,8 +137,8 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
     {
       id: "web-custom",
       name: "Signature (Custom Branding)",
-      price: "850k–1,200k",
-      priceSub: "4–7 business days",
+      price: "850k-1,200k",
+      priceSub: "4-7 business days",
       description:
         "Bespoke web presence crafted to match your brand identity. Smooth interactions, high credibility, and SEO-ready.",
       features: [
@@ -156,7 +156,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
       id: "sistem-kasir",
       name: "Platform (POS & Dashboard PWA)",
       price: "From 1,500k",
-      priceSub: "1–2 weeks",
+      priceSub: "1-2 weeks",
       description:
         "Web-based POS, inventory tracking, and revenue dashboard. Mobile-ready (PWA) with zero recurring software fees.",
       features: [

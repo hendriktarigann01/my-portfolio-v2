@@ -5,6 +5,7 @@ import { ProcessView } from "@/views/ProcessView";
 import { PricingView } from "@/views/PricingView";
 import { FAQView } from "@/views/FAQView";
 import { NowView } from "@/views/NowView";
+import { ReadyToGrowView } from "@/views/ReadyToGrowView";
 import { CTAView } from "@/views/CTAView";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <PricingView />
         <FAQView />
         <NowView />
+        <ReadyToGrowView />
         <CTAView />
       </main>
     </>

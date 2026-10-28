@@ -3,8 +3,9 @@ import type { NavLink } from "@/types";
 export const NAV_LINKS_BY_LANG: Record<"id" | "en", NavLink[]> = {
   id: [
     { label: "PROYEK", href: "#projects" },
-    { label: "CARA KERJA", href: "#process" },
+    { label: "PROSES", href: "#process" },
     { label: "LAYANAN", href: "#services" },
+    { label: "GIT TRENDS", href: "git-trends" },
     { label: "FAQ & GARANSI", href: "#faq" },
     { label: "KONTAK", href: "#contact" },
   ],
@@ -12,6 +13,7 @@ export const NAV_LINKS_BY_LANG: Record<"id" | "en", NavLink[]> = {
     { label: "PROJECTS", href: "#projects" },
     { label: "PROCESS", href: "#process" },
     { label: "SERVICES", href: "#services" },
+    { label: "GIT TRENDS", href: "git-trends" },
     { label: "FAQ & TERMS", href: "#faq" },
     { label: "CONTACT", href: "#contact" },
   ],

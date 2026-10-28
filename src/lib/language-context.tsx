@@ -4,6 +4,7 @@ import {
   createContext,
   useContext,
   useSyncExternalStore,
+  useEffect,
   ReactNode,
 } from "react";
 
@@ -50,22 +51,20 @@ function setLanguageStore(newLang: Language) {
   listeners.forEach((listener) => listener());
 }
 
-if (typeof window !== "undefined") {
-  try {
-    const saved = localStorage.getItem("preferred_lang") as Language | null;
-    if (saved === "id" || saved === "en") {
-      currentLang = saved;
-    } else {
-      const browserLang = navigator.language?.toLowerCase() || "";
-      currentLang = browserLang.startsWith("en") ? "en" : "id";
-    }
-  } catch {
-    // fallback
-  }
-}
-
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  // Sinkronisasi preferensi bahasa hanya setelah hidrasi selesai
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("preferred_lang") as Language | null;
+      if (saved === "id" || saved === "en") {
+        setLanguageStore(saved);
+      }
+    } catch {
+      // ignore storage error
+    }
+  }, []);
 
   const setLang = (newLang: Language) => {
     setLanguageStore(newLang);

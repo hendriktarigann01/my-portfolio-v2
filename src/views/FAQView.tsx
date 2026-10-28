@@ -2,7 +2,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ShieldCheck, CheckCircle2, Lock, Sparkles, MessageCircle } from "lucide-react";
+import {
+  ChevronDown,
+  ShieldCheck,
+  CheckCircle2,
+  Lock,
+  Sparkles,
+  MessageCircle,
+} from "lucide-react";
 import { FAQ_DATA_BY_LANG } from "@/constants/faq";
 import { useLanguage } from "@/lib/language-context";
 import { getWhatsAppUrl } from "@/helpers/text";
@@ -21,7 +28,7 @@ export function FAQView() {
       ? [
           {
             icon: ShieldCheck,
-            title: "Garansi Bug 14–30 Hari",
+            title: "Garansi Bug 14-30 Hari",
             desc: "Gratis perbaikan bug setelah serah terima tanpa biaya tambahan.",
           },
           {
@@ -43,7 +50,7 @@ export function FAQView() {
       : [
           {
             icon: ShieldCheck,
-            title: "14–30 Day Bugfix Warranty",
+            title: "14-30 Day Bugfix Warranty",
             desc: "Complimentary bugfixes post-delivery for full peace of mind.",
           },
           {
@@ -72,7 +79,10 @@ export function FAQView() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-24 scroll-mt-20 md:scroll-mt-0 relative">
+    <section
+      id="faq"
+      className="py-16 md:py-24 scroll-mt-20 md:scroll-mt-0 relative"
+    >
       <div className="container-main max-w-5xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -85,7 +95,9 @@ export function FAQView() {
               textTransform: "uppercase",
             }}
           >
-            {lang === "id" ? "Kepercayaan & Transparansi" : "Trust & Transparency"}
+            {lang === "id"
+              ? "Kepercayaan & Transparansi"
+              : "Trust & Transparency"}
           </span>
           <h2
             className="mt-3 mb-4"
@@ -98,7 +110,9 @@ export function FAQView() {
               lineHeight: 1.1,
             }}
           >
-            {lang === "id" ? "Pertanyaan Sering Masuk & Garansi" : "FAQ & Guarantees"}
+            {lang === "id"
+              ? "Pertanyaan Sering Masuk & Garansi"
+              : "FAQ & Guarantees"}
           </h2>
           <p
             className="text-sm max-w-2xl mx-auto text-[rgba(var(--accent-rgb),0.65)] font-light leading-relaxed"
