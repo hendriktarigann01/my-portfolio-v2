@@ -10,16 +10,16 @@ export function ReadyToGrowView() {
   const rotatingTexts =
     lang === "id"
       ? [
-          "website usaha.",
-          "sistem kasir.",
-          "otomasi data.",
-          "solusi digital.",
+          "aplikasi bisnis.",
+          "sistem web & desktop.",
+          "aplikasi mobile.",
+          "otomasi workflow.",
         ]
       : [
-          "web systems.",
-          "business tools.",
-          "data workflows.",
-          "digital solutions.",
+          "business apps.",
+          "web & desktop systems.",
+          "mobile applications.",
+          "workflow automation.",
         ];
 
   return (

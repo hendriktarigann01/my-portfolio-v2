@@ -205,10 +205,10 @@
       "stack": "TypeScript",
       "category": "system",
       "focus": "product configuration, meeting room package builder",
-      "summary": "A meeting room product configurator for MJ Solution's sales process — clients select between Essential and Enterprise packages, pick their preferred LCD/LED display products, and see the full setup rendered live on a canvas preview with pricing.",
-      "description": "Smart Meeting Room is a web-based product configurator that helps clients and sales staff build a complete meeting room display setup. Users choose between two package tiers — Essential and Enterprise — then select the LCD or LED products they want. As selections are made, the canvas preview updates in real time to reflect the chosen configuration. The tool is designed to shorten the sales consultation cycle by letting clients self-explore options and visualize their meeting room before committing.",
+      "summary": "A meeting room product configurator for MJ Solution's sales process: clients select between Essential and Enterprise packages, pick their preferred LCD/LED display products, and see the full setup rendered live on a canvas preview with pricing.",
+      "description": "Smart Meeting Room is a web-based product configurator that helps clients and sales staff build a complete meeting room display setup. Users choose between two package tiers (Essential and Enterprise), then select the LCD or LED products they want. As selections are made, the canvas preview updates in real time to reflect the chosen configuration. The tool is designed to shorten the sales consultation cycle by letting clients self-explore options and visualize their meeting room before committing.",
       "problem": "Clients had difficulty visualizing how different display products would look in their meeting room, and sales needed a faster way to walk clients through package options without manual back-and-forth.",
-      "solution": "A self-serve configurator where clients pick their package tier and product selections, with a live canvas that updates to show exactly what the room will look like — reducing ambiguity and speeding up the decision process.",
+      "solution": "A self-serve configurator where clients pick their package tier and product selections, with a live canvas that updates to show exactly what the room will look like, reducing ambiguity and speeding up the decision process.",
       "highlights": [
         "Two package tiers: Essential and Enterprise",
         "Live canvas preview that updates as products are selected",

@@ -73,8 +73,8 @@ export function FAQView() {
   const handleWaAsk = () => {
     const text =
       lang === "id"
-        ? "Halo Mas Hendrik, saya mau tanya-tanya dulu seputar layanan IT & estimasi kebutuhannya."
-        : "Hi Hendrik, I have a few questions about your IT services and would like an estimate.";
+        ? "Halo HT Solution, saya mau tanya-tanya seputar layanan digital & estimasi biayanya."
+        : "Hi HT Solution, I have questions about your digital services and estimates.";
     window.open(getWhatsAppUrl(text), "_blank");
   };
 
@@ -83,7 +83,7 @@ export function FAQView() {
       id="faq"
       className="py-16 md:py-24 scroll-mt-20 md:scroll-mt-0 relative"
     >
-      <div className="container-main max-w-5xl mx-auto px-4">
+      <div className="container-main">
         {/* Section Header */}
         <div className="text-center mb-12">
           <span
@@ -231,7 +231,7 @@ export function FAQView() {
         >
           <button
             onClick={handleWaAsk}
-            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[var(--accent)] text-[#012a2c] text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-lg shadow-[rgba(var(--accent-rgb),0.1)]"
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-lg shadow-[rgba(var(--accent-rgb),0.1)]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             <MessageCircle size={16} />

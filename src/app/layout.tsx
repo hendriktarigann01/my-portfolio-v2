@@ -19,26 +19,26 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://htsolution.tech"),
-  title: "Hendrik Tarigan",
+  title: "HT Solution • Multi-Platform Software & Business Automation",
   description:
-    "Fullstack developer crafting high performance digital systems and turning complex workflows into elegant web and desktop applications.",
+    "HT Solution (High Trust Solution) - Engineering high performance applications (web, desktop & mobile), spreadsheet automations, and custom business software.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Hendrik Tarigan",
+    title: "HT Solution • Multi-Platform Software & Business Automation",
     description:
-      "Fullstack developer crafting high performance digital systems and turning complex workflows into elegant web and desktop applications.",
+      "HT Solution (High Trust Solution) - Engineering high performance applications (web, desktop & mobile), spreadsheet automations, and custom business software.",
     url: "https://htsolution.tech",
-    siteName: "Hendrik Tarigan Portfolio",
-    locale: "en_US",
+    siteName: "HT Solution",
+    locale: "id_ID",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hendrik Tarigan",
+    title: "HT Solution • Multi-Platform Software & Business Automation",
     description:
-      "Fullstack developer crafting high performance digital systems and turning complex workflows into elegant web and desktop applications.",
+      "HT Solution (High Trust Solution) - Engineering high performance applications (web, desktop & mobile), spreadsheet automations, and custom business software.",
   },
 };
 
@@ -48,8 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={dmSans.variable}>
-      <body>
+    <html lang="id" className={dmSans.variable} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <LanguageProvider>
           <SmoothScrollProvider>
             <Preloader />

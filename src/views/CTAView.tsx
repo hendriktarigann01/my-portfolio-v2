@@ -19,8 +19,8 @@ export function CTAView() {
   const handleWAConnect = () => {
     const text =
       lang === "id"
-        ? "Halo Mas Hendrik, saya tertarik konsultasi kebutuhan website / sistem digital untuk usaha saya."
-        : "Hi Hendrik, I'm interested in discussing a project and learning how you can help achieve our business goals.";
+        ? "Halo HT Solution, saya tertarik konsultasi kebutuhan aplikasi (web/desktop/mobile) atau otomasi sistem untuk usaha saya."
+        : "Hi HT Solution, I'm interested in discussing an application (web/desktop/mobile) or automation project for my business.";
     window.open(getWhatsAppUrl(text), "_blank");
   };
 
@@ -42,20 +42,16 @@ export function CTAView() {
             >
               <motion.div
                 onClick={handleWAConnect}
-                whileHover={{ scale: 1.01, borderColor: "rgba(var(--accent-rgb), 0.4)" }}
+                whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
-                className="glass relative overflow-hidden rounded-[2.5rem] p-8 md:p-12 cursor-pointer flex flex-col justify-between gap-8 border border-[rgba(var(--accent-rgb),0.2)] transition-all duration-300 h-full"
-                style={{
-                  background: "rgba(2, 66, 68, 0.55)",
-                  backdropFilter: "blur(20px)",
-                }}
+                className="glass glass-interactive relative overflow-hidden rounded-2xl p-8 md:p-12 cursor-pointer flex flex-col justify-between gap-8 h-full"
               >
                 <div className="flex flex-col gap-3 z-10">
                   <span
                     className="text-[11px] tracking-[0.25em] uppercase font-semibold block"
-                    style={{ color: "var(--tertiary)", fontFamily: "var(--font-body)" }}
+                    style={{ color: "var(--text-subtle)", fontFamily: "var(--font-body)" }}
                   >
-                    {lang === "id" ? "Hubungi Saya Langsung" : "Direct Contact"}
+                    {lang === "id" ? "Hubungi Langsung" : "Direct Contact"}
                   </span>
                   <h3
                     style={{
@@ -72,12 +68,12 @@ export function CTAView() {
                       : "Have a Project in Mind?"}
                   </h3>
                   <p
-                    className="text-xs md:text-sm text-[rgba(var(--accent-rgb),0.7)] font-light leading-relaxed max-w-md mt-1"
+                    className="text-xs md:text-sm text-[var(--text-muted)] font-light leading-relaxed max-w-md mt-1"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {lang === "id"
-                      ? "Konsultasikan langsung dengan Hendrik. Diskusi awal 100% gratis, santai, dan tanpa komitmen apa pun."
-                      : "Discuss directly with Hendrik. The initial consultation is 100% free, relaxed, and with zero obligation."}
+                      ? "Konsultasikan langsung dengan tim HT Solution. Diskusi awal 100% gratis, santai, dan tanpa komitmen."
+                      : "Discuss directly with HT Solution. Initial consultation is 100% free and zero obligation."}
                   </p>
                 </div>
 
@@ -86,7 +82,7 @@ export function CTAView() {
                     className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-md"
                     style={{
                       backgroundColor: "var(--accent)",
-                      color: "#012a2c",
+                      color: "var(--bg)",
                     }}
                   >
                     <MessageSquare size={15} />

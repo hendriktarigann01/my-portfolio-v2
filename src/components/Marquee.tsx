@@ -35,6 +35,18 @@ export function LogoMarquee() {
       </div>
 
       <div className="container-main relative w-full overflow-hidden py-6">
+        <div 
+          className="absolute left-0 top-0 bottom-0 w-16 md:w-28 z-10 pointer-events-none"
+          style={{
+            background: "linear-gradient(90deg, var(--bg) 0%, transparent 100%)",
+          }}
+        />
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-16 md:w-28 z-10 pointer-events-none"
+          style={{
+            background: "linear-gradient(270deg, var(--bg) 0%, transparent 100%)",
+          }}
+        />
         <div className="w-full overflow-hidden flex items-center justify-start">
           <div className="marquee-track flex gap-16 md:gap-24 items-center">
             {MARQUEE_LOGOS.map((logo, idx) => (

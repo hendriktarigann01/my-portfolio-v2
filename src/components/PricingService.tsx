@@ -46,8 +46,8 @@ export const PricingHeader = () => {
         }}
       >
         {lang === "id"
-          ? "Harga jelas dan terjangkau untuk kebutuhan usaha di Cikarang dan sekitarnya. Tanpa biaya siluman, garansi bug 30 hari, dan konsultasi gratis via WhatsApp."
-          : "Clear and accessible solutions tailored for your business. Zero hidden fees, a 30-day bugfix warranty, and free WhatsApp consultation."}
+          ? "Biaya pasti tanpa biaya tersembunyi, pengerjaan cepat, dan garansi bug 30 hari. Konsultasi awal gratis."
+          : "Fixed upfront pricing, fast turnaround, and 30-day bug warranty. Free initial consultation."}
       </p>
     </div>
   );
@@ -220,16 +220,11 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        whileHover={{ y: -10, borderColor: "rgba(var(--accent-rgb))" }}
+        whileHover={{ y: -6 }}
         className={cn(
-          "relative flex flex-col justify-between h-full rounded-[2rem] p-6 lg:p-5 xl:p-8 border transition-all duration-300 overflow-hidden",
+          "glass glass-interactive relative flex flex-col justify-between h-full rounded-2xl p-6 lg:p-5 xl:p-8 overflow-hidden",
+          plan.isPopular && "border-[var(--accent)]"
         )}
-        style={{
-          backdropFilter: "blur(24px)",
-          borderColor: plan.isPopular
-            ? "rgba(var(--accent-rgb), 0.6)"
-            : "rgba(var(--accent-rgb), 0.25)",
-        }}
       >
         <div className="flex flex-1 flex-col space-y-3">
           <div className="flex items-center justify-between gap-3">
@@ -246,7 +241,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
                 {plan.name}
               </h3>
               {plan.isPopular && (
-                <span className="px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider bg-[var(--accent)] text-[#012a2c] uppercase select-none">
+                <span className="px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] uppercase select-none">
                   {lang === "id" ? "Terpopuler" : "Popular"}
                 </span>
               )}
@@ -328,15 +323,15 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
 
         <button
           onClick={handleContact}
-          className="w-full flex items-center justify-center gap-2 py-4 rounded-2xl text-xs font-semibold tracking-wide uppercase transition-all duration-300 cursor-pointer"
+          className="w-full flex items-center justify-center gap-2 py-4 rounded-xl text-xs font-semibold tracking-wide uppercase transition-all duration-300 cursor-pointer"
           style={{
             backgroundColor: plan.isPopular
-              ? "var(--accent)"
-              : "rgba(var(--accent-rgb), 0.06)",
-            color: plan.isPopular ? "#012a2c" : "var(--accent)",
+              ? "var(--btn-primary-bg)"
+              : "var(--card-bg)",
+            color: plan.isPopular ? "var(--btn-primary-text)" : "var(--accent)",
             border: plan.isPopular
               ? "none"
-              : "1px solid rgba(var(--accent-rgb), 0.15)",
+              : "1px solid var(--card-border)",
           }}
         >
           <span>{getButtonLabel(plan.id)}</span>

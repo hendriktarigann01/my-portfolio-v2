@@ -5,7 +5,7 @@ export const MAX_QUESTIONS = 10;
 export const LS_KEY = "ht_chat_ql";
 
 export const TOPIC_KEYWORDS = [
-  "hendrik", "tarigan", "you", "your", "he", "his", "profile", "about",
+  "ht", "solution", "high", "trust", "hendrik", "tarigan", "you", "your", "he", "his", "profile", "about",
   "work", "project", "portfolio", "skill", "tech", "stack", "code", "build",
   "develop", "design", "frontend", "backend", "fullstack", "next", "react",
   "typescript", "javascript", "node", "supabase", "database", "api",
@@ -16,7 +16,7 @@ export const TOPIC_KEYWORDS = [
   "jasa", "layanan", "harga", "biaya", "paket", "kasir", "toko", "otomasi",
   "excel", "spreadsheet", "garansi", "cikarang", "bekasi", "skripsi", "wa",
   "whatsapp", "pesan", "order", "alur", "cara kerja", "bikin", "buat", "website",
-  "web", "sistem", "dashboard", "dp", "uang muka", "bantuan", "konsultasi",
+  "web", "desktop", "mobile", "aplikasi", "android", "sistem", "dashboard", "dp", "uang muka", "bantuan", "konsultasi",
 ];
 
 export const GREETING_BY_LANG: Record<"id" | "en", Message> = {
@@ -24,14 +24,14 @@ export const GREETING_BY_LANG: Record<"id" | "en", Message> = {
     id: "greeting",
     role: "model",
     content:
-      "Halo! 👋 Saya asisten AI Hendrik. Mau tanya seputar paket layanan website, sistem kasir, otomasi Excel, harga, atau cara pemesanan?",
+      "Halo! Saya asisten AI HT Solution (High Trust Solution). Mau tanya seputar rekayasa aplikasi (web, desktop, mobile), otomasi spreadsheet, paket harga, atau alur kerja?",
     timestamp: new Date(),
   },
   en: {
     id: "greeting",
     role: "model",
     content:
-      "Hey! 👋 I'm Hendrik's AI assistant. Ask me anything about his IT services, pricing packages, or project collaboration!",
+      "Hello! I am HT Solution's AI assistant. Ask me anything about our software engineering services (web, desktop & mobile), spreadsheet automations, or pricing packages.",
     timestamp: new Date(),
   },
 };
@@ -39,13 +39,13 @@ export const GREETING_BY_LANG: Record<"id" | "en", Message> = {
 export const QUICK_QUESTIONS_BY_LANG: Record<"id" | "en", string[]> = {
   id: [
     "Berapa harga pembuatan website usaha?",
-    "Bisa bantu bikin sistem kasir atau inventori?",
-    "Bagaimana cara kerja dan garansinya?",
+    "Bisa bantu otomasi spreadsheet / Excel?",
+    "Bagaimana alur kerja dan garansi 30 hari?",
   ],
   en: [
-    "What IT services and packages do you offer?",
-    "How does the pricing and 30-day warranty work?",
-    "How can I book a project with Hendrik?",
+    "What services and packages do you offer?",
+    "How does spreadsheet automation work?",
+    "How does the 30-day warranty work?",
   ],
 };
 

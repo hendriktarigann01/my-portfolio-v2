@@ -19,7 +19,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Siap pakai dalam 1-3 hari kerja",
       ],
       waText:
-        "Halo Mas Hendrik, saya tertarik dengan paket *Website Kilat Usaha (Rp399k-499k)*. Mau konsultasi kebutuhan website untuk usaha saya.",
+        "Halo HT Solution, saya tertarik dengan paket *Website Kilat Usaha (Rp399k-499k)*. Mau konsultasi kebutuhan website untuk usaha saya.",
       videoSrc: "/assets/landing-pages/in-lite/example.webm",
     },
     {
@@ -38,7 +38,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Video panduan singkat penggunaan",
       ],
       waText:
-        "Halo Mas Hendrik, saya mau tanya soal jasa *Otomasi Excel / Spreadsheet*. Kebutuhan saya untuk merapikan data transaksi usaha.",
+        "Halo HT Solution, saya mau tanya soal jasa *Otomasi Excel / Spreadsheet*. Kebutuhan saya untuk merapikan data transaksi usaha.",
     },
     {
       id: "web-custom",
@@ -56,7 +56,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Garansi gratis perbaikan bug 30 hari",
       ],
       waText:
-        "Halo Mas Hendrik, saya ingin berkonsultasi mengenai paket *Website Custom & Branding*. Mau diskusi konsep dan kebutuhan spesifik usaha saya.",
+        "Halo HT Solution, saya ingin berkonsultasi mengenai paket *Website Custom & Branding*. Mau diskusi konsep dan kebutuhan spesifik usaha saya.",
     },
     {
       id: "sistem-kasir",
@@ -74,7 +74,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Pendampingan awal & garansi bugfix 30 hari",
       ],
       waText:
-        "Halo Mas Hendrik, saya butuh *Sistem Kasir / Dashboard Bisnis*. Mau tanya estimasi dan alur pembuatannya untuk usaha saya.",
+        "Halo HT Solution, saya butuh *Sistem Kasir / Dashboard Bisnis*. Mau tanya estimasi dan alur pembuatannya untuk usaha saya.",
     },
     {
       id: "riset-it",
@@ -92,7 +92,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Konsultasi penentuan lingkup & budget gratis",
       ],
       waText:
-        "Halo Mas Hendrik, saya mau konsultasi bantuan teknis / modul untuk *Proyek Software / Riset IT* saya.",
+        "Halo HT Solution, saya mau konsultasi bantuan teknis / modul untuk *Proyek Software / Riset IT* saya.",
     },
   ],
   en: [
@@ -113,7 +113,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Ready in 1-3 business days",
       ],
       waText:
-        "Hi Hendrik, I am interested in the *Quick Business Website (Rp399k-499k)* package. I would like to consult about website options for my business.",
+        "Hi HT Solution, I am interested in the *Quick Business Website (Rp399k-499k)* package. I would like to consult about website options for my business.",
       videoSrc: "/assets/landing-pages/in-lite/example.webm",
     },
     {
@@ -132,7 +132,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Short video walkthrough included",
       ],
       waText:
-        "Hi Hendrik, I would like to inquire about *Spreadsheet Automation* for my business operations.",
+        "Hi HT Solution, I would like to inquire about *Spreadsheet Automation* for my business operations.",
     },
     {
       id: "web-custom",
@@ -150,7 +150,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "30-day bugfix guarantee included",
       ],
       waText:
-        "Hi Hendrik, I would like to discuss the *Custom Branding Web* package for my company.",
+        "Hi HT Solution, I would like to discuss the *Custom Branding Web* package for my company.",
     },
     {
       id: "sistem-kasir",
@@ -168,7 +168,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Hands-on onboarding & 30-day bugfix warranty",
       ],
       waText:
-        "Hi Hendrik, I would like to discuss a *POS / Custom Dashboard System* for my business.",
+        "Hi HT Solution, I would like to discuss a *POS / Custom Dashboard System* for my business.",
     },
     {
       id: "riset-it",
@@ -186,7 +186,7 @@ export const SERVICE_PLANS_BY_LANG: Record<"id" | "en", PricingPlan[]> = {
         "Free scope & requirement consultation",
       ],
       waText:
-        "Hi Hendrik, I would like to consult about technical assistance / module build for my *Software Research Project*.",
+        "Hi HT Solution, I would like to consult about technical assistance / module build for my *Software Research Project*.",
     },
   ],
 };

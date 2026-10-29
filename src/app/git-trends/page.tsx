@@ -59,6 +59,7 @@ export default function GitTrendsPage() {
           <Breadcrumb
             items={[
               { label: "Home", href: "/" },
+              { label: "Lab", href: "/lab" },
               { label: "Git Trends" },
             ]}
           />
@@ -100,7 +101,7 @@ export default function GitTrendsPage() {
                   onClick={() => handlePeriodChange(p.value)}
                   className={`h-8 px-5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                     isSelected
-                      ? "bg-[var(--accent)] text-[#024244] shadow-sm font-bold"
+                      ? "bg-[var(--accent)] text-[var(--bg)] shadow-sm font-bold"
                       : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
                   }`}
                   style={{ fontFamily: "var(--font-body)" }}
@@ -121,7 +122,7 @@ export default function GitTrendsPage() {
                   onClick={() => setSelectedLang(lang)}
                   className={`h-8 px-4 rounded-full text-xs font-medium tracking-wide transition-all whitespace-nowrap cursor-pointer ${
                     isActive
-                      ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
+                      ? "bg-[var(--accent)] text-[var(--bg)] font-bold shadow-sm"
                       : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
                   }`}
                   style={{ fontFamily: "var(--font-body)" }}
@@ -146,7 +147,7 @@ export default function GitTrendsPage() {
               <button
                 type="button"
                 onClick={() => setSelectedLang("All")}
-                className="mt-4 px-4 py-1.5 rounded-full text-xs font-semibold bg-[var(--accent)] text-[#024244] cursor-pointer"
+                className="mt-4 px-4 py-1.5 rounded-full text-xs font-semibold bg-[var(--accent)] text-[var(--bg)] cursor-pointer"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 Reset Filter
@@ -212,7 +213,7 @@ function RepoCard({ repo }: { repo: TrendingRepo }) {
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-1 text-emerald-300 font-medium">
+          <div className="inline-flex items-center gap-1 text-[var(--accent)] font-medium">
             <TrendingUp className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
             <span>+{repo.starsPeriod.toLocaleString()}</span>
           </div>

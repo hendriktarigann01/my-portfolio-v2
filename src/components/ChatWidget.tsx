@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useRef, useEffect, useCallback, type FormEvent } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, Loader2, MessageSquare } from "lucide-react";
 import { globalLenis } from "@/components/SmoothScrollProvider";
@@ -68,6 +69,34 @@ export function ChatWidget() {
     }
   }, [isOpen, registerTimeout]);
 
+  const pathname = usePathname();
+  const [isHeroVisible, setIsHeroVisible] = useState(false);
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setIsHeroVisible(false);
+      return;
+    }
+
+    const checkHero = () => {
+      const heroEl = document.getElementById("home");
+      if (!heroEl) {
+        setIsHeroVisible(false);
+        return;
+      }
+      const rect = heroEl.getBoundingClientRect();
+      setIsHeroVisible(rect.bottom > 200);
+    };
+
+    checkHero();
+    window.addEventListener("scroll", checkHero, { passive: true });
+    window.addEventListener("resize", checkHero, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", checkHero);
+      window.removeEventListener("resize", checkHero);
+    };
+  }, [pathname]);
+
   const appendLimitNotice = useCallback(() => {
     registerTimeout(() => {
       setMessages((prev) => [
@@ -75,12 +104,15 @@ export function ChatWidget() {
         {
           id: `limit-${Date.now()}`,
           role: "model",
-          content: `We've reached the ${MAX_QUESTIONS}-question limit. Hope I was helpful! Reach out directly via the contact section. 🙌`,
+          content:
+            lang === "id"
+              ? `Batas ${MAX_QUESTIONS} pertanyaan tercapai. Untuk konsultasi lebih lanjut, silakan hubungi langsung via WhatsApp atau section kontak.`
+              : `We've reached the ${MAX_QUESTIONS}-question limit. Reach out directly via the contact section or WhatsApp for further consultation.`,
           timestamp: new Date(),
         },
       ]);
     }, 500);
-  }, [registerTimeout]);
+  }, [registerTimeout, lang]);
 
   const sendMessage = useCallback(
     async (text: string) => {
@@ -106,7 +138,9 @@ export function ChatWidget() {
           id: `refuse-${Date.now()}`,
           role: "model",
           content:
-            "I can only answer questions about Hendrik: his projects, skills, stack, or how to collaborate. Try asking something related! 😊",
+            lang === "id"
+              ? "Saya khusus menjawab pertanyaan seputar HT Solution: rekayasa aplikasi (web, desktop, mobile), otomasi spreadsheet, paket harga, atau alur kerja. Silakan ajukan pertanyaan terkait."
+              : "I can only answer questions about HT Solution: multi-platform app development (web, desktop & mobile), spreadsheet automations, pricing packages, or workflows. Please ask a related question.",
           timestamp: new Date(),
         };
         setMessages((prev) => [...prev, refuseMsg]);
@@ -149,7 +183,10 @@ export function ChatWidget() {
         const errMsg: Message = {
           id: `err-${Date.now()}`,
           role: "model",
-          content: "Oops, something went wrong. Try again in a bit! 🙏",
+          content:
+            lang === "id"
+              ? "Terjadi kendala teknis saat memproses pesan. Silakan coba sesaat lagi."
+              : "Something went wrong processing your request. Please try again shortly.",
           timestamp: new Date(),
         };
         setMessages((prev) => [...prev, errMsg]);
@@ -164,6 +201,19 @@ export function ChatWidget() {
     e.preventDefault();
     sendMessage(input);
   };
+
+  useEffect(() => {
+    const handleOpenAi = (e: Event) => {
+      const customEvent = e as CustomEvent<{ prompt?: string }>;
+      setIsOpen(true);
+      if (customEvent.detail?.prompt) {
+        sendMessage(customEvent.detail.prompt);
+      }
+    };
+
+    window.addEventListener("open-ai-chat", handleOpenAi);
+    return () => window.removeEventListener("open-ai-chat", handleOpenAi);
+  }, [sendMessage]);
 
   useEffect(() => {
     if (isOpen) {
@@ -240,7 +290,7 @@ export function ChatWidget() {
               <div
                 style={{
                   padding: "16px 20px",
-                  borderBottom: "1px solid rgba(2, 66, 68, 0.08)",
+                  borderBottom: "1px solid rgba(var(--bg-rgb), 0.1)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
@@ -251,7 +301,7 @@ export function ChatWidget() {
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <Image
                     src="/logo-dark-green.webp"
-                    alt="Logo"
+                    alt="Logo HT Solution"
                     width={40}
                     height={40}
                     className="object-contain"
@@ -267,22 +317,22 @@ export function ChatWidget() {
                         lineHeight: 1.3,
                       }}
                     >
-                      {lang === "id" ? "Asisten AI Hendrik" : "Hendrik's AI"}
+                      {lang === "id" ? "Asisten AI HT Solution" : "HT Solution AI"}
                     </h3>
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
                         fontSize: "0.7rem",
-                        color: "rgba(2,66,68,0.6)",
+                        color: "rgba(var(--bg-rgb), 0.65)",
                       }}
                     >
-                      {lang === "id" ? "Konsultasi Layanan & Solusi" : "Ask me anything"}
+                      {lang === "id" ? "Konsultasi Layanan & Solusi" : "High Trust Digital Partner"}
                     </span>
                   </div>
                 </div>
 
                 <motion.button
-                  whileHover={{ scale: 1.1, background: "rgba(2,66,68,0.08)" }}
+                  whileHover={{ scale: 1.1, background: "rgba(var(--bg-rgb), 0.1)" }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setIsOpen(false)}
                   style={{
@@ -297,7 +347,7 @@ export function ChatWidget() {
                     cursor: "pointer",
                   }}
                 >
-                  <X size={16} color="rgba(2,66,68,0.7)" />
+                  <X size={16} color="var(--bg)" />
                 </motion.button>
               </div>
 
@@ -339,7 +389,7 @@ export function ChatWidget() {
                           msg.role === "user"
                             ? "var(--accent)"
                             : "rgba(var(--accent-rgb), 0.07)",
-                        color: msg.role === "user" ? "#024244" : "var(--accent)",
+                        color: msg.role === "user" ? "var(--bg)" : "var(--accent)",
                         fontFamily: "var(--font-body)",
                         fontSize: "0.82rem",
                         lineHeight: 1.6,
@@ -521,7 +571,7 @@ export function ChatWidget() {
                           : "rgba(var(--accent-rgb),0.1)",
                       color:
                         input.trim() && !isLoading && !isLimitReached
-                          ? "#024244"
+                          ? "var(--bg)"
                           : "rgba(var(--accent-rgb),0.3)",
                       display: "flex",
                       alignItems: "center",
@@ -546,62 +596,72 @@ export function ChatWidget() {
           )}
         </AnimatePresence>
 
-        <motion.button
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.92 }}
-          onClick={() => setIsOpen((prev) => !prev)}
-          style={{
-            width: 56,
-            height: 56,
-            borderRadius: "50%",
-            border: "none",
-            background: isOpen ? "rgba(var(--accent-rgb),0.15)" : "var(--accent)",
-            color: isOpen ? "var(--accent)" : "#024244",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            position: "relative",
-            transition: "background 0.3s, color 0.3s",
-          }}
-        >
-          {!isOpen && (
-            <span
+        <AnimatePresence>
+          {(!isHeroVisible || isOpen) && (
+            <motion.button
+              key="floating-ai-trigger"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ type: "spring", stiffness: 350, damping: 25 }}
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.92 }}
+              onClick={() => setIsOpen((prev) => !prev)}
+              aria-label={isOpen ? "Tutup Asisten AI" : "Buka Asisten AI"}
               style={{
-                position: "absolute",
-                inset: -3,
+                width: 56,
+                height: 56,
                 borderRadius: "50%",
-                background: "inherit",
-                opacity: 0.15,
-                filter: "blur(12px)",
-                zIndex: -1,
+                border: "none",
+                background: isOpen ? "rgba(var(--accent-rgb),0.15)" : "var(--accent)",
+                color: isOpen ? "var(--accent)" : "var(--bg)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                position: "relative",
+                transition: "background 0.3s, color 0.3s",
               }}
-            />
+            >
+              {!isOpen && (
+                <span
+                  style={{
+                    position: "absolute",
+                    inset: -3,
+                    borderRadius: "50%",
+                    background: "inherit",
+                    opacity: 0.15,
+                    filter: "blur(12px)",
+                    zIndex: -1,
+                  }}
+                />
+              )}
+              <AnimatePresence mode="wait">
+                {isOpen ? (
+                  <motion.span
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <X size={22} />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="chat"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                  >
+                    <MessageSquare size={22} />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.button>
           )}
-          <AnimatePresence mode="wait">
-            {isOpen ? (
-              <motion.span
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.15 }}
-              >
-                <X size={22} />
-              </motion.span>
-            ) : (
-              <motion.span
-                key="chat"
-                initial={{ rotate: 90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: -90, opacity: 0 }}
-                transition={{ duration: 0.15 }}
-              >
-                <MessageSquare size={22} />
-              </motion.span>
-            )}
-          </AnimatePresence>
-        </motion.button>
+        </AnimatePresence>
       </div>
     </>
   );

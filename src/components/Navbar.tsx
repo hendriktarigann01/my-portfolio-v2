@@ -15,7 +15,7 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
 
   return (
     <div
-      className={`inline-flex items-center p-0.5 rounded-full border border-[rgba(var(--accent-rgb),0.25)] bg-[rgba(2,20,21,0.7)] backdrop-blur-md text-[0.7rem] font-medium tracking-wider select-none ${className}`}
+      className={`inline-flex items-center p-0.5 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] backdrop-blur-md text-[0.7rem] font-medium tracking-wider select-none ${className}`}
       style={{ fontFamily: "var(--font-body)" }}
       role="group"
       aria-label="Pilih Bahasa"
@@ -32,8 +32,8 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
         }}
         className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer select-none ${
           lang === "id"
-            ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
-            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+            ? "bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] font-bold shadow-sm"
+            : "text-[var(--text-subtle)] hover:text-[var(--text-primary)]"
         }`}
         aria-label="Bahasa Indonesia"
         aria-pressed={lang === "id"}
@@ -52,8 +52,8 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
         }}
         className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer select-none ${
           lang === "en"
-            ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
-            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+            ? "bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] font-bold shadow-sm"
+            : "text-[var(--text-subtle)] hover:text-[var(--text-primary)]"
         }`}
         aria-label="English"
         aria-pressed={lang === "en"}
@@ -69,7 +69,7 @@ export function VerticalLanguageToggle({ className = "" }: { className?: string 
 
   return (
     <div
-      className={`flex flex-col items-center p-1 rounded-full border border-[rgba(var(--accent-rgb),0.25)] bg-[rgba(2,20,21,0.8)] backdrop-blur-md text-[0.7rem] font-bold tracking-wider select-none shadow-lg gap-1 ${className}`}
+      className={`flex flex-col items-center p-1 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] backdrop-blur-md text-[0.7rem] font-bold tracking-wider select-none shadow-lg gap-1 ${className}`}
       style={{ fontFamily: "var(--font-body)" }}
       role="group"
       aria-label="Pilih Bahasa"
@@ -86,8 +86,8 @@ export function VerticalLanguageToggle({ className = "" }: { className?: string 
         }}
         className={`w-9 h-9 rounded-full transition-all duration-200 cursor-pointer flex items-center justify-center select-none ${
           lang === "id"
-            ? "bg-[var(--accent)] text-[#024244] shadow-sm font-bold"
-            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+            ? "bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] shadow-sm font-bold"
+            : "text-[var(--text-subtle)] hover:text-[var(--text-primary)]"
         }`}
         aria-label="Bahasa Indonesia"
         aria-pressed={lang === "id"}
@@ -106,8 +106,8 @@ export function VerticalLanguageToggle({ className = "" }: { className?: string 
         }}
         className={`w-9 h-9 rounded-full transition-all duration-200 cursor-pointer flex items-center justify-center select-none ${
           lang === "en"
-            ? "bg-[var(--accent)] text-[#024244] shadow-sm font-bold"
-            : "text-[rgba(var(--accent-rgb),0.55)] hover:text-[var(--accent)]"
+            ? "bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] shadow-sm font-bold"
+            : "text-[var(--text-subtle)] hover:text-[var(--text-primary)]"
         }`}
         aria-label="English"
         aria-pressed={lang === "en"}
@@ -135,9 +135,21 @@ export function Navbar() {
     e.preventDefault();
     setMenuOpen(false);
 
-    // Navigasi ke halaman Git Trends
-    if (href === "git-trends" || href === "/git-trends") {
-      router.push("/git-trends");
+    if (href === "/") {
+      if (pathname === "/") {
+        if (globalLenis) {
+          globalLenis.scrollTo(0);
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      } else {
+        router.push("/");
+      }
+      return;
+    }
+
+    if (href.startsWith("/")) {
+      router.push(href);
       return;
     }
 
@@ -204,7 +216,7 @@ export function Navbar() {
               textTransform: "uppercase",
             }}
           >
-            © 2026 Hendrik Tarigan
+            © 2026 HT Solution
           </span>
         </motion.div>
       </div>

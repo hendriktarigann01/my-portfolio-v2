@@ -5,13 +5,13 @@ export const NOW_ITEMS_BY_LANG: Record<"id" | "en", NowItem[]> = {
     {
       label: "Status Layanan",
       value: "Menerima Proyek Baru",
-      note: "Kapasitas tersedia untuk pembuatan website usaha, otomasi spreadsheet, sistem kasir, dan bimbingan IT.",
+      note: "Kapasitas tersedia untuk rekayasa aplikasi (web, desktop, mobile), otomasi spreadsheet, sistem kasir, dan bimbingan IT.",
       rotation: "rotate-1",
     },
     {
       label: "Fokus Solusi",
       value: "Sistem & Otomasi Bisnis",
-      note: "Membantu UMKM, toko, dan kantor merapikan pembukuan, mempercepat rekap data, dan punya web siap jualan.",
+      note: "Membantu UMKM, toko, dan kantor merapikan operasional, otomasi data, dan memiliki sistem handal di berbagai perangkat.",
       rotation: "-rotate-1",
     },
     {
@@ -31,13 +31,13 @@ export const NOW_ITEMS_BY_LANG: Record<"id" | "en", NowItem[]> = {
     {
       label: "Availability",
       value: "Open for New Projects",
-      note: "Ready to take on new business websites, spreadsheet automations, custom dashboards, and software consulting.",
+      note: "Ready to take on new software projects across web, desktop, and mobile, spreadsheet automations, and custom dashboards.",
       rotation: "rotate-1",
     },
     {
       label: "Core Focus",
       value: "Systems & Data Automation",
-      note: "Modernizing operational workflows, automating spreadsheets, and crafting reliable web-based applications.",
+      note: "Modernizing operational workflows, automating spreadsheets, and crafting reliable multi-platform software.",
       rotation: "-rotate-1",
     },
     {

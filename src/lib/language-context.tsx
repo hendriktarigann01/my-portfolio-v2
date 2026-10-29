@@ -5,6 +5,7 @@ import {
   useContext,
   useSyncExternalStore,
   useEffect,
+  useState,
   ReactNode,
 } from "react";
 
@@ -52,10 +53,11 @@ function setLanguageStore(newLang: Language) {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [mounted, setMounted] = useState(false);
   const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  // Sinkronisasi preferensi bahasa hanya setelah hidrasi selesai
   useEffect(() => {
+    setMounted(true);
     try {
       const saved = localStorage.getItem("preferred_lang") as Language | null;
       if (saved === "id" || saved === "en") {
@@ -74,8 +76,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguageStore(lang === "id" ? "en" : "id");
   };
 
+  const value = {
+    lang: mounted ? lang : "id",
+    setLang,
+    toggleLang,
+  };
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang, toggleLang }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );

@@ -29,8 +29,9 @@ export function Footer() {
   const currentNavLinks = NAV_LINKS_BY_LANG[lang] || NAV_LINKS;
 
   return (
-    <footer className="my-16 max-w-7xl container-main mx-auto md:px-24">
-      <div className="glass relative rounded-[2.5rem] px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="my-16 w-full">
+      <div className="container-main">
+        <div className="glass relative rounded-[2.5rem] px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="hidden md:block absolute -top-4 -left-8 w-[80px] h-[36px] scale-75">
           {tape}
         </div>
@@ -54,15 +55,15 @@ export function Footer() {
               {currentNavLinks.map((link) => (
                 <Link
                   key={link.href}
-                  href={link.href.startsWith("#") ? `/${link.href}` : `/${link.href.replace(/^\//, "")}`}
+                  href={link.href.startsWith("#") ? `/${link.href}` : link.href}
                   className="transition-colors hover:text-[var(--accent)]"
                   style={{
                     fontFamily: "var(--font-body)",
                     color: "rgba(var(--accent-rgb),0.5)",
                   }}
                 >
-                  {link.label === "GIT TRENDS"
-                    ? "Git Trends"
+                  {link.label === "LAB"
+                    ? "Lab"
                     : link.label.toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}
                 </Link>
               ))}
@@ -175,6 +176,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
   );
 }

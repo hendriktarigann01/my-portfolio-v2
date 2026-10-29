@@ -26,15 +26,15 @@ export const FAQ_DATA_BY_LANG: Record<"id" | "en", FAQItem[]> = {
     },
     {
       question:
-        "Apakah ada biaya langganan bulanan yang harus dibayar ke Mas Hendrik?",
+        "Apakah ada biaya langganan bulanan yang harus dibayar ke HT Solution?",
       answer:
-        "Tidak ada biaya sewa siluman. Sistem atau website yang dibuat bersifat beli putus (milik Anda). Untuk biaya pihak ketiga (seperti perpanjangan domain & hosting tahunan), Anda bayar langsung ke penyedia resminya atas nama Anda sendiri.",
+        "Tidak ada biaya sewa tersembunyi. Sistem atau website yang dibuat bersifat beli putus (milik Anda). Untuk biaya pihak ketiga (seperti perpanjangan domain & hosting tahunan), Anda bayar langsung ke penyedia resminya atas nama Anda sendiri.",
       category: "Biaya",
     },
     {
       question: "Kata sandi, akun hosting, dan source code dipegang siapa?",
       answer:
-        "100% diserahkan ke Anda saat serah terima. Saya tidak menahan akun atau aset digital klien agar Anda tidak terkunci (no vendor lock-in). Anda memiliki kendali penuh atas sistem bisnis Anda.",
+        "100% diserahkan ke Anda saat serah terima. HT Solution tidak menahan akun atau aset digital klien agar Anda tidak terkunci (no vendor lock-in). Anda memiliki kendali penuh atas sistem bisnis Anda.",
       category: "Keamanan",
     },
     {
@@ -44,7 +44,7 @@ export const FAQ_DATA_BY_LANG: Record<"id" | "en", FAQItem[]> = {
       category: "Layanan",
     },
     {
-      question: "Kapan jam kerja dan respon pesan Mas Hendrik?",
+      question: "Kapan jam kerja dan respon pesan HT Solution?",
       answer:
         "Jam kerja aktif: Senin-Jumat 18.00-21.00 WIB dan Sabtu-Minggu 08.00-21.00 WIB. Di luar jam kerja pesan tetap masuk dan akan dibalas di kesempatan pertama. Gangguan darurat pada proyek bergaransi direspon secepatnya.",
       category: "Operasional",

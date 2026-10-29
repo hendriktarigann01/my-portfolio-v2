@@ -10,7 +10,7 @@ export function NowView() {
   const items = NOW_ITEMS_BY_LANG[lang] || NOW_ITEMS_BY_LANG.id;
 
   return (
-    <section id="now" className="py-12 md:pt-0 md:pb-24 scroll-mt-20 md:scroll-mt-0">
+    <section id="now" className="relative w-full md:pt-0 pb-16 md:pb-32 scroll-mt-20 md:scroll-mt-0">
       <div className="container-main flex flex-col md:flex-row justify-between relative">
         <div className="w-full md:w-1/2 md:sticky top-0 h-auto md:h-screen flex flex-col justify-center mb-12 md:mb-0 z-10 pointer-events-none pt-24 md:pt-0">
           <ScrollReveal>
@@ -78,8 +78,11 @@ export function NowView() {
                   border: "1px solid rgba(var(--accent-rgb), 0.2)",
                   backdropFilter: "blur(16px)",
                 }}
+                initial={{ opacity: 0.85, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.25 }}
                 whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div>
                   <span

@@ -31,11 +31,37 @@
 :root {
   --font-display: "Monument Extended", system-ui, sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
+
+  /* Primary Palette */
   --bg: #024244;
+  --bg-rgb: 2, 66, 68;
   --accent: #efd1c3;
   --accent-rgb: 239, 209, 195;
-  --container-max: 1280px;
-  --container-pad: clamp(1.5rem, 5vw, 5rem);
+
+  /* Semantic UI Tokens */
+  --card-bg: rgba(var(--accent-rgb), 0.04);
+  --card-bg-hover: rgba(var(--accent-rgb), 0.07);
+  --card-border: rgba(var(--accent-rgb), 0.12);
+  --card-border-hover: rgba(var(--accent-rgb), 0.28);
+
+  --text-primary: var(--accent);
+  --text-muted: rgba(var(--accent-rgb), 0.65);
+  --text-subtle: rgba(var(--accent-rgb), 0.4);
+
+  --btn-primary-bg: var(--accent);
+  --btn-primary-text: var(--bg);
+  --btn-secondary-bg: rgba(var(--accent-rgb), 0.08);
+  --btn-secondary-border: rgba(var(--accent-rgb), 0.2);
+  --btn-secondary-text: var(--accent);
+
+  --container-max: 1360px;
+  --container-pad: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-pad: 6.5rem;
+  }
 }
 
 *,
@@ -60,7 +86,7 @@ body {
   position: relative;
   background-color: var(--bg);
   color: var(--accent);
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-body);
   width: 100%;
@@ -102,9 +128,16 @@ body::before {
 }
 
 .glass {
-  background: rgba(var(--accent-rgb), 0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(var(--accent-rgb), 0.08);
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.glass-interactive:hover {
+  background: var(--card-bg-hover);
+  border-color: var(--card-border-hover);
 }
 
 .hover-underline {
