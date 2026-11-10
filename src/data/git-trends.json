@@ -1,118 +1,10 @@
 {
-  "updatedAt": "2026-11-09T02:14:58.562Z",
-  "formattedUpdatedAt": "Diperbarui 9 November 2026 pukul 09.14 WIB",
+  "updatedAt": "2026-11-10T04:26:29.127Z",
+  "formattedUpdatedAt": "Diperbarui 10 November 2026 pukul 11.26 WIB",
   "daily": [
     {
-      "id": "daily-sherlock-project-sherlock",
-      "rank": 1,
-      "name": "sherlock-project/sherlock",
-      "owner": "sherlock-project",
-      "repoName": "sherlock",
-      "url": "https://github.com/sherlock-project/sherlock",
-      "description": "Hunt down social media accounts by username across social networks",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 103829,
-      "forks": 12148,
-      "starsPeriod": 2373,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Hunt down social media accounts by username across social networks"
-      }
-    },
-    {
-      "id": "daily-dsx-ai-factory-nvke",
-      "rank": 2,
-      "name": "dsx-ai-factory/nvke",
-      "owner": "dsx-ai-factory",
-      "repoName": "nvke",
-      "url": "https://github.com/dsx-ai-factory/nvke",
-      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
-      "language": "Go",
-      "languageColor": "#00ADD8",
-      "stars": 877,
-      "forks": 111,
-      "starsPeriod": 345,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal."
-      }
-    },
-    {
-      "id": "daily-milind-soni-openmausbot",
-      "rank": 3,
-      "name": "milind-soni/OpenMausBot",
-      "owner": "milind-soni",
-      "repoName": "OpenMausBot",
-      "url": "https://github.com/milind-soni/OpenMausBot",
-      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 18370,
-      "forks": 2544,
-      "starsPeriod": 1439,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Open-source Grok Bot alternative with a virtual machine that bots can use"
-      }
-    },
-    {
-      "id": "daily-anthropics-claude-quickstarts",
-      "rank": 4,
-      "name": "anthropics/claude-quickstarts",
-      "owner": "anthropics",
-      "repoName": "claude-quickstarts",
-      "url": "https://github.com/anthropics/claude-quickstarts",
-      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 19470,
-      "forks": 3281,
-      "starsPeriod": 32,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
-      }
-    },
-    {
-      "id": "daily-vercel-labs-agent-browser",
-      "rank": 5,
-      "name": "vercel-labs/agent-browser",
-      "owner": "vercel-labs",
-      "repoName": "agent-browser",
-      "url": "https://github.com/vercel-labs/agent-browser",
-      "description": "Browser automation CLI for AI agents",
-      "language": "Rust",
-      "languageColor": "#dea584",
-      "stars": 47682,
-      "forks": 3260,
-      "starsPeriod": 815,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Browser automation CLI for AI agents"
-      }
-    },
-    {
-      "id": "daily-meta-astryx",
-      "rank": 6,
-      "name": "meta/astryx",
-      "owner": "meta",
-      "repoName": "astryx",
-      "url": "https://github.com/meta/astryx",
-      "description": "An open source design system that's fully customizable and agent ready",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 17003,
-      "forks": 1340,
-      "starsPeriod": 875,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "An open source design system that's fully customizable and agent ready"
-      }
-    },
-    {
       "id": "daily-anthropics-skills",
-      "rank": 7,
+      "rank": 1,
       "name": "anthropics/skills",
       "owner": "anthropics",
       "repoName": "skills",
@@ -120,17 +12,53 @@
       "description": "Public repository for Agent Skills",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 189718,
-      "forks": 22353,
-      "starsPeriod": 792,
+      "stars": 191248,
+      "forks": 22463,
+      "starsPeriod": 1038,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "Public repository for Agent Skills"
       }
     },
     {
+      "id": "daily-meta-astryx",
+      "rank": 2,
+      "name": "meta/astryx",
+      "owner": "meta",
+      "repoName": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 20568,
+      "forks": 1558,
+      "starsPeriod": 3278,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "An open source design system that's fully customizable and agent ready"
+      }
+    },
+    {
+      "id": "daily-sherlock-project-sherlock",
+      "rank": 3,
+      "name": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "repoName": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 107479,
+      "forks": 12435,
+      "starsPeriod": 4267,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Hunt down social media accounts by username across social networks"
+      }
+    },
+    {
       "id": "daily-google-deepmind-mujoco",
-      "rank": 8,
+      "rank": 4,
       "name": "google-deepmind/mujoco",
       "owner": "google-deepmind",
       "repoName": "mujoco",
@@ -138,30 +66,138 @@
       "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
       "language": "C++",
       "languageColor": "#f34b7d",
-      "stars": 16453,
-      "forks": 1954,
-      "starsPeriod": 41,
+      "stars": 17005,
+      "forks": 2001,
+      "starsPeriod": 574,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "Multi-Joint dynamics with Contact. A general purpose physics simulator."
       }
     },
     {
-      "id": "daily-ranxianglei-billion-context",
-      "rank": 9,
-      "name": "ranxianglei/billion-context",
-      "owner": "ranxianglei",
-      "repoName": "billion-context",
-      "url": "https://github.com/ranxianglei/billion-context",
-      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 5209,
-      "forks": 407,
-      "starsPeriod": 460,
+      "id": "daily-anthropics-claude-quickstarts",
+      "rank": 5,
+      "name": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "repoName": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 20112,
+      "forks": 3321,
+      "starsPeriod": 551,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need"
+        "overview": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
+      }
+    },
+    {
+      "id": "daily-garrytan-gbrain",
+      "rank": 6,
+      "name": "garrytan/gbrain",
+      "owner": "garrytan",
+      "repoName": "gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 32256,
+      "forks": 4774,
+      "starsPeriod": 216,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Garry's Opinionated OpenClaw/Hermes Agent Brain"
+      }
+    },
+    {
+      "id": "daily-vercel-labs-agent-browser",
+      "rank": 7,
+      "name": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "repoName": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 48624,
+      "forks": 3309,
+      "starsPeriod": 916,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Browser automation CLI for AI agents"
+      }
+    },
+    {
+      "id": "daily-ruvnet-ruview",
+      "rank": 8,
+      "name": "ruvnet/RuView",
+      "owner": "ruvnet",
+      "repoName": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 103576,
+      "forks": 13418,
+      "starsPeriod": 172,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video."
+      }
+    },
+    {
+      "id": "daily-zhulinsen-daily_stock_analysis",
+      "rank": 9,
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "repoName": "daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 69098,
+      "forks": 56443,
+      "starsPeriod": 506,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs."
+      }
+    },
+    {
+      "id": "daily-homeassistant-ai-ha-mcp",
+      "rank": 10,
+      "name": "homeassistant-ai/ha-mcp",
+      "owner": "homeassistant-ai",
+      "repoName": "ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 6095,
+      "forks": 297,
+      "starsPeriod": 31,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants."
+      }
+    },
+    {
+      "id": "daily-milind-soni-openmausbot",
+      "rank": 11,
+      "name": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "repoName": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 19932,
+      "forks": 2720,
+      "starsPeriod": 1587,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Open-source Grok Bot alternative with a virtual machine that bots can use"
       }
     }
   ],
@@ -176,53 +212,35 @@
       "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 10452,
-      "forks": 847,
-      "starsPeriod": 9327,
+      "stars": 11105,
+      "forks": 905,
+      "starsPeriod": 10159,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows."
       }
     },
     {
-      "id": "weekly-thedotmack-claude-mem",
+      "id": "weekly-vercel-labs-agent-desktop",
       "rank": 2,
-      "name": "thedotmack/claude-mem",
-      "owner": "thedotmack",
-      "repoName": "claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 114939,
-      "forks": 9984,
-      "starsPeriod": 6443,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More"
-      }
-    },
-    {
-      "id": "weekly-max-sixty-worktrunk",
-      "rank": 3,
-      "name": "max-sixty/worktrunk",
-      "owner": "max-sixty",
-      "repoName": "worktrunk",
-      "url": "https://github.com/max-sixty/worktrunk",
-      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "name": "vercel-labs/agent-desktop",
+      "owner": "vercel-labs",
+      "repoName": "agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "description": "Computer use CLI for AI agents",
       "language": "Rust",
       "languageColor": "#dea584",
-      "stars": 12134,
-      "forks": 469,
-      "starsPeriod": 2313,
+      "stars": 20652,
+      "forks": 1529,
+      "starsPeriod": 12120,
       "periodLabel": "minggu ini",
       "aiSummary": {
-        "overview": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows"
+        "overview": "Computer use CLI for AI agents"
       }
     },
     {
       "id": "weekly-anthropics-skills",
-      "rank": 4,
+      "rank": 3,
       "name": "anthropics/skills",
       "owner": "anthropics",
       "repoName": "skills",
@@ -230,35 +248,35 @@
       "description": "Public repository for Agent Skills",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 189718,
-      "forks": 22353,
-      "starsPeriod": 3169,
+      "stars": 191249,
+      "forks": 22463,
+      "starsPeriod": 3796,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Public repository for Agent Skills"
       }
     },
     {
-      "id": "weekly-donchitos-claude-code-game-studios",
-      "rank": 5,
-      "name": "Donchitos/Claude-Code-Game-Studios",
-      "owner": "Donchitos",
-      "repoName": "Claude-Code-Game-Studios",
-      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
-      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
-      "language": "Shell",
-      "languageColor": "#89e051",
-      "stars": 37042,
-      "forks": 4880,
-      "starsPeriod": 5235,
+      "id": "weekly-max-sixty-worktrunk",
+      "rank": 4,
+      "name": "max-sixty/worktrunk",
+      "owner": "max-sixty",
+      "repoName": "worktrunk",
+      "url": "https://github.com/max-sixty/worktrunk",
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 12294,
+      "forks": 480,
+      "starsPeriod": 2395,
       "periodLabel": "minggu ini",
       "aiSummary": {
-        "overview": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy."
+        "overview": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows"
       }
     },
     {
       "id": "weekly-milind-soni-openmausbot",
-      "rank": 6,
+      "rank": 5,
       "name": "milind-soni/OpenMausBot",
       "owner": "milind-soni",
       "repoName": "OpenMausBot",
@@ -266,17 +284,71 @@
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 18370,
-      "forks": 2544,
-      "starsPeriod": 7621,
+      "stars": 19932,
+      "forks": 2720,
+      "starsPeriod": 8325,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Open-source Grok Bot alternative with a virtual machine that bots can use"
       }
     },
     {
-      "id": "weekly-pingdotgg-t3code",
+      "id": "weekly-thedotmack-claude-mem",
+      "rank": 6,
+      "name": "thedotmack/claude-mem",
+      "owner": "thedotmack",
+      "repoName": "claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 115470,
+      "forks": 10024,
+      "starsPeriod": 5130,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More"
+      }
+    },
+    {
+      "id": "weekly-donchitos-claude-code-game-studios",
       "rank": 7,
+      "name": "Donchitos/Claude-Code-Game-Studios",
+      "owner": "Donchitos",
+      "repoName": "Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "language": "Shell",
+      "languageColor": "#89e051",
+      "stars": 37659,
+      "forks": 4939,
+      "starsPeriod": 4324,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy."
+      }
+    },
+    {
+      "id": "weekly-vercel-labs-agent-browser",
+      "rank": 8,
+      "name": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "repoName": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 48624,
+      "forks": 3309,
+      "starsPeriod": 2994,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Browser automation CLI for AI agents"
+      }
+    },
+    {
+      "id": "weekly-pingdotgg-t3code",
+      "rank": 9,
       "name": "pingdotgg/t3code",
       "owner": "pingdotgg",
       "repoName": "t3code",
@@ -284,48 +356,12 @@
       "description": "",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 52578,
-      "forks": 10025,
-      "starsPeriod": 15379,
+      "stars": 54391,
+      "forks": 10211,
+      "starsPeriod": 13448,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Repositori open-source pingdotgg/t3code berbasis TypeScript untuk pengembangan aplikasi modern."
-      }
-    },
-    {
-      "id": "weekly-nutlope-hallmark",
-      "rank": 8,
-      "name": "Nutlope/hallmark",
-      "owner": "Nutlope",
-      "repoName": "hallmark",
-      "url": "https://github.com/Nutlope/hallmark",
-      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-      "language": "CSS",
-      "languageColor": "#563d7c",
-      "stars": 51011,
-      "forks": 2711,
-      "starsPeriod": 6356,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex."
-      }
-    },
-    {
-      "id": "weekly-renhuai123-ziwei-doushu",
-      "rank": 9,
-      "name": "Renhuai123/ziwei-doushu",
-      "owner": "Renhuai123",
-      "repoName": "ziwei-doushu",
-      "url": "https://github.com/Renhuai123/ziwei-doushu",
-      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 16998,
-      "forks": 3289,
-      "starsPeriod": 4191,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据"
       }
     },
     {
@@ -338,89 +374,17 @@
       "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 99917,
-      "forks": 10447,
-      "starsPeriod": 8342,
+      "stars": 100661,
+      "forks": 10514,
+      "starsPeriod": 8226,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev"
       }
     },
     {
-      "id": "weekly-vercel-labs-agent-browser",
-      "rank": 11,
-      "name": "vercel-labs/agent-browser",
-      "owner": "vercel-labs",
-      "repoName": "agent-browser",
-      "url": "https://github.com/vercel-labs/agent-browser",
-      "description": "Browser automation CLI for AI agents",
-      "language": "Rust",
-      "languageColor": "#dea584",
-      "stars": 47683,
-      "forks": 3260,
-      "starsPeriod": 2190,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "Browser automation CLI for AI agents"
-      }
-    },
-    {
-      "id": "weekly-mattpocock-skills",
-      "rank": 12,
-      "name": "mattpocock/skills",
-      "owner": "mattpocock",
-      "repoName": "skills",
-      "url": "https://github.com/mattpocock/skills",
-      "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "language": "Shell",
-      "languageColor": "#89e051",
-      "stars": 318602,
-      "forks": 26660,
-      "starsPeriod": 9635,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "Skills for Real Engineers. Straight from my .agents directory."
-      }
-    },
-    {
-      "id": "weekly-jakubkrehel-skills",
-      "rank": 13,
-      "name": "jakubkrehel/skills",
-      "owner": "jakubkrehel",
-      "repoName": "skills",
-      "url": "https://github.com/jakubkrehel/skills",
-      "description": "A collection of agent skills that help you build great interfaces.",
-      "language": "Markdown",
-      "languageColor": "#888888",
-      "stars": 11742,
-      "forks": 458,
-      "starsPeriod": 1857,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "A collection of agent skills that help you build great interfaces."
-      }
-    },
-    {
-      "id": "weekly-github-spec-kit",
-      "rank": 14,
-      "name": "github/spec-kit",
-      "owner": "github",
-      "repoName": "spec-kit",
-      "url": "https://github.com/github/spec-kit",
-      "description": "💫 Toolkit to help you get started with SDD or any other process!",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 148738,
-      "forks": 13358,
-      "starsPeriod": 4045,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "💫 Toolkit to help you get started with SDD or any other process!"
-      }
-    },
-    {
       "id": "weekly-the-pr-agent-pr-agent",
-      "rank": 15,
+      "rank": 11,
       "name": "The-PR-Agent/pr-agent",
       "owner": "The-PR-Agent",
       "repoName": "pr-agent",
@@ -428,12 +392,66 @@
       "description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 15610,
-      "forks": 2149,
-      "starsPeriod": 1706,
+      "stars": 15752,
+      "forks": 2162,
+      "starsPeriod": 1822,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier."
+      }
+    },
+    {
+      "id": "weekly-cloudflare-security-audit-skill",
+      "rank": 12,
+      "name": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "repoName": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "languageColor": "#f7df1e",
+      "stars": 68232,
+      "forks": 4482,
+      "starsPeriod": 10695,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
+      }
+    },
+    {
+      "id": "weekly-nutlope-hallmark",
+      "rank": 13,
+      "name": "Nutlope/hallmark",
+      "owner": "Nutlope",
+      "repoName": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "languageColor": "#563d7c",
+      "stars": 51903,
+      "forks": 2763,
+      "starsPeriod": 5987,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex."
+      }
+    },
+    {
+      "id": "weekly-mattpocock-skills",
+      "rank": 14,
+      "name": "mattpocock/skills",
+      "owner": "mattpocock",
+      "repoName": "skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "languageColor": "#89e051",
+      "stars": 319913,
+      "forks": 26784,
+      "starsPeriod": 9800,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Skills for Real Engineers. Straight from my .agents directory."
       }
     }
   ],
@@ -448,9 +466,9 @@
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 443991,
-      "forks": 109670,
-      "starsPeriod": 425123,
+      "stars": 447467,
+      "forks": 110334,
+      "starsPeriod": 413718,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Reverse engineer anything with agents, from app behavior down to native binaries."
@@ -466,9 +484,9 @@
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
       "languageColor": "#563d7c",
-      "stars": 51011,
-      "forks": 2711,
-      "starsPeriod": 21146,
+      "stars": 51903,
+      "forks": 2763,
+      "starsPeriod": 21862,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex."
@@ -484,30 +502,30 @@
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
       "languageColor": "#f7df1e",
-      "stars": 66938,
-      "forks": 4370,
-      "starsPeriod": 40289,
+      "stars": 68232,
+      "forks": 4482,
+      "starsPeriod": 40994,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
       }
     },
     {
-      "id": "monthly-storytold-artcraft",
+      "id": "monthly-pingdotgg-t3code",
       "rank": 4,
-      "name": "storytold/artcraft",
-      "owner": "storytold",
-      "repoName": "artcraft",
-      "url": "https://github.com/storytold/artcraft",
-      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
-      "language": "Rust",
-      "languageColor": "#dea584",
-      "stars": 39938,
-      "forks": 6255,
-      "starsPeriod": 33780,
+      "name": "pingdotgg/t3code",
+      "owner": "pingdotgg",
+      "repoName": "t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 54391,
+      "forks": 10211,
+      "starsPeriod": 26993,
       "periodLabel": "bulan ini",
       "aiSummary": {
-        "overview": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers"
+        "overview": "Repositori open-source pingdotgg/t3code berbasis TypeScript untuk pengembangan aplikasi modern."
       }
     },
     {
@@ -520,53 +538,17 @@
       "description": "Write HTML. Render video. Built for agents.",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 81126,
-      "forks": 7489,
-      "starsPeriod": 22360,
+      "stars": 81792,
+      "forks": 7555,
+      "starsPeriod": 22344,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Write HTML. Render video. Built for agents."
       }
     },
     {
-      "id": "monthly-debpalash-voicestudio",
-      "rank": 6,
-      "name": "debpalash/VoiceStudio",
-      "owner": "debpalash",
-      "repoName": "VoiceStudio",
-      "url": "https://github.com/debpalash/VoiceStudio",
-      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 105075,
-      "forks": 11681,
-      "starsPeriod": 50169,
-      "periodLabel": "bulan ini",
-      "aiSummary": {
-        "overview": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages."
-      }
-    },
-    {
-      "id": "monthly-pingdotgg-t3code",
-      "rank": 7,
-      "name": "pingdotgg/t3code",
-      "owner": "pingdotgg",
-      "repoName": "t3code",
-      "url": "https://github.com/pingdotgg/t3code",
-      "description": "",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 52578,
-      "forks": 10025,
-      "starsPeriod": 25840,
-      "periodLabel": "bulan ini",
-      "aiSummary": {
-        "overview": "Repositori open-source pingdotgg/t3code berbasis TypeScript untuk pengembangan aplikasi modern."
-      }
-    },
-    {
       "id": "monthly-thedotmack-claude-mem",
-      "rank": 8,
+      "rank": 6,
       "name": "thedotmack/claude-mem",
       "owner": "thedotmack",
       "repoName": "claude-mem",
@@ -574,53 +556,35 @@
       "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 114939,
-      "forks": 9984,
-      "starsPeriod": 17296,
+      "stars": 115470,
+      "forks": 10024,
+      "starsPeriod": 17008,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More"
       }
     },
     {
-      "id": "monthly-boykopovar-anyps5",
-      "rank": 9,
-      "name": "boykopovar/AnyPS5",
-      "owner": "boykopovar",
-      "repoName": "AnyPS5",
-      "url": "https://github.com/boykopovar/AnyPS5",
-      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
-      "language": "C++",
-      "languageColor": "#f34b7d",
-      "stars": 52350,
-      "forks": 4975,
-      "starsPeriod": 39354,
+      "id": "monthly-debpalash-voicestudio",
+      "rank": 7,
+      "name": "debpalash/VoiceStudio",
+      "owner": "debpalash",
+      "repoName": "VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 106334,
+      "forks": 11803,
+      "starsPeriod": 50585,
       "periodLabel": "bulan ini",
       "aiSummary": {
-        "overview": "Tool for automatic PS5 executables porting to Linux and Windows"
-      }
-    },
-    {
-      "id": "monthly-pbakaus-impeccable",
-      "rank": 10,
-      "name": "pbakaus/impeccable",
-      "owner": "pbakaus",
-      "repoName": "impeccable",
-      "url": "https://github.com/pbakaus/impeccable",
-      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
-      "language": "Rust",
-      "languageColor": "#dea584",
-      "stars": 106248,
-      "forks": 6313,
-      "starsPeriod": 28008,
-      "periodLabel": "bulan ini",
-      "aiSummary": {
-        "overview": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships."
+        "overview": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages."
       }
     },
     {
       "id": "monthly-hkuds-deeptutor",
-      "rank": 11,
+      "rank": 8,
       "name": "HKUDS/DeepTutor",
       "owner": "HKUDS",
       "repoName": "DeepTutor",
@@ -628,17 +592,53 @@
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 57058,
-      "forks": 6957,
-      "starsPeriod": 16065,
+      "stars": 57693,
+      "forks": 7035,
+      "starsPeriod": 16710,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/."
       }
     },
     {
+      "id": "monthly-pbakaus-impeccable",
+      "rank": 9,
+      "name": "pbakaus/impeccable",
+      "owner": "pbakaus",
+      "repoName": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 107001,
+      "forks": 6355,
+      "starsPeriod": 28285,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships."
+      }
+    },
+    {
+      "id": "monthly-storytold-artcraft",
+      "rank": 10,
+      "name": "storytold/artcraft",
+      "owner": "storytold",
+      "repoName": "artcraft",
+      "url": "https://github.com/storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 40309,
+      "forks": 6275,
+      "starsPeriod": 30753,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers"
+      }
+    },
+    {
       "id": "monthly-nationalsecurityagency-ghidra",
-      "rank": 12,
+      "rank": 11,
       "name": "NationalSecurityAgency/ghidra",
       "owner": "NationalSecurityAgency",
       "repoName": "ghidra",
@@ -646,127 +646,55 @@
       "description": "Ghidra is a software reverse engineering (SRE) framework",
       "language": "Java",
       "languageColor": "#b07219",
-      "stars": 98805,
-      "forks": 11216,
-      "starsPeriod": 17344,
+      "stars": 99136,
+      "forks": 11258,
+      "starsPeriod": 17387,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Ghidra is a software reverse engineering (SRE) framework"
+      }
+    },
+    {
+      "id": "monthly-boykopovar-anyps5",
+      "rank": 12,
+      "name": "boykopovar/AnyPS5",
+      "owner": "boykopovar",
+      "repoName": "AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "languageColor": "#f34b7d",
+      "stars": 52692,
+      "forks": 4998,
+      "starsPeriod": 34260,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "Tool for automatic PS5 executables porting to Linux and Windows"
+      }
+    },
+    {
+      "id": "monthly-anthropics-claude-plugins-official",
+      "rank": 13,
+      "name": "anthropics/claude-plugins-official",
+      "owner": "anthropics",
+      "repoName": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 46658,
+      "forks": 4859,
+      "starsPeriod": 9215,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "Official, Anthropic-managed directory of high quality Claude Code Plugins."
       }
     }
   ],
   "repositories": [
     {
-      "id": "daily-sherlock-project-sherlock",
-      "rank": 1,
-      "name": "sherlock-project/sherlock",
-      "owner": "sherlock-project",
-      "repoName": "sherlock",
-      "url": "https://github.com/sherlock-project/sherlock",
-      "description": "Hunt down social media accounts by username across social networks",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 103829,
-      "forks": 12148,
-      "starsPeriod": 2373,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Hunt down social media accounts by username across social networks"
-      }
-    },
-    {
-      "id": "daily-dsx-ai-factory-nvke",
-      "rank": 2,
-      "name": "dsx-ai-factory/nvke",
-      "owner": "dsx-ai-factory",
-      "repoName": "nvke",
-      "url": "https://github.com/dsx-ai-factory/nvke",
-      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
-      "language": "Go",
-      "languageColor": "#00ADD8",
-      "stars": 877,
-      "forks": 111,
-      "starsPeriod": 345,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal."
-      }
-    },
-    {
-      "id": "daily-milind-soni-openmausbot",
-      "rank": 3,
-      "name": "milind-soni/OpenMausBot",
-      "owner": "milind-soni",
-      "repoName": "OpenMausBot",
-      "url": "https://github.com/milind-soni/OpenMausBot",
-      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 18370,
-      "forks": 2544,
-      "starsPeriod": 1439,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Open-source Grok Bot alternative with a virtual machine that bots can use"
-      }
-    },
-    {
-      "id": "daily-anthropics-claude-quickstarts",
-      "rank": 4,
-      "name": "anthropics/claude-quickstarts",
-      "owner": "anthropics",
-      "repoName": "claude-quickstarts",
-      "url": "https://github.com/anthropics/claude-quickstarts",
-      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 19470,
-      "forks": 3281,
-      "starsPeriod": 32,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
-      }
-    },
-    {
-      "id": "daily-vercel-labs-agent-browser",
-      "rank": 5,
-      "name": "vercel-labs/agent-browser",
-      "owner": "vercel-labs",
-      "repoName": "agent-browser",
-      "url": "https://github.com/vercel-labs/agent-browser",
-      "description": "Browser automation CLI for AI agents",
-      "language": "Rust",
-      "languageColor": "#dea584",
-      "stars": 47682,
-      "forks": 3260,
-      "starsPeriod": 815,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Browser automation CLI for AI agents"
-      }
-    },
-    {
-      "id": "daily-meta-astryx",
-      "rank": 6,
-      "name": "meta/astryx",
-      "owner": "meta",
-      "repoName": "astryx",
-      "url": "https://github.com/meta/astryx",
-      "description": "An open source design system that's fully customizable and agent ready",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 17003,
-      "forks": 1340,
-      "starsPeriod": 875,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "An open source design system that's fully customizable and agent ready"
-      }
-    },
-    {
       "id": "daily-anthropics-skills",
-      "rank": 7,
+      "rank": 1,
       "name": "anthropics/skills",
       "owner": "anthropics",
       "repoName": "skills",
@@ -774,17 +702,53 @@
       "description": "Public repository for Agent Skills",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 189718,
-      "forks": 22353,
-      "starsPeriod": 792,
+      "stars": 191248,
+      "forks": 22463,
+      "starsPeriod": 1038,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "Public repository for Agent Skills"
       }
     },
     {
+      "id": "daily-meta-astryx",
+      "rank": 2,
+      "name": "meta/astryx",
+      "owner": "meta",
+      "repoName": "astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 20568,
+      "forks": 1558,
+      "starsPeriod": 3278,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "An open source design system that's fully customizable and agent ready"
+      }
+    },
+    {
+      "id": "daily-sherlock-project-sherlock",
+      "rank": 3,
+      "name": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "repoName": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 107479,
+      "forks": 12435,
+      "starsPeriod": 4267,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Hunt down social media accounts by username across social networks"
+      }
+    },
+    {
       "id": "daily-google-deepmind-mujoco",
-      "rank": 8,
+      "rank": 4,
       "name": "google-deepmind/mujoco",
       "owner": "google-deepmind",
       "repoName": "mujoco",
@@ -792,30 +756,138 @@
       "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
       "language": "C++",
       "languageColor": "#f34b7d",
-      "stars": 16453,
-      "forks": 1954,
-      "starsPeriod": 41,
+      "stars": 17005,
+      "forks": 2001,
+      "starsPeriod": 574,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "Multi-Joint dynamics with Contact. A general purpose physics simulator."
       }
     },
     {
-      "id": "daily-ranxianglei-billion-context",
-      "rank": 9,
-      "name": "ranxianglei/billion-context",
-      "owner": "ranxianglei",
-      "repoName": "billion-context",
-      "url": "https://github.com/ranxianglei/billion-context",
-      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 5209,
-      "forks": 407,
-      "starsPeriod": 460,
+      "id": "daily-anthropics-claude-quickstarts",
+      "rank": 5,
+      "name": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "repoName": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 20112,
+      "forks": 3321,
+      "starsPeriod": 551,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need"
+        "overview": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
+      }
+    },
+    {
+      "id": "daily-garrytan-gbrain",
+      "rank": 6,
+      "name": "garrytan/gbrain",
+      "owner": "garrytan",
+      "repoName": "gbrain",
+      "url": "https://github.com/garrytan/gbrain",
+      "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 32256,
+      "forks": 4774,
+      "starsPeriod": 216,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Garry's Opinionated OpenClaw/Hermes Agent Brain"
+      }
+    },
+    {
+      "id": "daily-vercel-labs-agent-browser",
+      "rank": 7,
+      "name": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "repoName": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 48624,
+      "forks": 3309,
+      "starsPeriod": 916,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Browser automation CLI for AI agents"
+      }
+    },
+    {
+      "id": "daily-ruvnet-ruview",
+      "rank": 8,
+      "name": "ruvnet/RuView",
+      "owner": "ruvnet",
+      "repoName": "RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 103576,
+      "forks": 13418,
+      "starsPeriod": 172,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video."
+      }
+    },
+    {
+      "id": "daily-zhulinsen-daily_stock_analysis",
+      "rank": 9,
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "repoName": "daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 69098,
+      "forks": 56443,
+      "starsPeriod": 506,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs."
+      }
+    },
+    {
+      "id": "daily-homeassistant-ai-ha-mcp",
+      "rank": 10,
+      "name": "homeassistant-ai/ha-mcp",
+      "owner": "homeassistant-ai",
+      "repoName": "ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 6095,
+      "forks": 297,
+      "starsPeriod": 31,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants."
+      }
+    },
+    {
+      "id": "daily-milind-soni-openmausbot",
+      "rank": 11,
+      "name": "milind-soni/OpenMausBot",
+      "owner": "milind-soni",
+      "repoName": "OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 19932,
+      "forks": 2720,
+      "starsPeriod": 1587,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Open-source Grok Bot alternative with a virtual machine that bots can use"
       }
     }
   ]
