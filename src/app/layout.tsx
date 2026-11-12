@@ -12,18 +12,22 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://htsolution.tech"),
+  metadataBase: new URL("https://www.htsolution.my.id"),
   title: "HT Solution • Multi-Platform Software & Business Automation",
   description:
     "HT Solution (High Trust Solution) - Engineering high performance applications (web, desktop & mobile), spreadsheet automations, and custom business software.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.htsolution.my.id",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   openGraph: {
     title: "HT Solution • Multi-Platform Software & Business Automation",
     description:
       "HT Solution (High Trust Solution) - Engineering high performance applications (web, desktop & mobile), spreadsheet automations, and custom business software.",
-    url: "https://htsolution.tech",
+    url: "https://www.htsolution.my.id",
     siteName: "HT Solution",
     locale: "id_ID",
     type: "website",

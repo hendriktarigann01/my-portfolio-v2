@@ -4,11 +4,14 @@ export const metadata: Metadata = {
   title: "Top Trending GitHub Repositories | HT Solution",
   description:
     "Kurasi repositori open-source GitHub yang paling diminati hari ini, dirangkum secara ringkas oleh AI setiap pagi jam 06:00 WIB.",
+  alternates: {
+    canonical: "https://www.htsolution.my.id/git-trends",
+  },
   openGraph: {
     title: "Top Trending GitHub Repositories | HT Solution",
     description:
       "Kurasi repositori open-source GitHub yang paling diminati hari ini, dirangkum secara ringkas oleh AI setiap pagi jam 06:00 WIB.",
-    url: "https://htsolution.tech/git-trends",
+    url: "https://www.htsolution.my.id/git-trends",
     siteName: "HT Solution",
     locale: "id_ID",
     type: "website",
