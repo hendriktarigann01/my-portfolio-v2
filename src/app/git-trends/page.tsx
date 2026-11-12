@@ -101,8 +101,8 @@ export default function GitTrendsPage() {
                   onClick={() => handlePeriodChange(p.value)}
                   className={`h-8 px-5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                     isSelected
-                      ? "bg-[var(--accent)] text-[var(--bg)] shadow-sm font-bold"
-                      : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
+                      ? "bg-(--accent) text-(--bg) shadow-sm font-bold"
+                      : "text-[rgba(var(--accent-rgb),0.6)] hover:text-(--accent)"
                   }`}
                   style={{ fontFamily: "var(--font-body)" }}
                 >
@@ -122,8 +122,8 @@ export default function GitTrendsPage() {
                   onClick={() => setSelectedLang(lang)}
                   className={`h-8 px-4 rounded-full text-xs font-medium tracking-wide transition-all whitespace-nowrap cursor-pointer ${
                     isActive
-                      ? "bg-[var(--accent)] text-[var(--bg)] font-bold shadow-sm"
-                      : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
+                      ? "bg-(--accent) text-(--bg) font-bold shadow-sm"
+                      : "text-[rgba(var(--accent-rgb),0.6)] hover:text-(--accent)"
                   }`}
                   style={{ fontFamily: "var(--font-body)" }}
                 >
@@ -137,7 +137,7 @@ export default function GitTrendsPage() {
         <AnimatePresence mode="popLayout">
           {filteredRepos.length === 0 ? (
             <div className="py-20 text-center glass rounded-2xl p-6">
-              <Layers className="w-8 h-8 opacity-60 mx-auto mb-3 text-[var(--accent)]" />
+              <Layers className="w-8 h-8 opacity-60 mx-auto mb-3 text-(--accent)" />
               <p
                 className="text-xs text-[rgba(var(--accent-rgb),0.6)]"
                 style={{ fontFamily: "var(--font-body)" }}
@@ -147,7 +147,7 @@ export default function GitTrendsPage() {
               <button
                 type="button"
                 onClick={() => setSelectedLang("All")}
-                className="mt-4 px-4 py-1.5 rounded-full text-xs font-semibold bg-[var(--accent)] text-[var(--bg)] cursor-pointer"
+                className="mt-4 px-4 py-1.5 rounded-full text-xs font-semibold bg-(--accent) text-(--bg) cursor-pointer"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 Reset Filter
@@ -199,7 +199,7 @@ function RepoCard({ repo }: { repo: TrendingRepo }) {
         <div className="flex items-center justify-between gap-1 mb-2 text-[10px] sm:text-xs">
           <div className="flex items-center gap-1.5">
             <span
-              className="font-bold text-[var(--accent)]"
+              className="font-bold text-(--accent)"
               style={{ fontFamily: "var(--font-display)" }}
             >
               #{repo.rank}
@@ -213,7 +213,7 @@ function RepoCard({ repo }: { repo: TrendingRepo }) {
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-1 text-[var(--accent)] font-medium">
+          <div className="inline-flex items-center gap-1 text-(--accent) font-medium">
             <TrendingUp className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
             <span>+{repo.starsPeriod.toLocaleString()}</span>
           </div>
@@ -224,7 +224,7 @@ function RepoCard({ repo }: { repo: TrendingRepo }) {
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/link flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[var(--accent)] hover:underline"
+            className="group/link flex items-center gap-1.5 text-xs sm:text-sm font-bold text-(--accent) hover:underline"
             style={{ fontFamily: "var(--font-display)" }}
           >
             <img
@@ -248,11 +248,11 @@ function RepoCard({ repo }: { repo: TrendingRepo }) {
 
       <div className="pt-2 border-t border-[rgba(var(--accent-rgb),0.06)] flex items-center justify-between text-[10px] sm:text-xs text-[rgba(var(--accent-rgb),0.5)]">
         <div className="inline-flex items-center gap-1">
-          <Star className="w-3 h-3 text-[var(--accent)]/70" />
+          <Star className="w-3 h-3 text-(--accent)/70" />
           <span>{repo.stars.toLocaleString()}</span>
         </div>
         <div className="inline-flex items-center gap-1">
-          <GitFork className="w-3 h-3 text-[var(--accent)]/70" />
+          <GitFork className="w-3 h-3 text-(--accent)/70" />
           <span>{repo.forks.toLocaleString()}</span>
         </div>
       </div>

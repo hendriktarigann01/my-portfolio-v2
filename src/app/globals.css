@@ -71,10 +71,24 @@
 }
 
 @media (pointer: fine) {
-  *,
-  *::before,
-  *::after {
+  body:not(.cat-simulator-mode) *,
+  body:not(.cat-simulator-mode) *::before,
+  body:not(.cat-simulator-mode) *::after {
     cursor: none !important;
+  }
+
+  body.cat-simulator-mode,
+  body.cat-simulator-mode * {
+    cursor: auto !important;
+  }
+
+  body.cat-simulator-mode button,
+  body.cat-simulator-mode a,
+  body.cat-simulator-mode input,
+  body.cat-simulator-mode textarea,
+  body.cat-simulator-mode select,
+  body.cat-simulator-mode [role="button"] {
+    cursor: pointer !important;
   }
 }
 
@@ -129,8 +143,8 @@ body::before {
 
 .glass {
   background: var(--card-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
   border: 1px solid var(--card-border);
   transition: border-color 0.25s ease, background-color 0.25s ease;
 }

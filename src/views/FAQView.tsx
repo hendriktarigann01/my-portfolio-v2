@@ -137,11 +137,11 @@ export function FAQView() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="p-5 rounded-2xl border border-[rgba(var(--accent-rgb),0.15)] bg-[rgba(var(--accent-rgb),0.025)] backdrop-blur-md flex flex-col items-center text-center"
               >
-                <div className="w-10 h-10 rounded-xl bg-[rgba(var(--accent-rgb),0.08)] border border-[rgba(var(--accent-rgb),0.2)] flex items-center justify-center text-[var(--accent)] mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[rgba(var(--accent-rgb),0.08)] border border-[rgba(var(--accent-rgb),0.2)] flex items-center justify-center text-() mb-3">
                   <Icon size={20} />
                 </div>
                 <h3
-                  className="text-sm font-bold text-[var(--accent)] mb-1"
+                  className="text-sm font-bold text-() mb-1"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {pillar.title}
@@ -184,7 +184,7 @@ export function FAQView() {
                   className="w-full flex items-center justify-between p-5 text-left cursor-pointer gap-4"
                 >
                   <span
-                    className="text-sm font-semibold text-[var(--accent)]"
+                    className="text-sm font-semibold text-()"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {item.question}
@@ -192,7 +192,7 @@ export function FAQView() {
                   <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="text-[var(--accent)] flex-shrink-0"
+                    className="text-() flex-shrink-0"
                   >
                     <ChevronDown size={18} />
                   </motion.span>
@@ -231,7 +231,7 @@ export function FAQView() {
         >
           <button
             onClick={handleWaAsk}
-            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-lg shadow-[rgba(var(--accent-rgb),0.1)]"
+            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-() text-() text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-lg shadow-[rgba(var(--accent-rgb),0.1)]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             <MessageCircle size={16} />

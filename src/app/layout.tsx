@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
-import { CursorFollow } from "@/components/CursorFollow";
-import { Preloader } from "@/components/Preloader";
-import { GlobalIllustrations } from "@/components/GlobalIllustrations";
-import { ChatWidget } from "@/components/ChatWidget";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { LanguageProvider } from "@/lib/language-context";
+import { AppShell } from "@/components/AppShell";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -51,15 +45,7 @@ export default function RootLayout({
     <html lang="id" className={dmSans.variable} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <LanguageProvider>
-          <SmoothScrollProvider>
-            <Preloader />
-            <GlobalIllustrations />
-            <CursorFollow />
-            <Navbar />
-            {children}
-            <Footer />
-          </SmoothScrollProvider>
-          <ChatWidget />
+          <AppShell>{children}</AppShell>
         </LanguageProvider>
       </body>
     </html>

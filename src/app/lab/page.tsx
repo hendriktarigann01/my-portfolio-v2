@@ -6,7 +6,7 @@ import {
   FlaskConical,
   ArrowUpRight,
   TrendingUp,
-  FileSpreadsheet,
+  GraduationCap,
 } from "lucide-react";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -44,23 +44,23 @@ const LAB_PROJECTS: LabProject[] = [
     icon: TrendingUp,
   },
   {
-    id: "spreadsheet-suite",
+    id: "cat-simulator",
     title: {
-      id: "Sheets Business Automation Suite",
-      en: "Sheets Business Automation Suite",
+      id: "CAT Simulator (SKD BKN)",
+      en: "CAT Simulator (SKD BKN)",
     },
     description: {
-      id: "Ekosistem otomasi spreadsheet UMKM menggunakan Apps Script: auto invoice PDF, surat jalan logistik, dan rekap omset harian tanpa biaya SaaS.",
-      en: "SME spreadsheet automation ecosystem via Apps Script: automated invoice PDFs, delivery orders, and daily recap with zero SaaS fees.",
+      id: "Simulasi ujian SKD CPNS standar resmi CAT BKN: 20 paket tryout (2.200 soal), scoring presisi TWK, TIU, TKP, timer 100 menit, dan pembahasan interaktif.",
+      en: "Official CAT BKN standard civil service exam simulation: 20 packages (2,200 questions), precise scoring for TWK, TIU, TKP, 100-min timer, and full review.",
     },
     status: "live",
     statusLabel: {
       id: "Aktif",
       en: "Live",
     },
-    tags: ["Google Apps Script", "Drive API", "PDF Engine"],
-    href: "/works/google-sheets-automation",
-    icon: FileSpreadsheet,
+    tags: ["CAT BKN Engine", "Local State", "100 Min Timer"],
+    href: "/lab/cat-simulator",
+    icon: GraduationCap,
   },
 ];
 
@@ -68,7 +68,7 @@ export default function LabPage() {
   const { lang } = useLanguage();
 
   return (
-    <div className="min-h-screen text-[var(--text-primary)] py-12 md:py-20 relative overflow-hidden">
+    <div className="min-h-screen text-(--text-primary) py-12 md:py-20 relative overflow-hidden">
       <div className="container-main relative z-10">
         <Breadcrumb
           items={[
@@ -78,19 +78,19 @@ export default function LabPage() {
         />
 
         <header className="mb-14 mt-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-xs font-semibold tracking-wider uppercase mb-5 text-[var(--text-primary)]">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-(--card-border) bg-(--card-bg) text-xs font-semibold tracking-wider uppercase mb-5 text-(--text-primary)">
             <FlaskConical size={14} />
             <span>{lang === "id" ? "Eksperimen & Tools" : "Experiments & Tools"}</span>
           </div>
 
           <h1
-            className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-[var(--accent)]"
+            className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-(--accent)"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {lang === "id" ? "Laboratorium Digital" : "Digital Laboratory"}
           </h1>
           <p
-            className="text-sm md:text-base max-w-2xl text-[var(--text-muted)] leading-relaxed"
+            className="text-sm md:text-base max-w-2xl text-(--text-muted) leading-relaxed"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {lang === "id"
@@ -117,40 +117,40 @@ export default function LabPage() {
                   >
                     <div>
                       <div className="flex items-center justify-between gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center justify-center text-[var(--accent)] group-hover:scale-110 transition-transform">
+                        <div className="w-12 h-12 rounded-xl bg-(--card-bg) border border-(--card-border) flex items-center justify-center text-(--accent) group-hover:scale-110 transition-transform">
                           <Icon size={24} />
                         </div>
 
                         <div className="flex items-center gap-2">
-                          <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--accent)]">
+                          <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full border border-(--card-border) bg-(--card-bg) text-(--accent)">
                             {project.statusLabel[lang]}
                           </span>
-                          <span className="p-2 rounded-lg text-[var(--text-subtle)] group-hover:text-[var(--text-primary)] transition-colors">
+                          <span className="p-2 rounded-lg text-(--text-subtle) group-hover:text-(--text-primary) transition-colors">
                             <ArrowUpRight size={18} />
                           </span>
                         </div>
                       </div>
 
                       <h2
-                        className="text-xl font-bold text-[var(--accent)] mb-3 group-hover:opacity-90 transition-opacity"
+                        className="text-xl font-bold text-(--accent) mb-3 group-hover:opacity-90 transition-opacity"
                         style={{ fontFamily: "var(--font-display)" }}
                       >
                         {project.title[lang]}
                       </h2>
 
                       <p
-                        className="text-xs md:text-sm text-[var(--text-muted)] leading-relaxed mb-6"
+                        className="text-xs md:text-sm text-(--text-muted) leading-relaxed mb-6"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         {project.description[lang]}
                       </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 pt-4 border-t border-[var(--card-border)]">
+                    <div className="flex flex-wrap gap-2 pt-4 border-t border-(--card-border)">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-[var(--card-bg)] border border-[var(--card-border)] text-[var(--text-subtle)]"
+                          className="text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-(--card-bg) border border-(--card-border) text-(--text-subtle)"
                         >
                           {tag}
                         </span>

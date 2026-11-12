@@ -32,7 +32,7 @@ export function HeroView() {
       className="min-h-screen w-full flex items-center pt-20 md:pt-0"
     >
       <div className="container-main w-full py-4 md:py-8">
-        <div className="relative h-[calc(100vh-6rem)] md:h-[calc(100vh-4rem)] min-h-[560px] md:min-h-[620px] w-full overflow-hidden rounded-2xl md:rounded-[2rem] border border-[var(--card-border)] bg-[rgba(var(--bg-rgb),0.3)]">
+        <div className="relative h-[calc(100vh-6rem)] md:h-[calc(100vh-4rem)] min-h-[560px] md:min-h-[620px] w-full overflow-hidden rounded-2xl md:rounded-[2rem] border border-() bg-[rgba(var(--bg-rgb),0.3)]">
           <div
             className="pointer-events-none absolute inset-0"
             style={{
@@ -67,7 +67,7 @@ export function HeroView() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="text-xs font-light text-center max-w-[320px] pointer-events-auto text-[var(--text-muted)] leading-relaxed"
+              className="text-xs font-light text-center max-w-[320px] pointer-events-auto text-() leading-relaxed"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {bio}
@@ -83,7 +83,7 @@ export function HeroView() {
               <button
                 type="button"
                 onClick={() => openAiChat()}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-[var(--text-primary)] text-xs font-semibold uppercase tracking-wider hover:bg-[var(--card-bg-hover)] transition-colors cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-() bg-() text-() text-xs font-semibold uppercase tracking-wider hover:bg-() transition-colors cursor-pointer"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 <Sparkles size={14} />
@@ -123,7 +123,7 @@ export function HeroView() {
                     delay: 0.4,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="text-sm font-light leading-relaxed text-[var(--text-muted)]"
+                  className="text-sm font-light leading-relaxed text-()"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {bio}
@@ -142,7 +142,7 @@ export function HeroView() {
                   <button
                     type="button"
                     onClick={handleExplore}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-sm"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-() text-() text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-sm"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     <span>{btnLabel}</span>
@@ -151,7 +151,7 @@ export function HeroView() {
                   <button
                     type="button"
                     onClick={() => openAiChat()}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] hover:bg-[var(--card-bg-hover)] text-[var(--text-primary)] text-xs font-medium tracking-wider uppercase transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-() bg-() hover:bg-() text-() text-xs font-medium tracking-wider uppercase transition-colors cursor-pointer"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     <Sparkles size={13} />

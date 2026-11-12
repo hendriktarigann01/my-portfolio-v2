@@ -37,7 +37,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="min-h-screen text-[var(--text-primary)] py-12 md:py-20 relative overflow-hidden">
+    <div className="min-h-screen text-() py-12 md:py-20 relative overflow-hidden">
       <div className="container-main relative z-10">
         <Breadcrumb
           items={[
@@ -48,19 +48,19 @@ export default function ServicesPage() {
 
         {/* Page Header */}
         <header className="mb-14 mt-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--card-border)] bg-[var(--card-bg)] text-xs font-semibold tracking-wider uppercase mb-5 text-[var(--text-primary)]">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-() bg-() text-xs font-semibold tracking-wider uppercase mb-5 text-()">
             <Sparkles size={14} />
             <span>{lang === "id" ? "Layanan & Alur Kerja" : "Services & Workflow"}</span>
           </div>
 
           <h1
-            className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-[var(--accent)]"
+            className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-()"
             style={{ fontFamily: "var(--font-display)" }}
           >
             {lang === "id" ? "Paket Layanan & Alur Kerja" : "Services & Delivery Workflow"}
           </h1>
           <p
-            className="text-sm md:text-base max-w-2xl text-[var(--text-muted)] leading-relaxed"
+            className="text-sm md:text-base max-w-2xl text-() leading-relaxed"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {lang === "id"
@@ -73,12 +73,12 @@ export default function ServicesPage() {
         <section className="mb-20">
           <div className="mb-8">
             <h2
-              className="text-2xl font-bold text-[var(--accent)] mb-2"
+              className="text-2xl font-bold text-() mb-2"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {lang === "id" ? "Pilihan Paket Layanan" : "Service Packages"}
             </h2>
-            <p className="text-xs md:text-sm text-[var(--text-muted)]">
+            <p className="text-xs md:text-sm text-()">
               {lang === "id"
                 ? "Pilih paket yang sesuai dengan skala dan kebutuhan operasional Anda."
                 : "Select the package that fits your current operational needs."}
@@ -97,12 +97,12 @@ export default function ServicesPage() {
                 <GlassCard
                   interactive
                   className={`p-6 md:p-8 flex flex-col justify-between h-full relative overflow-hidden ${
-                    plan.isPopular ? "border-[var(--accent)]" : ""
+                    plan.isPopular ? "border-()" : ""
                   }`}
                 >
                   {plan.isPopular && (
                     <div className="absolute top-4 right-4">
-                      <span className="text-[0.65rem] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)]">
+                      <span className="text-[0.65rem] font-bold tracking-wider uppercase px-2.5 py-1 rounded-full bg-() text-()">
                         {lang === "id" ? "Terpopuler" : "Popular"}
                       </span>
                     </div>
@@ -110,35 +110,35 @@ export default function ServicesPage() {
 
                   <div>
                     <h3
-                      className="text-xl font-bold text-[var(--accent)] mb-2"
+                      className="text-xl font-bold text-() mb-2"
                       style={{ fontFamily: "var(--font-display)" }}
                     >
                       {plan.name}
                     </h3>
-                    <p className="text-xs text-[var(--text-muted)] leading-relaxed mb-6 min-h-[36px]">
+                    <p className="text-xs text-() leading-relaxed mb-6 min-h-[36px]">
                       {plan.description}
                     </p>
 
-                    <div className="mb-6 pb-6 border-b border-[var(--card-border)]">
-                      <span className="text-2xl md:text-3xl font-extrabold text-[var(--accent)]">
+                    <div className="mb-6 pb-6 border-b border-()">
+                      <span className="text-2xl md:text-3xl font-extrabold text-()">
                         {plan.price}
                       </span>
                       {plan.priceSub && (
-                        <span className="text-xs text-[var(--text-subtle)] block mt-1">
+                        <span className="text-xs text-() block mt-1">
                           {plan.priceSub}
                         </span>
                       )}
                     </div>
 
                     <div className="mb-6">
-                      <span className="text-[0.7rem] font-bold uppercase tracking-wider text-[var(--text-subtle)] block mb-3">
+                      <span className="text-[0.7rem] font-bold uppercase tracking-wider text-() block mb-3">
                         {lang === "id" ? "Yang Anda Dapatkan:" : "Included Deliverables:"}
                       </span>
                       <ul className="flex flex-col gap-3">
                         {plan.features.map((feature, fIdx) => (
                           <li key={fIdx} className="flex items-start gap-2.5 text-xs">
-                            <Check size={14} className="text-[var(--accent)] shrink-0 mt-0.5" />
-                            <span className="text-[var(--text-muted)] leading-tight">
+                            <Check size={14} className="text-() shrink-0 mt-0.5" />
+                            <span className="text-() leading-tight">
                               {feature}
                             </span>
                           </li>
@@ -149,7 +149,7 @@ export default function ServicesPage() {
 
                   <button
                     onClick={() => handleContactPlan(plan)}
-                    className="w-full mt-6 py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] hover:opacity-90"
+                    className="w-full mt-6 py-3 px-4 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer bg-() text-() hover:opacity-90"
                   >
                     <span>{lang === "id" ? "Konsultasi Paket Ini" : "Select Package"}</span>
                     <ArrowRight size={14} />
@@ -164,12 +164,12 @@ export default function ServicesPage() {
         <section className="mb-20">
           <div className="mb-8">
             <h2
-              className="text-2xl font-bold text-[var(--accent)] mb-2"
+              className="text-2xl font-bold text-() mb-2"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {lang === "id" ? "Alur Pengerjaan (4 Langkah)" : "Phased Workflow (4 Steps)"}
             </h2>
-            <p className="text-xs md:text-sm text-[var(--text-muted)]">
+            <p className="text-xs md:text-sm text-()">
               {lang === "id"
                 ? "Setiap tahapan memiliki output terukur agar proyek selesai tepat waktu."
                 : "Each phase features concrete milestones to ensure on-time delivery."}
@@ -189,24 +189,24 @@ export default function ServicesPage() {
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                 >
                   <GlassCard interactive className="p-6 md:p-8 flex gap-5 h-full">
-                    <div className="w-12 h-12 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)] flex items-center justify-center text-[var(--accent)] shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-() border border-() flex items-center justify-center text-() shrink-0">
                       <Icon size={22} />
                     </div>
 
                     <div>
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="text-xs font-mono font-bold text-[var(--text-subtle)]">
+                        <span className="text-xs font-mono font-bold text-()">
                           FASE {step.index}
                         </span>
                         <h3
-                          className="text-lg font-bold text-[var(--accent)]"
+                          className="text-lg font-bold text-()"
                           style={{ fontFamily: "var(--font-display)" }}
                         >
                           {step.title}
                         </h3>
                       </div>
                       <p
-                        className="text-xs md:text-sm text-[var(--text-muted)] leading-relaxed"
+                        className="text-xs md:text-sm text-() leading-relaxed"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         {step.body}
@@ -223,32 +223,32 @@ export default function ServicesPage() {
         <GlassCard className="p-8 md:p-10 mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--card-bg)] border border-[var(--card-border)] text-[var(--accent)] text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-() border border-() text-() text-xs font-bold uppercase tracking-wider mb-4">
                 <ShieldCheck size={14} />
                 <span>{lang === "id" ? "Garansi" : "Warranty"}</span>
               </div>
               <h3
-                className="text-xl md:text-2xl font-bold text-[var(--accent)] mb-3"
+                className="text-xl md:text-2xl font-bold text-() mb-3"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {lang === "id" ? "Garansi Bebas Bug 30 Hari" : "30-Day Zero Bug Guarantee"}
               </h3>
-              <p className="text-xs md:text-sm text-[var(--text-muted)] leading-relaxed">
+              <p className="text-xs md:text-sm text-() leading-relaxed">
                 {lang === "id"
                   ? "Setelah proyek online, Anda mendapatkan pendampingan perbaikan bug selama 30 hari tanpa biaya tambahan."
                   : "Every deployed project includes 30 days of complimentary technical support and bug fixes."}
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-[var(--card-bg)] border border-[var(--card-border)]">
-              <div className="flex items-center gap-2 text-xs font-bold text-[var(--accent)] uppercase tracking-wider mb-2">
+            <div className="p-5 rounded-xl bg-() border border-()">
+              <div className="flex items-center gap-2 text-xs font-bold text-() uppercase tracking-wider mb-2">
                 <Clock size={14} />
                 <span>{hours.title}</span>
               </div>
-              <p className="text-xs text-[var(--text-primary)] font-medium mb-1">
+              <p className="text-xs text-() font-medium mb-1">
                 {hours.weekdays} • {hours.weekends}
               </p>
-              <p className="text-[11px] text-[var(--text-muted)] leading-relaxed">
+              <p className="text-[11px] text-() leading-relaxed">
                 {hours.note}
               </p>
             </div>

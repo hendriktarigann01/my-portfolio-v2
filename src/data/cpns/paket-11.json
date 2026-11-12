@@ -1,0 +1,3852 @@
+[
+  {
+    "category": "TWK",
+    "explanation": "Trigatra adalah aspek alamiah ketahanan nasional yang terdiri atas gatra geografi, gatra demografi (keadaan dan kemampuan penduduk), dan gatra sumber daya alam.",
+    "id": "p11-twk-01",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Geografi, ideologi, dan ekonomi"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Geografi, demografi, dan sumber daya alam"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Demografi, politik, dan pertahanan keamanan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Sumber daya alam, sosial budaya, dan politik"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Geografi, ekonomi, dan pertahanan keamanan"
+      }
+    ],
+    "question": "Dalam konsepsi ketahanan nasional Indonesia, Asta Gatra terdiri atas trigatra dan pancagatra. Kelompok gatra yang termasuk trigatra adalah...",
+    "subCategory": "Nasionalisme"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pancagatra terdiri atas lima gatra sosial, yaitu ideologi, politik, ekonomi, sosial budaya, dan pertahanan keamanan (hankam).",
+    "id": "p11-twk-02",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Geografi, demografi, sumber daya alam, ideologi, dan politik"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Ideologi, politik, ekonomi, geografi, dan demografi"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Politik, ekonomi, sosial budaya, geografi, dan sumber daya alam"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Ideologi, politik, ekonomi, sosial budaya, dan pertahanan keamanan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Ekonomi, sosial budaya, pertahanan keamanan, demografi, dan geografi"
+      }
+    ],
+    "question": "Pancagatra dalam Asta Gatra merupakan aspek sosial kehidupan nasional yang bersifat dinamis. Gatra-gatra yang termasuk pancagatra adalah...",
+    "subCategory": "Nasionalisme"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Waduk dan irigasi merupakan pendayagunaan kekayaan alam, khususnya sumber air, sehingga memperkuat gatra sumber daya alam dalam trigatra.",
+    "id": "p11-twk-03",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Geografi"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Demografi"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Sumber daya alam"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Ideologi"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Politik"
+      }
+    ],
+    "question": "Pemerintah membangun waduk dan memperbaiki jaringan irigasi agar pasokan air untuk pertanian dan kebutuhan warga tetap terjaga sepanjang musim kemarau. Upaya tersebut terutama memperkuat ketahanan nasional pada gatra...",
+    "subCategory": "Nasionalisme"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Trigatra bersifat relatif statis karena kondisi alamiah berubah perlahan, sedangkan pancagatra bersifat dinamis karena kehidupan sosial terus berkembang; keduanya saling berkaitan dalam satu kesatuan Asta Gatra.",
+    "id": "p11-twk-04",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Trigatra tidak pernah berubah sama sekali, sedangkan pancagatra berubah setiap hari"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Pancagatra hanya berlaku pada masa perang, sedangkan trigatra berlaku pada masa damai"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Trigatra ditentukan oleh kebijakan pemerintah, sedangkan pancagatra ditentukan oleh alam"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Trigatra dan pancagatra tidak saling memengaruhi dalam kehidupan nasional"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Kondisi geografi, penduduk, dan kekayaan alam relatif bertahan lama, sedangkan kondisi ideologi, politik, ekonomi, sosial budaya, dan pertahanan keamanan terus berkembang"
+      }
+    ],
+    "question": "Trigatra dalam Asta Gatra disebut aspek alamiah yang relatif statis, sedangkan pancagatra disebut aspek sosial yang bersifat dinamis. Perbedaan tersebut berarti...",
+    "subCategory": "Nasionalisme"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pangan, energi, dan air bersumber dari kekayaan alam, geografi, dan kemampuan penduduk, yaitu trigatra yang menjadi modal dasar bagi terciptanya kondisi dinamis pancagatra.",
+    "id": "p11-twk-05",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Trigatra sebagai modal dasar kehidupan nasional"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Gatra ideologi sebagai satu-satunya penentu ketahanan nasional"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Gatra politik tanpa memperhatikan kondisi alam"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Pancagatra yang terlepas dari kondisi geografi dan kekayaan alam"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Gatra pertahanan keamanan sebagai gatra yang berdiri sendiri"
+      }
+    ],
+    "question": "Kebijakan menjaga cadangan pangan nasional, mengembangkan energi terbarukan dari sumber daya dalam negeri, dan melindungi sumber air bersih merupakan wujud ketahanan nasional yang berakar pada pemanfaatan optimal...",
+    "subCategory": "Nasionalisme"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Keputusan jabatan yang dipengaruhi kepentingan keluarga merupakan konflik kepentingan; pemilihan penyedia harus melalui proses yang adil dan objektif, dan pejabat yang bersangkutan wajib menghindarkan diri dari keputusan tersebut.",
+    "id": "p11-twk-06",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Penerapan prinsip efisiensi dalam pengelolaan anggaran sekolah"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Keberpihakan yang wajar kepada usaha keluarga demi kemajuan sekolah"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Konflik kepentingan karena kepentingan keluarga memengaruhi keputusan jabatan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Pelaksanaan otonomi sekolah dalam memilih mitra kerja sama"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Bentuk pemberdayaan ekonomi keluarga yang tidak dilarang aturan"
+      }
+    ],
+    "question": "Seorang kepala sekolah menunjuk koperasi yang dikelola istrinya sebagai penyedia katering sekolah tanpa membandingkan penawaran penyedia lain. Tindakan kepala sekolah tersebut menunjukkan...",
+    "subCategory": "Integritas"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Rangkap jabatan pada perusahaan yang berkepentingan dengan instansinya menimbulkan konflik kepentingan; pegawai wajib melepaskan salah satu jabatan atau mengundurkan diri dari keterlibatan dalam urusan perusahaan tersebut.",
+    "id": "p11-twk-07",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Tetap merangkap kedua jabatan selama perusahaan itu tidak memenangi proyek pemerintah"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Melepaskan salah satu jabatan karena rangkap jabatan tersebut menimbulkan konflik kepentingan"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Merahasiakan jabatan di perusahaan itu agar tidak diketahui rekan kerja"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Mempercepat pengurusan izin perusahaan itu sebagai bentuk loyalitas kepada perusahaan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Meminta rekan kerja memproses izin perusahaan itu tanpa memberi tahu atasan"
+      }
+    ],
+    "question": "Seorang pegawai dinas perizinan merangkap jabatan sebagai komisaris pada perusahaan properti yang sedang mengurus izin pembangunan di dinas tempat ia bekerja. Sikap yang paling tepat bagi pegawai tersebut adalah...",
+    "subCategory": "Integritas"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Kepemilikan saham pada perusahaan pemohon izin merupakan konflik kepentingan; pejabat wajib mengungkapkan (disclosure) dan menarik diri dari proses pengambilan keputusan atas permohonan tersebut.",
+    "id": "p11-twk-08",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Menyetujui permohonan itu karena perusahaan tersebut telah memenuhi syarat administratif"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Meminta perusahaan itu menambah sahamnya agar ia makin berkepentingan menjaga kelancaran usaha"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Menyembunyikan kepemilikan sahamnya dan tetap memimpin pembahasan permohonan izin"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Mengungkapkan kepemilikan sahamnya kepada atasan dan tidak terlibat dalam pengambilan keputusan atas permohonan itu"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Menolak permohonan itu tanpa pemeriksaan agar tidak dicurigai berpihak kepada perusahaan"
+      }
+    ],
+    "question": "Seorang pejabat di dinas energi memiliki saham dalam jumlah besar pada perusahaan tambang yang mengajukan izin usaha pertambangan di wilayah kerjanya. Ketika permohonan izin itu dibahas, tindakan yang paling tepat bagi pejabat tersebut adalah...",
+    "subCategory": "Integritas"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Hadiah dari pihak yang sedang berperkara dan berkaitan dengan jabatan merupakan gratifikasi yang wajib ditolak dan dilaporkan kepada KPK atau unit pengendalian gratifikasi sesuai Undang-Undang Nomor 20 Tahun 2001.",
+    "id": "p11-twk-09",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Menolak parsel tersebut dan melaporkannya sesuai ketentuan tentang gratifikasi"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Menerima parsel itu karena dianggap sebagai tanda terima kasih yang tidak mengikat"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Menerima parsel itu lalu mempercepat proses berkas pihak yang mengirimkannya"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Mengembalikan parsel itu secara diam-diam tanpa mencatat atau melaporkannya"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Membagikan parsel itu kepada rekan kerja agar tidak dianggap menerima sendiri"
+      }
+    ],
+    "question": "Seorang pegawai kantor pertanahan sedang memproses berkas sengketa batas tanah antara dua warga. Di tengah proses itu, salah satu pihak yang bersengketa mengirimkan parsel berharga ke rumah pegawai tersebut. Tindakan yang paling tepat bagi pegawai itu adalah...",
+    "subCategory": "Integritas"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Konflik kepentingan adalah situasi ketika kepentingan pribadi, keluarga, atau kelompok penyelenggara negara memengaruhi atau berpotensi memengaruhi objektivitas pelaksanaan tugas dan pengambilan keputusannya.",
+    "id": "p11-twk-10",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Seorang pejabat berbeda pendapat dengan atasannya mengenai kebijakan yang akan diambil"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Dua instansi memperebutkan kewenangan atas satu urusan pemerintahan yang sama"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Seorang pegawai menolak perintah atasan yang bertentangan dengan peraturan perundang-undangan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Seorang pejabat menerima kritik masyarakat atas kebijakan yang telah diputuskannya"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Kepentingan pribadi seorang penyelenggara negara memengaruhi objektivitasnya dalam mengambil keputusan jabatan"
+      }
+    ],
+    "question": "Konflik kepentingan dalam penyelenggaraan negara terjadi ketika...",
+    "subCategory": "Integritas"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Bela negara melalui profesi diwujudkan dengan menjalankan pekerjaan sebaik-baiknya demi kepentingan bangsa; petani memperkuat ketahanan pangan dan menjaga lahan produktif sebagai sumber kehidupan nasional.",
+    "id": "p11-twk-11",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Meningkatkan pendapatan pribadi petani dari hasil penjualan gabah"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Memperkuat ketersediaan pangan nasional dan menjaga lahan produktif tetap berfungsi"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Menjadikan pertanian sebagai satu-satunya mata pencaharian yang diakui negara"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Menghindari persaingan dengan petani dari daerah lain dalam memasarkan hasil panen"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Membuktikan bahwa petani tidak memerlukan bantuan teknologi pertanian modern"
+      }
+    ],
+    "question": "Seorang petani di lahan subur memilih tetap mengolah sawahnya, menanam varietas unggul, dan menyisihkan sebagian hasil panen untuk lumbung pangan desa. Perilaku petani tersebut merupakan wujud bela negara melalui profesi karena...",
+    "subCategory": "Bela Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Menangkap ikan secara ramah lingkungan dan menjaga terumbu karang berarti mempertahankan sumber daya kelautan nasional, yang merupakan wujud bela negara di bidang lingkungan dan ekonomi.",
+    "id": "p11-twk-12",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Menambah jumlah kapal nelayan yang beroperasi di perairan Indonesia"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Mengutamakan keuntungan dagang di atas kelestarian sumber daya laut"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Membatasi hasil tangkapan agar harga ikan di pasar tetap tinggi"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Menjadikan laut sebagai wilayah tertutup yang tidak boleh dimanfaatkan warga lain"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Menjaga kelestarian sumber daya laut sebagai kekayaan nasional bagi generasi mendatang"
+      }
+    ],
+    "question": "Seorang nelayan menolak menangkap ikan dengan bahan peledak dan racun, menjaga terumbu karang di perairan tempatnya melaut, serta menjual hasil tangkapannya untuk memenuhi kebutuhan gizi warga sekitar. Tindakan nelayan tersebut mencerminkan bela negara karena...",
+    "subCategory": "Bela Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pedagang yang jujur dan tidak menimbun kebutuhan pokok ikut menjaga stabilitas ekonomi dan ketahanan pangan masyarakat, yang merupakan bela negara melalui profesi di bidang ekonomi.",
+    "id": "p11-twk-13",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Meningkatkan persaingan dagang antarpedagang di pasar yang sama"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Membuktikan bahwa pedagang tidak terikat pada aturan perdagangan yang berlaku"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Menjadikan pasar tradisional sebagai satu-satunya tempat warga berbelanja"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Menjaga stabilitas pasokan dan harga kebutuhan pokok demi kesejahteraan masyarakat"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Menghindari kewajiban membayar retribusi pasar kepada pemerintah daerah"
+      }
+    ],
+    "question": "Pada masa harga sembako melonjak, seorang pedagang pasar tetap menjual beras dan minyak goreng dengan harga wajar, menggunakan timbangan yang jujur, dan tidak menimbun barang dagangannya. Perilaku pedagang tersebut merupakan wujud bela negara karena...",
+    "subCategory": "Bela Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Seniman membela negara melalui profesi dengan melestarikan budaya, memperkuat identitas bangsa, dan memperkenalkan kekayaan budaya Indonesia ke dunia tanpa merusak persatuan.",
+    "id": "p11-twk-14",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Melestarikan dan memperkenalkan budaya bangsa sekaligus menjaga persatuan melalui karya seni"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Menjadikan kesenian daerah sebagai tontonan yang hanya boleh dinikmati wisatawan asing"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Menghapus pengaruh budaya daerah lain dalam pertunjukan yang ia ciptakan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Membuktikan bahwa kesenian tradisional lebih unggul daripada kesenian modern"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Menghindari kerja sama dengan seniman dari negara lain dalam bentuk apa pun"
+      }
+    ],
+    "question": "Seorang seniman tari menciptakan pertunjukan yang mengangkat cerita rakyat daerahnya, menolak membuat karya yang menghina kelompok masyarakat tertentu, dan menampilkan karyanya pada festival budaya di luar negeri. Peran seniman tersebut sebagai wujud bela negara terletak pada...",
+    "subCategory": "Bela Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pekerja migran yang berangkat secara resmi, taat hukum, menjaga nama baik bangsa, dan mengirim remitansi lewat jalur resmi turut menjaga martabat dan perekonomian nasional, yang merupakan bela negara melalui profesi.",
+    "id": "p11-twk-15",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Membuktikan bahwa bekerja di luar negeri lebih mulia daripada bekerja di dalam negeri"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Menghindari kewajiban membayar pajak atas penghasilan yang diperolehnya"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Menunjukkan ketaatan pada hukum, menjaga martabat bangsa, dan berkontribusi pada perekonomian nasional"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Menjadikan negara tempatnya bekerja sebagai tanah air yang baru"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Membuktikan bahwa pekerja migran tidak memerlukan perlindungan dari negara"
+      }
+    ],
+    "question": "Seorang pekerja migran Indonesia bekerja di luar negeri melalui jalur resmi, mematuhi hukum negara tempatnya bekerja, menjaga nama baik Indonesia, dan mengirimkan penghasilannya melalui lembaga keuangan resmi. Perilaku pekerja migran tersebut mencerminkan bela negara karena...",
+    "subCategory": "Bela Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pasal 28C ayat (1) UUD 1945: setiap orang berhak mengembangkan diri melalui pemenuhan kebutuhan dasarnya, berhak mendapat pendidikan dan memperoleh manfaat dari ilmu pengetahuan dan teknologi, seni dan budaya, demi meningkatkan kualitas hidupnya dan demi kesejahteraan umat manusia.",
+    "id": "p11-twk-16",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Memperoleh perlindungan hukum dan perlakuan yang sama di hadapan hukum"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Memeluk agama dan beribadah menurut agamanya masing-masing"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Berkomunikasi dan memperoleh informasi melalui segala jenis saluran yang tersedia"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Mengembangkan diri, mendapat pendidikan, dan memperoleh manfaat dari ilmu pengetahuan dan teknologi, seni, dan budaya"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Mendirikan serikat pekerja dan mengikuti pemogokan sebagai hak konstitusional"
+      }
+    ],
+    "question": "Pasal 28C ayat (1) Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 menjamin hak setiap orang untuk...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pasal 28D ayat (1) UUD 1945 menjamin pengakuan, jaminan, perlindungan, dan kepastian hukum yang adil serta perlakuan yang sama di hadapan hukum; ayat (2) menjamin hak bekerja serta imbalan dan perlakuan yang adil dan layak dalam hubungan kerja.",
+    "id": "p11-twk-17",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Setiap orang berhak atas kepastian hukum yang adil dan berhak bekerja serta mendapat imbalan dan perlakuan yang adil dan layak dalam hubungan kerja"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Setiap orang berhak mendapat pendidikan dan memperoleh manfaat dari ilmu pengetahuan dan teknologi"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Setiap orang bebas memeluk agama dan beribadah menurut agamanya serta meyakini kepercayaan sesuai hati nuraninya"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Setiap orang berhak berkomunikasi dan memperoleh informasi untuk mengembangkan pribadi dan lingkungan sosialnya"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Setiap orang berhak hidup dan mempertahankan hidup dan kehidupannya"
+      }
+    ],
+    "question": "Pernyataan yang sesuai dengan Pasal 28D Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 adalah...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pasal 28E ayat (1) UUD 1945 menjamin kebebasan memeluk agama dan beribadat menurut agamanya, sedangkan ayat (2) menjamin kebebasan meyakini kepercayaan serta menyatakan pikiran dan sikap sesuai hati nurani.",
+    "id": "p11-twk-18",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Pasal 28C Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Pasal 28E Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Pasal 28D Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Pasal 28F Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Pasal 28A Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      }
+    ],
+    "question": "Seorang warga menjalankan ibadah sesuai agamanya, meyakini kepercayaan yang dianutnya, serta menyatakan pikiran dan sikap sesuai hati nuraninya tanpa paksaan dari pihak mana pun. Kebebasan tersebut dijamin dalam...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pasal 28F UUD 1945: setiap orang berhak untuk berkomunikasi dan memperoleh informasi untuk mengembangkan pribadi dan lingkungan sosialnya, serta berhak mencari, memperoleh, memiliki, menyimpan, mengolah, dan menyampaikan informasi dengan menggunakan segala jenis saluran yang tersedia.",
+    "id": "p11-twk-19",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Pasal 28C Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Pasal 28E Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Pasal 28F Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Pasal 28D Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Pasal 28G Undang-Undang Dasar Negara Republik Indonesia Tahun 1945"
+      }
+    ],
+    "question": "Hak setiap orang untuk berkomunikasi dan memperoleh informasi, serta untuk mencari, memperoleh, memiliki, menyimpan, mengolah, dan menyampaikan informasi dengan menggunakan segala jenis saluran yang tersedia, diatur dalam...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Butir pengamalan sila ketiga, Persatuan Indonesia, antara lain menempatkan persatuan dan kesatuan serta kepentingan bangsa dan negara di atas kepentingan pribadi dan golongan.",
+    "id": "p11-twk-20",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Mengakui dan memperlakukan manusia sesuai harkat dan martabatnya"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Mengutamakan musyawarah dalam mengambil keputusan untuk kepentingan bersama"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Mengembangkan perbuatan yang luhur yang mencerminkan sikap dan suasana kekeluargaan dan kegotongroyongan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Tidak memaksakan suatu agama dan kepercayaan kepada orang lain"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Menempatkan persatuan, kesatuan, serta kepentingan dan keselamatan bangsa dan negara sebagai kepentingan bersama di atas kepentingan pribadi dan golongan"
+      }
+    ],
+    "question": "Warga sebuah rumah susun yang berasal dari berbagai suku sepakat menggunakan bahasa Indonesia dalam rapat warga agar seluruh penghuni memahami pembahasan, serta bersama-sama menjaga ketertiban lingkungan tanpa membedakan asal daerah. Perilaku tersebut merupakan penerapan butir pengamalan sila ketiga Pancasila, yaitu...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Butir pengamalan sila keempat, Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan, antara lain mengutamakan musyawarah, tidak memaksakan kehendak, serta menghormati dan menjunjung tinggi keputusan hasil musyawarah.",
+    "id": "p11-twk-21",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Rela berkorban untuk kepentingan bangsa dan negara"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Menghormati dan menjunjung tinggi setiap keputusan yang dicapai sebagai hasil musyawarah"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Menjaga keseimbangan antara hak dan kewajiban dalam kehidupan bermasyarakat"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Mengembangkan rasa cinta kepada tanah air dan bangsa"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Mengakui persamaan derajat, hak, dan kewajiban asasi setiap manusia"
+      }
+    ],
+    "question": "Dewan guru sebuah sekolah bermusyawarah menentukan jadwal ujian akhir. Setiap guru diberi kesempatan menyampaikan pendapat, tidak ada pihak yang memaksakan kehendaknya, dan guru yang usulnya tidak terpilih tetap melaksanakan keputusan bersama dengan penuh tanggung jawab. Perilaku tersebut merupakan penerapan butir pengamalan sila keempat Pancasila, yaitu...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Rumah Gadang berasal dari Sumatera Barat (Minangkabau). Tongkonan berasal dari Sulawesi Selatan, Joglo dari Jawa, Honai dari Papua, dan Rumah Limas dari Sumatera Selatan.",
+    "id": "p11-twk-22",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Tongkonan dari Sumatera Utara"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Joglo dari Bali"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Honai dari Kalimantan"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Rumah Gadang dari Sumatera Barat"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Rumah Limas dari Jawa Barat"
+      }
+    ],
+    "question": "Pasangan rumah adat dan daerah asalnya yang tepat adalah...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Pasal 9 ayat (2) Undang-Undang Nomor 23 Tahun 2014 menetapkan urusan pemerintahan absolut, yaitu politik luar negeri, pertahanan, keamanan, yustisi, serta moneter dan fiskal nasional.",
+    "id": "p11-twk-23",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Politik luar negeri, pertahanan, keamanan, yustisi, serta moneter dan fiskal nasional"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Pendidikan, kesehatan, pekerjaan umum, perumahan rakyat, dan ketenteraman masyarakat"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Politik luar negeri, pertahanan, pendidikan, kesehatan, dan pertanian"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Keamanan, yustisi, perhubungan, lingkungan hidup, dan koperasi"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Moneter dan fiskal nasional, pertahanan, pariwisata, perikanan, dan kehutanan"
+      }
+    ],
+    "question": "Undang-Undang Nomor 23 Tahun 2014 tentang Pemerintahan Daerah menetapkan lima urusan pemerintahan absolut yang sepenuhnya menjadi wewenang pemerintah pusat. Kelima urusan tersebut adalah...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Melayani sesama manusia dengan mengakui persamaan derajat, menjunjung tinggi nilai kemanusiaan, dan bersikap tenggang rasa merupakan pengamalan sila kedua, Kemanusiaan yang Adil dan Beradab.",
+    "id": "p11-twk-24",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Pertama, Ketuhanan Yang Maha Esa"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Ketiga, Persatuan Indonesia"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Kedua, Kemanusiaan yang Adil dan Beradab"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Keempat, Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Kelima, Keadilan Sosial bagi Seluruh Rakyat Indonesia"
+      }
+    ],
+    "question": "Seorang petugas loket melayani warga yang tidak lancar membaca dengan sabar, membacakan isi formulir tanpa merendahkannya, dan memberikan perlakuan yang sama tanpa membedakan latar belakang warga tersebut. Sikap petugas itu merupakan pengamalan sila...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Bhinneka Tunggal Ika berarti berbeda-beda tetapi tetap satu jua; keberagaman suku dan agama tidak menghalangi kebersamaan, saling membantu, dan persatuan dalam kehidupan bermasyarakat.",
+    "id": "p11-twk-25",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Semangat persaingan bebas antarpedagang untuk menguasai pasar"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Penerapan satu budaya tunggal agar tidak terjadi perbedaan di pasar"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Kebebasan setiap pedagang menentukan aturan pasarnya sendiri"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Pembedaan perlakuan berdasarkan suku dan agama pedagang"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Bhinneka Tunggal Ika, yaitu berbeda-beda tetapi tetap satu jua"
+      }
+    ],
+    "question": "Di sebuah pasar tradisional, para pedagang yang berasal dari suku dan agama yang berbeda saling menitipkan lapak ketika salah satu pergi beribadah, saling meminjam timbangan, dan ikut merayakan hari besar satu sama lain. Kehidupan bersama para pedagang itu mencerminkan pengamalan...",
+    "subCategory": "Pilar Negara"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Ungkapan kambing hitam bermakna orang yang dipersalahkan atas suatu kesalahan atau kegagalan yang bukan disebabkan olehnya.",
+    "id": "p11-twk-26",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Kutu buku"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Besar mulut"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Tangan kosong"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Kambing hitam"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Rendah hati"
+      }
+    ],
+    "question": "Dalam rapat evaluasi, seorang pegawai selalu disalahkan atas setiap kegagalan tim meskipun keputusan yang menyebabkan kegagalan itu tidak pernah melibatkannya. Dalam bahasa Indonesia, pegawai yang selalu dipersalahkan seperti itu dapat disebut sebagai...",
+    "subCategory": "Bahasa Indonesia"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Ungkapan besar kepala bermakna sombong atau congkak, merasa diri lebih hebat daripada orang lain.",
+    "id": "p11-twk-27",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Buah bibir"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Besar kepala"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Naik daun"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Tangan kanan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Kepala dingin"
+      }
+    ],
+    "question": "Sejak dipuji atas keberhasilan satu proyek, seorang pegawai menjadi sombong, menolak saran rekan kerja, dan merasa dirinya paling berjasa di kantor. Sifat pegawai tersebut dalam ungkapan bahasa Indonesia disebut...",
+    "subCategory": "Bahasa Indonesia"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Ungkapan tangan kanan bermakna orang kepercayaan yang sangat diandalkan dan menjadi penolong utama seseorang dalam pekerjaan.",
+    "id": "p11-twk-28",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Buah bibir"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Kambing hitam"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Besar kepala"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Naik daun"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Tangan kanan"
+      }
+    ],
+    "question": "Seorang kepala dinas selalu melibatkan asistennya dalam setiap keputusan penting karena asisten itu sangat dipercaya dan diandalkan dalam pekerjaan. Kedudukan asisten tersebut dalam ungkapan bahasa Indonesia disebut sebagai...",
+    "subCategory": "Bahasa Indonesia"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Ungkapan buah bibir bermakna bahan pembicaraan atau perbincangan banyak orang.",
+    "id": "p11-twk-29",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Buah bibir"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Besar kepala"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Tangan kanan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Kambing hitam"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Naik pitam"
+      }
+    ],
+    "question": "Keberhasilan sebuah desa mengubah lahan tandus menjadi kebun produktif menjadi bahan pembicaraan banyak orang di berbagai daerah. Dalam bahasa Indonesia, hal yang menjadi bahan pembicaraan seperti itu disebut...",
+    "subCategory": "Bahasa Indonesia"
+  },
+  {
+    "category": "TWK",
+    "explanation": "Ungkapan naik daun bermakna sedang naik pamor, makin terkenal, atau makin populer.",
+    "id": "p11-twk-30",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Naik pitam"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Turun tangan"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Naik daun"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Naik darah"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Besar mulut"
+      }
+    ],
+    "question": "Sebuah kedai kopi kecil di gang sempit makin dikenal dan ramai dikunjungi setelah ulasan pelanggannya tersebar luas. Kedai kopi yang sedang naik pamor dan makin populer seperti itu dalam ungkapan bahasa Indonesia disebut sedang...",
+    "subCategory": "Bahasa Indonesia"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Hubungannya adalah penyakit dan gejala khasnya: demam berdarah menimbulkan bintik merah, sebagaimana asma menimbulkan sesak napas.",
+    "id": "p11-tiu-01",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Influenza : Virus"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Asma : Sesak napas"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Luka bakar : Salep"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Dokter : Stetoskop"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Demam : Termometer"
+      }
+    ],
+    "question": "DEMAM BERDARAH : BINTIK MERAH = ...",
+    "subCategory": "Analogi"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Hubungannya adalah alat ukur dan satuan yang diukurnya: timbangan mengukur massa dalam kilogram, sebagaimana meteran mengukur panjang dalam meter.",
+    "id": "p11-tiu-02",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Termometer : Suhu"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Jam dinding : Waktu"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Meteran : Meter"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Barometer : Tekanan udara"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Amperemeter : Listrik"
+      }
+    ],
+    "question": "TIMBANGAN : KILOGRAM = ...",
+    "subCategory": "Analogi"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Hubungannya adalah penyakit dan gejala khasnya: hipertensi menimbulkan sakit kepala, sebagaimana maag menimbulkan nyeri ulu hati.",
+    "id": "p11-tiu-03",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Tifus : Bakteri"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Maag : Nyeri ulu hati"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Anemia : Zat besi"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Patah tulang : Gips"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Alergi : Debu"
+      }
+    ],
+    "question": "HIPERTENSI : SAKIT KEPALA = ...",
+    "subCategory": "Analogi"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Hubungannya adalah alat ukur dan satuan yang diukurnya: stopwatch mengukur waktu dalam detik, sebagaimana speedometer mengukur kelajuan dalam kilometer per jam.",
+    "id": "p11-tiu-04",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Speedometer : Kilometer per jam"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Termometer : Panas"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Timbangan : Berat"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Voltmeter : Tegangan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Mikroskop : Sel"
+      }
+    ],
+    "question": "STOPWATCH : DETIK = ...",
+    "subCategory": "Analogi"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Tidak semua warga memenuhi kriteria berarti ada warga yang tidak memenuhi kriteria. Semua warga yang tidak memenuhi kriteria tidak dimasukkan ke dalam daftar penerima, sehingga ada warga pengaju bantuan yang tidak dimasukkan ke dalam daftar penerima.",
+    "id": "p11-tiu-05",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Ada warga yang mengajukan bantuan yang tidak dimasukkan ke dalam daftar penerima"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Semua warga yang mengajukan bantuan tidak dimasukkan ke dalam daftar penerima"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Tidak ada warga yang mengajukan bantuan yang dimasukkan ke dalam daftar penerima"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Semua warga yang dimasukkan ke dalam daftar penerima tidak mengajukan bantuan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Warga yang tidak mengajukan bantuan dimasukkan ke dalam daftar penerima"
+      }
+    ],
+    "question": "Tidak semua warga yang mengajukan bantuan memenuhi kriteria penerima. Semua warga yang tidak memenuhi kriteria penerima tidak dimasukkan ke dalam daftar penerima. Kesimpulan yang tepat adalah...",
+    "subCategory": "Silogisme"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Tidak semua siswa membawa kartu ujian berarti ada siswa yang tidak membawa kartu ujian. Tidak ada siswa yang tidak membawa kartu ujian yang diperbolehkan masuk, sehingga ada siswa yang tidak diperbolehkan masuk ruang ujian.",
+    "id": "p11-tiu-06",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Semua siswa diperbolehkan masuk ruang ujian"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Tidak ada siswa yang membawa kartu ujian"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Ada siswa yang tidak diperbolehkan masuk ruang ujian"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Semua siswa yang membawa kartu ujian tidak diperbolehkan masuk ruang ujian"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Siswa yang tidak membawa kartu ujian semuanya diperbolehkan masuk ruang ujian"
+      }
+    ],
+    "question": "Tidak ada siswa yang tidak membawa kartu ujian yang diperbolehkan masuk ruang ujian. Tidak semua siswa membawa kartu ujian. Kesimpulan yang tepat adalah...",
+    "subCategory": "Silogisme"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Tidak semua pegawai memahami sistem baru berarti ada pegawai yang tidak memahaminya. Semua pegawai yang tidak memahami sistem baru wajib mengikuti bimbingan teknis, sehingga ada pegawai bagian keuangan yang wajib mengikuti bimbingan teknis.",
+    "id": "p11-tiu-07",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Semua pegawai bagian keuangan wajib mengikuti bimbingan teknis"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Tidak ada pegawai bagian keuangan yang wajib mengikuti bimbingan teknis"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Semua pegawai yang memahami sistem akuntansi baru wajib mengikuti bimbingan teknis"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Ada pegawai bagian keuangan yang wajib mengikuti bimbingan teknis"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Pegawai yang wajib mengikuti bimbingan teknis seluruhnya memahami sistem akuntansi baru"
+      }
+    ],
+    "question": "Tidak semua pegawai bagian keuangan memahami sistem akuntansi baru. Semua pegawai yang tidak memahami sistem akuntansi baru wajib mengikuti bimbingan teknis. Kesimpulan yang tepat adalah...",
+    "subCategory": "Silogisme"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Tidak semua ruangan dilengkapi pengatur suhu berarti ada ruangan yang tidak dilengkapi pengatur suhu. Tidak ada arsip kertas kuno yang boleh disimpan di ruangan tanpa pengatur suhu, sehingga ada ruangan di gedung arsip yang tidak boleh dipakai menyimpan arsip kertas kuno.",
+    "id": "p11-tiu-08",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Semua ruangan di gedung arsip boleh dipakai menyimpan arsip kertas kuno"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Ada ruangan di gedung arsip yang tidak boleh dipakai menyimpan arsip kertas kuno"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Tidak ada ruangan di gedung arsip yang dilengkapi pengatur suhu"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Semua arsip kertas kuno disimpan di ruangan tanpa pengatur suhu"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Ruangan yang dilengkapi pengatur suhu seluruhnya tidak boleh dipakai menyimpan arsip kertas kuno"
+      }
+    ],
+    "question": "Tidak semua ruangan di gedung arsip dilengkapi pengatur suhu. Tidak ada arsip kertas kuno yang boleh disimpan di ruangan tanpa pengatur suhu. Kesimpulan yang tepat adalah...",
+    "subCategory": "Silogisme"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Citra di lantai 3. Eko tidak di lantai 1 dan tidak bersebelahan dengan Citra, sehingga Eko hanya dapat berada di lantai 5. Dewi di atas Citra dan tersisa lantai 4. Arman tepat di atas Budi pada lantai 2 dan 1. Susunan dari lantai 1: Budi, Arman, Citra, Dewi, Eko.",
+    "id": "p11-tiu-09",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Arman"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Budi"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Citra"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Dewi"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Eko"
+      }
+    ],
+    "question": "Sebuah gedung kantor memiliki lima lantai yang ditempati oleh lima pegawai: Arman, Budi, Citra, Dewi, dan Eko, masing-masing satu lantai. Lantai Citra adalah lantai 3. Lantai Arman tepat satu tingkat di atas lantai Budi. Lantai Dewi lebih tinggi daripada lantai Citra. Lantai Eko bukan lantai 1 dan tidak berdampingan dengan lantai Citra. Pegawai yang berkantor di lantai paling atas adalah...",
+    "subCategory": "Penalaran Analitis"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Arsip di lantai 1. SDM tidak di lantai 5 dan tidak bersebelahan dengan Arsip, sehingga SDM di lantai 3 atau 4. Teknologi Informasi tepat di bawah Humas dan Keuangan di atas SDM hanya terpenuhi oleh susunan: lantai 1 Arsip, lantai 2 Teknologi Informasi, lantai 3 Humas, lantai 4 SDM, lantai 5 Keuangan.",
+    "id": "p11-tiu-10",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Teknologi Informasi"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Humas"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Keuangan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "SDM"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Arsip"
+      }
+    ],
+    "question": "Di sebuah gedung lima lantai, tiap lantai ditempati satu unit kerja. Kelima unit itu adalah Keuangan, SDM, Humas, Arsip, dan Teknologi Informasi. Arsip menempati lantai paling bawah. Humas berada satu lantai di atas Teknologi Informasi. Keuangan berada lebih tinggi daripada SDM. SDM tidak berada di lantai teratas dan lantainya tidak berdampingan dengan lantai Arsip. Unit kerja yang berada di lantai 2 adalah...",
+    "subCategory": "Penalaran Analitis"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Hadi di lantai 4. Indra tepat di atas Joko dan Joko bukan di lantai 1, sehingga Joko di lantai 2 dan Indra di lantai 3 (bersebelahan dengan Hadi). Fajar di bawah Gita pada lantai tersisa, yaitu Fajar di lantai 1 dan Gita di lantai 5.",
+    "id": "p11-tiu-11",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Gita"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Hadi"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Fajar"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Indra"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Joko"
+      }
+    ],
+    "question": "Fajar, Gita, Hadi, Indra, dan Joko bekerja di lantai yang berbeda-beda dalam sebuah gedung berlantai lima. Hadi bekerja di lantai 4. Lantai kerja Fajar lebih rendah daripada lantai kerja Gita. Indra bekerja satu lantai di atas Joko. Joko tidak bekerja di lantai 1. Lantai kerja Indra berdampingan dengan lantai kerja Hadi. Pegawai yang bekerja di lantai paling bawah adalah...",
+    "subCategory": "Penalaran Analitis"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Ruang Server di lantai 5. Aula tepat di atas Ruang Arsip dan Ruang Arsip bukan di lantai 1. Jika Ruang Arsip di lantai 2, Perpustakaan jatuh di lantai 4 yang bersebelahan dengan Ruang Server, sehingga tidak memenuhi syarat. Susunan yang memenuhi semua syarat: lantai 1 Kantin, lantai 2 Perpustakaan, lantai 3 Ruang Arsip, lantai 4 Aula, lantai 5 Ruang Server.",
+    "id": "p11-tiu-12",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Aula"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Kantin"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Perpustakaan"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Ruang Arsip"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Ruang Server"
+      }
+    ],
+    "question": "Sebuah gedung memiliki lima lantai, dan setiap lantainya digunakan untuk satu ruangan: Aula, Perpustakaan, Ruang Arsip, Ruang Server, dan Kantin. Ruang Server menggunakan lantai 5. Kantin menggunakan lantai yang lebih rendah daripada Perpustakaan. Aula berada satu lantai di atas Ruang Arsip. Ruang Arsip tidak menggunakan lantai 1. Lantai Perpustakaan tidak berdampingan dengan lantai Ruang Server. Ruangan yang menggunakan lantai 3 adalah...",
+    "subCategory": "Penalaran Analitis"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Putri di lantai 2. Oka tepat di bawah Nina dan Nina tidak bersebelahan dengan Putri, sehingga pasangan Oka-Nina berada di lantai 3-4 karena Oka tidak di lantai 4. Lina di atas Made pada lantai tersisa, yaitu Made di lantai 1 dan Lina di lantai 5. Susunan dari lantai 1: Made, Putri, Oka, Nina, Lina.",
+    "id": "p11-tiu-13",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Lina"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Nina"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Made"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Oka"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Putri"
+      }
+    ],
+    "question": "Lina, Made, Nina, Oka, dan Putri masing-masing menempati satu lantai yang berbeda di sebuah gedung kantor berlantai lima. Putri menempati lantai 2. Posisi lantai Lina lebih tinggi daripada posisi lantai Made. Oka berada satu lantai di bawah Nina. Made tidak berada di lantai 5. Lantai Nina tidak bersebelahan dengan lantai Putri. Oka tidak berada di lantai 4. Siapa yang menempati lantai 4?",
+    "subCategory": "Penalaran Analitis"
+  },
+  {
+    "category": "TIU",
+    "explanation": "75% dari 480 = 360; 0,25 × 160 = 40; 360 − 40 = 320.",
+    "id": "p11-tiu-14",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "320"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "300"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "310"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "330"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "340"
+      }
+    ],
+    "question": "Hasil dari 75% dari 480 dikurangi 0,25 × 160 adalah...",
+    "subCategory": "Berhitung Cepat"
+  },
+  {
+    "category": "TIU",
+    "explanation": "0,8 + 3/5 = 0,8 + 0,6 = 1,4; 1,4 × 150 = 210; 20% dari 250 = 50; 210 − 50 = 160.",
+    "id": "p11-tiu-15",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "140"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "145"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "150"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "155"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "160"
+      }
+    ],
+    "question": "Hasil dari (0,8 + 3/5) × 150 dikurangi 20% dari 250 adalah...",
+    "subCategory": "Berhitung Cepat"
+  },
+  {
+    "category": "TIU",
+    "explanation": "2,5 × 96 = 240; 12,5% dari 480 = 60; 240 + 60 = 300.",
+    "id": "p11-tiu-16",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "280"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "290"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "300"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "310"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "320"
+      }
+    ],
+    "question": "Hasil dari 2,5 × 96 ditambah 12,5% dari 480 adalah...",
+    "subCategory": "Berhitung Cepat"
+  },
+  {
+    "category": "TIU",
+    "explanation": "45% dari 500 = 225; 0,4 × 125 = 50; 225 + 50 = 275; 275 : 5 = 55.",
+    "id": "p11-tiu-17",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "50"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "55"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "60"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "65"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "70"
+      }
+    ],
+    "question": "Hasil dari (45% dari 500 ditambah 0,4 × 125) dibagi 5 adalah...",
+    "subCategory": "Berhitung Cepat"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Waktu = jarak : kecepatan. P = 150 : 60 = 2,5 jam; Q = 200 : 50 = 4 jam; Q lebih besar daripada P.",
+    "id": "p11-tiu-18",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "P lebih besar daripada Q"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "P sama dengan Q"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Hubungan P dan Q tidak dapat ditentukan"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "P dua kali Q"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Q lebih besar daripada P"
+      }
+    ],
+    "question": "P menyatakan lama perjalanan sepeda motor yang melaju sejauh 150 km dengan kecepatan 60 km per jam, sedangkan Q menyatakan lama perjalanan sepeda motor lain yang melaju sejauh 200 km dengan kecepatan 50 km per jam. Hubungan yang tepat antara P dan Q adalah...",
+    "subCategory": "Perbandingan Kuantitatif"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Waktu = jarak : kecepatan. Kuantitas A = 210 : 70 = 3 jam; kuantitas B = 180 : 60 = 3 jam; kedua kuantitas sama besar.",
+    "id": "p11-tiu-19",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Kuantitas A lebih besar daripada kuantitas B"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Kuantitas B lebih besar daripada kuantitas A"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Hubungan kedua kuantitas tidak dapat ditentukan dari informasi yang diberikan"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Kuantitas A sama dengan kuantitas B"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Kuantitas B dua kali kuantitas A"
+      }
+    ],
+    "question": "Bus pertama melaju dengan kecepatan 70 km per jam sejauh 210 km. Bus kedua melaju dengan kecepatan 60 km per jam sejauh 180 km. Jika kuantitas A adalah lama perjalanan bus pertama dan kuantitas B adalah lama perjalanan bus kedua, pernyataan yang benar adalah...",
+    "subCategory": "Perbandingan Kuantitatif"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Waktu = jarak : kecepatan. Kuantitas A = 96 : 48 = 2 jam = 120 menit; kuantitas B = 105 : 42 = 2,5 jam = 150 menit; kuantitas B lebih besar daripada kuantitas A.",
+    "id": "p11-tiu-20",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Kuantitas A lebih besar daripada kuantitas B"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Kuantitas A sama dengan kuantitas B"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Kuantitas B lebih besar daripada kuantitas A"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Hubungan kedua kuantitas tidak dapat ditentukan dari informasi yang diberikan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Kuantitas A dua kali kuantitas B"
+      }
+    ],
+    "question": "Sebuah truk menempuh rute 96 km dengan kecepatan rata-rata 48 km per jam, sedangkan truk lain menempuh rute 105 km dengan kecepatan rata-rata 42 km per jam. Kuantitas A adalah lama perjalanan truk pertama dalam menit dan kuantitas B adalah lama perjalanan truk lain dalam menit. Hubungan yang benar antara keduanya adalah...",
+    "subCategory": "Perbandingan Kuantitatif"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Waktu = jarak : kelajuan. A = 300 : 60 = 5 jam; B = 280 : 70 = 4 jam; A lebih besar daripada B.",
+    "id": "p11-tiu-21",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "B lebih besar daripada A"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "A lebih besar daripada B"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "A sama dengan B"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Hubungan A dan B tidak dapat ditentukan dari informasi yang diberikan"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "A dua kali B"
+      }
+    ],
+    "question": "Dua kereta berangkat pada jalur yang berbeda. Kereta pertama menempuh jarak 300 km dengan kelajuan tetap 60 km per jam, sedangkan kereta kedua menempuh jarak 280 km dengan kelajuan tetap 70 km per jam. Jika A menyatakan waktu yang dibutuhkan kereta pertama dan B menyatakan waktu yang dibutuhkan kereta kedua, pernyataan yang tepat mengenai A dan B adalah...",
+    "subCategory": "Perbandingan Kuantitatif"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Polanya ×3−2 untuk seluruh suku: 5×3−2=13, 13×3−2=37, 37×3−2=109, 109×3−2=325, sehingga suku berikutnya 325×3−2=973.",
+    "id": "p11-tiu-22",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "973"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "971"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "975"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "965"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "977"
+      }
+    ],
+    "question": "Bilangan selanjutnya dari deret 5, 13, 37, 109, 325, ... adalah...",
+    "subCategory": "Deret Angka"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Polanya ×2−1 untuk seluruh suku: 6×2−1=11, 11×2−1=21, 21×2−1=41, 41×2−1=81, sehingga suku berikutnya 81×2−1=161.",
+    "id": "p11-tiu-23",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "157"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "159"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "161"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "163"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "165"
+      }
+    ],
+    "question": "Perhatikan deret angka berikut: 6, 11, 21, 41, 81, ... Angka berikutnya adalah...",
+    "subCategory": "Deret Angka"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Polanya ×3+4 untuk seluruh suku: 2×3+4=10, 10×3+4=34, 34×3+4=106, 106×3+4=322, sehingga suku berikutnya 322×3+4=970.",
+    "id": "p11-tiu-24",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "962"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "964"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "966"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "970"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "974"
+      }
+    ],
+    "question": "Bilangan selanjutnya dari deret 2, 10, 34, 106, 322, ... adalah...",
+    "subCategory": "Deret Angka"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Polanya ×2+5 untuk seluruh suku: 3×2+5=11, 11×2+5=27, 27×2+5=59, 59×2+5=123, sehingga suku berikutnya 123×2+5=251.",
+    "id": "p11-tiu-25",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "243"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "245"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "247"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "249"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "251"
+      }
+    ],
+    "question": "Perhatikan deret angka berikut: 3, 11, 27, 59, 123, ... Angka berikutnya adalah...",
+    "subCategory": "Deret Angka"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Selisih perbandingan 7−5=2 dari total 12 bagian. Selisih uang = 2/12 × Rp96.000,00 = Rp16.000,00.",
+    "id": "p11-tiu-26",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "Rp14.000,00"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Rp16.000,00"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Rp18.000,00"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Rp20.000,00"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Rp24.000,00"
+      }
+    ],
+    "question": "Andra dan Bima mengumpulkan uang dalam perbandingan 7 : 5. Total uang yang mereka kumpulkan adalah Rp96.000,00. Berapa rupiah lebih banyak uang Andra dibandingkan uang Bima?",
+    "subCategory": "Soal Cerita"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Selisih perbandingan 8−3=5 bagian setara 35 tahun, sehingga satu bagian 7 tahun. Umur anak = 3 × 7 tahun = 21 tahun.",
+    "id": "p11-tiu-27",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "18 tahun"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "19 tahun"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "20 tahun"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "21 tahun"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "24 tahun"
+      }
+    ],
+    "question": "Seorang ayah berusia 35 tahun lebih tua daripada anaknya. Umur ayah dan umur anaknya berbanding 8 : 3. Umur anak tersebut sekarang adalah...",
+    "subCategory": "Soal Cerita"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Misalkan uang Rina 5x dan uang Tono 4x. Setelah pemberian, 5x − 12.000 = 4x + 12.000, sehingga x = 24.000. Jumlah uang mereka = 9x = Rp216.000,00.",
+    "id": "p11-tiu-28",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Rp216.000,00"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "Rp204.000,00"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "Rp192.000,00"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "Rp180.000,00"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "Rp228.000,00"
+      }
+    ],
+    "question": "Rina mempunyai uang lebih banyak daripada Tono dengan perbandingan 5 : 4. Setelah Rina memberikan Rp12.000,00 kepada Tono, jumlah uang mereka berdua menjadi sama. Berapa jumlah uang Rina dan Tono seluruhnya?",
+    "subCategory": "Soal Cerita"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Misalkan usia Andi x tahun, usia Budi 3x/5 tahun. Lima tahun lagi: (x + 5) + (3x/5 + 5) = 50, sehingga 8x/5 = 40 dan x = 25.",
+    "id": "p11-tiu-29",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "22 tahun"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "24 tahun"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "25 tahun"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "26 tahun"
+      },
+      {
+        "label": "E",
+        "points": 0,
+        "text": "28 tahun"
+      }
+    ],
+    "question": "Budi berusia 3/5 dari usia Andi. Jika lima tahun dari sekarang jumlah usia mereka berdua 50 tahun, berapa usia Andi saat ini?",
+    "subCategory": "Soal Cerita"
+  },
+  {
+    "category": "TIU",
+    "explanation": "Selisih perbandingan 5−3=2 bagian setara 8 tahun, sehingga satu bagian 4 tahun. Usia kakak 20 tahun dan adik 12 tahun; empat tahun lagi menjadi 24 : 16 = 3 : 2.",
+    "id": "p11-tiu-30",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 0,
+        "text": "5 : 4"
+      },
+      {
+        "label": "B",
+        "points": 0,
+        "text": "4 : 3"
+      },
+      {
+        "label": "C",
+        "points": 0,
+        "text": "7 : 5"
+      },
+      {
+        "label": "D",
+        "points": 0,
+        "text": "8 : 5"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "3 : 2"
+      }
+    ],
+    "question": "Usia seorang kakak dan adiknya berbanding 5 : 3 dengan selisih 8 tahun. Empat tahun mendatang, usia kakak berbanding usia adik menjadi...",
+    "subCategory": "Soal Cerita"
+  },
+  {
+    "id": "p11-tiu-31",
+    "category": "TIU",
+    "subCategory": "Figural",
+    "question": "Perhatikan rangkaian gambar berikut, kemudian pilih gambar yang tepat untuk menggantikan tanda tanya.",
+    "image": "images/p11-figural-01.webp",
+    "options": [
+      {
+        "label": "A",
+        "text": "Gambar A",
+        "points": 0
+      },
+      {
+        "label": "B",
+        "text": "Gambar B",
+        "points": 0
+      },
+      {
+        "label": "C",
+        "text": "Gambar C",
+        "points": 0
+      },
+      {
+        "label": "D",
+        "text": "Gambar D",
+        "points": 0
+      },
+      {
+        "label": "E",
+        "text": "Gambar E",
+        "points": 5
+      }
+    ],
+    "explanation": "Kubus digulingkan 90 derajat ke depan pada setiap langkah."
+  },
+  {
+    "id": "p11-tiu-32",
+    "category": "TIU",
+    "subCategory": "Figural",
+    "question": "Perhatikan pola gambar berikut. Gambar manakah yang tepat untuk melanjutkan pola tersebut?",
+    "image": "images/p11-figural-02.webp",
+    "options": [
+      {
+        "label": "A",
+        "text": "Gambar A",
+        "points": 0
+      },
+      {
+        "label": "B",
+        "text": "Gambar B",
+        "points": 0
+      },
+      {
+        "label": "C",
+        "text": "Gambar C",
+        "points": 5
+      },
+      {
+        "label": "D",
+        "text": "Gambar D",
+        "points": 0
+      },
+      {
+        "label": "E",
+        "text": "Gambar E",
+        "points": 0
+      }
+    ],
+    "explanation": "Seluruh pola diputar 90 derajat berlawanan arah jarum jam pada setiap langkah."
+  },
+  {
+    "id": "p11-tiu-33",
+    "category": "TIU",
+    "subCategory": "Figural",
+    "question": "Rangkaian gambar berikut mengikuti suatu pola tertentu. Pilih gambar yang tepat untuk menggantikan tanda tanya.",
+    "image": "images/p11-figural-03.webp",
+    "options": [
+      {
+        "label": "A",
+        "text": "Gambar A",
+        "points": 0
+      },
+      {
+        "label": "B",
+        "text": "Gambar B",
+        "points": 5
+      },
+      {
+        "label": "C",
+        "text": "Gambar C",
+        "points": 0
+      },
+      {
+        "label": "D",
+        "text": "Gambar D",
+        "points": 0
+      },
+      {
+        "label": "E",
+        "text": "Gambar E",
+        "points": 0
+      }
+    ],
+    "explanation": "Bangun dicerminkan secara bergantian terhadap sumbu tegak dan sumbu datar."
+  },
+  {
+    "id": "p11-tiu-34",
+    "category": "TIU",
+    "subCategory": "Figural",
+    "question": "Perhatikan rangkaian gambar berikut, kemudian pilih gambar yang tepat untuk menggantikan tanda tanya.",
+    "image": "images/p11-figural-04.webp",
+    "options": [
+      {
+        "label": "A",
+        "text": "Gambar A",
+        "points": 0
+      },
+      {
+        "label": "B",
+        "text": "Gambar B",
+        "points": 0
+      },
+      {
+        "label": "C",
+        "text": "Gambar C",
+        "points": 0
+      },
+      {
+        "label": "D",
+        "text": "Gambar D",
+        "points": 5
+      },
+      {
+        "label": "E",
+        "text": "Gambar E",
+        "points": 0
+      }
+    ],
+    "explanation": "Anak panah berputar 45 derajat searah jarum jam pada setiap langkah."
+  },
+  {
+    "id": "p11-tiu-35",
+    "category": "TIU",
+    "subCategory": "Figural",
+    "question": "Perhatikan pola gambar berikut. Gambar manakah yang tepat untuk melanjutkan pola tersebut?",
+    "image": "images/p11-figural-05.webp",
+    "options": [
+      {
+        "label": "A",
+        "text": "Gambar A",
+        "points": 5
+      },
+      {
+        "label": "B",
+        "text": "Gambar B",
+        "points": 0
+      },
+      {
+        "label": "C",
+        "text": "Gambar C",
+        "points": 0
+      },
+      {
+        "label": "D",
+        "text": "Gambar D",
+        "points": 0
+      },
+      {
+        "label": "E",
+        "text": "Gambar E",
+        "points": 0
+      }
+    ],
+    "explanation": "Anak panah berputar 45 derajat berlawanan arah jarum jam pada setiap langkah."
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: responsif dan empatik dalam pelayanan darurat; keselamatan warga diutamakan dengan menggali informasi lokasi sambil mengerahkan regu dan memberi arahan keselamatan awal.",
+    "id": "p11-tkp-01",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Memintanya menenangkan diri dan menyebutkan alamat lengkap sebelum laporan diteruskan"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Menyuruhnya menutup telepon dan menelepon kembali setelah menemukan alamat lengkapnya"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Menenangkannya, menggali patokan lokasi dan nomor teleponnya, meneruskan laporan ke regu terdekat, dan memberinya arahan keselamatan awal"
+      },
+      {
+        "label": "D",
+        "points": 1,
+        "text": "Mengabaikan laporan itu karena alamatnya tidak jelas dan menunggu laporan lain yang lebih lengkap"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mencatat nama gang yang disebutkannya dan meneruskan laporan ke regu terdekat tanpa memberi arahan keselamatan"
+      }
+    ],
+    "question": "Anda bertugas menerima laporan darurat kebakaran. Seorang warga menelepon dengan panik melaporkan api membesar di dapur rumahnya, tetapi ia tidak dapat menyebutkan alamat lengkapnya dan hanya menyebut nama gang. Tindakan yang paling tepat Anda lakukan adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kemudahan dan kejelasan layanan; petugas membantu warga melengkapi persyaratan dengan memanfaatkan arsip kejadian dan memberi kepastian waktu penyelesaian.",
+    "id": "p11-tkp-02",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Menolak permintaannya dan memintanya kembali setelah seluruh dokumen lengkap tanpa penjelasan lebih lanjut"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Menyuruhnya mengurus sendiri ke instansi lain karena pos tidak melayani surat keterangan"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menerima permintaannya dan memintanya menunggu tanpa kepastian waktu penyelesaian"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menjelaskan syarat yang diperlukan dan membantunya memeriksa arsip kejadian agar dokumen pendukung dapat dilengkapi"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Menjelaskan syaratnya secara rinci, membantunya menelusuri arsip kejadian dan foto petugas, serta memberinya daftar periksa dan perkiraan waktu penyelesaian"
+      }
+    ],
+    "question": "Seorang warga datang ke pos pemadam kebakaran meminta surat keterangan kebakaran untuk klaim asuransi. Ia hanya membawa kartu identitas, sedangkan berita acara kejadian dan foto lokasi belum ia miliki. Sebagai petugas, tindakan Anda adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: proaktif dan solutif dalam melayani kebutuhan warga; ketika jadwal penuh, petugas menawarkan alternatif jadwal dan materi pendahuluan agar kebutuhan sekolah tetap terlayani.",
+    "id": "p11-tkp-03",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Menawarkan jadwal pengganti yang tersedia, mengirimkan materi tertulis dan video singkat terlebih dahulu, serta mencatat permintaan itu sebagai prioritas berikutnya"
+      },
+      {
+        "label": "B",
+        "points": 3,
+        "text": "Meminta sekolah menunggu kabar tanpa memberikan jadwal pengganti yang jelas"
+      },
+      {
+        "label": "C",
+        "points": 2,
+        "text": "Menolak permintaan itu karena regu sedang sibuk dan meminta sekolah mencari narasumber lain"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menawarkan jadwal pengganti, tetapi tidak memberikan materi apa pun sampai kegiatan dilaksanakan"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Mengabaikan permintaan itu karena pelatihan internal lebih penting daripada sosialisasi ke sekolah"
+      }
+    ],
+    "question": "Sebuah sekolah meminta regu pemadam kebakaran memberikan sosialisasi penggunaan alat pemadam api ringan (APAR) pada pekan ini, tetapi seluruh regu sudah terjadwal penuh untuk pelatihan internal. Sebagai petugas yang menerima permintaan itu, tindakan Anda adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: akuntabilitas dan perbaikan layanan; keluhan diterima dengan terbuka dan ditindaklanjuti sampai ke akar masalah, yaitu akses jalan yang terhalang.",
+    "id": "p11-tkp-04",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Menjelaskan bahwa keterlambatan itu sepenuhnya salah warga yang parkir sembarangan"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Mengabaikan keluhan itu karena petugas sudah bekerja secepat mungkin"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menerima keluhan itu dan berjanji akan lebih cepat lain kali tanpa menindaklanjuti penyebabnya"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Menerima keluhan dengan terbuka, menjelaskan kendala akses jalan, mengoordinasikan penertiban parkir dengan pihak terkait, dan mengedukasi warga tentang pentingnya jalur bebas hambatan"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Menerima keluhan itu dan menjelaskan kendala akses jalan, tetapi tidak melakukan tindak lanjut apa pun"
+      }
+    ],
+    "question": "Seorang warga mengeluh bahwa mobil pemadam kebakaran terlambat tiba saat kebakaran di lingkungannya karena jalan masuk terhalang kendaraan yang parkir sembarangan. Sebagai petugas, respons yang paling tepat adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: keberpihakan pada kelompok rentan dan kepedulian; warga lanjut usia yang tinggal sendiri diprioritaskan dengan jadwal kunjungan yang jelas dan penjelasan yang menenangkan.",
+    "id": "p11-tkp-05",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 4,
+        "text": "Mencatat permintaannya dan menjadwalkan kunjungan pada giliran berikutnya tanpa penjelasan waktu"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Memprioritaskan permintaannya karena kerentanannya, menjadwalkan kunjungan rumah dengan waktu yang jelas, dan menjelaskan hal yang akan diperiksa"
+      },
+      {
+        "label": "C",
+        "points": 2,
+        "text": "Memintanya membeli detektor asap sendiri dan memasangnya dengan bantuan tetangga"
+      },
+      {
+        "label": "D",
+        "points": 1,
+        "text": "Menolak permintaannya karena pemasangan detektor asap bukan tugas pemadam kebakaran"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Memberinya brosur pencegahan kebakaran dan memintanya menghubungi teknisi listrik sendiri"
+      }
+    ],
+    "question": "Seorang warga lanjut usia yang tinggal seorang diri datang ke pos pemadam kebakaran dan meminta bantuan pemasangan detektor asap serta pemeriksaan instalasi listrik di rumahnya karena ia khawatir terjadi korsleting. Tindakan Anda adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: inklusivitas dan kesetaraan layanan bagi penyandang disabilitas; kebutuhan khusus dicatat dalam rencana evakuasi agar keselamatan semua peserta terjamin.",
+    "id": "p11-tkp-06",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Memintanya menunggu di tempatnya sampai simulasi selesai tanpa penjelasan jalur alternatif"
+      },
+      {
+        "label": "B",
+        "points": 4,
+        "text": "Menunjukkan jalur landai dan titik kumpul yang dapat diaksesnya, tetapi tidak mencatat kebutuhannya"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Mendampinginya melewati jalur landai menuju titik kumpul yang aksesibel, menjelaskan prosedur evakuasi baginya, dan mencatat kebutuhan khususnya dalam rencana evakuasi gedung"
+      },
+      {
+        "label": "D",
+        "points": 1,
+        "text": "Menyuruhnya mengikuti jalur yang sama dengan peserta lain agar simulasi berjalan seragam"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Menunjukkan arah jalur landai dari kejauhan dan memintanya mencoba sendiri"
+      }
+    ],
+    "question": "Saat simulasi evakuasi gedung, seorang pegawai pengguna kursi roda bertanya jalur evakuasi yang dapat ia lalui karena tangga darurat tidak dapat ia gunakan. Sebagai petugas BPBD yang memandu simulasi, tindakan Anda adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: komunikasi yang empatik dan transparan dalam situasi darurat; warga diberi penjelasan yang menenangkan, perkiraan waktu, dan saluran pengaduan resmi.",
+    "id": "p11-tkp-07",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Membentaknya balik karena ia tidak memahami bahaya kebakaran"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Mengabaikannya dan melanjutkan pemadaman tanpa penjelasan apa pun"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menjelaskan alasan pemutusan listrik secara singkat, lalu meninggalkannya tanpa informasi lanjutan"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menjelaskan alasan keselamatan di balik pemutusan listrik dan memintanya bersabar tanpa perkiraan waktu"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Menjelaskan alasan keselamatan pemutusan listrik dengan tenang, menyampaikan perkiraan waktu penormalan, dan memberitahunya saluran pengaduan resmi bila masih keberatan"
+      }
+    ],
+    "question": "Saat memadamkan kebakaran sebuah ruko, petugas memutus aliran listrik di deretan ruko itu demi keselamatan. Seorang pemilik toko di sebelahnya marah karena usahanya terganggu dan menuntut penjelasan. Sebagai petugas di lokasi, tindakan Anda adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: keterbukaan informasi yang disertai perlindungan data pribadi; data agregat dapat dibagikan melalui permohonan resmi tanpa mengorbankan identitas korban.",
+    "id": "p11-tkp-08",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Memberikan data agregat yang tidak memuat identitas pribadi, menjelaskan ketentuan perlindungan data, dan mengarahkannya mengajukan permohonan resmi"
+      },
+      {
+        "label": "B",
+        "points": 3,
+        "text": "Memberikan seluruh data yang diminta agar tugas akhirnya cepat selesai"
+      },
+      {
+        "label": "C",
+        "points": 2,
+        "text": "Menolak seluruh permintaan tanpa menawarkan data apa pun yang dapat dibagikan"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Memberikan data agregat, tetapi tidak menjelaskan prosedur permohonan resminya"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Memberikan data lengkap termasuk nama dan alamat karena mahasiswa itu berjanji tidak menyebarluaskannya"
+      }
+    ],
+    "question": "Seorang mahasiswa meminta data kejadian kebakaran selama setahun terakhir untuk tugas akhirnya, termasuk nama dan alamat pemilik rumah yang terbakar. Sebagai petugas yang mengelola data kejadian, tindakan Anda adalah...",
+    "subCategory": "Pelayanan Publik"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: koordinasi lintas instansi dan keselamatan kerja bersama; pemutusan aliran listrik dikoordinasikan dengan PLN dan zona aman disepakati sebelum pemadaman dilanjutkan.",
+    "id": "p11-tkp-09",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Memerintahkan regu memadamkan api dari jarak jauh sambil menunggu listrik padam sendiri"
+      },
+      {
+        "label": "B",
+        "points": 3,
+        "text": "Menghubungi PLN sekali dan melanjutkan pemadaman tanpa memastikan aliran sudah diputus"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Melanjutkan pemadaman tanpa menghubungi PLN karena setiap menit api makin membesar"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Segera menghubungi PLN untuk memutus aliran, menetapkan zona aman bersama petugas PLN, dan menjaga komunikasi berkala sampai lokasi dinyatakan aman"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Menghubungi PLN dan menunggu konfirmasi pemutusan, tetapi tidak menetapkan zona aman di lokasi"
+      }
+    ],
+    "question": "Regu Anda memadamkan kebakaran yang melibatkan gardu listrik di permukiman padat. Aliran listrik di sekitar lokasi masih menyala sehingga berisiko bagi petugas dan warga. Sebagai komandan regu, langkah koordinasi yang paling tepat adalah...",
+    "subCategory": "Jejaring Kerja"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kolaborasi dan inisiatif membantu mitra kerja; hambatan data diatasi dengan mendatangi langsung, menyederhanakan format, dan melibatkan perangkat kewilayahan.",
+    "id": "p11-tkp-10",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Mengirimkan pengingat tertulis dan menunggu tanpa batas waktu yang jelas"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Mendatangi kelurahan, membantu menyiapkan format data yang sederhana, dan melibatkan ketua RT dan RW untuk melengkapi data bersama"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Menyusun peta evakuasi tanpa data warga rentan agar pekerjaan selesai tepat waktu"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Melaporkan kelurahan ke atasan sebagai pihak yang menghambat tanpa berupaya membantu terlebih dahulu"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mendatangi kelurahan untuk menagih data, tetapi tidak menawarkan bantuan penyusunan datanya"
+      }
+    ],
+    "question": "BPBD membutuhkan data warga rentan, seperti warga lanjut usia dan penyandang disabilitas, dari kelurahan untuk menyusun peta evakuasi. Kelurahan belum mengirimkan data itu hingga tenggat yang disepakati. Tindakan Anda adalah...",
+    "subCategory": "Jejaring Kerja"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: koordinasi dan pembagian peran dalam kerja tim lintas kelompok; wilayah dan peran dibagi di bawah satu komando agar tidak ada wilayah yang terlewat atau didatangi dua kali.",
+    "id": "p11-tkp-11",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Membiarkan kedua kelompok bekerja sendiri-sendiri karena keduanya berniat baik"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Menyuruh relawan pulang agar tidak mengganggu kerja regu resmi"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Mengumpulkan kedua kelompok di posko, membagi wilayah dan peran secara jelas di bawah satu komando, serta menyepakati jadwal pelaporan berkala"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Membagi wilayah secara lisan tanpa menetapkan komando dan jadwal pelaporan"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Meminta relawan menunggu di posko sampai regu selesai bekerja"
+      }
+    ],
+    "question": "Di lokasi banjir, regu pemadam kebakaran dan sekelompok relawan sama-sama mengevakuasi warga dari satu permukiman tanpa pembagian wilayah, sehingga sebagian gang terlewat dan sebagian dikunjungi dua kali. Sebagai petugas BPBD di posko, tindakan Anda adalah...",
+    "subCategory": "Jejaring Kerja"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: musyawarah dan pengambilan keputusan bersama berbasis keselamatan; perbedaan pendapat diselesaikan dengan mengutamakan tingkat kegawatan korban dan keputusan didokumentasikan.",
+    "id": "p11-tkp-12",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Memaksakan pendapat tim Anda dan mengabaikan tim ambulans"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Membiarkan masing-masing tim bekerja tanpa kesepakatan urutan evakuasi"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Mengikuti pendapat tim ambulans sepenuhnya tanpa menyampaikan pertimbangan tim Anda"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Berdiskusi singkat untuk menyepakati urutan, tetapi tidak mencatat keputusan yang diambil"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Bermusyawarah cepat berdasarkan tingkat kegawatan dan keselamatan korban, menyepakati urutan evakuasi bersama, dan mendokumentasikan keputusan itu"
+      }
+    ],
+    "question": "Anda dan tim ambulans berbeda pendapat tentang urutan evakuasi korban dari lokasi kebakaran: tim Anda mengutamakan warga yang terjebak di lantai atas, sedangkan tim ambulans mengutamakan korban luka di halaman. Sebagai petugas di lokasi, tindakan Anda adalah...",
+    "subCategory": "Jejaring Kerja"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: sinergi antarinstansi dan akurasi data bersama; perbedaan data diselesaikan dengan verifikasi bersama dan satu daftar yang diperbarui berkala.",
+    "id": "p11-tkp-13",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Melakukan verifikasi bersama dengan dinas sosial di posko, menyatukan data ke dalam satu daftar, dan memperbaruinya secara berkala"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Memakai data BPBD saja karena posko berada di bawah koordinasi BPBD"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Meminta dinas sosial mengubah datanya mengikuti data BPBD tanpa verifikasi"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Melakukan verifikasi bersama, tetapi tidak memperbarui data setelahnya"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Membiarkan perbedaan data karena pembagian logistik dianggap sudah cukup merata"
+      }
+    ],
+    "question": "Data jumlah pengungsi di posko yang dicatat BPBD berbeda dengan data yang dicatat dinas sosial, sehingga pembagian logistik menjadi tidak merata. Sebagai petugas posko, tindakan Anda adalah...",
+    "subCategory": "Jejaring Kerja"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kemitraan dengan pihak swasta yang tertib dan akuntabel; bantuan diterima dengan kesepakatan tertulis, koordinasi pergerakan, dan laporan penggunaan yang transparan.",
+    "id": "p11-tkp-14",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Menerima bantuan itu tanpa kesepakatan apa pun dan langsung mengarahkan truk ke lokasi"
+      },
+      {
+        "label": "B",
+        "points": 3,
+        "text": "Menolak tawaran itu karena perusahaan swasta tidak memiliki kewenangan dalam pemadaman"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Mengabaikan tawaran itu karena prosedur kerja sama dianggap terlalu merepotkan"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Membuat kesepakatan tertulis sederhana tentang peran, jadwal, dan area kerja truk itu, mengoordinasikan pergerakannya dengan regu, serta melaporkan penggunaan bantuannya secara transparan"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Menerima bantuan itu dan mengoordinasikan pergerakannya, tetapi tanpa kesepakatan tertulis dan laporan penggunaan"
+      }
+    ],
+    "question": "Saat kebakaran hutan di pinggir kota, sebuah perusahaan menawarkan bantuan truk tangki air miliknya untuk membantu pemadaman. Sebagai petugas BPBD yang menerima tawaran itu, tindakan Anda adalah...",
+    "subCategory": "Jejaring Kerja"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kepedulian dan pembinaan rekan kerja dalam tim; pegawai baru didampingi dan diberi panduan agar mampu bekerja mandiri dengan hasil yang benar.",
+    "id": "p11-tkp-15",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Menjawab pertanyaannya seadanya sambil tetap mengerjakan tugas Anda sendiri"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Mendampinginya mengisi satu laporan sampai selesai, memberinya panduan singkat tertulis, dan memeriksa laporannya sebelum terkirim"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Menyuruhnya belajar sendiri karena semua pegawai harus mandiri"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Mengambil alih seluruh laporannya agar tidak ada kesalahan"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Memberinya panduan tertulis, tetapi tidak mendampingi atau memeriksa hasil kerjanya"
+      }
+    ],
+    "question": "Seorang pegawai baru di posko belum memahami sistem pelaporan kejadian dan berulang kali bertanya kepada Anda di tengah kesibukan penanganan banjir. Sebagai rekan kerja, sikap Anda adalah...",
+    "subCategory": "Jejaring Kerja"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: penghormatan pada adat dan pelibatan tokoh masyarakat; jadwal disesuaikan bersama tokoh adat agar simulasi berjalan tanpa mengabaikan kehidupan budaya warga.",
+    "id": "p11-tkp-16",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Tetap melaksanakan simulasi sesuai jadwal karena keselamatan lebih penting daripada upacara adat"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Membatalkan simulasi tanpa menjadwalkan pengganti"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Menjadwalkan ulang simulasi bersama tokoh adat, melibatkan tokoh adat sebagai pengarah kegiatan, dan menjelaskan manfaat simulasi bagi keselamatan warga"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menjadwalkan ulang simulasi, tetapi tanpa melibatkan tokoh adat dalam pelaksanaannya"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Meminta warga membagi waktu antara upacara adat dan simulasi pada hari yang sama"
+      }
+    ],
+    "question": "BPBD menjadwalkan simulasi evakuasi di sebuah desa, tetapi jadwal itu bertepatan dengan upacara adat yang dihadiri hampir seluruh warga desa. Tokoh adat menyampaikan keberatannya. Sebagai petugas BPBD, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: adaptasi komunikasi lintas budaya dan ketelitian dalam pelayanan darurat; hambatan bahasa diatasi dengan bantuan penerjemah dan konfirmasi ulang lokasi.",
+    "id": "p11-tkp-17",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Memintanya menelepon kembali setelah menemukan seseorang yang dapat berbahasa Indonesia"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Menutup telepon karena Anda tidak memahami penjelasannya"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Mencatat sebagian informasi yang Anda tangkap dan meneruskannya tanpa konfirmasi"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Mencari petugas lain yang memahami bahasa daerah itu, tetapi tidak mengonfirmasi ulang patokan lokasinya"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Mencari petugas atau relawan yang memahami bahasa daerah itu, menggunakan kalimat sederhana, dan mengonfirmasi ulang patokan lokasi sampai jelas sebelum meneruskan laporan"
+      }
+    ],
+    "question": "Seorang warga menelepon nomor darurat untuk melaporkan banjir dan hanya dapat menjelaskan lokasinya dengan bahasa daerah yang tidak Anda kuasai. Sebagai petugas penerima laporan, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: empati dan solusi yang menghormati kekhawatiran warga; penolakan mengungsi diatasi dengan pengertian dan solusi konkret bagi rumah dan ternak, bukan paksaan.",
+    "id": "p11-tkp-18",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Memberi pengertian tentang bahaya banjir dengan tenang, menawarkan penjagaan rumah secara bergilir bersama warga dan aparat, serta menyediakan tempat penitipan ternak yang aman"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Memaksa warga mengungsi dengan ancaman sanksi"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Membiarkan warga tinggal karena itu pilihan mereka sendiri"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Memberi pengertian tentang bahaya banjir, tetapi tidak menawarkan solusi bagi rumah dan ternak mereka"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Meninggalkan warga itu dan beralih ke permukiman lain yang lebih mudah dievakuasi"
+      }
+    ],
+    "question": "Air banjir mulai memasuki permukiman dan petugas mengimbau warga mengungsi ke posko. Sejumlah warga menolak pergi karena ingin menjaga rumah dan hewan ternaknya. Sebagai petugas BPBD, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: persuasif dan mengutamakan keselamatan masyarakat; kerumunan diatasi dengan garis pembatas dan imbauan yang melibatkan tokoh masyarakat, bukan bentakan.",
+    "id": "p11-tkp-19",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Mengusir warga dengan bentakan agar mereka segera pergi"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Membiarkan kerumunan itu karena warga hanya menonton dari kejauhan"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Memasang garis pembatas, tetapi tidak menjelaskan alasannya kepada warga"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Memasang garis pembatas, memberi imbauan persuasif melalui pengeras suara dan tokoh masyarakat setempat, serta menjelaskan bahaya asap dan reruntuhan"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Memberi imbauan persuasif, tetapi tidak memasang garis pembatas di lokasi"
+      }
+    ],
+    "question": "Saat kebakaran sebuah toko, banyak warga berkerumun menonton di sekitar lokasi sehingga menghambat gerak mobil pemadam dan membahayakan keselamatan mereka sendiri. Sebagai petugas di lokasi, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: pelayanan yang menjangkau pendatang dan komunikasi yang mudah dipahami; pendatang baru didatangi langsung dan pengurus rumah susun dilibatkan agar informasi tersebar merata.",
+    "id": "p11-tkp-20",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Memberinya selebaran dan memintanya membaca sendiri"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Mendatanginya dengan bahasa yang sederhana, menjelaskan nomor darurat dan jalur evakuasi, menempelkan poster di lantai tempatnya tinggal, dan melibatkan pengurus rumah susun"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Mengabaikannya karena sosialisasi sudah pernah dilakukan untuk penghuni lama"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Memintanya bertanya kepada tetangga karena petugas tidak sempat mendatangi satu per satu"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Menjelaskan nomor darurat dan jalur evakuasi, tetapi tidak melibatkan pengurus rumah susun dan tidak menempelkan poster"
+      }
+    ],
+    "question": "Sebuah keluarga pendatang baru di rumah susun belum mengetahui nomor darurat dan jalur evakuasi gedung karena baru pindah minggu lalu. Sebagai petugas pemadam kebakaran yang bertugas sosialisasi, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: mediasi konflik dan keadilan dalam penyaluran bantuan; perselisihan diredakan dengan transparansi daftar prioritas dan pelibatan perwakilan kedua kelompok.",
+    "id": "p11-tkp-21",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Membagikan bantuan kepada kelompok yang datang lebih dahulu agar perdebatan cepat selesai"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Menghentikan pembagian bantuan sampai kedua kelompok berhenti berdebat"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Menengahi dengan tenang, menjelaskan daftar prioritas pembagian secara transparan, dan melibatkan perwakilan kedua kelompok dalam pembagian berikutnya"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menjelaskan daftar prioritas, tetapi tidak melibatkan perwakilan warga dalam pembagian"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Meminta kedua kelompok mengambil sendiri paket bantuan yang tersisa"
+      }
+    ],
+    "question": "Di posko pengungsian, dua kelompok warga dari gang yang berbeda berebut paket bantuan logistik dan perdebatan mulai memanas. Sebagai petugas posko, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: penghormatan pada adat keluarga dan ketelitian pendataan; pendampingan diizinkan sesuai adat, tetapi keterangan tetap diverifikasi langsung dengan pemilik rumah.",
+    "id": "p11-tkp-22",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Menolak pendampingan itu karena pendataan harus dilakukan hanya dengan pemilik rumah"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Menunda pendataan sampai warga itu bersedia didata tanpa pendamping"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Mengizinkan pendampingan, tetapi mencatat keterangan anaknya tanpa verifikasi kepada pemilik rumah"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Mengizinkan pendampingan dan mencatat keterangan pemilik rumah, tetapi tidak menjelaskan prosedur pendataan kepada keduanya"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Mengizinkan pendampingan sesuai adat keluarganya, tetap memverifikasi keterangan langsung dengan pemilik rumah, dan menjelaskan prosedur pendataan kepada keduanya"
+      }
+    ],
+    "question": "Saat pendataan kerusakan rumah pascakebakaran, seorang warga lanjut usia meminta didampingi anaknya karena menurut adat keluarganya keputusan tentang rumah harus dihadiri anak tertua. Sebagai petugas pendata, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: keadilan dan nondiskriminasi dalam pelayanan kebencanaan; keberatan didengarkan, kriteria prioritas dijelaskan secara transparan, dan perwakilan warga dilibatkan.",
+    "id": "p11-tkp-23",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Mendengarkan keberatannya dengan serius, menjelaskan kriteria prioritas evakuasi berdasarkan kerentanan, melayani secara transparan, dan melibatkan perwakilan warga dalam pengaturan giliran"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Menjelaskan bahwa perasaannya keliru tanpa memeriksa pengaturan giliran evakuasi"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Memintanya bersabar dan menunggu giliran tanpa penjelasan kriteria prioritas"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menjelaskan kriteria prioritas, tetapi tidak melibatkan perwakilan warga dalam pengaturan giliran"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Mengabaikan keberatannya karena evakuasi harus berjalan cepat"
+      }
+    ],
+    "question": "Seorang warga dari suku minoritas di permukiman itu merasa tim evakuasi mendahulukan kelompok lain dan menyampaikan keberatannya kepada Anda. Sebagai petugas BPBD, tindakan Anda adalah...",
+    "subCategory": "Sosial Budaya"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: adaptif terhadap gangguan teknologi dan menjaga kelangsungan layanan; pencatatan manual terstruktur menjadi cadangan dan seluruh catatan disinkronkan setelah sistem pulih.",
+    "id": "p11-tkp-24",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Menunggu sistem pulih dan menunda seluruh pencatatan laporan"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Menolak menerima laporan warga sampai sistem kembali normal"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Mencatat laporan pada kertas seadanya tanpa format yang jelas"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Beralih ke pencatatan manual terstruktur, menginformasikan cara melapor alternatif kepada warga dan posko lain, serta menyinkronkan seluruh catatan ke sistem begitu pulih"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mencatat laporan secara manual, tetapi tidak menginformasikan cara melapor alternatif dan tidak menyinkronkannya kemudian"
+      }
+    ],
+    "question": "Sistem pelaporan kejadian daring BPBD mengalami gangguan saat banjir melanda dan laporan warga menumpuk. Sebagai petugas posko, tindakan Anda adalah...",
+    "subCategory": "Teknologi Informasi & Komunikasi"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: literasi informasi dan kecepatan klarifikasi resmi; kabar yang menimbulkan panik diverifikasi ke sumber berwenang dan diklarifikasi melalui kanal resmi secepatnya.",
+    "id": "p11-tkp-25",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Mengimbau warga tidak panik tanpa memeriksa kebenaran kabar itu"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Memverifikasi kondisi bendungan ke pos pantau, mengumumkan klarifikasi resmi secepatnya melalui kanal resmi, dan mengimbau warga tidak menyebarkan kabar yang belum terverifikasi"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Membiarkan kabar itu beredar karena warga akan mengetahuinya sendiri"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Meneruskan kabar itu ke grup lain agar warga lebih waspada"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Memverifikasi ke pos pantau, tetapi menunda pengumuman klarifikasi sampai keesokan hari"
+      }
+    ],
+    "question": "Di grup percakapan warga beredar kabar bahwa bendungan di hulu akan jebol dan warga diminta segera mengungsi, padahal belum ada pernyataan resmi. Kabar itu menimbulkan kepanikan. Sebagai petugas BPBD, tindakan Anda adalah...",
+    "subCategory": "Teknologi Informasi & Komunikasi"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: perlindungan data pribadi warga dalam layanan digital; data identitas dijaga kerahasiaannya, permintaan diteruskan lewat kanal resmi, dan warga diarahkan ke nomor darurat.",
+    "id": "p11-tkp-26",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Meneruskan foto dan datanya ke grup relawan agar evakuasi cepat dilakukan"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Mengabaikan pesan itu karena bukan kanal laporan resmi"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Menjaga kerahasiaan datanya, meneruskan permintaan evakuasi melalui kanal resmi tanpa menyebarluaskan fotonya, dan mengarahkannya melapor lewat nomor darurat"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Meneruskan permintaan evakuasi melalui kanal resmi, tetapi ikut menyebarluaskan foto identitasnya ke grup relawan"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Membalas pesannya dengan nomor darurat tanpa meneruskan permintaan evakuasinya"
+      }
+    ],
+    "question": "Melalui pesan pribadi di media sosial Anda, seorang warga mengirimkan foto kartu identitas dan lokasi rumahnya sambil meminta evakuasi karena banjir. Sebagai petugas BPBD, tindakan Anda adalah...",
+    "subCategory": "Teknologi Informasi & Komunikasi"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: keamanan informasi dan kepatuhan pada prosedur akses sistem; kata sandi tidak boleh dibagikan, dan kebutuhan mendesak dibantu melalui jalur yang sah.",
+    "id": "p11-tkp-27",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Memberikan kata sandi Anda karena kebutuhannya mendesak"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Memberikan kata sandi Anda dengan syarat ia mengubahnya kembali setelah selesai"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menolak memberikannya, tetapi tidak menawarkan bantuan lain"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menolak memberikannya dan memintanya menunggu sampai akunnya pulih sendiri"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Menolak berbagi kata sandi, mengarahkannya pada prosedur pemulihan akun resmi, dan membantunya mengakses peta yang dibutuhkan melalui akun Anda sesuai prosedur"
+      }
+    ],
+    "question": "Akun sistem pemetaan bencana milik rekan kerja Anda terkunci. Ia meminta kata sandi akun Anda agar dapat mengakses peta evakuasi yang mendesak dibutuhkan. Sebagai rekan kerja, tindakan Anda adalah...",
+    "subCategory": "Teknologi Informasi & Komunikasi"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: akurasi data dan ketertelusuran perubahan; perbedaan angka ditelusuri sumbernya, diverifikasi ulang, dan perbaikannya dicatat jejaknya.",
+    "id": "p11-tkp-28",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Menelusuri sumber perbedaan, memverifikasi ulang ke lapangan dan posko, lalu memperbarui data dengan mencatat jejak perubahannya"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Memakai angka sistem pusat tanpa memeriksa kebenarannya"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Memakai angka lembar kerja posko karena dianggap lebih baru"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Memverifikasi ulang ke lapangan, tetapi memperbarui data tanpa mencatat jejak perubahan"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Membiarkan perbedaan itu karena selisihnya dianggap kecil"
+      }
+    ],
+    "question": "Saat verifikasi, angka jumlah korban terdampak di lembar kerja posko berbeda dengan angka yang tercatat di sistem pusat. Sebagai petugas pendata, tindakan Anda adalah...",
+    "subCategory": "Teknologi Informasi & Komunikasi"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: tanggung jawab atas informasi publik dan perbaikan sistem; notifikasi keliru segera dikoreksi kepada warga, dilaporkan kepada pengelola, dan dicatat untuk evaluasi.",
+    "id": "p11-tkp-29",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Membiarkannya karena warga akan menyadari sendiri bahwa airnya normal"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Menyalahkan pengelola aplikasi di media sosial tanpa melapor secara resmi"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Mengumumkan koreksi kepada warga, tetapi tidak melaporkan kekeliruan itu kepada pengelola aplikasi"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Melaporkan kekeliruan itu kepada pengelola aplikasi, mengumumkan koreksi kepada warga secepatnya, dan mencatat insiden itu untuk evaluasi"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mengumumkan koreksi kepada warga dan melaporkan kepada pengelola, tetapi tidak mencatat insiden itu"
+      }
+    ],
+    "question": "Aplikasi peringatan dini banjir mengirimkan notifikasi evakuasi ke warga sebuah permukiman, tetapi setelah diperiksa ternyata ketinggian air di permukiman itu masih normal. Sebagai petugas yang mengetahui kekeliruan itu, tindakan Anda adalah...",
+    "subCategory": "Teknologi Informasi & Komunikasi"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: perlindungan privasi korban dan etika bermedia sosial; penyebaran foto korban dicegah dengan imbauan, pelaporan, dan edukasi warga.",
+    "id": "p11-tkp-30",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Mengabaikannya karena unggahan itu bukan berasal dari akun resmi instansi"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Mengimbau warga itu menghapus foto demi privasi korban, melaporkan unggahan kepada pengelola grup, dan mengedukasi warga tentang etika berbagi foto korban"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Ikut menyebarkan foto itu agar warga lain lebih waspada terhadap bahaya kebakaran"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Mengomentari unggahan itu dengan nada marah tanpa menjelaskan alasannya"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mengimbau warga menghapus foto, tetapi tidak melaporkan unggahan dan tidak mengedukasi warga lain"
+      }
+    ],
+    "question": "Seorang warga mengunggah foto korban kebakaran ke grup media sosial lingkungan dan foto itu mulai tersebar luas. Sebagai petugas yang melihat unggahan itu, tindakan Anda adalah...",
+    "subCategory": "Teknologi Informasi & Komunikasi"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: akuntabilitas dan kejujuran dalam pelaporan kinerja; kesalahan diperbaiki melalui mekanisme koreksi yang sah dan angka lain turut diperiksa ulang.",
+    "id": "p11-tkp-31",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Membiarkannya karena laporan sudah ditandatangani dan kesalahannya dianggap kecil"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Mengubah angka itu diam-diam tanpa memberi tahu siapa pun"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Melaporkan kesalahan itu kepada atasan, memperbaikinya melalui berita acara koreksi yang sah, dan memeriksa kembali angka lain dalam laporan itu"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Melaporkan kesalahan itu kepada atasan, tetapi tidak memeriksa angka lain dalam laporan"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Menunda pengiriman laporan tanpa menjelaskan alasannya kepada atasan"
+      }
+    ],
+    "question": "Anda menemukan kesalahan pencatatan waktu respons dalam laporan kejadian kebakaran yang sudah ditandatangani atasan dan siap dikirim ke pimpinan daerah. Tindakan yang paling tepat Anda lakukan adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: integritas dan keberanian menolak perintah yang melanggar kebenaran; data riil disajikan apa adanya disertai usulan perbaikan kinerja yang sesungguhnya.",
+    "id": "p11-tkp-32",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Mengikuti permintaan atasan karena ia yang bertanggung jawab atas laporan itu"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Mengubah sebagian angka agar terlihat lebih baik, tetapi tidak terlalu jauh dari kenyataan"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menolak mengubah angka, tetapi tidak menyampaikan data yang benar kepada atasan"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menolak mengubah angka dan menyajikan data yang benar, tetapi tidak mengusulkan perbaikan apa pun"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Menolak memalsukan data, menyajikan data riil yang dapat dipertanggungjawabkan, dan mengusulkan langkah perbaikan waktu respons yang sebenarnya"
+      }
+    ],
+    "question": "Atasan meminta Anda menuliskan waktu respons dalam laporan seolah-olah lebih cepat daripada kenyataannya agar kinerja unit terlihat baik dalam evaluasi. Tindakan Anda adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: manajemen beban kerja dan tanggung jawab; prioritas disusun berdasarkan tenggat dan urgensi serta dikoordinasikan dengan atasan dan rekan kerja.",
+    "id": "p11-tkp-33",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Menyusun prioritas berdasarkan tenggat dan urgensi, mengoordinasikan pembagian tugas dengan atasan dan rekan, serta menyelesaikan pekerjaan secara bertahap"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Mengerjakan tugas yang paling mudah terlebih dahulu tanpa memperhatikan tenggatnya"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Meminta seluruh tugas dialihkan kepada rekan lain agar Anda dapat beristirahat"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menyusun prioritas sendiri tanpa mengoordinasikannya dengan atasan dan rekan"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Mengabaikan laporan dan persiapan simulasi demi menjaga waktu istirahat Anda"
+      }
+    ],
+    "question": "Menjelang akhir pekan, beban kerja Anda menumpuk: laporan kebakaran harus selesai, persiapan simulasi evakuasi belum rampung, dan giliran piket malam sudah menunggu. Tindakan yang paling tepat Anda lakukan adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kepedulian pada keselamatan tim dan penegakan prosedur; kelalaian pemeriksaan peralatan diingatkan, dibantu perbaikannya, dan dilaporkan bila berulang.",
+    "id": "p11-tkp-34",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Membiarkannya karena pemeriksaan peralatan adalah tanggung jawabnya sendiri"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Melaporkannya langsung ke pimpinan tanpa pernah mengingatkannya"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Mengingatkannya sekali, lalu membiarkannya jika ia tetap tidak memeriksa"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Mengingatkannya dengan baik, memeriksa peralatan bersama pada kesempatan berikutnya, dan melaporkan kepada komandan regu bila kelalaian itu berulang"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mengingatkannya dan memeriksa peralatan bersama, tetapi tidak melaporkannya meskipun kelalaian itu berulang"
+      }
+    ],
+    "question": "Anda mengetahui seorang rekan regu berulang kali tidak memeriksa selang dan alat pemadam api ringan sebelum piket, padahal pemeriksaan itu wajib dilakukan. Tindakan Anda adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: integritas dan penolakan gratifikasi; pemberian dari warga ditolak dengan sopan disertai penjelasan bahwa layanan pemadaman kebakaran tidak dipungut biaya.",
+    "id": "p11-tkp-35",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Menerima uang itu dan membagikannya secara merata kepada anggota regu"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Menolak uang itu dengan sopan, menjelaskan bahwa penanggulangan kebakaran adalah tugas dan layanan gratis, serta mencatat kejadian itu sesuai ketentuan"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Menerima uang itu karena warga memberikannya dengan ikhlas"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Menerima uang itu dan menggunakannya untuk keperluan regu tanpa pencatatan"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Menolak uang itu dengan sopan, tetapi tidak menjelaskan alasan penolakannya"
+      }
+    ],
+    "question": "Setelah rumahnya berhasil diselamatkan dari kebakaran, seorang warga memberikan sejumlah uang kepada regu Anda sebagai ucapan terima kasih. Tindakan yang paling tepat bagi regu Anda adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kejujuran mengakui kesalahan dan perbaikan proses kerja; kesalahan diakui, diperbaiki dalam laporan, dan dicegah terulangnya dengan prosedur verifikasi yang lebih baik.",
+    "id": "p11-tkp-36",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Menyembunyikan kesalahan itu karena regu akhirnya sampai di lokasi yang benar"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Menyalahkan warga pelapor yang dianggap tidak menjelaskan alamat dengan jelas"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Mengakui kesalahan itu kepada komandan regu, memperbaikinya dalam laporan, dan mengusulkan prosedur verifikasi alamat dua tahap untuk mencegah terulangnya kesalahan"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Mengakui kesalahan itu dan memperbaikinya dalam laporan, tetapi tidak mengusulkan perbaikan prosedur"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Memperbaiki catatan alamat tanpa memberi tahu komandan regu"
+      }
+    ],
+    "question": "Anda menyadari telah salah mencatat alamat lokasi kejadian sehingga regu sempat salah arah sebelum akhirnya tiba di lokasi yang benar. Tindakan yang paling tepat Anda lakukan adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: pengembangan kompetensi dan kesediaan belajar; tugas baru dihadapi dengan mempelajari materi, meminta pendampingan, dan berlatih, bukan ditolak atau dikerjakan seadanya.",
+    "id": "p11-tkp-37",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Menolak tugas itu karena merasa tidak mampu"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Melaksanakan penyuluhan seadanya tanpa persiapan materi"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Meminta tugas itu dialihkan sepenuhnya kepada rekan yang lebih berpengalaman"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Mempelajari materi sendiri tanpa meminta pendampingan dan latihan"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Mempelajari materi penyuluhan, meminta pendampingan rekan senior, berlatih menyampaikan materi, dan menyiapkan alat peraga sederhana"
+      }
+    ],
+    "question": "Anda ditugasi menjadi narasumber penyuluhan pencegahan kebakaran di sebuah sekolah, padahal Anda belum pernah berbicara di depan umum dan belum menguasai materi penyuluhan. Tindakan Anda adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: tanggung jawab dan kesiapsiagaan dalam tugas darurat; regu tetap bertugas sampai serah terima jelas dan komandan regu dihubungi.",
+    "id": "p11-tkp-38",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Tetap bertugas menangani laporan itu sampai serah terima dengan regu pengganti jelas, sambil menghubungi komandan regu"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Pulang sesuai jadwal dan membiarkan laporan itu menunggu regu pengganti"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menangani laporan itu, tetapi tidak menghubungi komandan regu dan tidak melakukan serah terima"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menunggu regu pengganti di pos tanpa menindaklanjuti laporan yang masuk"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Menolak laporan itu karena sudah melewati jam piket regu Anda"
+      }
+    ],
+    "question": "Jam piket regu Anda sudah berakhir, tetapi regu pengganti belum datang dan sebuah laporan kebakaran baru saja masuk. Tindakan yang paling tepat bagi regu Anda adalah...",
+    "subCategory": "Profesionalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: ketegasan menolak intoleransi dan menjaga ketenteraman pengungsian; sisipan provokatif diamankan, dilaporkan kepada koordinator posko dan aparat keamanan, dan paket bantuan lainnya diperiksa.",
+    "id": "p11-tkp-39",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Membiarkan buku itu tetap di dalam paket karena warga bebas memilih bacaan"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Membagikan paket itu apa adanya agar pembagian bantuan tidak tertunda"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Mengeluarkan buku itu dari paket tanpa melaporkan penemuannya kepada siapa pun"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Mengeluarkan dan mengamankan buku itu, melaporkan penemuannya kepada koordinator posko dan aparat keamanan, serta memeriksa paket bantuan lainnya"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mengeluarkan buku itu dan melaporkannya, tetapi tidak memeriksa paket bantuan lainnya"
+      }
+    ],
+    "question": "Ketika memeriksa paket bantuan yang akan dibagikan di posko pengungsian, Anda menemukan buku kecil berisi ajakan membenci kelompok agama tertentu yang disisipkan di dalam salah satu paket. Tindakan Anda adalah...",
+    "subCategory": "Anti Radikalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: keberanian menegur ujaran kebencian dan menjaga kerukunan di tempat kerja; candaan yang merendahkan kelompok agama tidak didiamkan dan tidak ditertawakan.",
+    "id": "p11-tkp-40",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Mendiamkan lelucon itu agar apel berjalan lancar dan tidak timbul konflik"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Menegurnya secara pribadi setelah apel, memintanya tidak mengulanginya, dan melaporkannya kepada komandan regu bila ia mengulanginya"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Ikut menertawakan lelucon itu agar dianggap akrab dengan regu"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Membalas dengan lelucon yang merendahkan kelompok agama lain"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Menegurnya secara pribadi, tetapi tidak melakukan apa pun bila ia mengulanginya"
+      }
+    ],
+    "question": "Saat apel kesiapsiagaan regu, seorang rekan berulang kali melontarkan lelucon yang merendahkan penganut agama tertentu dan sebagian anggota regu menertawakannya. Sebagai anggota regu, tindakan Anda adalah...",
+    "subCategory": "Anti Radikalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: nondiskriminasi dan pengutamaan keselamatan dalam pelayanan; penolakan berbasis agama dihadapi dengan penjelasan yang menenangkan dan pendampingan, tanpa mengorbankan keselamatan warga.",
+    "id": "p11-tkp-41",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Meninggalkan warga itu karena ia menolak bantuan yang ditawarkan"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Menyuruh warga itu mengevakuasi diri sendiri"
+      },
+      {
+        "label": "C",
+        "points": 5,
+        "text": "Menenangkannya, menjelaskan bahwa petugas bekerja untuk keselamatan semua warga tanpa membedakan agama, menawarkan pendampingan warga lain yang ia percaya, dan tetap mengutamakan keselamatannya"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menjelaskan bahwa petugas bekerja untuk semua warga, tetapi tidak menawarkan pendampingan dan tidak menindaklanjuti keselamatannya"
+      },
+      {
+        "label": "E",
+        "points": 3,
+        "text": "Mengganti petugas sesuai permintaannya tanpa menjelaskan apa pun"
+      }
+    ],
+    "question": "Saat evakuasi banjir, seorang warga menolak dievakuasi oleh petugas yang berbeda agama dengannya dan meminta petugas lain. Sebagai petugas di lokasi, tindakan Anda adalah...",
+    "subCategory": "Anti Radikalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kesetiaan pada Pancasila dan kewaspadaan terhadap paham anti-Pancasila; ajakan ditolak tegas dan dilaporkan kepada atasan atau aparat yang berwenang.",
+    "id": "p11-tkp-42",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 1,
+        "text": "Menerima ajakan itu karena perkumpulan itu menawarkan bantuan logistik untuk posko"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Menerima ajakan itu sambil tetap menjalankan tugas di posko"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menolak ajakan itu, tetapi tidak melaporkan bujukan tersebut kepada siapa pun"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Menolak ajakan itu dengan tegas, tetapi tidak memberi tahu atasan tentang keberadaan perkumpulan itu"
+      },
+      {
+        "label": "E",
+        "points": 5,
+        "text": "Menolak ajakan itu dengan tegas, tidak terlibat dalam kegiatan perkumpulan itu, dan melaporkan bujukan tersebut kepada atasan atau aparat yang berwenang"
+      }
+    ],
+    "question": "Di sela pembagian logistik di posko, seorang relawan membisikkan ajakan agar Anda menghadiri pertemuan tertutup sebuah perkumpulan yang mengajarkan bahwa Pancasila harus diganti. Sikap Anda adalah...",
+    "subCategory": "Anti Radikalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: klarifikasi berbasis data dan menjaga kerukunan antarumat; tuduhan provokatif dijawab dengan data penyaluran yang transparan dan pelibatan tokoh masyarakat.",
+    "id": "p11-tkp-43",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 5,
+        "text": "Mengklarifikasi dengan data penyaluran yang transparan melalui kanal resmi, melibatkan tokoh masyarakat dari berbagai kelompok, dan melaporkan konten provokatif itu melalui mekanisme yang berlaku"
+      },
+      {
+        "label": "B",
+        "points": 2,
+        "text": "Membiarkan konten itu karena warga pada akhirnya akan mengetahui kebenarannya"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Membantah konten itu dengan pernyataan singkat tanpa data pendukung"
+      },
+      {
+        "label": "D",
+        "points": 4,
+        "text": "Mengklarifikasi dengan data penyaluran, tetapi tidak melibatkan tokoh masyarakat dan tidak melaporkan konten itu"
+      },
+      {
+        "label": "E",
+        "points": 1,
+        "text": "Membalas konten itu dengan tuduhan balik terhadap penyebarnya"
+      }
+    ],
+    "question": "Konten provokatif beredar di media sosial dan menyatakan bahwa bantuan bencana di wilayah Anda hanya diberikan kepada satu kelompok agama tertentu, padahal penyalurannya terbuka untuk semua korban. Sebagai petugas BPBD, tindakan Anda adalah...",
+    "subCategory": "Anti Radikalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: kehati-hatian dan ketegasan menjaga fasilitas negara dari paham ekstrem; permohonan diverifikasi terlebih dahulu, ditolak bila bertentangan dengan Pancasila, dan dilaporkan kepada pimpinan.",
+    "id": "p11-tkp-44",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 2,
+        "text": "Mengizinkan pemakaian aula karena semua perkumpulan berhak memakai fasilitas umum"
+      },
+      {
+        "label": "B",
+        "points": 1,
+        "text": "Mengizinkan pemakaian aula tanpa memeriksa latar belakang kegiatan itu"
+      },
+      {
+        "label": "C",
+        "points": 3,
+        "text": "Menolak permohonan itu tanpa verifikasi dan tanpa memberi penjelasan"
+      },
+      {
+        "label": "D",
+        "points": 5,
+        "text": "Memverifikasi informasi tentang kegiatan itu, menolak permohonan bila terbukti bertentangan dengan Pancasila dan ketentuan yang berlaku, serta melaporkannya kepada pimpinan"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Memverifikasi informasi itu dan menolak permohonan, tetapi tidak melaporkannya kepada pimpinan"
+      }
+    ],
+    "question": "Sebuah perkumpulan mengajukan permohonan memakai aula BPBD untuk kegiatan yang berdasarkan informasi yang Anda terima diduga menyebarkan paham ekstrem yang bertentangan dengan Pancasila. Sebagai petugas yang menangani permohonan itu, tindakan Anda adalah...",
+    "subCategory": "Anti Radikalisme"
+  },
+  {
+    "category": "TKP",
+    "explanation": "Indikator: netralitas ASN dan profesionalisme di hadapan masyarakat; perdebatan politik di posko dialihkan kembali ke tugas pelayanan dan suasana tenang dijaga.",
+    "id": "p11-tkp-45",
+    "image": null,
+    "options": [
+      {
+        "label": "A",
+        "points": 3,
+        "text": "Membiarkan obrolan itu karena berlangsung di sela waktu istirahat"
+      },
+      {
+        "label": "B",
+        "points": 5,
+        "text": "Mengalihkan pembicaraan kembali ke tugas pelayanan, mengingatkan rekan tentang netralitas dan fokus pada pengungsi, serta menjaga suasana posko tetap tenang"
+      },
+      {
+        "label": "C",
+        "points": 1,
+        "text": "Ikut berdebat membela pilihan politik Anda"
+      },
+      {
+        "label": "D",
+        "points": 2,
+        "text": "Menyuruh rekan yang berbeda pilihan diam tanpa penjelasan"
+      },
+      {
+        "label": "E",
+        "points": 4,
+        "text": "Mengingatkan rekan tentang netralitas, tetapi tidak mengalihkan pembicaraan ke tugas pelayanan"
+      }
+    ],
+    "question": "Di posko pengungsian, obrolan antarpetugas tentang pilihan politik masing-masing semakin memanas dan mulai terdengar oleh para pengungsi. Sebagai petugas senior di posko, tindakan Anda adalah...",
+    "subCategory": "Anti Radikalisme"
+  }
+]

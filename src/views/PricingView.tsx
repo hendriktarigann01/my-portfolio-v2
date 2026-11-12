@@ -34,11 +34,11 @@ export function PricingView() {
 
         <GlassCard className="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="max-w-xl">
-            <span className="text-xs font-semibold text-[var(--text-subtle)] uppercase tracking-wider block mb-1">
+            <span className="text-xs font-semibold text-() uppercase tracking-wider block mb-1">
               {lang === "id" ? "Transparansi & Garansi" : "Clarity & Warranty"}
             </span>
             <h3
-              className="text-lg md:text-xl font-bold text-[var(--accent)] mb-2"
+              className="text-lg md:text-xl font-bold text-() mb-2"
               style={{ fontFamily: "var(--font-display)" }}
             >
               {lang === "id"
@@ -46,7 +46,7 @@ export function PricingView() {
                 : "Full Deliverables, Phased Workflow & 30-Day Warranty"}
             </h3>
             <p
-              className="text-xs md:text-sm text-[var(--text-muted)] leading-relaxed"
+              className="text-xs md:text-sm text-() leading-relaxed"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {lang === "id"
@@ -58,7 +58,7 @@ export function PricingView() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
             <Link
               href="/services"
-              className="px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+              className="px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-() text-() flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
             >
               <span>{lang === "id" ? "Lihat Halaman Layanan Lengkap" : "View Full Services Page"}</span>
               <ArrowRight size={14} />

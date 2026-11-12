@@ -140,12 +140,12 @@ export const VideoModal = ({
             className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden border border-[rgba(var(--accent-rgb),0.25)] bg-[#011d1e] cursor-default"
           >
             <div className="absolute top-0 inset-x-0 h-14 flex items-center justify-between px-6 z-20 pointer-events-none">
-              <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] font-body">
+              <span className="text-xs font-bold uppercase tracking-wider text-() font-body">
                 {title} - Live Preview
               </span>
               <button
                 onClick={onClose}
-                className="p-1.5 rounded-full bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-all pointer-events-auto hover:scale-105"
+                className="p-1.5 rounded-full bg-black/40 hover:bg-black/60 text-() border border-[rgba(var(--accent-rgb),0.15)] transition-all pointer-events-auto hover:scale-105"
               >
                 <X size={14} />
               </button>
@@ -167,13 +167,13 @@ export const VideoModal = ({
               <div className="flex items-center gap-3">
                 <button
                   onClick={togglePlay}
-                  className="p-2 rounded bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
+                  className="p-2 rounded bg-black/40 hover:bg-black/60 text-() border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
                 >
                   {isPlaying ? <Pause size={14} /> : <Play size={14} />}
                 </button>
                 <button
                   onClick={toggleMute}
-                  className="p-2 rounded bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
+                  className="p-2 rounded bg-black/40 hover:bg-black/60 text-() border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
                 >
                   {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
                 </button>
@@ -181,7 +181,7 @@ export const VideoModal = ({
 
               <button
                 onClick={handleFullscreen}
-                className="p-2 rounded bg-black/40 hover:bg-black/60 text-[var(--accent)] border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
+                className="p-2 rounded bg-black/40 hover:bg-black/60 text-() border border-[rgba(var(--accent-rgb),0.15)] transition-colors cursor-pointer"
               >
                 <Maximize2 size={14} />
               </button>
@@ -223,7 +223,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
         whileHover={{ y: -6 }}
         className={cn(
           "glass glass-interactive relative flex flex-col justify-between h-full rounded-2xl p-6 lg:p-5 xl:p-8 overflow-hidden",
-          plan.isPopular && "border-[var(--accent)]"
+          plan.isPopular && "border-()"
         )}
       >
         <div className="flex flex-1 flex-col space-y-3">
@@ -241,7 +241,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
                 {plan.name}
               </h3>
               {plan.isPopular && (
-                <span className="px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider bg-[var(--btn-primary-bg)] text-[var(--btn-primary-text)] uppercase select-none">
+                <span className="px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider bg-() text-() uppercase select-none">
                   {lang === "id" ? "Terpopuler" : "Popular"}
                 </span>
               )}
@@ -250,11 +250,11 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
             {plan.videoSrc && (
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-[rgba(var(--accent-rgb),0.06)] hover:bg-[rgba(var(--accent-rgb),0.15)] border border-[rgba(var(--accent-rgb),0.15)] hover:border-[rgba(var(--accent-rgb),0.35)] text-[9px] font-bold tracking-wider text-[var(--accent)] transition-all duration-300 cursor-pointer select-none"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-[rgba(var(--accent-rgb),0.06)] hover:bg-[rgba(var(--accent-rgb),0.15)] border border-[rgba(var(--accent-rgb),0.15)] hover:border-[rgba(var(--accent-rgb),0.35)] text-[9px] font-bold tracking-wider text-() transition-all duration-300 cursor-pointer select-none"
               >
                 <SquarePlay
                   size={10}
-                  className="animate-pulse text-[var(--accent)]"
+                  className="animate-pulse text-()"
                 />
                 <span>DEMO</span>
               </button>
@@ -304,7 +304,7 @@ export const PricingCard = ({ plan }: { plan: PricingPlan }) => {
                     border: "1px solid rgba(var(--accent-rgb), 0.12)",
                   }}
                 >
-                  <Check size={11} className="text-[var(--accent)]" />
+                  <Check size={11} className="text-()" />
                 </div>
                 <span
                   className="text-xs"
