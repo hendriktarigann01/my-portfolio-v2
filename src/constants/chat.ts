@@ -5,18 +5,30 @@ export const MAX_QUESTIONS = 10;
 export const LS_KEY = "ht_chat_ql";
 
 export const TOPIC_KEYWORDS = [
-  "ht", "solution", "high", "trust", "hendrik", "tarigan", "you", "your", "he", "his", "profile", "about",
-  "work", "project", "portfolio", "skill", "tech", "stack", "code", "build",
-  "develop", "design", "frontend", "backend", "fullstack", "next", "react",
-  "typescript", "javascript", "node", "supabase", "database", "api",
-  "hire", "freelance", "collaborate", "available", "contact", "price",
-  "rate", "cost", "project", "client", "work together",
-  "experience", "background", "education", "career", "job", "role",
-  // Indonesian keywords
-  "jasa", "layanan", "harga", "biaya", "paket", "kasir", "toko", "otomasi",
-  "excel", "spreadsheet", "garansi", "cikarang", "bekasi", "skripsi", "wa",
-  "whatsapp", "pesan", "order", "alur", "cara kerja", "bikin", "buat", "website",
-  "web", "desktop", "mobile", "aplikasi", "android", "sistem", "dashboard", "dp", "uang muka", "bantuan", "konsultasi",
+  // Brand & Identity
+  "ht", "solution", "high trust", "hendrik", "tarigan", "you", "your", "who", "profile", "about",
+  "founder", "developer", "engineer", "tim", "siapa", "profil",
+
+  // Greetings & Conversation Starters
+  "halo", "hai", "hello", "hi", "hey", "pagi", "siang", "sore", "malam", "salam",
+  "permisi", "tanya", "ask", "mau tanya", "bisa", "tolong", "bantu", "bantuan", "help",
+
+  // Business & Operational Needs
+  "bisnis", "usaha", "umkm", "toko", "kantor", "perusahaan", "dagang", "jual", "jualan",
+  "masalah", "solusi", "kendala", "stok", "barang", "omset", "laba", "rugi", "pencatatan",
+  "rekap", "laporan", "invoice", "faktur", "struk", "nota", "kasir", "pos", "katalog",
+
+  // Development, Tech & Platforms
+  "website", "web", "landing page", "desktop", "mobile", "aplikasi", "app", "apps",
+  "android", "ios", "pwa", "software", "sistem", "program", "tool", "otomasi", "automation",
+  "excel", "spreadsheet", "google sheets", "apps script", "dashboard", "database", "api",
+  "coding", "code", "dev", "develop", "skripsi", "riset", "tugas akhir",
+
+  // Pricing, Process & Guarantees
+  "jasa", "layanan", "service", "paket", "harga", "biaya", "rate", "cost", "price", "pricing",
+  "budget", "murah", "bayar", "dp", "uang muka", "garansi", "warranty", "alur", "cara kerja",
+  "berapa lama", "estimasi", "durasi", "waktu", "konsultasi", "cikarang", "bekasi", "remote",
+  "wa", "whatsapp", "kontak", "contact", "order", "pesan", "portofolio", "portfolio", "contoh",
 ];
 
 export const GREETING_BY_LANG: Record<"id" | "en", Message> = {

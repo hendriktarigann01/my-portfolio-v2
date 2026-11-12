@@ -317,7 +317,7 @@ export function ChatWidget() {
                         lineHeight: 1.3,
                       }}
                     >
-                      {lang === "id" ? "Asisten AI HT Solution" : "HT Solution AI"}
+                      HT Solution AI
                     </h3>
                     <span
                       style={{
@@ -326,7 +326,7 @@ export function ChatWidget() {
                         color: "rgba(var(--bg-rgb), 0.65)",
                       }}
                     >
-                      {lang === "id" ? "Konsultasi Layanan & Solusi" : "High Trust Digital Partner"}
+                      {lang === "id" ? "Konsultasi Solusi & Sistem" : "High Trust Digital Partner"}
                     </span>
                   </div>
                 </div>

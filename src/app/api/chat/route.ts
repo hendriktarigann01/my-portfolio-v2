@@ -47,6 +47,7 @@ export async function POST(request: Request) {
 
     return Response.json({ message: result.response.text() });
   } catch (error) {
+    console.error("[Chat API Error]:", error);
     let errorMsg = "Maaf, terjadi kendala teknis. Silakan coba sesaat lagi.";
 
     if (error instanceof Error) {
