@@ -1,10 +1,28 @@
 {
-  "updatedAt": "2026-11-13T03:03:30.035Z",
-  "formattedUpdatedAt": "Diperbarui 13 November 2026 pukul 10.03 WIB",
+  "updatedAt": "2026-11-14T02:49:04.086Z",
+  "formattedUpdatedAt": "Diperbarui 14 November 2026 pukul 09.49 WIB",
   "daily": [
     {
-      "id": "daily-googlechrome-modern-web-guidance-src",
+      "id": "daily-alibaba-open-code-review",
       "rank": 1,
+      "name": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "repoName": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "languageColor": "#00ADD8",
+      "stars": 50699,
+      "forks": 3773,
+      "starsPeriod": 215,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible."
+      }
+    },
+    {
+      "id": "daily-googlechrome-modern-web-guidance-src",
+      "rank": 2,
       "name": "GoogleChrome/modern-web-guidance-src",
       "owner": "GoogleChrome",
       "repoName": "modern-web-guidance-src",
@@ -12,9 +30,9 @@
       "description": "Keep your coding agent up to date with the latest web best practices",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 3241,
-      "forks": 208,
-      "starsPeriod": 739,
+      "stars": 4942,
+      "forks": 273,
+      "starsPeriod": 1925,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "Keep your coding agent up to date with the latest web best practices"
@@ -22,7 +40,7 @@
     },
     {
       "id": "daily-openai-codex-security",
-      "rank": 2,
+      "rank": 3,
       "name": "openai/codex-security",
       "owner": "openai",
       "repoName": "codex-security",
@@ -30,48 +48,30 @@
       "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 12521,
-      "forks": 979,
-      "starsPeriod": 643,
+      "stars": 13174,
+      "forks": 1026,
+      "starsPeriod": 751,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security"
       }
     },
     {
-      "id": "daily-nvm-sh-nvm",
-      "rank": 3,
-      "name": "nvm-sh/nvm",
-      "owner": "nvm-sh",
-      "repoName": "nvm",
-      "url": "https://github.com/nvm-sh/nvm",
-      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "language": "Shell",
-      "languageColor": "#89e051",
-      "stars": 96028,
-      "forks": 10760,
-      "starsPeriod": 63,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions."
-      }
-    },
-    {
-      "id": "daily-pookjw-hermesenabler",
+      "id": "daily-zhulinsen-daily_stock_analysis",
       "rank": 4,
-      "name": "pookjw/HermesEnabler",
-      "owner": "pookjw",
-      "repoName": "HermesEnabler",
-      "url": "https://github.com/pookjw/HermesEnabler",
-      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
-      "language": "Objective-C",
-      "languageColor": "#888888",
-      "stars": 1580,
-      "forks": 142,
-      "starsPeriod": 218,
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "repoName": "daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 71684,
+      "forks": 57314,
+      "starsPeriod": 256,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "Enable Hermès Watch Faces on any Apple Watch devices"
+        "overview": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs."
       }
     },
     {
@@ -84,163 +84,163 @@
       "description": "The personal finance app for everyone (by everyone)",
       "language": "Ruby",
       "languageColor": "#888888",
-      "stars": 14010,
-      "forks": 1050,
-      "starsPeriod": 967,
+      "stars": 14791,
+      "forks": 1125,
+      "starsPeriod": 925,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "The personal finance app for everyone (by everyone)"
       }
     },
     {
-      "id": "daily-qwenlm-qwen-code",
+      "id": "daily-backnotprop-plannotator",
       "rank": 6,
-      "name": "QwenLM/qwen-code",
-      "owner": "QwenLM",
-      "repoName": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
+      "name": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "repoName": "plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 29874,
-      "forks": 3401,
-      "starsPeriod": 151,
+      "stars": 10497,
+      "forks": 789,
+      "starsPeriod": 108,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "An open-source AI coding agent that lives in your terminal."
+        "overview": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click."
       }
     },
     {
-      "id": "daily-ashhart-tensorfold",
+      "id": "daily-louislam-uptime-kuma",
       "rank": 7,
-      "name": "ashhart/TensorFold",
-      "owner": "ashhart",
-      "repoName": "TensorFold",
-      "url": "https://github.com/ashhart/TensorFold",
-      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "language": "Zig",
-      "languageColor": "#888888",
-      "stars": 1968,
-      "forks": 394,
-      "starsPeriod": 54,
+      "name": "louislam/uptime-kuma",
+      "owner": "louislam",
+      "repoName": "uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "description": "A fancy self-hosted monitoring tool",
+      "language": "JavaScript",
+      "languageColor": "#f7df1e",
+      "stars": 93889,
+      "forks": 8724,
+      "starsPeriod": 71,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "LLM Inference Engine for Metal, CUDA and Vulkan."
+        "overview": "A fancy self-hosted monitoring tool"
       }
     },
     {
-      "id": "daily-nodejs-node",
+      "id": "daily-block-buzz",
       "rank": 8,
-      "name": "nodejs/node",
-      "owner": "nodejs",
-      "repoName": "node",
-      "url": "https://github.com/nodejs/node",
-      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
-      "language": "JavaScript",
-      "languageColor": "#f7df1e",
-      "stars": 123613,
-      "forks": 38057,
-      "starsPeriod": 62,
+      "name": "block/buzz",
+      "owner": "block",
+      "repoName": "buzz",
+      "url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 37315,
+      "forks": 4942,
+      "starsPeriod": 97,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "Node.js JavaScript runtime ✨🐢🚀✨"
+        "overview": "A hive mind communication platform"
       }
     },
     {
-      "id": "daily-addyosmani-agent-skills",
+      "id": "daily-tradermonty-claude-trading-skills",
       "rank": 9,
-      "name": "addyosmani/agent-skills",
-      "owner": "addyosmani",
-      "repoName": "agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "language": "JavaScript",
-      "languageColor": "#f7df1e",
-      "stars": 116745,
-      "forks": 12212,
-      "starsPeriod": 816,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Production-grade engineering skills for AI coding agents."
-      }
-    },
-    {
-      "id": "daily-meta-astryx",
-      "rank": 10,
-      "name": "meta/astryx",
-      "owner": "meta",
-      "repoName": "astryx",
-      "url": "https://github.com/meta/astryx",
-      "description": "An open source design system that's fully customizable and agent ready",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 26686,
-      "forks": 2069,
-      "starsPeriod": 1830,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "An open source design system that's fully customizable and agent ready"
-      }
-    },
-    {
-      "id": "daily-copilotkit-openbot",
-      "rank": 11,
-      "name": "CopilotKit/OpenBot",
-      "owner": "CopilotKit",
-      "repoName": "OpenBot",
-      "url": "https://github.com/CopilotKit/OpenBot",
-      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 11682,
-      "forks": 1442,
-      "starsPeriod": 298,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent."
-      }
-    },
-    {
-      "id": "daily-alishahryar1-free-claude-code",
-      "rank": 12,
-      "name": "Alishahryar1/free-claude-code",
-      "owner": "Alishahryar1",
-      "repoName": "free-claude-code",
-      "url": "https://github.com/Alishahryar1/free-claude-code",
-      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "name": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "repoName": "claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 69393,
-      "forks": 10769,
-      "starsPeriod": 415,
+      "stars": 4213,
+      "forks": 873,
+      "starsPeriod": 69,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)"
+        "overview": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development."
       }
     },
     {
-      "id": "daily-ggml-org-llama.cpp",
-      "rank": 13,
-      "name": "ggml-org/llama.cpp",
-      "owner": "ggml-org",
-      "repoName": "llama.cpp",
-      "url": "https://github.com/ggml-org/llama.cpp",
-      "description": "LLM inference in C/C++",
-      "language": "C++",
-      "languageColor": "#f34b7d",
-      "stars": 134615,
-      "forks": 25511,
-      "starsPeriod": 176,
+      "id": "daily-tailscale-tailcat",
+      "rank": 10,
+      "name": "tailscale/tailcat",
+      "owner": "tailscale",
+      "repoName": "tailcat",
+      "url": "https://github.com/tailscale/tailcat",
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "language": "Go",
+      "languageColor": "#00ADD8",
+      "stars": 9493,
+      "forks": 433,
+      "starsPeriod": 256,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "LLM inference in C/C++"
+        "overview": "like netcat, but over Tailscale's data plane, without Tailscale's control plane"
+      }
+    },
+    {
+      "id": "daily-likely7-veyra-nrvideo",
+      "rank": 11,
+      "name": "Likely7/Veyra-NRVideo",
+      "owner": "Likely7",
+      "repoName": "Veyra-NRVideo",
+      "url": "https://github.com/Likely7/Veyra-NRVideo",
+      "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "language": "C++",
+      "languageColor": "#f34b7d",
+      "stars": 1646,
+      "forks": 72,
+      "starsPeriod": 256,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience."
+      }
+    },
+    {
+      "id": "daily-chromedevtools-chrome-devtools-mcp",
+      "rank": 12,
+      "name": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "repoName": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 55503,
+      "forks": 4607,
+      "starsPeriod": 67,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Chrome DevTools for coding agents"
       }
     }
   ],
   "weekly": [
     {
-      "id": "weekly-anthropics-skills",
+      "id": "weekly-sherlock-project-sherlock",
       "rank": 1,
+      "name": "sherlock-project/sherlock",
+      "owner": "sherlock-project",
+      "repoName": "sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 111200,
+      "forks": 12870,
+      "starsPeriod": 13364,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Hunt down social media accounts by username across social networks"
+      }
+    },
+    {
+      "id": "weekly-anthropics-skills",
+      "rank": 2,
       "name": "anthropics/skills",
       "owner": "anthropics",
       "repoName": "skills",
@@ -248,9 +248,9 @@
       "description": "Public repository for Agent Skills",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 193732,
-      "forks": 22795,
-      "starsPeriod": 6055,
+      "stars": 194169,
+      "forks": 22834,
+      "starsPeriod": 6169,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Public repository for Agent Skills"
@@ -258,7 +258,7 @@
     },
     {
       "id": "weekly-milind-soni-openmausbot",
-      "rank": 2,
+      "rank": 3,
       "name": "milind-soni/OpenMausBot",
       "owner": "milind-soni",
       "repoName": "OpenMausBot",
@@ -266,9 +266,9 @@
       "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 21766,
-      "forks": 3030,
-      "starsPeriod": 9104,
+      "stars": 22228,
+      "forks": 3085,
+      "starsPeriod": 7763,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Open-source Grok Bot alternative with a virtual machine that bots can use"
@@ -276,7 +276,7 @@
     },
     {
       "id": "weekly-vercel-labs-agent-browser",
-      "rank": 3,
+      "rank": 4,
       "name": "vercel-labs/agent-browser",
       "owner": "vercel-labs",
       "repoName": "agent-browser",
@@ -284,17 +284,53 @@
       "description": "Browser automation CLI for AI agents",
       "language": "Rust",
       "languageColor": "#dea584",
-      "stars": 50365,
-      "forks": 3505,
-      "starsPeriod": 4601,
+      "stars": 50763,
+      "forks": 3529,
+      "starsPeriod": 4360,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Browser automation CLI for AI agents"
       }
     },
     {
+      "id": "weekly-google-elephant-goldfish-model",
+      "rank": 5,
+      "name": "google/elephant-goldfish-model",
+      "owner": "google",
+      "repoName": "elephant-goldfish-model",
+      "url": "https://github.com/google/elephant-goldfish-model",
+      "description": "Open-source plugin for designing and reviewing software with agents",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 18661,
+      "forks": 1391,
+      "starsPeriod": 5560,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Open-source plugin for designing and reviewing software with agents"
+      }
+    },
+    {
+      "id": "weekly-zhulinsen-daily_stock_analysis",
+      "rank": 6,
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "repoName": "daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 71684,
+      "forks": 57314,
+      "starsPeriod": 3778,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs."
+      }
+    },
+    {
       "id": "weekly-nvidia-auto-ontology",
-      "rank": 4,
+      "rank": 7,
       "name": "NVIDIA/auto-ontology",
       "owner": "NVIDIA",
       "repoName": "auto-ontology",
@@ -302,89 +338,17 @@
       "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 12279,
-      "forks": 1013,
-      "starsPeriod": 5802,
+      "stars": 12580,
+      "forks": 1033,
+      "starsPeriod": 4108,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows."
       }
     },
     {
-      "id": "weekly-cloudflare-security-audit-skill",
-      "rank": 5,
-      "name": "cloudflare/security-audit-skill",
-      "owner": "cloudflare",
-      "repoName": "security-audit-skill",
-      "url": "https://github.com/cloudflare/security-audit-skill",
-      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "language": "JavaScript",
-      "languageColor": "#f7df1e",
-      "stars": 71274,
-      "forks": 4740,
-      "starsPeriod": 10700,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
-      }
-    },
-    {
-      "id": "weekly-vercel-labs-agent-desktop",
-      "rank": 6,
-      "name": "vercel-labs/agent-desktop",
-      "owner": "vercel-labs",
-      "repoName": "agent-desktop",
-      "url": "https://github.com/vercel-labs/agent-desktop",
-      "description": "Computer use CLI for AI agents",
-      "language": "Rust",
-      "languageColor": "#dea584",
-      "stars": 22791,
-      "forks": 1687,
-      "starsPeriod": 6414,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "Computer use CLI for AI agents"
-      }
-    },
-    {
-      "id": "weekly-mattpocock-skills",
-      "rank": 7,
-      "name": "mattpocock/skills",
-      "owner": "mattpocock",
-      "repoName": "skills",
-      "url": "https://github.com/mattpocock/skills",
-      "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "language": "Shell",
-      "languageColor": "#89e051",
-      "stars": 323079,
-      "forks": 27104,
-      "starsPeriod": 8731,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "Skills for Real Engineers. Straight from my .agents directory."
-      }
-    },
-    {
-      "id": "weekly-zed-industries-zed",
-      "rank": 8,
-      "name": "zed-industries/zed",
-      "owner": "zed-industries",
-      "repoName": "zed",
-      "url": "https://github.com/zed-industries/zed",
-      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
-      "language": "Rust",
-      "languageColor": "#dea584",
-      "stars": 94863,
-      "forks": 11671,
-      "starsPeriod": 2339,
-      "periodLabel": "minggu ini",
-      "aiSummary": {
-        "overview": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter."
-      }
-    },
-    {
       "id": "weekly-google-deepmind-mujoco",
-      "rank": 9,
+      "rank": 8,
       "name": "google-deepmind/mujoco",
       "owner": "google-deepmind",
       "repoName": "mujoco",
@@ -392,73 +356,145 @@
       "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
       "language": "C++",
       "languageColor": "#f34b7d",
-      "stars": 17778,
-      "forks": 2180,
-      "starsPeriod": 1671,
+      "stars": 17880,
+      "forks": 2188,
+      "starsPeriod": 1764,
       "periodLabel": "minggu ini",
       "aiSummary": {
         "overview": "Multi-Joint dynamics with Contact. A general purpose physics simulator."
       }
     },
     {
-      "id": "weekly-google-skills",
-      "rank": 10,
-      "name": "google/skills",
-      "owner": "google",
+      "id": "weekly-mattpocock-skills",
+      "rank": 9,
+      "name": "mattpocock/skills",
+      "owner": "mattpocock",
       "repoName": "skills",
-      "url": "https://github.com/google/skills",
-      "description": "Agent Skills for Google products and technologies",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 24084,
-      "forks": 2005,
-      "starsPeriod": 1933,
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "languageColor": "#89e051",
+      "stars": 323875,
+      "forks": 27182,
+      "starsPeriod": 7599,
       "periodLabel": "minggu ini",
       "aiSummary": {
-        "overview": "Agent Skills for Google products and technologies"
+        "overview": "Skills for Real Engineers. Straight from my .agents directory."
       }
     },
     {
-      "id": "weekly-d4vinci-scrapling",
-      "rank": 11,
-      "name": "D4Vinci/Scrapling",
-      "owner": "D4Vinci",
-      "repoName": "Scrapling",
-      "url": "https://github.com/D4Vinci/Scrapling",
-      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 102201,
-      "forks": 10640,
-      "starsPeriod": 4743,
+      "id": "weekly-addyosmani-agent-skills",
+      "rank": 10,
+      "name": "addyosmani/agent-skills",
+      "owner": "addyosmani",
+      "repoName": "agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "languageColor": "#f7df1e",
+      "stars": 117178,
+      "forks": 12254,
+      "starsPeriod": 3502,
       "periodLabel": "minggu ini",
       "aiSummary": {
-        "overview": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev"
+        "overview": "Production-grade engineering skills for AI coding agents."
+      }
+    },
+    {
+      "id": "weekly-cloudflare-security-audit-skill",
+      "rank": 11,
+      "name": "cloudflare/security-audit-skill",
+      "owner": "cloudflare",
+      "repoName": "security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "languageColor": "#f7df1e",
+      "stars": 71973,
+      "forks": 4794,
+      "starsPeriod": 8829,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
+      }
+    },
+    {
+      "id": "weekly-zed-industries-zed",
+      "rank": 12,
+      "name": "zed-industries/zed",
+      "owner": "zed-industries",
+      "repoName": "zed",
+      "url": "https://github.com/zed-industries/zed",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 94972,
+      "forks": 11696,
+      "starsPeriod": 2117,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter."
+      }
+    },
+    {
+      "id": "weekly-anthropics-claude-quickstarts",
+      "rank": 13,
+      "name": "anthropics/claude-quickstarts",
+      "owner": "anthropics",
+      "repoName": "claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 20879,
+      "forks": 3491,
+      "starsPeriod": 1731,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API"
+      }
+    },
+    {
+      "id": "weekly-vercel-labs-agent-desktop",
+      "rank": 14,
+      "name": "vercel-labs/agent-desktop",
+      "owner": "vercel-labs",
+      "repoName": "agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "description": "Computer use CLI for AI agents",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 23339,
+      "forks": 1727,
+      "starsPeriod": 5408,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "Computer use CLI for AI agents"
+      }
+    },
+    {
+      "id": "weekly-lobehub-lobehub",
+      "rank": 15,
+      "name": "lobehub/lobehub",
+      "owner": "lobehub",
+      "repoName": "lobehub",
+      "url": "https://github.com/lobehub/lobehub",
+      "description": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week.",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 85411,
+      "forks": 16297,
+      "starsPeriod": 1126,
+      "periodLabel": "minggu ini",
+      "aiSummary": {
+        "overview": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week."
       }
     }
   ],
   "monthly": [
     {
-      "id": "monthly-morluto-rea",
-      "rank": 1,
-      "name": "morluto/rea",
-      "owner": "morluto",
-      "repoName": "rea",
-      "url": "https://github.com/morluto/rea",
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 455513,
-      "forks": 111862,
-      "starsPeriod": 325178,
-      "periodLabel": "bulan ini",
-      "aiSummary": {
-        "overview": "Reverse engineer anything with agents, from app behavior down to native binaries."
-      }
-    },
-    {
       "id": "monthly-nutlope-hallmark",
-      "rank": 2,
+      "rank": 1,
       "name": "Nutlope/hallmark",
       "owner": "Nutlope",
       "repoName": "hallmark",
@@ -466,12 +502,30 @@
       "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
       "language": "CSS",
       "languageColor": "#563d7c",
-      "stars": 54061,
-      "forks": 2885,
-      "starsPeriod": 24106,
+      "stars": 54553,
+      "forks": 2914,
+      "starsPeriod": 24631,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex."
+      }
+    },
+    {
+      "id": "monthly-morluto-rea",
+      "rank": 2,
+      "name": "morluto/rea",
+      "owner": "morluto",
+      "repoName": "rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 457818,
+      "forks": 112333,
+      "starsPeriod": 271084,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "Reverse engineer anything with agents, from app behavior down to native binaries."
       }
     },
     {
@@ -484,9 +538,9 @@
       "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
       "language": "JavaScript",
       "languageColor": "#f7df1e",
-      "stars": 71274,
-      "forks": 4740,
-      "starsPeriod": 42602,
+      "stars": 71973,
+      "forks": 4794,
+      "starsPeriod": 42839,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings"
@@ -502,9 +556,9 @@
       "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 116612,
-      "forks": 10113,
-      "starsPeriod": 17162,
+      "stars": 116869,
+      "forks": 10142,
+      "starsPeriod": 17120,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More"
@@ -520,9 +574,9 @@
       "description": "The best way to control Claude Code, Codex and more from any computer or phone",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 58505,
-      "forks": 10689,
-      "starsPeriod": 30926,
+      "stars": 59665,
+      "forks": 10812,
+      "starsPeriod": 32057,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "The best way to control Claude Code, Codex and more from any computer or phone"
@@ -538,9 +592,9 @@
       "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
       "language": "Rust",
       "languageColor": "#dea584",
-      "stars": 109058,
-      "forks": 6500,
-      "starsPeriod": 29165,
+      "stars": 109660,
+      "forks": 6543,
+      "starsPeriod": 29328,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships."
@@ -556,9 +610,9 @@
       "description": "Write HTML. Render video. Built for agents.",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 83478,
-      "forks": 7705,
-      "starsPeriod": 22251,
+      "stars": 83980,
+      "forks": 7763,
+      "starsPeriod": 21924,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Write HTML. Render video. Built for agents."
@@ -574,9 +628,9 @@
       "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 58681,
-      "forks": 7129,
-      "starsPeriod": 17692,
+      "stars": 58967,
+      "forks": 7158,
+      "starsPeriod": 17913,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/."
@@ -592,17 +646,35 @@
       "description": "Public repository for Agent Skills",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 193732,
-      "forks": 22795,
-      "starsPeriod": 13440,
+      "stars": 194169,
+      "forks": 22834,
+      "starsPeriod": 13734,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Public repository for Agent Skills"
       }
     },
     {
-      "id": "monthly-debpalash-voicestudio",
+      "id": "monthly-agricidaniel-claude-seo",
       "rank": 10,
+      "name": "AgriciDaniel/claude-seo",
+      "owner": "AgriciDaniel",
+      "repoName": "claude-seo",
+      "url": "https://github.com/AgriciDaniel/claude-seo",
+      "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 29089,
+      "forks": 3704,
+      "starsPeriod": 10190,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data."
+      }
+    },
+    {
+      "id": "monthly-debpalash-voicestudio",
+      "rank": 11,
       "name": "debpalash/VoiceStudio",
       "owner": "debpalash",
       "repoName": "VoiceStudio",
@@ -610,30 +682,12 @@
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 109273,
-      "forks": 12111,
-      "starsPeriod": 49960,
+      "stars": 110027,
+      "forks": 12197,
+      "starsPeriod": 48848,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages."
-      }
-    },
-    {
-      "id": "monthly-anthropics-claude-plugins-official",
-      "rank": 11,
-      "name": "anthropics/claude-plugins-official",
-      "owner": "anthropics",
-      "repoName": "claude-plugins-official",
-      "url": "https://github.com/anthropics/claude-plugins-official",
-      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 47064,
-      "forks": 4883,
-      "starsPeriod": 9515,
-      "periodLabel": "bulan ini",
-      "aiSummary": {
-        "overview": "Official, Anthropic-managed directory of high quality Claude Code Plugins."
       }
     },
     {
@@ -646,35 +700,17 @@
       "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
       "language": "JavaScript",
       "languageColor": "#f7df1e",
-      "stars": 114382,
-      "forks": 7693,
-      "starsPeriod": 19580,
+      "stars": 115089,
+      "forks": 7722,
+      "starsPeriod": 19948,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages"
       }
     },
     {
-      "id": "monthly-agricidaniel-claude-seo",
-      "rank": 13,
-      "name": "AgriciDaniel/claude-seo",
-      "owner": "AgriciDaniel",
-      "repoName": "claude-seo",
-      "url": "https://github.com/AgriciDaniel/claude-seo",
-      "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
-      "language": "Python",
-      "languageColor": "#3572A5",
-      "stars": 28723,
-      "forks": 3676,
-      "starsPeriod": 9819,
-      "periodLabel": "bulan ini",
-      "aiSummary": {
-        "overview": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data."
-      }
-    },
-    {
       "id": "monthly-anthropics-knowledge-work-plugins",
-      "rank": 14,
+      "rank": 13,
       "name": "anthropics/knowledge-work-plugins",
       "owner": "anthropics",
       "repoName": "knowledge-work-plugins",
@@ -682,19 +718,73 @@
       "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 35594,
-      "forks": 3936,
-      "starsPeriod": 6451,
+      "stars": 35678,
+      "forks": 3948,
+      "starsPeriod": 6311,
       "periodLabel": "bulan ini",
       "aiSummary": {
         "overview": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork"
+      }
+    },
+    {
+      "id": "monthly-anthropics-claude-plugins-official",
+      "rank": 14,
+      "name": "anthropics/claude-plugins-official",
+      "owner": "anthropics",
+      "repoName": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 47207,
+      "forks": 4899,
+      "starsPeriod": 9580,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "Official, Anthropic-managed directory of high quality Claude Code Plugins."
+      }
+    },
+    {
+      "id": "monthly-vercel-labs-agent-browser",
+      "rank": 15,
+      "name": "vercel-labs/agent-browser",
+      "owner": "vercel-labs",
+      "repoName": "agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 50763,
+      "forks": 3529,
+      "starsPeriod": 6810,
+      "periodLabel": "bulan ini",
+      "aiSummary": {
+        "overview": "Browser automation CLI for AI agents"
       }
     }
   ],
   "repositories": [
     {
-      "id": "daily-googlechrome-modern-web-guidance-src",
+      "id": "daily-alibaba-open-code-review",
       "rank": 1,
+      "name": "alibaba/open-code-review",
+      "owner": "alibaba",
+      "repoName": "open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "languageColor": "#00ADD8",
+      "stars": 50699,
+      "forks": 3773,
+      "starsPeriod": 215,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible."
+      }
+    },
+    {
+      "id": "daily-googlechrome-modern-web-guidance-src",
+      "rank": 2,
       "name": "GoogleChrome/modern-web-guidance-src",
       "owner": "GoogleChrome",
       "repoName": "modern-web-guidance-src",
@@ -702,9 +792,9 @@
       "description": "Keep your coding agent up to date with the latest web best practices",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 3241,
-      "forks": 208,
-      "starsPeriod": 739,
+      "stars": 4942,
+      "forks": 273,
+      "starsPeriod": 1925,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "Keep your coding agent up to date with the latest web best practices"
@@ -712,7 +802,7 @@
     },
     {
       "id": "daily-openai-codex-security",
-      "rank": 2,
+      "rank": 3,
       "name": "openai/codex-security",
       "owner": "openai",
       "repoName": "codex-security",
@@ -720,48 +810,30 @@
       "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 12521,
-      "forks": 979,
-      "starsPeriod": 643,
+      "stars": 13174,
+      "forks": 1026,
+      "starsPeriod": 751,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security"
       }
     },
     {
-      "id": "daily-nvm-sh-nvm",
-      "rank": 3,
-      "name": "nvm-sh/nvm",
-      "owner": "nvm-sh",
-      "repoName": "nvm",
-      "url": "https://github.com/nvm-sh/nvm",
-      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
-      "language": "Shell",
-      "languageColor": "#89e051",
-      "stars": 96028,
-      "forks": 10760,
-      "starsPeriod": 63,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions."
-      }
-    },
-    {
-      "id": "daily-pookjw-hermesenabler",
+      "id": "daily-zhulinsen-daily_stock_analysis",
       "rank": 4,
-      "name": "pookjw/HermesEnabler",
-      "owner": "pookjw",
-      "repoName": "HermesEnabler",
-      "url": "https://github.com/pookjw/HermesEnabler",
-      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
-      "language": "Objective-C",
-      "languageColor": "#888888",
-      "stars": 1580,
-      "forks": 142,
-      "starsPeriod": 218,
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "owner": "ZhuLinsen",
+      "repoName": "daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "languageColor": "#3572A5",
+      "stars": 71684,
+      "forks": 57314,
+      "starsPeriod": 256,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "Enable Hermès Watch Faces on any Apple Watch devices"
+        "overview": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs."
       }
     },
     {
@@ -774,156 +846,138 @@
       "description": "The personal finance app for everyone (by everyone)",
       "language": "Ruby",
       "languageColor": "#888888",
-      "stars": 14010,
-      "forks": 1050,
-      "starsPeriod": 967,
+      "stars": 14791,
+      "forks": 1125,
+      "starsPeriod": 925,
       "periodLabel": "hari ini",
       "aiSummary": {
         "overview": "The personal finance app for everyone (by everyone)"
       }
     },
     {
-      "id": "daily-qwenlm-qwen-code",
+      "id": "daily-backnotprop-plannotator",
       "rank": 6,
-      "name": "QwenLM/qwen-code",
-      "owner": "QwenLM",
-      "repoName": "qwen-code",
-      "url": "https://github.com/QwenLM/qwen-code",
-      "description": "An open-source AI coding agent that lives in your terminal.",
+      "name": "backnotprop/plannotator",
+      "owner": "backnotprop",
+      "repoName": "plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
       "language": "TypeScript",
       "languageColor": "#3178c6",
-      "stars": 29874,
-      "forks": 3401,
-      "starsPeriod": 151,
+      "stars": 10497,
+      "forks": 789,
+      "starsPeriod": 108,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "An open-source AI coding agent that lives in your terminal."
+        "overview": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click."
       }
     },
     {
-      "id": "daily-ashhart-tensorfold",
+      "id": "daily-louislam-uptime-kuma",
       "rank": 7,
-      "name": "ashhart/TensorFold",
-      "owner": "ashhart",
-      "repoName": "TensorFold",
-      "url": "https://github.com/ashhart/TensorFold",
-      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
-      "language": "Zig",
-      "languageColor": "#888888",
-      "stars": 1968,
-      "forks": 394,
-      "starsPeriod": 54,
+      "name": "louislam/uptime-kuma",
+      "owner": "louislam",
+      "repoName": "uptime-kuma",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "description": "A fancy self-hosted monitoring tool",
+      "language": "JavaScript",
+      "languageColor": "#f7df1e",
+      "stars": 93889,
+      "forks": 8724,
+      "starsPeriod": 71,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "LLM Inference Engine for Metal, CUDA and Vulkan."
+        "overview": "A fancy self-hosted monitoring tool"
       }
     },
     {
-      "id": "daily-nodejs-node",
+      "id": "daily-block-buzz",
       "rank": 8,
-      "name": "nodejs/node",
-      "owner": "nodejs",
-      "repoName": "node",
-      "url": "https://github.com/nodejs/node",
-      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
-      "language": "JavaScript",
-      "languageColor": "#f7df1e",
-      "stars": 123613,
-      "forks": 38057,
-      "starsPeriod": 62,
+      "name": "block/buzz",
+      "owner": "block",
+      "repoName": "buzz",
+      "url": "https://github.com/block/buzz",
+      "description": "A hive mind communication platform",
+      "language": "Rust",
+      "languageColor": "#dea584",
+      "stars": 37315,
+      "forks": 4942,
+      "starsPeriod": 97,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "Node.js JavaScript runtime ✨🐢🚀✨"
+        "overview": "A hive mind communication platform"
       }
     },
     {
-      "id": "daily-addyosmani-agent-skills",
+      "id": "daily-tradermonty-claude-trading-skills",
       "rank": 9,
-      "name": "addyosmani/agent-skills",
-      "owner": "addyosmani",
-      "repoName": "agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "description": "Production-grade engineering skills for AI coding agents.",
-      "language": "JavaScript",
-      "languageColor": "#f7df1e",
-      "stars": 116745,
-      "forks": 12212,
-      "starsPeriod": 816,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Production-grade engineering skills for AI coding agents."
-      }
-    },
-    {
-      "id": "daily-meta-astryx",
-      "rank": 10,
-      "name": "meta/astryx",
-      "owner": "meta",
-      "repoName": "astryx",
-      "url": "https://github.com/meta/astryx",
-      "description": "An open source design system that's fully customizable and agent ready",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 26686,
-      "forks": 2069,
-      "starsPeriod": 1830,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "An open source design system that's fully customizable and agent ready"
-      }
-    },
-    {
-      "id": "daily-copilotkit-openbot",
-      "rank": 11,
-      "name": "CopilotKit/OpenBot",
-      "owner": "CopilotKit",
-      "repoName": "OpenBot",
-      "url": "https://github.com/CopilotKit/OpenBot",
-      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
-      "language": "TypeScript",
-      "languageColor": "#3178c6",
-      "stars": 11682,
-      "forks": 1442,
-      "starsPeriod": 298,
-      "periodLabel": "hari ini",
-      "aiSummary": {
-        "overview": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent."
-      }
-    },
-    {
-      "id": "daily-alishahryar1-free-claude-code",
-      "rank": 12,
-      "name": "Alishahryar1/free-claude-code",
-      "owner": "Alishahryar1",
-      "repoName": "free-claude-code",
-      "url": "https://github.com/Alishahryar1/free-claude-code",
-      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "name": "tradermonty/claude-trading-skills",
+      "owner": "tradermonty",
+      "repoName": "claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
       "language": "Python",
       "languageColor": "#3572A5",
-      "stars": 69393,
-      "forks": 10769,
-      "starsPeriod": 415,
+      "stars": 4213,
+      "forks": 873,
+      "starsPeriod": 69,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)"
+        "overview": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development."
       }
     },
     {
-      "id": "daily-ggml-org-llama.cpp",
-      "rank": 13,
-      "name": "ggml-org/llama.cpp",
-      "owner": "ggml-org",
-      "repoName": "llama.cpp",
-      "url": "https://github.com/ggml-org/llama.cpp",
-      "description": "LLM inference in C/C++",
-      "language": "C++",
-      "languageColor": "#f34b7d",
-      "stars": 134615,
-      "forks": 25511,
-      "starsPeriod": 176,
+      "id": "daily-tailscale-tailcat",
+      "rank": 10,
+      "name": "tailscale/tailcat",
+      "owner": "tailscale",
+      "repoName": "tailcat",
+      "url": "https://github.com/tailscale/tailcat",
+      "description": "like netcat, but over Tailscale's data plane, without Tailscale's control plane",
+      "language": "Go",
+      "languageColor": "#00ADD8",
+      "stars": 9493,
+      "forks": 433,
+      "starsPeriod": 256,
       "periodLabel": "hari ini",
       "aiSummary": {
-        "overview": "LLM inference in C/C++"
+        "overview": "like netcat, but over Tailscale's data plane, without Tailscale's control plane"
+      }
+    },
+    {
+      "id": "daily-likely7-veyra-nrvideo",
+      "rank": 11,
+      "name": "Likely7/Veyra-NRVideo",
+      "owner": "Likely7",
+      "repoName": "Veyra-NRVideo",
+      "url": "https://github.com/Likely7/Veyra-NRVideo",
+      "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "language": "C++",
+      "languageColor": "#f34b7d",
+      "stars": 1646,
+      "forks": 72,
+      "starsPeriod": 256,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience."
+      }
+    },
+    {
+      "id": "daily-chromedevtools-chrome-devtools-mcp",
+      "rank": 12,
+      "name": "ChromeDevTools/chrome-devtools-mcp",
+      "owner": "ChromeDevTools",
+      "repoName": "chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "languageColor": "#3178c6",
+      "stars": 55503,
+      "forks": 4607,
+      "starsPeriod": 67,
+      "periodLabel": "hari ini",
+      "aiSummary": {
+        "overview": "Chrome DevTools for coding agents"
       }
     }
   ]
