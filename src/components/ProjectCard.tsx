@@ -19,16 +19,16 @@ import { Badge } from "@/components/ui/Badge";
 const getProjectIcon = (category: string) => {
   switch (category) {
     case "system":
-      return <Cpu size={20} className="text-()" />;
+      return <Cpu size={20} className="text-[var(--accent)]" />;
     case "interactive":
-      return <Gamepad2 size={20} className="text-()" />;
+      return <Gamepad2 size={20} className="text-[var(--accent)]" />;
     case "landing":
     case "landing_pages":
-      return <Globe size={20} className="text-()" />;
+      return <Globe size={20} className="text-[var(--accent)]" />;
     case "experiment":
-      return <FlaskConical size={20} className="text-()" />;
+      return <FlaskConical size={20} className="text-[var(--accent)]" />;
     default:
-      return <Database size={20} className="text-()" />;
+      return <Database size={20} className="text-[var(--accent)]" />;
   }
 };
 

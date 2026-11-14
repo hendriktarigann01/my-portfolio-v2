@@ -15,7 +15,7 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
 
   return (
     <div
-      className={`inline-flex items-center p-0.5 rounded-full border border-() bg-() backdrop-blur-md text-[0.7rem] font-medium tracking-wider select-none ${className}`}
+      className={`inline-flex items-center p-0.5 rounded-full border border-[rgba(var(--accent-rgb),0.2)] bg-[rgba(var(--bg-rgb),0.6)] backdrop-blur-md text-[0.7rem] font-medium tracking-wider select-none ${className}`}
       style={{ fontFamily: "var(--font-body)" }}
       role="group"
       aria-label="Pilih Bahasa"
@@ -32,8 +32,8 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
         }}
         className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer select-none ${
           lang === "id"
-            ? "bg-() text-() font-bold shadow-sm"
-            : "text-() hover:text-()"
+            ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
+            : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
         }`}
         aria-label="Bahasa Indonesia"
         aria-pressed={lang === "id"}
@@ -52,8 +52,8 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
         }}
         className={`px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer select-none ${
           lang === "en"
-            ? "bg-() text-() font-bold shadow-sm"
-            : "text-() hover:text-()"
+            ? "bg-[var(--accent)] text-[#024244] font-bold shadow-sm"
+            : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
         }`}
         aria-label="English"
         aria-pressed={lang === "en"}
@@ -69,7 +69,7 @@ export function VerticalLanguageToggle({ className = "" }: { className?: string 
 
   return (
     <div
-      className={`flex flex-col items-center p-1 rounded-full border border-() bg-() backdrop-blur-md text-[0.7rem] font-bold tracking-wider select-none shadow-lg gap-1 ${className}`}
+      className={`flex flex-col items-center p-1 rounded-full border border-[rgba(var(--accent-rgb),0.2)] bg-[rgba(var(--bg-rgb),0.6)] backdrop-blur-md text-[0.7rem] font-bold tracking-wider select-none shadow-lg gap-1 ${className}`}
       style={{ fontFamily: "var(--font-body)" }}
       role="group"
       aria-label="Pilih Bahasa"
@@ -86,8 +86,8 @@ export function VerticalLanguageToggle({ className = "" }: { className?: string 
         }}
         className={`w-9 h-9 rounded-full transition-all duration-200 cursor-pointer flex items-center justify-center select-none ${
           lang === "id"
-            ? "bg-() text-() shadow-sm font-bold"
-            : "text-() hover:text-()"
+            ? "bg-[var(--accent)] text-[#024244] shadow-sm font-bold"
+            : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
         }`}
         aria-label="Bahasa Indonesia"
         aria-pressed={lang === "id"}
@@ -106,8 +106,8 @@ export function VerticalLanguageToggle({ className = "" }: { className?: string 
         }}
         className={`w-9 h-9 rounded-full transition-all duration-200 cursor-pointer flex items-center justify-center select-none ${
           lang === "en"
-            ? "bg-() text-() shadow-sm font-bold"
-            : "text-() hover:text-()"
+            ? "bg-[var(--accent)] text-[#024244] shadow-sm font-bold"
+            : "text-[rgba(var(--accent-rgb),0.6)] hover:text-[var(--accent)]"
         }`}
         aria-label="English"
         aria-pressed={lang === "en"}
@@ -241,7 +241,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleClick(e, link.href)}
-              className="hover-underline text-[rgba(var(--accent-rgb),0.65)] hover:text-() transition-colors duration-300 uppercase font-medium tracking-[0.2em] text-[0.75rem]"
+              className="hover-underline text-[rgba(var(--accent-rgb),0.65)] hover:text-[var(--accent)] transition-colors duration-300 uppercase font-medium tracking-[0.2em] text-[0.75rem]"
               style={{
                 fontFamily: "var(--font-body)",
               }}
@@ -338,7 +338,7 @@ export function Navbar() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05 + i * 0.06, duration: 0.4 }}
-                className="text-() hover:text-[rgba(var(--accent-rgb),0.5)] transition-colors duration-200"
+                className="text-[var(--accent)] hover:text-[rgba(var(--accent-rgb),0.5)] transition-colors duration-200"
                 style={{
                   fontFamily: "var(--font-display)",
                   fontSize: "1.75rem",

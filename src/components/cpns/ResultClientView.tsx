@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Award, ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ScoreSummaryCard } from "@/components/cpns/ScoreSummaryCard";
 import { QuestionReviewList } from "@/components/cpns/QuestionReviewList";
+import { useIsMounted } from "@/hooks";
 import {
   loadStoredResult,
   clearStoredSession,
@@ -24,14 +25,10 @@ export function ResultClientView({
   questions,
 }: ResultClientViewProps) {
   const router = useRouter();
-  const [result, setResult] = useState<ExamResult | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const saved = loadStoredResult(packageMeta.id);
-    setResult(saved);
-    setIsLoaded(true);
-  }, [packageMeta.id]);
+  const isLoaded = useIsMounted();
+  const [result] = useState<ExamResult | null>(() =>
+    loadStoredResult(packageMeta.id)
+  );
 
   const handleRetake = () => {
     if (typeof window === "undefined") return;

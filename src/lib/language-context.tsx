@@ -5,9 +5,9 @@ import {
   useContext,
   useSyncExternalStore,
   useEffect,
-  useState,
   ReactNode,
 } from "react";
+import { useIsMounted } from "@/hooks";
 
 export type Language = "id" | "en";
 
@@ -53,11 +53,10 @@ function setLanguageStore(newLang: Language) {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useIsMounted();
   const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
-    setMounted(true);
     try {
       const saved = localStorage.getItem("preferred_lang") as Language | null;
       if (saved === "id" || saved === "en") {

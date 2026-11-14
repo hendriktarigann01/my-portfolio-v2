@@ -76,11 +76,10 @@ export function NowView() {
                 style={{
                   background: "rgba(2, 66, 68, 0.96)",
                   border: "1px solid rgba(var(--accent-rgb), 0.2)",
-                  backdropFilter: "blur(16px)",
                 }}
                 initial={{ opacity: 0.85, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.25 }}
+                viewport={{ once: true, amount: 0.2 }}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               >

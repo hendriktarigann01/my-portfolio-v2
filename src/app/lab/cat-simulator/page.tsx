@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import {
   GraduationCap,
@@ -27,13 +27,10 @@ type FilterStatus = "all" | "completed" | "unattempted" | "passed";
 const ITEMS_PER_PAGE = 10;
 
 export default function CatSimulatorCatalogPage() {
-  const [history, setHistory] = useState<Record<string, ExamHistoryRecord>>({});
-  const [activeSessions, setActiveSessions] = useState<Record<string, boolean>>({});
-  const [filter, setFilter] = useState<FilterStatus>("all");
-  const [currentPage, setCurrentPage] = useState(1);
-
-  useEffect(() => {
-    const loadedHistory = loadStoredHistory();
+  const [history, setHistory] = useState<Record<string, ExamHistoryRecord>>(() =>
+    loadStoredHistory()
+  );
+  const [activeSessions, setActiveSessions] = useState<Record<string, boolean>>(() => {
     const activeMap: Record<string, boolean> = {};
     for (const pkg of CPNS_PACKAGES) {
       const sess = loadStoredSession(pkg.id);
@@ -41,10 +38,10 @@ export default function CatSimulatorCatalogPage() {
         activeMap[pkg.id] = true;
       }
     }
-
-    setHistory(loadedHistory);
-    setActiveSessions(activeMap);
-  }, []);
+    return activeMap;
+  });
+  const [filter, setFilter] = useState<FilterStatus>("all");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const stats = useMemo(() => {
     const historyList = Object.values(history);

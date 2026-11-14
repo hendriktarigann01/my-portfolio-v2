@@ -3,22 +3,21 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useIsMounted } from "@/hooks";
 
 export function Preloader() {
-  const [mounted, setMounted] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const mounted = useIsMounted();
+  const [loading, setLoading] = useState(() => {
+    if (typeof window === "undefined") return true;
+    try {
+      return !sessionStorage.getItem("preloader_shown");
+    } catch {
+      return true;
+    }
+  });
 
   useEffect(() => {
-    setMounted(true);
-
-    try {
-      if (sessionStorage.getItem("preloader_shown")) {
-        setLoading(false);
-        return;
-      }
-    } catch {
-      // ignore storage error
-    }
+    if (!loading) return;
 
     let delayTimer: ReturnType<typeof setTimeout> | undefined;
     let fallbackTimer: ReturnType<typeof setTimeout> | undefined;
@@ -46,7 +45,7 @@ export function Preloader() {
       if (delayTimer) clearTimeout(delayTimer);
       if (fallbackTimer) clearTimeout(fallbackTimer);
     };
-  }, []);
+  }, [loading]);
 
   if (!mounted) return null;
 
@@ -58,7 +57,7 @@ export function Preloader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: "-100%" }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-()"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#024244]"
         >
           <div className="overflow-hidden mb-4">
             <motion.h1

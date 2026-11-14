@@ -10,11 +10,31 @@ import type { GeoData } from "@/types";
 export function LocationMap() {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<maplibregl.Map | null>(null);
+  const [isInView, setIsInView] = useState(false);
   const [geo, setGeo] = useState<GeoData | null>(null);
   const [distance, setDistance] = useState<number | null>(null);
   const [locationSource, setLocationSource] = useState<"gps" | "ip">("ip");
 
+  // Defer map & geo initialization until user scrolls near the contact section
   useEffect(() => {
+    const el = mapContainer.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
     let isCancelled = false;
 
     const fetchIP = () => {
@@ -37,41 +57,15 @@ export function LocationMap() {
         .catch(() => null);
     };
 
-    if (typeof navigator !== "undefined" && navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          if (isCancelled) return;
-          const data = {
-            city: "Your location",
-            country_name: "",
-            latitude: pos.coords.latitude,
-            longitude: pos.coords.longitude,
-          };
-          setGeo(data);
-          setDistance(
-            getDistanceKm(
-              HOME_LOCATION.lat,
-              HOME_LOCATION.lng,
-              data.latitude,
-              data.longitude,
-            ),
-          );
-          setLocationSource("gps");
-        },
-        fetchIP,
-        { timeout: 5000 },
-      );
-    } else {
-      fetchIP();
-    }
+    fetchIP();
 
     return () => {
       isCancelled = true;
     };
-  }, []);
+  }, [isInView]);
 
   useEffect(() => {
-    if (!mapContainer.current || map.current) return;
+    if (!isInView || !mapContainer.current || map.current) return;
 
     map.current = new maplibregl.Map({
       container: mapContainer.current,
@@ -86,7 +80,7 @@ export function LocationMap() {
       map.current?.remove();
       map.current = null;
     };
-  }, []);
+  }, [isInView]);
 
   useEffect(() => {
     if (!geo || isNaN(geo.latitude) || isNaN(geo.longitude)) return;

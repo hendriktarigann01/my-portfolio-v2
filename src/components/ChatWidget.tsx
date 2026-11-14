@@ -78,23 +78,21 @@ export function ChatWidget() {
       return;
     }
 
-    const checkHero = () => {
-      const heroEl = document.getElementById("home");
-      if (!heroEl) {
-        setIsHeroVisible(false);
-        return;
-      }
-      const rect = heroEl.getBoundingClientRect();
-      setIsHeroVisible(rect.bottom > 200);
-    };
+    const heroEl = document.getElementById("home");
+    if (!heroEl) {
+      setIsHeroVisible(false);
+      return;
+    }
 
-    checkHero();
-    window.addEventListener("scroll", checkHero, { passive: true });
-    window.addEventListener("resize", checkHero, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", checkHero);
-      window.removeEventListener("resize", checkHero);
-    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroVisible(entry.isIntersecting);
+      },
+      { rootMargin: "-100px 0px 0px 0px", threshold: 0 }
+    );
+
+    observer.observe(heroEl);
+    return () => observer.disconnect();
   }, [pathname]);
 
   const appendLimitNotice = useCallback(() => {
@@ -194,7 +192,7 @@ export function ChatWidget() {
         setIsLoading(false);
       }
     },
-    [messages, isLoading, questionCount, appendLimitNotice],
+    [messages, isLoading, questionCount, appendLimitNotice, lang],
   );
 
   const handleSubmit = (e: FormEvent) => {

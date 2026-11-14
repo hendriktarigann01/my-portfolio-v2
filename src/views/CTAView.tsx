@@ -68,7 +68,7 @@ export function CTAView() {
                       : "Have a Project in Mind?"}
                   </h3>
                   <p
-                    className="text-xs md:text-sm text-() font-light leading-relaxed max-w-md mt-1"
+                    className="text-xs md:text-sm text-[rgba(var(--accent-rgb),0.65)] font-light leading-relaxed max-w-md mt-1"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {lang === "id"

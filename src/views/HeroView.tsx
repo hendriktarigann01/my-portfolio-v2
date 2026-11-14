@@ -32,7 +32,7 @@ export function HeroView() {
       className="min-h-screen w-full flex items-center pt-20 md:pt-0"
     >
       <div className="container-main w-full py-4 md:py-8">
-        <div className="relative h-[calc(100vh-6rem)] md:h-[calc(100vh-4rem)] min-h-[560px] md:min-h-[620px] w-full overflow-hidden rounded-2xl md:rounded-[2rem] border border-() bg-[rgba(var(--bg-rgb),0.3)]">
+        <div className="relative h-[calc(100dvh-6rem)] md:h-[calc(100dvh-4rem)] min-h-[560px] md:min-h-[620px] w-full overflow-hidden rounded-2xl md:rounded-[2rem] border border-[var(--card-border)] bg-[rgba(var(--bg-rgb),0.3)]">
           <div
             className="pointer-events-none absolute inset-0"
             style={{
@@ -43,7 +43,7 @@ export function HeroView() {
           />
 
           {/* Mobile Presentation */}
-          <div className="md:hidden absolute inset-0 flex flex-col items-center justify-center gap-5 px-6 z-10 overflow-y-auto py-10">
+          <div className="md:hidden absolute inset-0 flex flex-col items-center justify-center gap-5 px-6 z-10 py-10">
             <div className="text-center pointer-events-auto">
               <h1
                 className="font-medium leading-[0.9] tracking-[-0.06em] text-[12vw]"
@@ -67,7 +67,7 @@ export function HeroView() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="text-xs font-light text-center max-w-[320px] pointer-events-auto text-() leading-relaxed"
+              className="text-xs font-light text-center max-w-[320px] pointer-events-auto text-[rgba(var(--accent-rgb),0.7)] leading-relaxed"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {bio}
@@ -83,7 +83,7 @@ export function HeroView() {
               <button
                 type="button"
                 onClick={() => openAiChat()}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-() bg-() text-() text-xs font-semibold uppercase tracking-wider hover:bg-() transition-colors cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-[rgba(var(--accent-rgb),0.2)] bg-[rgba(var(--accent-rgb),0.06)] text-[var(--accent)] text-xs font-semibold uppercase tracking-wider hover:bg-[rgba(var(--accent-rgb),0.12)] transition-colors cursor-pointer"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 <Sparkles size={14} />
@@ -123,7 +123,7 @@ export function HeroView() {
                     delay: 0.4,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="text-sm font-light leading-relaxed text-()"
+                  className="text-sm font-light leading-relaxed text-[rgba(var(--accent-rgb),0.7)]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {bio}
@@ -142,7 +142,7 @@ export function HeroView() {
                   <button
                     type="button"
                     onClick={handleExplore}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-() text-() text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-sm"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--accent)] text-[#024244] text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer shadow-sm"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     <span>{btnLabel}</span>
@@ -151,7 +151,7 @@ export function HeroView() {
                   <button
                     type="button"
                     onClick={() => openAiChat()}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-() bg-() hover:bg-() text-() text-xs font-medium tracking-wider uppercase transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-[rgba(var(--accent-rgb),0.2)] bg-[rgba(var(--accent-rgb),0.06)] hover:bg-[rgba(var(--accent-rgb),0.12)] text-[var(--accent)] text-xs font-medium tracking-wider uppercase transition-colors cursor-pointer"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     <Sparkles size={13} />

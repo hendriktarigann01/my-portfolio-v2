@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useTouchDevice } from "@/hooks";
+import { useTouchDevice, useIsMounted } from "@/hooks";
 
 export function CursorFollow() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useIsMounted();
   const isTouchDevice = useTouchDevice();
 
   const cursorX = useMotionValue(-100);
@@ -22,10 +22,6 @@ export function CursorFollow() {
   const [isClicking, setIsClicking] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
     if (!mounted || isTouchDevice) return;
 
     const move = (e: MouseEvent) => {
@@ -37,10 +33,10 @@ export function CursorFollow() {
 
     const over = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
-      setIsHovering(
+      const hoverState =
         target?.closest("a, button, [data-cursor-hover], input, textarea") !==
-          null,
-      );
+        null;
+      setIsHovering((prev) => (prev !== hoverState ? hoverState : prev));
     };
 
     const down = () => setIsClicking(true);
@@ -64,7 +60,7 @@ export function CursorFollow() {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[99999] rounded-full border mix-blend-exclusion"
+        className="fixed top-0 left-0 pointer-events-none z-[99999] rounded-full border bg-[rgba(var(--accent-rgb),0.06)]"
         style={{
           x: springX,
           y: springY,

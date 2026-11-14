@@ -28,9 +28,30 @@ interface ExamClientViewProps {
 
 export function ExamClientView({ packageMeta, questions }: ExamClientViewProps) {
   const router = useRouter();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, QuestionAnswerState>>({});
-  const [timeRemaining, setTimeRemaining] = useState(EXAM_DURATION_SECONDS);
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    const saved = loadStoredSession(packageMeta.id);
+    if (
+      saved &&
+      !saved.isFinished &&
+      typeof saved.lastActiveIndex === "number" &&
+      saved.lastActiveIndex >= 0 &&
+      saved.lastActiveIndex < questions.length
+    ) {
+      return saved.lastActiveIndex;
+    }
+    return 0;
+  });
+  const [answers, setAnswers] = useState<Record<string, QuestionAnswerState>>(() => {
+    const saved = loadStoredSession(packageMeta.id);
+    return saved && !saved.isFinished && saved.answers ? saved.answers : {};
+  });
+  const [timeRemaining, setTimeRemaining] = useState(() => {
+    const saved = loadStoredSession(packageMeta.id);
+    if (saved && !saved.isFinished && typeof saved.timeRemainingSeconds === "number") {
+      return saved.timeRemainingSeconds;
+    }
+    return EXAM_DURATION_SECONDS;
+  });
   const [isConfirmOpen, setIsConfirmOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -56,17 +77,7 @@ export function ExamClientView({ packageMeta, questions }: ExamClientViewProps) 
     initialLoadedRef.current = true;
 
     const saved = loadStoredSession(packageMeta.id);
-    if (saved && !saved.isFinished) {
-      setAnswers(saved.answers || {});
-      setTimeRemaining(saved.timeRemainingSeconds ?? EXAM_DURATION_SECONDS);
-      if (
-        typeof saved.lastActiveIndex === "number" &&
-        saved.lastActiveIndex >= 0 &&
-        saved.lastActiveIndex < questions.length
-      ) {
-        setCurrentIndex(saved.lastActiveIndex);
-      }
-    } else {
+    if (!saved || saved.isFinished) {
       const newSession: ExamSession = {
         packageId: packageMeta.id,
         startedAt: Date.now(),
@@ -77,7 +88,7 @@ export function ExamClientView({ packageMeta, questions }: ExamClientViewProps) 
       };
       saveStoredSession(newSession);
     }
-  }, [packageMeta.id, questions.length]);
+  }, [packageMeta.id]);
 
   const persistCurrentState = useCallback(() => {
     const session: ExamSession = {

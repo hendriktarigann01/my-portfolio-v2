@@ -56,7 +56,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href.startsWith("#") ? `/${link.href}` : link.href}
-                  className="transition-colors hover:text-()"
+                  className="transition-colors hover:text-[var(--accent)]"
                   style={{
                     fontFamily: "var(--font-body)",
                     color: "rgba(var(--accent-rgb),0.5)",
@@ -88,7 +88,7 @@ export function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="transition-colors hover:text-()"
+                  className="transition-colors hover:text-[var(--accent)]"
                   style={{
                     fontFamily: "var(--font-body)",
                     color: "rgba(var(--accent-rgb),0.5)",

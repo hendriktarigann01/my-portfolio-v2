@@ -14,7 +14,7 @@ export function GlassCard({
 }: GlassCardProps) {
   return (
     <div
-      className={`glass backdrop-blur-2xl rounded-2xl ${interactive ? "glass-interactive" : ""} ${className}`}
+      className={`glass rounded-2xl ${interactive ? "glass-interactive" : ""} ${className}`}
       {...props}
     >
       {children}
