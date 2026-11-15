@@ -888,7 +888,20 @@
         "html2canvas",
         "Tailwind CSS"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/interactive/mjs-photobooth/1.webp",
+          "title": "MJS Photobooth - Welcome & Interactive Entry Screen"
+        },
+        {
+          "url": "/assets/interactive/mjs-photobooth/2.webp",
+          "title": "MJS Photobooth - Frame Layout & Event Theme Selection"
+        },
+        {
+          "url": "/assets/interactive/mjs-photobooth/3.webp",
+          "title": "MJS Photobooth - Live Studio Viewfinder & Controls"
+        }
+      ],
       "links": {
         "demo": "https://mjs-photobooth-flax.vercel.app/",
         "repo": ""
@@ -992,7 +1005,24 @@
         "HTML",
         "CSS"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/interactive/mjs-product-showcase/1.webp",
+          "title": "MJS Product Showcase - Welcome & Entry Screen"
+        },
+        {
+          "url": "/assets/interactive/mjs-product-showcase/2.webp",
+          "title": "MJS Product Showcase - Digital Signage Catalog"
+        },
+        {
+          "url": "/assets/interactive/mjs-product-showcase/3.webp",
+          "title": "MJS Product Showcase - Interactive Display Viewer"
+        },
+        {
+          "url": "/assets/interactive/mjs-product-showcase/4.webp",
+          "title": "MJS Product Showcase - Product Specifications & Features"
+        }
+      ],
       "links": {
         "demo": "https://product-showcase-mjs.vercel.app/",
         "repo": ""
@@ -1307,7 +1337,24 @@
         "D3.js",
         "next-intl"
       ],
-      "images": [],
+      "images": [
+        {
+          "url": "/assets/landing-pages/creativelab/1.webp",
+          "title": "CreativeLAB - Homepage & Digital Ecosystem Hero"
+        },
+        {
+          "url": "/assets/landing-pages/creativelab/2.webp",
+          "title": "CreativeLAB - Comprehensive Digital Services"
+        },
+        {
+          "url": "/assets/landing-pages/creativelab/3.webp",
+          "title": "CreativeLAB - Case Studies & Client Portfolio"
+        },
+        {
+          "url": "/assets/landing-pages/creativelab/4.webp",
+          "title": "CreativeLAB - Consultation & Contact Inquiries"
+        }
+      ],
       "links": {
         "demo": "https://creativelab.mjsolution.co.id/",
         "repo": ""
@@ -1345,7 +1392,23 @@
       "images": [
         {
           "url": "/assets/landing-pages/tanta/1.webp",
-          "title": "Tanta Resto & Lounge - Landing Page"
+          "title": "Tanta Resto & Lounge - Landing Page Hero"
+        },
+        {
+          "url": "/assets/landing-pages/tanta/2.webp",
+          "title": "Tanta Resto & Lounge - Culinary & Dining Menu"
+        },
+        {
+          "url": "/assets/landing-pages/tanta/3.webp",
+          "title": "Tanta Resto & Lounge - Ambiance & Bar Experience"
+        },
+        {
+          "url": "/assets/landing-pages/tanta/4.webp",
+          "title": "Tanta Resto & Lounge - Private Events & Reservation"
+        },
+        {
+          "url": "/assets/landing-pages/tanta/5.webp",
+          "title": "Tanta Resto & Lounge - Location & Operating Hours"
         }
       ],
       "links": {
@@ -1385,7 +1448,23 @@
       "images": [
         {
           "url": "/assets/landing-pages/in-lite/1.webp",
-          "title": "in-Lite Indonesia - Landing Page"
+          "title": "in-Lite Indonesia - Landing Page Hero"
+        },
+        {
+          "url": "/assets/landing-pages/in-lite/2.webp",
+          "title": "in-Lite Indonesia - Product Categories & Smart LED"
+        },
+        {
+          "url": "/assets/landing-pages/in-lite/3.webp",
+          "title": "in-Lite Indonesia - Residential & Architectural Lighting"
+        },
+        {
+          "url": "/assets/landing-pages/in-lite/4.webp",
+          "title": "in-Lite Indonesia - Commercial Solutions & Features"
+        },
+        {
+          "url": "/assets/landing-pages/in-lite/5.webp",
+          "title": "in-Lite Indonesia - Product Catalog & Specifications"
         }
       ],
       "links": {
@@ -1425,7 +1504,23 @@
       "images": [
         {
           "url": "/assets/landing-pages/bsp/1.webp",
-          "title": "Bali Surfers Perfume - Landing Page"
+          "title": "Bali Surfers Perfume - Landing Page Hero"
+        },
+        {
+          "url": "/assets/landing-pages/bsp/2.webp",
+          "title": "Bali Surfers Perfume - Signature Fragrance Collection"
+        },
+        {
+          "url": "/assets/landing-pages/bsp/3.webp",
+          "title": "Bali Surfers Perfume - Scent Notes & Inspiration"
+        },
+        {
+          "url": "/assets/landing-pages/bsp/4.webp",
+          "title": "Bali Surfers Perfume - Best Seller Product Showcase"
+        },
+        {
+          "url": "/assets/landing-pages/bsp/5.webp",
+          "title": "Bali Surfers Perfume - Official Distribution & Stores"
         }
       ],
       "links": {
@@ -1465,7 +1560,23 @@
       "images": [
         {
           "url": "/assets/landing-pages/leko/1.webp",
-          "title": "Warung Leko Grand Wisata - Landing Page"
+          "title": "Warung Leko Grand Wisata - Landing Page Hero"
+        },
+        {
+          "url": "/assets/landing-pages/leko/2.webp",
+          "title": "Warung Leko Grand Wisata - Signature Iga Sapi Penyet"
+        },
+        {
+          "url": "/assets/landing-pages/leko/3.webp",
+          "title": "Warung Leko Grand Wisata - Nusantara Specialty Dishes"
+        },
+        {
+          "url": "/assets/landing-pages/leko/4.webp",
+          "title": "Warung Leko Grand Wisata - Dine-in Ambience & Facilities"
+        },
+        {
+          "url": "/assets/landing-pages/leko/5.webp",
+          "title": "Warung Leko Grand Wisata - Delivery & Location Information"
         }
       ],
       "links": {
@@ -1505,7 +1616,23 @@
       "images": [
         {
           "url": "/assets/landing-pages/metland-cikarang/1.webp",
-          "title": "Metland Cikarang - Landing Page"
+          "title": "Metland Cikarang - Landing Page Hero"
+        },
+        {
+          "url": "/assets/landing-pages/metland-cikarang/2.webp",
+          "title": "Metland Cikarang - Masterplan & Cluster Layout"
+        },
+        {
+          "url": "/assets/landing-pages/metland-cikarang/3.webp",
+          "title": "Metland Cikarang - House Type Specifications"
+        },
+        {
+          "url": "/assets/landing-pages/metland-cikarang/4.webp",
+          "title": "Metland Cikarang - Infrastructure & Eco Living"
+        },
+        {
+          "url": "/assets/landing-pages/metland-cikarang/5.webp",
+          "title": "Metland Cikarang - Developer Credibility & Inquiries"
         }
       ],
       "links": {
